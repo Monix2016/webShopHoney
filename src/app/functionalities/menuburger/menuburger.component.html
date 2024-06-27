@@ -1,0 +1,15 @@
+<div class="menu-container">
+    <div class="burger-menu" (click)="toggleMenu()">
+      &#9776; <!-- Ícono del menú hamburguesa -->
+    </div>
+    <div class="menu-items" [ngClass]="{'show': menuOpen}">
+      <a class="" routerLinkActive="activebutton" ariaCurrentWhenActive="page" routerLink="/">
+        Home
+      </a>
+      <a class="" routerLinkActive="activebutton" ariaCurrentWhenActive="page" routerLink="/blog">
+        Blog
+      </a>
+
+  
+    </div>
+  </div>

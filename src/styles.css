@@ -7,11 +7,13 @@
 body {
   font-family: 'Be Vietnam Pro', sans-serif;
 }
+
 :root {
   --primary-color: #605DC8;
   --secondary-color: #8B89E6;
   --accent-color: #e8e7fa;
   --shadow-color: #E8E8E8;
+  --honey-color: #efa909;
 }
 
 button.primary {
@@ -21,8 +23,6 @@ button.primary {
   color: white;
   border-radius: 8px;
 }
-
-
 
 .results {
   display: grid;
@@ -45,42 +45,43 @@ input[type="text"] {
 /** #####################################################
     #                 FLEX                              #
     #####################################################*/
-    .flex-container {
-      display: flex;
-      align-items: center;
-      justify-content: space-evenly;
-      padding: 15px;
-    
-    }
+.flex-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 15px;
+
+}
 
 /** #####################################################
   #                 TEXT ALIGNATION                   #
   #####################################################*/
 
-    .rtl {
-      direction: rtl;
-      text-align: right;
-    }
-    
-    .ltr {
-      direction: ltr;
-      text-align: left;
-    }
+.rtl {
+  direction: rtl;
+  text-align: right;
+}
+
+.ltr {
+  direction: ltr;
+  text-align: left;
+}
 
 /** #####################################################
     #                Media                              #
     #####################################################*/
 @media (min-width: 500px) and (max-width: 768px) {
   .results {
-      grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
+
   input[type="text"] {
-      width: 70%;
-  }   
+    width: 70%;
+  }
 }
 
 @media (max-width: 499px) {
   .results {
-      grid-template-columns: 1fr;
-  }    
+    grid-template-columns: 1fr;
+  }
 }
