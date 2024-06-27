@@ -3,7 +3,7 @@
     <header class="brand-name containerHeader">
         <nav class="flex-header-row">
             <a class="spanMHS menu__link" routerLinkActive="activebutton" ariaCurrentWhenActive="page" routerLink="/">
-                Home
+                {{'Home.HomeTitle'| translate}}
             </a>
 
         </nav>
@@ -24,11 +24,11 @@
     <section class="content">
         <router-outlet></router-outlet>
     </section>
-    <footer class="flex-container containerHeader">
+    <footer class="flex-container containerHeader" [ngClass]="{'rtl': translate.currentLang  === 'ar', 'ltr': translate.currentLang  === 'en'}">
         <!-- [ngClass]="{'rtl': translate.currentLang  === 'ar', 'ltr': translate.currentLang  === 'en'}"> -->
         <div>
             <!-- <h4 class="AlignTxtCenter styleTitle">{{ 'Follow_Us' | translate}}</h4> -->
-            <h4 class="title">Follow_Us</h4>
+            <h4 class="title">{{ 'Follow_Us' | translate}}</h4>
             <div class="flex-container-col">
 
                 <div class="social-buttons">
@@ -116,11 +116,11 @@
 
         <div>
             <!-- <h4 class="styleTitle">{{ 'Contact_Us' | translate}}</h4> -->
-            <h4 class="title">Contact_Us</h4>
+            <h4 class="title">{{ 'Contact_Us' | translate}}</h4>
             <div class="flex-container-col">
 
-                <!-- <span class="spanMHS">{{'Adress' | translate}}</span> -->
-                <span class="honey-color">Blog</span>
+                <!-- <span class="spanMHS"></span> -->
+                <span class="honey-color">{{'Adress' | translate}}</span>
                 <span class="honey-color">00212669671149</span>
                 <span class="honey-color">testgmailcom</span>
             </div>
@@ -128,35 +128,35 @@
 
         <div>
             <!-- <h4 class="AlignTxtCenter styleTitle">{{ 'About_Us' | translate}}</h4> -->
-            <h4 class="title">About_Us</h4>
+            <h4 class="title">{{ 'About_Us' | translate}}</h4>
             <nav class="flex-container-col">
                 <a class="honey-color" routerLinkActive="activebutton" ariaCurrentWhenActive="page" routerLink="/blog">
-                    <!-- {{'where_we_are'| translate}} -->
-                    Blog
+                     {{'where_we_are'| translate}} 
+                   
                 </a>
                 <a class="honey-color" routerLinkActive="activebutton" ariaCurrentWhenActive="page" routerLink="/blog">
-                    <!-- {{ 'Collection_Procedure' | translate}} -->
-                    Blog
+                    {{ 'Collection_Procedure' | translate}} 
+                   
                 </a>
                 <a class="honey-color" routerLinkActive="activebutton" ariaCurrentWhenActive="page"
                     routerLink="/benefit">
-                    <!-- {{ 'Benifices.BenificesTitle' | translate}} -->
-                    Blog
+                     {{ 'Benifices.BenificesTitle' | translate}} 
+                   
                 </a>
             </nav>
         </div>
         <div>
-            <h4 class="title">Info</h4>
-            <!-- <h4 class="AlignTxtCenter styleTitle">{{ 'Info' | translate}}</h4> -->
+            <h4 class="title">{{ 'Info' | translate}}</h4>
+            <!-- <h4 class="AlignTxtCenter styleTitle"></h4> -->
             <nav class="flex-container-col">
                 <a class="honey-color" routerLinkActive="activebutton" ariaCurrentWhenActive="page" routerLink="/blog">
-                    <!-- {{ 'Policies.PoliciesTitle' | translate}} -->
-                    Blog
+                    {{ 'Policies.PoliciesTitle' | translate}}
+                    
                 </a>
                 <a class="honey-color" routerLinkActive="activebutton" ariaCurrentWhenActive="page"
                     routerLink="/benefit">
-                    <!-- {{ 'Delivery.DeliveryTitle' | translate}} -->
-                    Blog
+                    {{ 'Delivery.DeliveryTitle' | translate}}
+                   
                 </a>
                 <a class="honey-color" routerLinkActive="activebutton" ariaCurrentWhenActive="page" routerLink="/blog">
                     blog

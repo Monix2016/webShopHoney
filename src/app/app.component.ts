@@ -4,8 +4,9 @@ import { RouterLink, RouterOutlet } from '@angular/router';
 import { MenuburgerComponent } from './functionalities/menuburger/menuburger.component';
 import { HttpClient } from '@angular/common/http';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
-import { TranslateService } from '@ngx-translate/core';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { SwitchLangComponent } from './functionalities/switch-lang/switch-lang.component';
+import { CommonModule } from '@angular/common';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return  new  TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -19,6 +20,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     RouterLink,
     RouterOutlet,
     MenuburgerComponent,
+    TranslateModule,
+    CommonModule,
     SwitchLangComponent
   ],
   templateUrl: './app.component.html',
