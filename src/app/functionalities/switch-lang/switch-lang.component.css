@@ -1,0 +1,6 @@
+.form-control{
+    border-radius: 50%;
+    box-shadow: 0 2px 5px var(--box-shadow-color); 
+    background-color: var(--honey-color);
+    
+}

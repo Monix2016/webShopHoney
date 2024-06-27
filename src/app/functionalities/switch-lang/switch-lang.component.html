@@ -1,1 +1,12 @@
-<p>switch-lang works!</p>
+<span class="form-inline">
+    <select 
+        class="form-control allIcon" 
+        #selectedLang 
+        (change)="switchLang(selectedLang.value)">
+      <option *ngFor="let language of translate.getLangs()" 
+        [value]="language"
+        [selected]="language === translate.currentLang">
+        {{ language }}
+      </option>
+    </select>
+  </span>
