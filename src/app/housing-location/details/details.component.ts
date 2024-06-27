@@ -1,8 +1,8 @@
 import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
-import { HousingService } from '../services/housing.service';
-import { IHoney } from '../interfaces/honey';
+import { HousingService } from '../../services/housing.service';
+import { IHoney } from '../../interfaces/honey';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 
 @Component({
