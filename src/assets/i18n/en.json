@@ -1,0 +1,70 @@
+{
+    "HELLO": "hello {{value}}",
+    "Idioma": "Title",
+    "TextIdioma": "Ingles",
+    "Sitetitle": "Angular Multi Language Site",
+    "Name": "Name",
+    "NameError": "I am sure you must have a name!",
+    "Email": "Email address",
+    "PhoneNo": "Phone No",
+    "Password": "Password",
+    "Bio": "Enter bio",
+    "TermsConditions": "I agree to terms and conditions.",
+    "Submit": "Submit",
+    "LigneTxt": "Order online or by phone",
+    "Follow_Us": "Follow us",
+    "Contact_Us": "Contact us",
+    "About_Us": "About Us",
+    "Country": "Morrocco",
+    "where_we_are": "Where we are",
+    "Collection_Procedure": "Collection Procedure",
+    "Adress": "Av Mohamed 5 N65 Bl5 Porte4",
+    "Help": "Help",
+    "Info": "Info",
+    "Titles": {
+        "Heart_Of_Nature": "In the heart of nature"
+    },
+    "Home": {
+        "HomeTitle": "Home",
+        "Parraph": "Le miel de Montagne des ruches Atlassia installées au parc nationale de ifrane, un miel de fleurs variées dumoyen atlas.Récolté entre 1200m et 2600 m d'altitude, sur des forêts majestueuses, des montagnes ou encore des prairies là oùla nature est la plus pure possible."
+    },
+    "Delivery": {
+        "DeliveryTitle": "Delivery",
+        "Payment_Method": "Payment Method (Cash on Delivery)",
+        "Cash_Delivery": "Cash on Delivery means that the shopper can shop through our online store and choose the product he/she wants to buy, then place the order and choose the Cash on Delivery method, which means that the payment process is postponed until the customer receives the product he/she ordered online. We will send the product to the agreed upon location (city, neighbourhood, home or other place), after which the payment will be made",
+        "Deliver_Anywhere": "We deliver anywhere in Morocco via Aramex or Amana within 24 - 72 hours."
+    },
+    "About": {
+        "AboutTitle": "About",
+        "Title": "the pure honeys of"
+    },
+    "Benifices": {
+        "BenificesTitle": "Honey Benifices",
+        "Title1": "Learn about the most important types of honey and their benefits",
+        "DescriptionHoney": "Honey is a sweet and sticky natural food produced by bees. Bees produce honey from sugary plant secretions (flower nectar) through regulated processes and special enzymatic activity, and after evaporation of water it takes its final form. Honey is stored in waxy structures called honeycombs. Bees produce a variety of honey that varies in colour, taste and bulge (depending on the bee's food source).",
+        "TitleType": "The 7 most famous and best honeys in Morocco",
+        "PType": "There are many types of honey in Morocco due to the diversity of vegetation from one region to another. In this post, we will take a look at the best honeys from Morocco. Between 10 and 18 flavours of honey are sold, the most popular being Dagmus honey, Eucalyptus honey, Carob honey, Sidr honey, Orange honey, Zaatar honey, ... Best Honey in Morocco "
+    },
+    "BenificesHerbalHoney": {
+        "Title": "Herbal honey",
+        "PHerbalHoney": "There are different types of honey, which differ according to the flower from which the bees collected pollen, there is floral honey, clover flower honey, citrus honey, and here we are talking about herbal honey. Herbal honey is one of the purest types of honey due to its rich content of vitamins and minerals, as well as antioxidants, which are the first fortress for the human body against many diseases, the most important of which is cancer. Herbal honey, like other types of honey, contains a high percentage of sugar, protein, iron and calcium as well, and there are many types of herbal honey, including clove honey, wild herbs and wild rose, and there are slight differences in taste between each type and another. Herbal honey is extremely rich.",
+        "TitleBenifit": "Benefits of Herbal Honey",
+        "DescriptionBenifit": "Herbal honey has many benefits for human health and body, perhaps more so than other types of honey.",
+        "Benifit1": "Herbal honey is rich in a large percentage of natural antibiotics, which protects the body from various diseases.",
+        "Benifit2": "Herbal honey helps relieve toothache as well as various gum infections.",
+        "Benifit3": "Herbal honey is rich in a large percentage of natural antibiotics, which protects the body from various diseases.",
+        "Benifit4": "It helps to regenerate skin cells and increase its freshness.",
+        "Benifit5": "Reduces pimples and acne, lightens blemishes and evens out skin tone.",
+        "Benifit6": "Protects against chest allergies and treats acute cough.",
+        "Benifit7": "A powerful tranquilliser.",
+        "Benifit8": "Stimulates blood circulation.",
+        "Benifit9": "Helps milk production for new mothers and increases its usefulness for infants."
+
+
+
+    },
+    "Policies": {
+        "PoliciesTitle": "Refund policy ",
+        "Title": ""
+    }
+}

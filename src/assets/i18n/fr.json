@@ -1,0 +1,66 @@
+{
+    "Idioma": "Titre",
+    "TextIdioma": "Frances",
+    "Sitetitle": "abeille",
+    "Name": "Name",
+    "NameError": "I am sure you must have a name!",
+    "Email": "Email address",
+    "PhoneNo": "Phone No",
+    "Password": "Password",
+    "Bio": "Enter bio",
+    "TermsConditions": "I agree to terms and conditions.",
+    "Submit": "Submit",
+    "LigneTxt": "Commander en ligne ou par téléphone",
+    "Follow_Us": "Suivez-nous",
+    "Contact_Us": "Contactez-nous",
+    "About_Us": "About Us",
+    "Country": "Morrocco",
+    "where_we_are": "Dónde estamos",
+    "Collection_Procedure": "Collecte Procédure",
+    "Adress": "Av Mohamed 5 N65 Bl5 Porte4",
+    "Help": "Support",
+    "Info": "Info",
+    "Titles": {
+        "Heart_Of_Nature": "Au coeur de la nature"
+    },
+    "Home": {
+        "HomeTitle": "Home",
+        "Parraph": "Le miel de Montagne des ruches Atlassia installées au parc nationale de ifrane, un miel de fleurs variées dumoyen atlas.Récolté entre 1200m et 2600 m d'altitude, sur des forêts majestueuses, des montagnes ou encore des prairies là oùla nature est la plus pure possible."
+    },
+    "Delivery": {
+        "DeliveryTitle": "Livraison",
+        "Payment_Method": "Mode de paiement (contre remboursement)",
+        "Cash_Delivery": "Cash on Delivery means that the shopper can shop through our online store and choose the product he/she wants to buy, then place the order and choose the Cash on Delivery method, which means that the payment process is postponed until the customer receives the product he/she ordered online. We will send the product to the agreed upon location (city, neighbourhood, home or other place), after which the payment will be made",
+        "Deliver_Anywhere": "Partout au Maroc, On vous livre via Aramex ou Amana dans 24 - 72 Heures."
+    },
+    "About": {
+        "AboutTitle": "About",
+        "Title": "les miels purs du"
+    },
+    "Benifices": {
+        "BenificesTitle": "Benifices",
+        "Title1": "تعرف على أبرز أنواع العسل وفوائده",
+        "DescriptionHoney": "العسل هو طعام طبيعي حلو ولزج يُنتجه النحل. ينتج النحل العسل من إفرازات النباتات السكرية (رحيق الزهور) من خلال العمليات المنظمة والنشاط الأنزيمي الخاص، وبعد تبخر الماء يأخذ شكله النهائي. يتم تخزين العسل في هياكل شمعية تسمى أقراص العسل. ينتج النحل مجموعة متنوعة من العسل تختلف في اللون والذوق والانتفاخ (اعتمادًا على مصدر الغذاء للنحل).",
+        "TitleType": "أشهر وأفضل 7 أنواع العسل في المغرب",
+        "PType": "هناك العديد من أنواع العسل في المغرب بسبب تنوع الغطاء النباتي من منطقة إلى أخرى. في هذا الموضوع، سنلقي نظرة على أفضل أنواع العسل من المغرب. يتم بيع ما بين 10 و 18 نكهة من العسل، أشهرها عسل داغموس، عسل الأوكالبتوس، عسل الخروب، عسل السدر، عسل البرتقال، عسل الزعتر ، … أفضل أنواع العسل في "
+    },
+    "BenificesHerbalHoney": {
+        "Title": "عسل الأعشاب",
+        "PHerbalHoney": "هناك أنواع مختلفة من العسل، والتي تختلف حسب الزهرة التي جمع من عليها النحل اللقاح، فهناك عسل الأزهار وعسل زهرة البرسيم وعسل الموالح، وهنا نتكلم عن عسل الأعشاب. وعسل الأعشاب من أنقى أنواع العسل وذلك لما يحتوي عليه من مواد غنية بالفيتامينات والمعادن، وأيضًا مضادات الأكسدة، وهي الحصن الأول لجسم الإنسان ضد الكثير من الأمراض وأهمها السرطان. وعسل الأعشاب مثل باقي أنواع العسل يحتوي على نسبة عالية من السكر والبروتين والحديد والكالسيوم كذلك، وهناك العديد من أنواع عسل الأعشاب، منها عسل القرنفل والأعشاب البرية والورد البري، وهناك اختلافات طفيفة في المذاق بين كل نوع وآخر. وعسل الأعشاب غني للغاية ",
+        "TitleBenifit": "فوائد عسل الأعشاب",
+        "DescriptionBenifit": "عسل الأعشاب يحتوي على فوائد عديدة لصحة الإنسان وجسمه ربما أكثر من باقي أنواع العسل الأخرى",
+        "Benifit1": "Le miel végétal est riche en antibiotiques naturels, qui protègent l'organisme de diverses maladies.",
+        "Benifit2": "Le miel végétal aide à soulager les maux de dents ainsi que diverses infections des gencives.",
+        "Benifit3": "Le miel végétal est riche en antibiotiques naturels qui protègent l'organisme de diverses maladies.",
+        "Benifit4": "Il aide à régénérer les cellules de la peau et à en augmenter la fraîcheur.",
+        "Benifit5": "Il réduit les boutons et l'acné, atténue les taches et unifie le teint de la peau.",
+        "Benifit6": "Protège contre les allergies thoraciques et traite la toux aiguë.",
+        "Benifit7": "Un puissant tranquillisant.",
+        "Benifit8": "Stimule la circulation sanguine.",
+        "Benifit9": "Favorise la production de lait chez les nouvelles mères et augmente son utilité pour les nourrissons."
+    },
+    "Policies": {
+        "PoliciesTitle": "Politique de remboursement",
+        "Title": ""
+    }
+}

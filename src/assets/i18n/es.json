@@ -1,0 +1,66 @@
+{
+    "Idioma": "Titulo",
+    "TextIdioma": "Español",
+    "Sitetitle": "Abeja",
+    "Name": "Name",
+    "NameError": "I am sure you must have a name!",
+    "Email": "Email address",
+    "PhoneNo": "Phone No",
+    "Password": "Password",
+    "Bio": "Enter bio",
+    "TermsConditions": "I agree to terms and conditions.",
+    "Submit": "Submit",
+    "LigneTxt": "Haga su pedido en línea o por teléfono",
+    "Follow_Us": "Síguenos en",
+    "Contact_Us": "Contacte con nosotros",
+    "About_Us": "Quiénes somos",
+    "Country": "Marruecos",
+    "where_we_are": "Dónde estamos",
+    "Collection_Procedure": "Procedimiento de recogida",
+    "Adress": "Av Mohamed 5 N65 Bl5 Porte4",
+    "Help": "Soporte",
+    "Info": "Info",
+    "Titles": {
+        "Heart_Of_Nature": "En pleno corazón de la naturaleza"
+    },
+    "Home": {
+        "HomeTitle": "Home",
+        "Parraph": " Miel de montaña procedente de las XXXX colmenas del parque, una miel elaborada a partir de una variedad de flores que se encuentran en la naturaleza.Recolectada a altitudes de entre 1200 m y 2600 m, en majestuosos bosques, montañas y prados donde la naturaleza es lo más pura posible."
+    },
+    "Delivery": {
+        "DeliveryTitle": "Envíos",
+        "Payment_Method": "Mode de paiement (contre remboursement)Forma de pago (contra reembolso)",
+        "Cash_Delivery": "Contrareembolso significa que el comprador puede comprar a través de nuestra tienda en línea y elegir el producto que desea comprar, luego realizar el pedido y elegir el método Contrareembolso, lo que significa que el proceso de pago se pospone hasta que el cliente reciba el producto que pidió en línea. Enviaremos el producto al lugar acordado (ciudad, barrio, domicilio u otro lugar), tras lo cual se efectuará el pago",
+        "Deliver_Anywhere": "Entregamos en cualquier lugar de Marruecos a través de Aramex o Amana en un plazo de 24 a 72 horas."
+    },
+    "About": {
+        "AboutTitle": "About",
+        "Title": "las puras mieles"
+    },
+    "Benifices": {
+        "BenificesTitle": "Beneficios de la miel",
+        "Title1": "تعرف على أبرز أنواع العسل وفوائده",
+        "DescriptionHoney": "العسل هو طعام طبيعي حلو ولزج يُنتجه النحل. ينتج النحل العسل من إفرازات النباتات السكرية (رحيق الزهور) من خلال العمليات المنظمة والنشاط الأنزيمي الخاص، وبعد تبخر الماء يأخذ شكله النهائي. يتم تخزين العسل في هياكل شمعية تسمى أقراص العسل. ينتج النحل مجموعة متنوعة من العسل تختلف في اللون والذوق والانتفاخ (اعتمادًا على مصدر الغذاء للنحل).",
+        "TitleType": "أشهر وأفضل 7 أنواع العسل في المغرب",
+        "PType": "هناك العديد من أنواع العسل في المغرب بسبب تنوع الغطاء النباتي من منطقة إلى أخرى. في هذا الموضوع، سنلقي نظرة على أفضل أنواع العسل من المغرب. يتم بيع ما بين 10 و 18 نكهة من العسل، أشهرها عسل داغموس، عسل الأوكالبتوس، عسل الخروب، عسل السدر، عسل البرتقال، عسل الزعتر ، … أفضل أنواع العسل في "
+    },
+    "BenificesHerbalHoney": {
+        "Title": "عسل الأعشاب",
+        "PHerbalHoney": "هناك أنواع مختلفة من العسل، والتي تختلف حسب الزهرة التي جمع من عليها النحل اللقاح، فهناك عسل الأزهار وعسل زهرة البرسيم وعسل الموالح، وهنا نتكلم عن عسل الأعشاب. وعسل الأعشاب من أنقى أنواع العسل وذلك لما يحتوي عليه من مواد غنية بالفيتامينات والمعادن، وأيضًا مضادات الأكسدة، وهي الحصن الأول لجسم الإنسان ضد الكثير من الأمراض وأهمها السرطان. وعسل الأعشاب مثل باقي أنواع العسل يحتوي على نسبة عالية من السكر والبروتين والحديد والكالسيوم كذلك، وهناك العديد من أنواع عسل الأعشاب، منها عسل القرنفل والأعشاب البرية والورد البري، وهناك اختلافات طفيفة في المذاق بين كل نوع وآخر. وعسل الأعشاب غني للغاية ",
+        "TitleBenifit": "فوائد عسل الأعشاب",
+        "DescriptionBenifit": "عسل الأعشاب يحتوي على فوائد عديدة لصحة الإنسان وجسمه ربما أكثر من باقي أنواع العسل الأخرى",
+        "Benifit1": "La miel de hierbas es rica en un gran porcentaje de antibióticos naturales, que protegen al organismo de diversas enfermedades.",
+        "Benifit2": "Ayuda a aliviar el dolor de muelas y las infecciones de las encías.",
+        "Benifit3": "La miel a base de plantas es rica en un gran porcentaje de antibióticos naturales que protegen al organismo de diversas enfermedades.",
+        "Benifit4": "Ayuda a regenerar las células de la piel y a aumentar su frescura.",
+        "Benifit5": "Reduce los granos y el acné, aclara las manchas y unifica el tono de la piel.",
+        "Benifit6": "Protege contra las alergias torácicas y trata la tos aguda.",
+        "Benifit7": "Potente tranquilizante.",
+        "Benifit8": "Estimula la circulación sanguínea.",
+        "Benifit9": "Favorece la producción de leche para las madres primerizas y aumenta su utilidad para los lactantes."
+    },
+    "Policies": {
+        "PoliciesTitle": "Política de devoluciones",
+        "Title": ""
+    }
+}
