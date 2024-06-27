@@ -75,3 +75,50 @@ section{
       #282828;
   background-size: 40px 60px;
 }
+
+.menu__link {
+  color: var(--honey-color);
+  line-height: 2;
+  position: relative;
+  border: none;
+  border-radius: 10px;
+  transition: 0.5s;
+  box-shadow: 0 0 10px #363636, inset 0 0 10px var(--honey-color);
+  padding: 10px 20px;
+}
+
+.menu__link::before {
+  content: '';
+  width: 0;
+  height: 2px;
+  border-radius: 2px;
+  background-color: var(--honey-color);
+  color: var(--text-shadow-color);
+  position: absolute;
+  bottom: -.25rem;
+  left: 50%;
+  transition: width .4s, left .4s;
+}
+
+.menu__link:hover::before {
+  width: 100%;
+  left: 0;
+}
+
+
+/** #####################################################
+    #                Media                              #
+    #####################################################*/
+@media (min-width: 500px) and (max-width: 768px) {
+
+  .menu__link {
+    display: none;
+  } 
+}
+
+@media (max-width: 499px) {
+
+  .menu__link {
+    display: none;
+  }    
+}
