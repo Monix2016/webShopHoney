@@ -23,7 +23,7 @@ export class MenuburgerComponent {
 
   constructor(
     // public translate: TranslateService
-  ){}
+  ) { }
   toggleMenu() {
     this.menuOpen = !this.menuOpen;
   }
