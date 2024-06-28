@@ -5,7 +5,7 @@ import { HousingService } from '../../services/housing.service';
 import { IHoney } from '../../interfaces/honey';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
-import { BenefitHerbalHoneyComponent } from '../../blog/benefit/benefit-herbal-honey/benefit-herbal-honey.component';
+import { BenefitHerbalHoneyComponent } from '../../functionalities/static-text/blog-herbal-honey/benefit-herbal-honey/benefit-herbal-honey.component';
 
 @Component({
   selector: 'app-details',

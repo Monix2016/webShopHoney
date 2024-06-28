@@ -1,14 +1,11 @@
 import { Component } from '@angular/core';
-import { BlogHerbalHoneyComponent } from './blog-herbal-honey/blog-herbal-honey.component';
-import { CommonModule } from '@angular/common';
-import { BenefitComponent } from './benefit/benefit.component';
+import { BlogHerbalHoneyComponent } from '../functionalities/static-text/blog-herbal-honey/blog-herbal-honey.component';
 
 @Component({
   selector: 'app-blog',
   standalone: true,
   imports: [
-    BlogHerbalHoneyComponent,
-    BenefitComponent
+    BlogHerbalHoneyComponent
   ],
   templateUrl: './blog.component.html',
   styleUrl: './blog.component.css'

@@ -1,7 +1,9 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
-import { BenefitComponent } from '../benefit/benefit.component';
+import { BenefitComponent } from '../../../benefit/benefit.component';
+import { BenefitHerbalHoneyComponent } from './benefit-herbal-honey/benefit-herbal-honey.component';
+
 
 @Component({
   selector: 'app-blog-herbal-honey',
@@ -9,7 +11,7 @@ import { BenefitComponent } from '../benefit/benefit.component';
   imports: [
     CommonModule,
     TranslateModule,
-    BenefitComponent
+    BenefitHerbalHoneyComponent
   ],
   templateUrl: './blog-herbal-honey.component.html',
   styleUrl: './blog-herbal-honey.component.css'
