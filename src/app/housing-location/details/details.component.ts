@@ -4,13 +4,18 @@ import { ActivatedRoute } from '@angular/router';
 import { HousingService } from '../../services/housing.service';
 import { IHoney } from '../../interfaces/honey';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { BenefitHerbalHoneyComponent } from '../../blog/benefit/benefit-herbal-honey/benefit-herbal-honey.component';
 
 @Component({
   selector: 'app-details',
   standalone: true,
   imports: [
     CommonModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    TranslateModule,
+    BenefitHerbalHoneyComponent
+
   ],
   templateUrl: './details.component.html',
   styleUrl: './details.component.css',
@@ -27,9 +32,11 @@ export class DetailsComponent {
     email: new FormControl('')
   });
 
-  constructor() {
+  constructor(public translate: TranslateService) {
     const housingLocationId = parseInt(this.route.snapshot.params['id'], 10);
     this.housingLocation = this.housingService.getHousingLocationById(housingLocationId);
+    
+
   }
 
   submitApplication() {
