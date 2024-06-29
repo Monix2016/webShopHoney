@@ -1,24 +1,43 @@
-<article
-    [ngClass]="{'rtl': translate.currentLang  === 'ar', 'ltr': translate.currentLang  === 'en'}">
+<article [ngClass]="{'rtl': translate.currentLang  === 'ar', 'ltr': translate.currentLang  === 'en'}">
     <div class="flex-container">
         <div class="flex-container-col">
+
             <section class="listing-description">
                 <h2 class="listing-heading">{{materialHoney?.title}}</h2>
                 <p class="listing-location">{{materialHoney?.ubication}}</p>
                 <p class="">Precio: {{materialHoney?.price}}</p>
-
                 <ul>
                     <li>Ubicación: {{materialHoney?.ubication}}</li>
-                    <li>duracion: {{materialHoney?.duration}}</li>
+                    <li>duration: {{materialHoney?.duration}}</li>
                 </ul>
             </section>
+
+            <section>
+                <h1>Es una prueba</h1>
+                <p>A la espra de definir y preparar el resto de tipos De momemnto solo tengo lso benificios de la miel
+                    Milaflores
+                </p>
+            </section>
         </div>
+
         <div>
-            <img class="listing-photo" [src]="materialHoney?.photo"
-                alt="Exterior photo of {{materialHoney?.title}}" />
+            <img class="listing-photo" [src]="materialHoney?.photo" alt="Exterior photo of {{materialHoney?.title}}" />
         </div>
-        <section class="listing-apply"></section>
+
+        <section class="listing-apply">
+            <!--<h2 class="section-heading">Apply now to live here</h2>
+        <form [formGroup]="applyForm" (submit)="submitApplication()">
+          <label for="first-name">First Name</label>
+          <input id="first-name" type="text" formControlName="firstName">
+  
+          <label for="last-name">Last Name</label>
+          <input id="last-name" type="text" formControlName="lastName">
+  
+          <label for="email">Email</label>
+          <input id="email" type="email" formControlName="email">
+          <button type="submit" class="primary">Apply now</button>
+        </form> -->
+        </section>
+
     </div>
-
-
 </article>
