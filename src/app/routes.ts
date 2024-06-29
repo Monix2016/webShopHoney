@@ -4,6 +4,7 @@ import { DetailsComponent } from './housing-location/details/details.component';
 import { BlogComponent } from './blog/blog.component';
 import { BenefitComponent } from './benefit/benefit.component';
 import { DetailsCoursComponent } from './products/courses-honey/details-cours/details-cours.component';
+import { DetailsMaterialComponent } from './products/material-honey/details-material/details-material.component';
 
 const routeConfig: Routes = [
   {
@@ -19,7 +20,12 @@ const routeConfig: Routes = [
   {
     path: 'detailsCours/:id',
     component: DetailsCoursComponent,
-    title: 'Home details'
+    title: 'Details Course'
+  },
+  {
+    path: 'detailsMaterial/:id',
+    component: DetailsMaterialComponent,
+    title: 'Details material'
   },
   {
     path: 'blog',

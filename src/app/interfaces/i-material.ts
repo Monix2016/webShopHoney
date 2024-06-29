@@ -1,4 +1,5 @@
 export interface IMaterial {
+    id:number;
     title: string;
     ubication:string
     photo: string;

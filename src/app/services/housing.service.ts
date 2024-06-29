@@ -36,6 +36,10 @@ export class HousingService {
     return this.coursList.find(coursHoney=> coursHoney.id===id);
   }
 
+  getMaterialById(id:number):IMaterial| undefined{
+    return this.materialList.find(materialHoney => materialHoney.id===id)
+  }
+
   submitApplication(firstName: string, lastName: string, email: string) {
     console.log(`Homes application received: firstName: ${firstName}, lastName: ${lastName}, email: ${email}.`);
   }
