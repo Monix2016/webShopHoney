@@ -3,6 +3,7 @@ import { HomeComponent } from './home/home.component';
 import { DetailsComponent } from './housing-location/details/details.component';
 import { BlogComponent } from './blog/blog.component';
 import { BenefitComponent } from './benefit/benefit.component';
+import { DetailsCoursComponent } from './products/courses-honey/details-cours/details-cours.component';
 
 const routeConfig: Routes = [
   {
@@ -13,6 +14,11 @@ const routeConfig: Routes = [
   {
     path: 'details/:id',
     component: DetailsComponent,
+    title: 'Home details'
+  },
+  {
+    path: 'detailsCours/:id',
+    component: DetailsCoursComponent,
     title: 'Home details'
   },
   {

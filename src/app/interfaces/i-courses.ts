@@ -1,4 +1,5 @@
 export interface ICours {
+    id: number;
     title: string;
     ubication:string
     photo: string;
@@ -6,4 +7,5 @@ export interface ICours {
     price:number;
     valoration: string;
     desc:number;
+    state:string;
 }

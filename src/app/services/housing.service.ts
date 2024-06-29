@@ -32,6 +32,10 @@ export class HousingService {
     return this.housingLocationList.find(housingLocation => housingLocation.id === id);
   }
 
+  getCoursById(id:number):ICours |undefined{
+    return this.coursList.find(coursHoney=> coursHoney.id===id);
+  }
+
   submitApplication(firstName: string, lastName: string, email: string) {
     console.log(`Homes application received: firstName: ${firstName}, lastName: ${lastName}, email: ${email}.`);
   }
