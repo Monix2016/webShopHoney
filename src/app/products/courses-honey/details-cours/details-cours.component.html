@@ -18,6 +18,8 @@
                 alt="Exterior photo of {{coursHoney?.title}}" />
         </div>
     </div>
-
+<section class="results">
+    <app-cours-team *ngFor="let staff of team" [staff]="staff"></app-cours-team>
+</section>
 
 </article>

@@ -5,6 +5,8 @@ import { ICours } from '../interfaces/i-courses';
 import { MOCKCOURSES } from '../../assets/mock/mock-courses';
 import { IMaterial } from '../interfaces/i-material';
 import { MOCKMATERIAL } from '../../assets/mock/mock-material';
+import { ITeam } from '../interfaces/i-team';
+import { MOCKTEAM } from '../../assets/mock/mock-team';
 
 @Injectable({
   providedIn: 'root'
@@ -15,6 +17,7 @@ export class HousingService {
   protected housingLocationList: IHoney[] = MOCKHONEYS;
   protected coursList: ICours[]=MOCKCOURSES;
   protected materialList: IMaterial[]=MOCKMATERIAL;
+  protected team:ITeam[]=MOCKTEAM
 
 
   getAllHousingLocations(): IHoney[] {
@@ -26,6 +29,10 @@ export class HousingService {
 
   getAllMaterial():IMaterial[]{
     return this.materialList;
+  }
+
+  getTeam():ITeam[]{
+    return this.team;
   }
 
   getHousingLocationById(id: number): IHoney | undefined {

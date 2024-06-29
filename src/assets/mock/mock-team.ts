@@ -1,7 +1,9 @@
 import { ITeam } from "../../app/interfaces/i-team";
 
+
 export const MOCKTEAM:ITeam[]=[
     {
+        id:0,
         name: " Mounir Hamiche",
         photo: "./assets/img/ai-generated-8497387_1280.webp",
         role: "APICULTOR profesional",
@@ -10,6 +12,7 @@ export const MOCKTEAM:ITeam[]=[
       
     },
     {
+        id:1,
         name: " Mounir Hamiche",
         photo: "./assets/img/ai-generated-8497387_1280.webp",
         role: "Ing. agrícola y consultora apícola",
@@ -18,6 +21,7 @@ export const MOCKTEAM:ITeam[]=[
       
     },
     {
+        id:2,
         name: " Mounir Hamiche",
         photo: "./assets/img/ai-generated-8497387_1280.webp",
         role: "CRIADOR de reinas profesional",
@@ -26,6 +30,7 @@ export const MOCKTEAM:ITeam[]=[
       
     },
     {
+        id:3,
         name: " Mounir Hamiche",
         photo: "./assets/img/ai-generated-8497387_1280.webp",
         role: "Biólogo y consultor apícola",
