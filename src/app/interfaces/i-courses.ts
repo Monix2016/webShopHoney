@@ -1,0 +1,9 @@
+export interface ICours {
+    title: string;
+    ubication:string
+    photo: string;
+    duration: number;
+    price:number;
+    valoration: string;
+    desc:number;
+}

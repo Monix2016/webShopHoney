@@ -3,13 +3,19 @@ import { CommonModule } from '@angular/common';
 import { HousingLocationComponent } from '../housing-location/housing-location.component';
 import { IHoney } from '../interfaces/honey';
 import { HousingService } from '../services/housing.service';
+import { CoursesHoneyComponent } from '../products/courses-honey/courses-honey.component';
+import { ICours } from '../interfaces/i-courses';
+import { IMaterial } from '../interfaces/i-material';
+import { MaterialHoneyComponent } from '../products/material-honey/material-honey.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
   imports: [
     CommonModule,
-    HousingLocationComponent
+    HousingLocationComponent,
+    CoursesHoneyComponent,
+    MaterialHoneyComponent
   ], 
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
@@ -17,10 +23,15 @@ import { HousingService } from '../services/housing.service';
 
 export class HomeComponent {
   housingLocationList: IHoney[] = [];
+  coursesHoneyList:ICours[]=[];
+  materialHoneyList:IMaterial[]=[];
+
   housingService: HousingService = inject(HousingService);
   filteredLocationList: IHoney[] = [];
   constructor() {
     this.housingLocationList = this.housingService.getAllHousingLocations();
+    this.coursesHoneyList= this.housingService.getAllCourses();
+    this.materialHoneyList=this.housingService.getAllMaterial();
     this.filteredLocationList = this.housingLocationList;
   }
   filterResults(text: string) {
