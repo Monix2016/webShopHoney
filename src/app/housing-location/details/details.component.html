@@ -2,8 +2,8 @@
   <div class="flex-container">
     <div class="flex-container-col">
       <section class="listing-description">
-        <h2 class="listing-details-heading">{{housingLocation?.name}}</h2>
-        <p class="listing-details-location">{{housingLocation?.city}}</p>
+        <h2 class="listing-heading">{{housingLocation?.name}}</h2>
+        <p class="listing-location">{{housingLocation?.city}}</p>
         <p class="">Precio: {{housingLocation?.price}}</p>
 
         <ul>
@@ -24,10 +24,10 @@
       </section>
     </div>
     <div>
-      <img class="listing-details-photo" [src]="housingLocation?.photo" alt="Exterior photo of {{housingLocation?.name}}" />
+      <img class="listing-photo" [src]="housingLocation?.photo" alt="Exterior photo of {{housingLocation?.name}}" />
     </div>
 
-   
+
 
     <section class="listing-apply">
       <!--<h2 class="section-heading">Apply now to live here</h2>

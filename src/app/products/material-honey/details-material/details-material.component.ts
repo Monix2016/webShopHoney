@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, inject } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { TranslateModule } from '@ngx-translate/core';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { HousingService } from '../../../services/housing.service';
 import { IMaterial } from '../../../interfaces/i-material';
 
@@ -20,7 +20,7 @@ export class DetailsMaterialComponent {
   housingService = inject(HousingService);
   materialHoney: IMaterial |undefined;
 
-constructor(){
+constructor(public translate: TranslateService){
   const materialId=parseInt(this.route.snapshot.params['id'],10);
   this.materialHoney=this.housingService.getMaterialById(materialId);
 }
