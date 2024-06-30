@@ -6,6 +6,7 @@ import { BenefitComponent } from './benefit/benefit.component';
 import { DetailsCoursComponent } from './products/courses-honey/details-cours/details-cours.component';
 import { DetailsMaterialComponent } from './products/material-honey/details-material/details-material.component';
 import { CoursComponent } from './cours/cours.component';
+import { AboutComponent } from './about/about.component';
 
 const routeConfig: Routes = [
   {
@@ -42,6 +43,11 @@ const routeConfig: Routes = [
     path: 'cours',
     component: CoursComponent,
     title: 'Cours'
+  },
+  {
+    path: 'about',
+    component: AboutComponent,
+    title: 'About'
   }
 ];
 
