@@ -10,6 +10,7 @@ import { CommonModule } from '@angular/common';
 import { PoliciesComponent } from './about/policies/policies.component';
 import { DeliveryComponent } from './about/delivery/delivery.component';
 import { FollowUsComponent } from './about/follow-us/follow-us.component';
+import { ContactUsComponent } from './about/contact-us/contact-us.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return  new  TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -28,7 +29,9 @@ export function HttpLoaderFactory(http: HttpClient) {
     SwitchLangComponent,
     PoliciesComponent,
     DeliveryComponent,
-    FollowUsComponent
+    FollowUsComponent,
+    ContactUsComponent
+
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
