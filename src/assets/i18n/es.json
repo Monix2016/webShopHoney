@@ -2,9 +2,9 @@
     "Idioma": "Titulo",
     "TextIdioma": "Español",
     "Sitetitle": "Abeja",
-    "Honey":"Miel",
-    "Honeys":"Mieles",
-    "HoneyList":"Lista de Mieles",
+    "Honey": "Miel",
+    "Honeys": "Mieles",
+    "HoneyList": "Lista de Mieles",
     "Name": "Name",
     "NameError": "I am sure you must have a name!",
     "Email": "Email",
@@ -38,18 +38,23 @@
     },
     "About": {
         "Title": "Acerca de",
-        "AboutTitle": "las puras mieles"
+        "AboutTitle": "las puras mieles",
+        "whereAre": {
+            "Title": "Donde estamos",
+            "Region": "La región de Rabat-Salé-Zemmour-Zaïr",
+            "Located": " es una de las dieciséis regiones que componen Marruecos. La región de Rabat-Salé-Zemmour-Za'ir se encuentra en el noroeste del Reino, en la meseta central. Gran parte de ella cubre la provincia de Khemisset, así como la meseta costera que se extiende sobre la wilaya de Rabat-Salé. Limita al norte y noreste con el oeste - Chararda - Beni Hassan, al oeste con el Océano Atlántico, al este y sureste con la región de Meknes-Tafilalet, y al sur y suroeste con la región de Chaouia - Ouardigha se extiende sobre un área de 9580 km², es decir, el 1,3% de la superficie total del país, e incluye 3 prefecturas y una región."
+        }
     },
     "Benifices": {
         "BenificesTitle": "Beneficios de la miel",
-        "Title1":"Conoce los principales tipos de miel y sus beneficios",
+        "Title1": "Conoce los principales tipos de miel y sus beneficios",
         "DescriptionHoney": "La miel es un alimento natural dulce y pegajoso producido por las abejas. Las abejas producen miel a partir de las secreciones azucaradas de las plantas (néctar de las flores) mediante procesos regulados y una actividad enzimática especial, y tras la evaporación del agua adquiere su forma final. La miel se almacena en estructuras cerosas llamadas panales. Las abejas producen una variedad de miel que varía en color, sabor y bulto (dependiendo de la fuente de alimento de la abeja)",
-        "TitleType":"Las 7 mieles más famosas y mejores de Marruecos",
+        "TitleType": "Las 7 mieles más famosas y mejores de Marruecos",
         "PType": "Hay muchos tipos de miel en Marruecos debido a la diversidad de la vegetación de una región a otra. En este post, echaremos un vistazo a las mejores mieles de Marruecos. Se venden entre 10 y 18 sabores de miel, siendo las más populares la miel de Dagmus, la miel de Eucalipto, la miel de Algarrobo, la miel de Sidr, la miel de Naranja, la miel de Zaatar, ... Las mejores mieles de Marruecos "
     },
     "BenificesHerbalHoney": {
         "Title": "Miel de hierbas",
-        "PHerbalHoney":"Hay diferentes tipos de miel, que se diferencian según la flor de la que las abejas recogieron el polen, hay miel de flores, miel de trébol, miel de cítricos, y aquí estamos hablando de la miel de hierbas. La miel de hierbas es uno de los tipos de miel más puros por su rico contenido en vitaminas y minerales, así como en antioxidantes, que son la primera fortaleza del cuerpo humano contra muchas enfermedades, la más importante de las cuales es el cáncer. La miel de hierbas, como otros tipos de miel, contiene también un alto porcentaje de azúcar, proteínas, hierro y calcio, y hay muchos tipos de miel de hierbas, como la miel de clavo, de hierbas silvestres y de rosa silvestre, y hay ligeras diferencias de sabor entre un tipo y otro. La miel de hierbas es riquísima", 
+        "PHerbalHoney": "Hay diferentes tipos de miel, que se diferencian según la flor de la que las abejas recogieron el polen, hay miel de flores, miel de trébol, miel de cítricos, y aquí estamos hablando de la miel de hierbas. La miel de hierbas es uno de los tipos de miel más puros por su rico contenido en vitaminas y minerales, así como en antioxidantes, que son la primera fortaleza del cuerpo humano contra muchas enfermedades, la más importante de las cuales es el cáncer. La miel de hierbas, como otros tipos de miel, contiene también un alto porcentaje de azúcar, proteínas, hierro y calcio, y hay muchos tipos de miel de hierbas, como la miel de clavo, de hierbas silvestres y de rosa silvestre, y hay ligeras diferencias de sabor entre un tipo y otro. La miel de hierbas es riquísima",
         "TitleBenifit": " Beneficios de la miel de hierbas ",
         "DescripciónBenifit": "La miel de hierbas tiene muchos beneficios para la salud y el cuerpo humano, quizás más que otros tipos de miel.",
         "Benifit1": "La miel de hierbas es rica en un gran porcentaje de antibióticos naturales, que protegen al organismo de diversas enfermedades.",
@@ -66,13 +71,12 @@
         "PoliciesTitle": "Política de devoluciones",
         "Title": ""
     },
-
     "Cours": {
         "Title": "Coursos",
-        "TitleCours1":"Curso Miel, Polen, Propóleos, Jalea Y Cera",
+        "TitleCours1": "Curso Miel, Polen, Propóleos, Jalea Y Cera",
         "TitleCours": "Cursos de Apicultura impartidos por referentes del sector",
         "TitleTeam": "Aprende de la mano de referentes del sector",
-        "DescriptionCours":"Esta es nuestra selección de cursos de apicultura, impartidos por los mejores profesionales en apicultura como FolanitoXXXXX o menganitoXXXXX entre otros. Ofrecemos una gama de formación para personas que pretenden iniciarse como apicultores así como cursos de especialización para apicultores profesionales.Es un proyecto formativo de nuestra XXXXXXXX."
+        "DescriptionCours": "Esta es nuestra selección de cursos de apicultura, impartidos por los mejores profesionales en apicultura como FolanitoXXXXX o menganitoXXXXX entre otros. Ofrecemos una gama de formación para personas que pretenden iniciarse como apicultores así como cursos de especialización para apicultores profesionales.Es un proyecto formativo de nuestra XXXXXXXX."
     },
     "Material": {
         "Title": "Materiales de tu interes"
@@ -80,8 +84,8 @@
     "Blog": {
         "Title": "Blog"
     },
-    "staff":{
-        "role":"APICULTOR profesional",
-        "description":"Criador de reinas profesional dedicado a la producción de material vivo. Trabaja con diferentes razas. Especialista en Buckfast."
+    "staff": {
+        "role": "APICULTOR profesional",
+        "description": "Criador de reinas profesional dedicado a la producción de material vivo. Trabaja con diferentes razas. Especialista en Buckfast."
     }
 }

@@ -2,9 +2,9 @@
     "Idioma": "Title",
     "TextIdioma": "Ingles",
     "Sitetitle": "Angular Multi Language Site",
-    "Honey":"Honey",
-    "Honeys":"Honeys",
-    "HoneyList":"List of Honeys",
+    "Honey": "Honey",
+    "Honeys": "Honeys",
+    "HoneyList": "List of Honeys",
     "Name": "Name",
     "NameError": "I am sure you must have a name!",
     "Email": "Email address",
@@ -38,7 +38,12 @@
     },
     "About": {
         "Title": "About",
-        "AboutTitle": "the pure honeys of"
+        "AboutTitle": "the pure honeys of",
+        "whereAre": {
+            "Title": "Where we are",
+            "Region": "The Rabat-Salé-Zemmour-Zaïr region",
+            "Located": "  is one of the sixteen regions that make up Morocco. The Rabat-Salé-Zemmour-Za'ir region is located in the northwest of the Kingdom, on the central plateau. Much of it covers the province of Khemisset, as well as the coastal plateau that extends over the wilaya of Rabat-Salé. It is bordered to the north and northeast by the west - Chararda - Beni Hassan, to the west by the Atlantic Ocean, to the east and southeast by the region of Meknes-Tafilalet, and to the south and southwest by the region of Chaouia - Ouardigha extends over an area of 9580 km², i.e. 1.3% of the total area of the country, and includes 3 prefectures and a region."
+        }
     },
     "Benifices": {
         "BenificesTitle": "Honey Benifices",
@@ -61,30 +66,26 @@
         "Benifit7": "A powerful tranquilliser.",
         "Benifit8": "Stimulates blood circulation.",
         "Benifit9": "Helps milk production for new mothers and increases its usefulness for infants."
-
-
-
     },
     "Policies": {
         "PoliciesTitle": "Refund policy ",
         "Title": ""
     },
-
     "Cours": {
         "Title": "Courses",
-        "TitleCours1":"Honey, Pollen, Propolis, Jelly & Wax Course",
+        "TitleCours1": "Honey, Pollen, Propolis, Jelly & Wax Course",
         "TitleCours": "Beekeeping courses given by leading figures in the sector",
         "TitleTeam": "Learn from leading industry experts",
-        "DescriptionCours":"This is our selection of beekeeping courses, given by the best professionals in beekeeping such as FolanitoXXXXXXX or menganitoXXXXXXX among others. We offer a range of training for people who want to start as beekeepers as well as specialised courses for professional beekeepers, a training project of our XXXXXXXXXXXX."
+        "DescriptionCours": "This is our selection of beekeeping courses, given by the best professionals in beekeeping such as FolanitoXXXXXXX or menganitoXXXXXXX among others. We offer a range of training for people who want to start as beekeepers as well as specialised courses for professional beekeepers, a training project of our XXXXXXXXXXXX."
     },
     "Material": {
         "Title": "Materials of your interest"
     },
-    "Blog":{
-        "Title":"Blog"
+    "Blog": {
+        "Title": "Blog"
     },
-    "staff":{
-        "role":"TestAPICULTOR profesional",
-        "description":"TestCriador de reinas profesional dedicado a la producción de material vivo. Trabaja con diferentes razas. Especialista en Buckfast."
+    "staff": {
+        "role": "TestAPICULTOR profesional",
+        "description": "TestCriador de reinas profesional dedicado a la producción de material vivo. Trabaja con diferentes razas. Especialista en Buckfast."
     }
 }

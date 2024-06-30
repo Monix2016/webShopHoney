@@ -38,7 +38,12 @@
     },
     "About": {
         "Title": "نبذة عن",
-        "AboutTitle": "العسل الصافي"
+        "AboutTitle": "العسل الصافي",
+        "whereAre": {
+            "Title": "مكان تواجدنا",
+            "Region": "جهة الرباط - سلا - زمور- زعير ",
+            "Located": " هي إحدى الجهات الستة عشرة التي تؤلف المغرب. تقع جهة الرباط - سلا - زمور- زعير في الشمال الغربي للمملكة، على الهضبة الوسطى.التي يغطي جزءا كبيرا منها إقليم الخميسات، وكذا الهضبة الساحلية التي تمتد على ولاية الرباط - سلا. تحد من الشمالوالشمال الشرقي بجهة الغرب - الشراردة - بني حسن، ومن الغرب بالمحيط الأطلسي، ومن الشرق والجنوب الشرقي بجهة مكناس-تافيلالت، ومن الجنوب والجنوب الغربي بجهة الشاوية - ورديغة تمتد الجهة على مساحة تقدر ب 9580كلم²، أي بنسبة 1,3% من المساحةالإجمالية للبلاد، وتضم 3 عمالات وإقليم واحد. "
+        }
     },
     "Benifices": {
         "BenificesTitle": "فوائد العسل",
@@ -79,8 +84,8 @@
     "Blog": {
         "Title": "مدونة"
     },
-    "staff":{
-        "role":"TestAPICULTOR profesional",
-        "description":"TestCriador de reinas profesional dedicado a la producción de material vivo. Trabaja con diferentes razas. Especialista en Buckfast."
+    "staff": {
+        "role": "TestAPICULTOR profesional",
+        "description": "TestCriador de reinas profesional dedicado a la producción de material vivo. Trabaja con diferentes razas. Especialista en Buckfast."
     }
 }
