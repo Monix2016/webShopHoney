@@ -7,6 +7,8 @@ import { DetailsCoursComponent } from './products/courses-honey/details-cours/de
 import { DetailsMaterialComponent } from './products/material-honey/details-material/details-material.component';
 import { CoursComponent } from './cours/cours.component';
 import { AboutComponent } from './about/about.component';
+import { PoliciesComponent } from './about/policies/policies.component';
+import { DeliveryComponent } from './about/delivery/delivery.component';
 
 const routeConfig: Routes = [
   {
@@ -48,7 +50,18 @@ const routeConfig: Routes = [
     path: 'about',
     component: AboutComponent,
     title: 'About'
+  },
+  {
+    path:'policies',
+    component:PoliciesComponent,
+    title:'Policies'
+  },
+  {
+    path:'delivery',
+    component:DeliveryComponent,
+    title:'Delivery'
   }
+  
 ];
 
 export default routeConfig;
