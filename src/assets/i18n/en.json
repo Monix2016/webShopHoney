@@ -82,5 +82,9 @@
     },
     "Blog":{
         "Title":"Blog"
+    },
+    "staff":{
+        "role":"TestAPICULTOR profesional",
+        "description":"TestCriador de reinas profesional dedicado a la producción de material vivo. Trabaja con diferentes razas. Especialista en Buckfast."
     }
 }
