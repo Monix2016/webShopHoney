@@ -7,12 +7,12 @@
     "HoneyList":"قائمة العسل",
     "Name": "Name",
     "NameError": "I am sure you must have a name!",
-    "Email": "Email address",
-    "PhoneNo": "Phone No",
-    "Password": "Password",
+    "Email": "البريد الإلكتروني",
+    "PhoneNo": "رقم الهاتف",
+    "Password": "كلمة السر",
     "Bio": "Enter bio",
     "TermsConditions": "I agree to terms and conditions.",
-    "Submit": "Submit",
+    "Submit": "إرسال",
     "LigneTxt": "اطلب عبر الإنترنت أو عبر الهاتف",
     "Follow_Us": "اتبعنا على",
     "Contact_Us": "اتصل بنا",
@@ -37,7 +37,7 @@
         "Deliver_Anywhere": "نقوم بالتوصيل إلى أي مكان في المغرب عبر أرامكس أو أمانة في غضون 24 - 72 ساعة."
     },
     "About": {
-        "AboutTitle": "About",
+        "AboutTitle": "نبذة عن",
         "Title": "العسل الصافي"
     },
     "Benifices": {
