@@ -1,4 +1,5 @@
 :host {
+  /* --content-padding: 10px; */
   --content-padding: 10px;
 }
 
@@ -22,9 +23,9 @@ footer {
 }
 
 
-section {
+/* section {
   min-height: 52rem
-}
+} */
 
 .containerHeader {
   width: 100%;
