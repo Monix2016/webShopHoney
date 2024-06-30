@@ -9,6 +9,7 @@ import { SwitchLangComponent } from './functionalities/switch-lang/switch-lang.c
 import { CommonModule } from '@angular/common';
 import { PoliciesComponent } from './about/policies/policies.component';
 import { DeliveryComponent } from './about/delivery/delivery.component';
+import { FollowUsComponent } from './about/follow-us/follow-us.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return  new  TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -26,7 +27,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     CommonModule,
     SwitchLangComponent,
     PoliciesComponent,
-    DeliveryComponent
+    DeliveryComponent,
+    FollowUsComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
