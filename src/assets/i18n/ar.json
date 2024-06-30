@@ -2,6 +2,9 @@
     "Idioma": "3nwan",
     "TextIdioma": "Arabe",
     "Sitetitle": "Angular Multi Language Site",
+    "Honey":"العسل",
+    "Honeys":"العسل",
+    "HoneyList":"قائمة العسل",
     "Name": "Name",
     "NameError": "I am sure you must have a name!",
     "Email": "Email address",
@@ -62,5 +65,16 @@
     "Policies": {
         "PoliciesTitle": "سياسة الاسترداد",
         "Title": ""
+    },
+
+    "Cours": {
+        "Title": "الدورات التدريبية",
+        "TitleCours1":"دورة العسل وحبوب اللقاح والعكبر والهلام والشمع",
+        "TitleCours": "دورات تربية النحل التي تقدمها شخصيات بارزة في هذا القطاع",
+        "TitleTeam": "تعلّم من خبراء رائدين في المجال",
+        "DescriptionCours":"هذه هي مجموعتنا المختارة من دورات تربية النحل، التي يقدمها أفضل المحترفين في تربية النحل مثل فولانيتو XXXXXXXXXX أو منجانيتو XXXXXXXXXX وغيرهم. نحن نقدم مجموعة من الدورات التدريبية للأشخاص الذين يرغبون في البدء كمربي نحل بالإضافة إلى دورات متخصصة لمربي النحل المحترفين، وهو مشروع تدريبي خاص بنا."
+    },
+    "Material": {
+        "Title": "المواد التي تهمك"
     }
 }

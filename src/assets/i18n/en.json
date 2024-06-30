@@ -1,8 +1,10 @@
 {
-    "HELLO": "hello {{value}}",
     "Idioma": "Title",
     "TextIdioma": "Ingles",
     "Sitetitle": "Angular Multi Language Site",
+    "Honey":"Honey",
+    "Honeys":"Honeys",
+    "HoneyList":"List of Honeys",
     "Name": "Name",
     "NameError": "I am sure you must have a name!",
     "Email": "Email address",
@@ -66,5 +68,16 @@
     "Policies": {
         "PoliciesTitle": "Refund policy ",
         "Title": ""
+    },
+
+    "Cours": {
+        "Title": "Courses",
+        "TitleCours1":"Honey, Pollen, Propolis, Jelly & Wax Course",
+        "TitleCours": "Beekeeping courses given by leading figures in the sector",
+        "TitleTeam": "Learn from leading industry experts",
+        "DescriptionCours":"This is our selection of beekeeping courses, given by the best professionals in beekeeping such as FolanitoXXXXXXX or menganitoXXXXXXX among others. We offer a range of training for people who want to start as beekeepers as well as specialised courses for professional beekeepers, a training project of our XXXXXXXXXXXX."
+    },
+    "Material": {
+        "Title": "Materials of your interest"
     }
 }

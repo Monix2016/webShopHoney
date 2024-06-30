@@ -1,20 +1,18 @@
 <section>
-    <div class="flex-container">
-        <h4>Cursos de Apicultura impartidos por referentes del sector</h4>
-        <p>
+    <div class="flex-container"
+        [ngClass]="{'rtl': translate.currentLang  === 'ar', 'ltr': translate.currentLang  === 'en'}">
 
-            Esta es nuestra selección de cursos de apicultura, impartidos por los mejores profesionales en
-            apicultura como FolanitoXXXXX o menganitoXXXXX entre otros.
-            Ofrecemos una gama de formación para personas que pretenden iniciarse
-            como apicultores así como cursos de especialización para apicultores profesionales.
-            Es un proyecto formativo de nuestra XXXXXXXX.
-
-        </p>
+        <div class="flex-container-col">
+            <h4 class="AlignTitleCenter">{{'Cours.TitleCours'|translate}}</h4>
+            <p>{{'Cours.DescriptionCours'|translate}}</p>
+        </div>
     </div>
-    <h4 class="AlignTxtCenter">Aprende de la mano de referentes del sector</h4>
+
     <section class="results">
         <app-courses-honey *ngFor="let coursHoney of coursesHoneyList" [coursHoney]="coursHoney"></app-courses-honey>
     </section>
+
+    <h4 class="AlignTitleCenter">{{'Cours.TitleTeam'|translate}}</h4>
     <section class="results">
         <app-cours-team *ngFor="let staff of team" [staff]="staff"></app-cours-team>
     </section>

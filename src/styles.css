@@ -244,6 +244,10 @@ input[type="text"] {
   text-align: left;
 }
 
+.AlignTitleCenter {
+  text-align: center;
+}
+
 /** #####################################################
     #                 SVG: SOCIAL MEDIAS                #
     #####################################################*/
