@@ -9,7 +9,6 @@ import { FollowUsComponent } from '../follow-us/follow-us.component';
   imports: [
     CommonModule,
     TranslateModule,
-    FollowUsComponent
   ],
   templateUrl: './contact-us.component.html',
   styleUrl: './contact-us.component.css'

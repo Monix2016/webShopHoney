@@ -3,6 +3,7 @@ import { PoliciesComponent } from './policies/policies.component';
 import { DeliveryComponent } from './delivery/delivery.component';
 import { WhereareComponent } from './whereare/whereare.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
+import { FollowUsComponent } from './follow-us/follow-us.component';
 
 @Component({
   selector: 'app-about',
@@ -11,7 +12,8 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
     PoliciesComponent,
     DeliveryComponent,
     WhereareComponent,
-    ContactUsComponent
+    ContactUsComponent,
+    FollowUsComponent
   ],
   templateUrl: './about.component.html',
   styleUrl: './about.component.css'
