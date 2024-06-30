@@ -198,7 +198,7 @@ input[type="text"] {
   color: #000000;
   text-shadow: 0 1px 0 #000000;
 }
-
+/* 
 .social-buttons {
   display: flex;
   justify-content: center;
@@ -228,7 +228,7 @@ input[type="text"] {
 .social-buttons svg {
   transition: 0.3s;
   height: 20px;
-}
+} */
 
 /** #####################################################
   #                 TEXT ALIGNATION                   #
@@ -248,74 +248,7 @@ input[type="text"] {
   text-align: center;
 }
 
-/** #####################################################
-    #                 SVG: SOCIAL MEDIAS                #
-    #####################################################*/
 
-.facebook {
-  background-color: var(--facebook-color);
-}
-
-.facebook:hover svg {
-  fill: var(--facebook-hover-color)
-}
-
-.linkedin {
-  background-color: var(--linkedin-color);
-}
-
-.linkedin:hover svg {
-  fill: var(--linkedin-hover-color)
-}
-
-.instagram {
-  background-color: var(--instagram-color);
-}
-
-
-.instagram:hover svg {
-  fill: var(--instagram-hover-color)
-}
-
-.whatsapp {
-  background-color: #4fec3a;
-}
-
-.whatsapp:hover svg {
-  fill: #4fec3a;
-}
-
-.youtube {
-  background-color: #fd1d1d;
-}
-
-.youtube:hover svg {
-  fill: #fd1d1d;
-}
-
-.twiter {
-  background-color: rgb(69, 187, 255);
-}
-
-.twiter:hover svg {
-  fill: rgb(69, 187, 255);
-}
-
-.gmail {
-  background-color: #fd1d1d;
-}
-
-.gmail:hover svg {
-  fill: #fd1d1d;
-}
-
-.telegram {
-  background-color: rgb(69, 187, 255);
-}
-
-.telegram:hover svg {
-  fill: rgb(69, 187, 255);
-}
 
 /** #####################################################
     #                Media                              #
