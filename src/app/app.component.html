@@ -54,20 +54,16 @@
             <h4 class="title honey-color">{{ 'About_Us' | translate}}</h4>
             <nav class="flex-container-col">
                 <a class="honey-color" routerLinkActive="activebutton" ariaCurrentWhenActive="page" routerLink="/blog">
-                    {{'where_we_are'| translate}}
+                    {{'About.whereAre.Title'| translate}}
 
                 </a>
                 <a class="honey-color" routerLinkActive="activebutton" ariaCurrentWhenActive="page" routerLink="/blog">
                     {{ 'Collection_Procedure' | translate}}
 
                 </a>
-                <a class="honey-color" routerLinkActive="activebutton" ariaCurrentWhenActive="page"
-                    routerLink="/benefit">
-                    {{ 'Benifices.BenificesTitle' | translate}}
-
-                </a>
             </nav>
         </div>
+
         <div>
             <h4 class="title honey-color">{{ 'Info' | translate}}</h4>
             <!-- <h4 class="AlignTxtCenter styleTitle"></h4> -->
@@ -79,14 +75,30 @@
                 </a>
                 <a class="honey-color" routerLinkActive="activebutton" ariaCurrentWhenActive="page"
                     routerLink="/delivery">
-                    {{ 'Delivery.DeliveryTitle' | translate}}
+                    {{ 'About.Delivery.Title' | translate}}
+
+                </a>
+
+            </nav>
+        </div>
+
+        <div>
+            <!-- <h4 class="AlignTxtCenter styleTitle">{{ 'About_Us' | translate}}</h4> -->
+            <h4 class="title honey-color">{{ 'Blog.Title' | translate}}</h4>
+            <nav class="flex-container-col">
+
+                <a class="honey-color" routerLinkActive="activebutton" ariaCurrentWhenActive="page"
+                    routerLink="/benefit">
+                    {{ 'Benifices.Title' | translate}}
 
                 </a>
                 <a class="honey-color" routerLinkActive="activebutton" ariaCurrentWhenActive="page" routerLink="/blog">
-                    blog
+                    {{ 'Blog.Title' | translate}}
                 </a>
             </nav>
         </div>
+
+        
     </footer>
 
 </main>

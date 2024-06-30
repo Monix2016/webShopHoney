@@ -30,12 +30,7 @@
         "HomeTitle": "Home",
         "Parraph": "Le miel de Montagne des ruches Atlassia installées au parc nationale de ifrane, un miel de fleurs variées dumoyen atlas.Récolté entre 1200m et 2600 m d'altitude, sur des forêts majestueuses, des montagnes ou encore des prairies là oùla nature est la plus pure possible."
     },
-    "Delivery": {
-        "DeliveryTitle": "Livraison",
-        "Payment_Method": "Mode de paiement (contre remboursement)",
-        "Cash_Delivery": "Cash on Delivery means that the shopper can shop through our online store and choose the product he/she wants to buy, then place the order and choose the Cash on Delivery method, which means that the payment process is postponed until the customer receives the product he/she ordered online. We will send the product to the agreed upon location (city, neighbourhood, home or other place), after which the payment will be made",
-        "Deliver_Anywhere": "Partout au Maroc, On vous livre via Aramex ou Amana dans 24 - 72 Heures."
-    },
+
     "About": {
         "Title": "A propos de",
         "AboutTitle": "les miels purs du",
@@ -46,10 +41,16 @@
         },
         "Contact_Us":{
             "Title": "Contactez-nous"
+        },
+        "Delivery": {
+            "Title": "Livraison",
+            "Payment_Method": "Mode de paiement (contre remboursement)",
+            "Cash_Delivery": "Cash on Delivery means that the shopper can shop through our online store and choose the product he/she wants to buy, then place the order and choose the Cash on Delivery method, which means that the payment process is postponed until the customer receives the product he/she ordered online. We will send the product to the agreed upon location (city, neighbourhood, home or other place), after which the payment will be made",
+            "Deliver_Anywhere": "Partout au Maroc, On vous livre via Aramex ou Amana dans 24 - 72 Heures."
         }
     },
     "Benifices": {
-        "BenificesTitle": "Benifices",
+        "Title": "Benifices",
         "Title1": "Découvrez les principaux types de miel et leurs bienfaits",
         "DescriptionHoney": "Le miel est un aliment naturel sucré et collant produit par les abeilles. Les abeilles produisent le miel à partir des sécrétions sucrées des plantes (nectar des fleurs) par des processus régulés et une activité enzymatique spéciale, et après évaporation de l'eau, il prend sa forme finale. Le miel est stocké dans des structures cireuses appelées nids d'abeilles. Les abeilles produisent une variété de miel qui varie en couleur, en goût et en volume (en fonction de la source de nourriture de l'abeille)",
         "TitleType": "Les 7 miels les plus célèbres et les meilleurs du Maroc",

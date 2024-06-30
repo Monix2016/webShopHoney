@@ -30,12 +30,7 @@
         "HomeTitle": "Home",
         "Parraph": "Le miel de Montagne des ruches Atlassia installées au parc nationale de ifrane, un miel de fleurs variées dumoyen atlas.Récolté entre 1200m et 2600 m d'altitude, sur des forêts majestueuses, des montagnes ou encore des prairies là oùla nature est la plus pure possible."
     },
-    "Delivery": {
-        "DeliveryTitle": "Delivery",
-        "Payment_Method": "Payment Method (Cash on Delivery)",
-        "Cash_Delivery": "Cash on Delivery means that the shopper can shop through our online store and choose the product he/she wants to buy, then place the order and choose the Cash on Delivery method, which means that the payment process is postponed until the customer receives the product he/she ordered online. We will send the product to the agreed upon location (city, neighbourhood, home or other place), after which the payment will be made",
-        "Deliver_Anywhere": "We deliver anywhere in Morocco via Aramex or Amana within 24 - 72 hours."
-    },
+
     "About": {
         "Title": "About",
         "AboutTitle": "the pure honeys of",
@@ -46,10 +41,16 @@
         },
         "Contact_Us":{
             "Title": "Contact us"
+        },
+        "Delivery": {
+            "DeliveryTitle": "Delivery",
+            "Payment_Method": "Payment Method (Cash on Delivery)",
+            "Cash_Delivery": "Cash on Delivery means that the shopper can shop through our online store and choose the product he/she wants to buy, then place the order and choose the Cash on Delivery method, which means that the payment process is postponed until the customer receives the product he/she ordered online. We will send the product to the agreed upon location (city, neighbourhood, home or other place), after which the payment will be made",
+            "Deliver_Anywhere": "We deliver anywhere in Morocco via Aramex or Amana within 24 - 72 hours."
         }
     },
     "Benifices": {
-        "BenificesTitle": "Honey Benifices",
+        "Title": "Honey Benifices",
         "Title1": "Learn about the most important types of honey and their benefits",
         "DescriptionHoney": "Honey is a sweet and sticky natural food produced by bees. Bees produce honey from sugary plant secretions (flower nectar) through regulated processes and special enzymatic activity, and after evaporation of water it takes its final form. Honey is stored in waxy structures called honeycombs. Bees produce a variety of honey that varies in colour, taste and bulge (depending on the bee's food source).",
         "TitleType": "The 7 most famous and best honeys in Morocco",

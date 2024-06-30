@@ -23,9 +23,13 @@ footer {
 }
 
 
-/* section {
-  min-height: 52rem
-} */
+section {
+ min-height: 46rem
+}
+
+footer section{
+  min-height: 0px
+}
 
 .containerHeader {
   width: 100%;

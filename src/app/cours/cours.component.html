@@ -3,7 +3,7 @@
         [ngClass]="{'rtl': translate.currentLang  === 'ar', 'ltr': translate.currentLang  === 'en'}">
 
         <div class="flex-container-col">
-            <h4 class="AlignTitleCenter">{{'Cours.TitleCours'|translate}}</h4>
+            <h4 class="title">{{'Cours.TitleCours'|translate}}</h4>
             <p>{{'Cours.DescriptionCours'|translate}}</p>
         </div>
     </div>
@@ -12,7 +12,7 @@
         <app-courses-honey *ngFor="let coursHoney of coursesHoneyList" [coursHoney]="coursHoney"></app-courses-honey>
     </section>
 
-    <h4 class="AlignTitleCenter">{{'Cours.TitleTeam'|translate}}</h4>
+    <h4 class="title">{{'Cours.TitleTeam'|translate}}</h4>
     <section class="results">
         <app-cours-team *ngFor="let staff of team" [staff]="staff"></app-cours-team>
     </section>
