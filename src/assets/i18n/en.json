@@ -79,5 +79,8 @@
     },
     "Material": {
         "Title": "Materials of your interest"
+    },
+    "Blog":{
+        "Title":"Blog"
     }
 }

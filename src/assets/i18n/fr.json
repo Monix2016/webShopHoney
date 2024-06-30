@@ -2,9 +2,9 @@
     "Idioma": "Titre",
     "TextIdioma": "Frances",
     "Sitetitle": "abeille",
-    "Honey":"Miel",
-    "Honies":"Mieles",
-    "HoneyList":"Liste des miels",
+    "Honey": "Miel",
+    "Honies": "Mieles",
+    "HoneyList": "Liste des miels",
     "Name": "Name",
     "NameError": "I am sure you must have a name!",
     "Email": "Email address",
@@ -44,15 +44,14 @@
         "BenificesTitle": "Benifices",
         "Title1": "Découvrez les principaux types de miel et leurs bienfaits",
         "DescriptionHoney": "Le miel est un aliment naturel sucré et collant produit par les abeilles. Les abeilles produisent le miel à partir des sécrétions sucrées des plantes (nectar des fleurs) par des processus régulés et une activité enzymatique spéciale, et après évaporation de l'eau, il prend sa forme finale. Le miel est stocké dans des structures cireuses appelées nids d'abeilles. Les abeilles produisent une variété de miel qui varie en couleur, en goût et en volume (en fonction de la source de nourriture de l'abeille)",
-        "TitleType":"Les 7 miels les plus célèbres et les meilleurs du Maroc",
+        "TitleType": "Les 7 miels les plus célèbres et les meilleurs du Maroc",
         "PType": "Il existe de nombreux types de miel au Maroc en raison de la diversité de la végétation d'une région à l'autre. Dans ce billet, nous allons nous intéresser aux meilleurs miels du Maroc. Entre 10 et 18 parfums de miel sont commercialisés, les plus populaires étant le miel de Dagmus, le miel d'Eucalyptus, le miel de Caroube, le miel de Sidr, le miel d'Orange, le miel de Zaatar, ... Les meilleurs miels du Maroc "
     },
     "BenificesHerbalHoney": {
         "Title": "Miel aux herbes ",
-        "PHerbalHoney":"Il existe différents types de miel, qui diffèrent selon la fleur dont les abeilles ont récolté le pollen, il y a le miel floral, le miel de trèfle, le miel d'agrumes, et ici nous parlons du miel d'herbes. Le miel de plantes est l'un des types de miel les plus purs en raison de sa richesse en vitamines et en minéraux, ainsi qu'en antioxydants, qui constituent la première forteresse du corps humain contre de nombreuses maladies, dont la plus importante est le cancer. Le miel de plantes, comme les autres types de miel, contient un pourcentage élevé de sucre, de protéines, de fer et de calcium. Il existe de nombreux types de miel de plantes, dont le miel de clou de girofle, d'herbes sauvages et de rose sauvage, et il y a de légères différences de goût entre chaque type. Le miel de plantes est extrêmement riche",
+        "PHerbalHoney": "Il existe différents types de miel, qui diffèrent selon la fleur dont les abeilles ont récolté le pollen, il y a le miel floral, le miel de trèfle, le miel d'agrumes, et ici nous parlons du miel d'herbes. Le miel de plantes est l'un des types de miel les plus purs en raison de sa richesse en vitamines et en minéraux, ainsi qu'en antioxydants, qui constituent la première forteresse du corps humain contre de nombreuses maladies, dont la plus importante est le cancer. Le miel de plantes, comme les autres types de miel, contient un pourcentage élevé de sucre, de protéines, de fer et de calcium. Il existe de nombreux types de miel de plantes, dont le miel de clou de girofle, d'herbes sauvages et de rose sauvage, et il y a de légères différences de goût entre chaque type. Le miel de plantes est extrêmement riche",
         "TitleBenifit": "Les bienfaits du miel aux herbes",
-        "DescriptionBenifit" :"Le miel aux herbes présente de nombreux avantages pour la santé et le corps humain, peut-être plus que d'autres types de miel.",
-        
+        "DescriptionBenifit": "Le miel aux herbes présente de nombreux avantages pour la santé et le corps humain, peut-être plus que d'autres types de miel.",
         "Benifit1": "Le miel végétal est riche en antibiotiques naturels, qui protègent l'organisme de diverses maladies.",
         "Benifit2": "Le miel végétal aide à soulager les maux de dents ainsi que diverses infections des gencives.",
         "Benifit3": "Le miel végétal est riche en antibiotiques naturels qui protègent l'organisme de diverses maladies.",
@@ -67,15 +66,17 @@
         "PoliciesTitle": "Politique de remboursement",
         "Title": ""
     },
-
     "Cours": {
         "Title": "Cours",
-        "TitleCours1":"Miel, pollen, propolis, gelée et cire Cours",
+        "TitleCours1": "Miel, pollen, propolis, gelée et cire Cours",
         "TitleCours": "Cours d'apiculture dispensés par des personnalités du secteur",
         "TitleTeam": "Apprendre auprès d'experts du secteur",
-        "DescriptionCours":"Voici notre sélection de cours d'apiculture, dispensés par les meilleurs professionnels de l'apiculture tels que FolanitoXXXXX ou menganitoXXXXX entre autres. Nous proposons une gamme de formations pour les personnes qui souhaitent se lancer dans l'apiculture ainsi que des cours spécialisés pour les apiculteurs professionnels, un projet de formation de notre XXXXXXXXXXXX."
+        "DescriptionCours": "Voici notre sélection de cours d'apiculture, dispensés par les meilleurs professionnels de l'apiculture tels que FolanitoXXXXX ou menganitoXXXXX entre autres. Nous proposons une gamme de formations pour les personnes qui souhaitent se lancer dans l'apiculture ainsi que des cours spécialisés pour les apiculteurs professionnels, un projet de formation de notre XXXXXXXXXXXX."
     },
     "Material": {
         "Title": "Matériel d'intérêt"
+    },
+    "Blog": {
+        "Title": "Blog"
     }
 }
