@@ -41,17 +41,17 @@
     <footer class="flex-container containerHeader"
         [ngClass]="{'rtl': translate.currentLang  === 'ar', 'ltr': translate.currentLang  === 'en'}">
         <!-- [ngClass]="{'rtl': translate.currentLang  === 'ar', 'ltr': translate.currentLang  === 'en'}"> -->
-        <section>
+        <section class="honey-color">
             <app-follow-us></app-follow-us>
         </section>
 
-        <section>
+        <section class="honey-color" >
             <app-contact-us></app-contact-us>
         </section>
 
         <div>
             <!-- <h4 class="AlignTxtCenter styleTitle">{{ 'About_Us' | translate}}</h4> -->
-            <h4 class="title">{{ 'About_Us' | translate}}</h4>
+            <h4 class="title honey-color">{{ 'About_Us' | translate}}</h4>
             <nav class="flex-container-col">
                 <a class="honey-color" routerLinkActive="activebutton" ariaCurrentWhenActive="page" routerLink="/blog">
                     {{'where_we_are'| translate}}
@@ -69,7 +69,7 @@
             </nav>
         </div>
         <div>
-            <h4 class="title">{{ 'Info' | translate}}</h4>
+            <h4 class="title honey-color">{{ 'Info' | translate}}</h4>
             <!-- <h4 class="AlignTxtCenter styleTitle"></h4> -->
             <nav class="flex-container-col">
                 <a class="honey-color" routerLinkActive="activebutton" ariaCurrentWhenActive="page"
