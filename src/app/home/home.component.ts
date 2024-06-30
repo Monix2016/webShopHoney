@@ -7,6 +7,7 @@ import { CoursesHoneyComponent } from '../products/courses-honey/courses-honey.c
 import { ICours } from '../interfaces/i-courses';
 import { IMaterial } from '../interfaces/i-material';
 import { MaterialHoneyComponent } from '../products/material-honey/material-honey.component';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-home',
@@ -15,7 +16,8 @@ import { MaterialHoneyComponent } from '../products/material-honey/material-hone
     CommonModule,
     HousingLocationComponent,
     CoursesHoneyComponent,
-    MaterialHoneyComponent
+    MaterialHoneyComponent,
+    TranslateModule
   ], 
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
@@ -28,7 +30,7 @@ export class HomeComponent {
 
   housingService: HousingService = inject(HousingService);
   filteredLocationList: IHoney[] = [];
-  constructor() {
+  constructor(public translate: TranslateService) {
     this.housingLocationList = this.housingService.getAllHousingLocations();
     this.coursesHoneyList= this.housingService.getAllCourses();
     this.materialHoneyList=this.housingService.getAllMaterial();
