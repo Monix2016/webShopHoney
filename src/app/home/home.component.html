@@ -1,9 +1,30 @@
-<section>
+
+<section [ngClass]="{'rtl': translate.currentLang  === 'ar', 'ltr': translate.currentLang  === 'en'}">
   <form>
     <input type="text" placeholder="Filter by city" #filter>
     <button class="primary" type="button" (click)="filterResults(filter.value)">Search</button>
   </form>
 </section>
+<section>
+  <div class="container">
+    <h3> {{ 'Titles.Heart_Of_Nature' | translate}}</h3>
+    <div class="flex-container">
+
+      <div class="flex-item flex-container-col">
+        
+        <p>{{ 'Home.Parraph' | translate}}</p>
+      </div>
+      <div class="flex-item">
+        <iframe class="flex-item1" src="https://www.youtube.com/embed/MiHycjTTWcU">
+        </iframe>
+      </div>
+
+    </div>
+  </div>
+
+</section>
+
+
 <h1>{{'Honeys'|translate}}</h1>
 <section class="results">
   <app-housing-location *ngFor="let housingLocation of filteredLocationList" [housingLocation]="housingLocation">
@@ -15,5 +36,6 @@
 </section>
 <h1>{{'Material.Title'|translate}}</h1>
 <section class="results">
-  <app-material-honey *ngFor="let materialHoney of materialHoneyList" [materialHoney]="materialHoney"></app-material-honey>
+  <app-material-honey *ngFor="let materialHoney of materialHoneyList"
+    [materialHoney]="materialHoney"></app-material-honey>
 </section>
