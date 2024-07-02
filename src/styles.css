@@ -12,7 +12,7 @@ body {
     #                 PARAM COLORS                           #
     #####################################################*/
 :root {
-  --primary-color: #605DC8;
+  --primary-color: #444f40;
   --secondary-color: #8B89E6;
   --accent-color: #e8e7fa;
   --shadow-color: #E8E8E8;
@@ -52,7 +52,7 @@ button.primary {
 }
 
 .listing {
-  background: var(--accent-color);
+  background: var(--honey-color);
   border-radius: 30px;
   padding-bottom: 30px;
 }
@@ -67,7 +67,18 @@ button.primary {
   width: 100%;
   object-fit: cover;
   border-radius: 30px 30px 0 0;
+  transform: translateX(400%);
+  transition: all 0.4s ease ;
 }
+
+.listing-photo:nth-of-type(even){
+  transform: translateX(400%);
+}
+
+.listing-photo.show{
+  transform: translateX(0);
+}
+
 
 .listing-location {
   padding: 10px 20px 20px 20px;
