@@ -24,10 +24,10 @@ footer {
 
 
 section {
- min-height: 46rem
+  min-height: 46rem
 }
 
-footer section{
+footer section {
   min-height: 0px
 }
 
@@ -66,6 +66,12 @@ footer section{
   background-size: 40px 60px;
 }
 
+.menus:has(.menu__link:hover) .menu__link:not(:hover) {
+  scale: 0.8;
+  opacity: 0.8;
+  filter: blur(4px);
+}
+
 .menu__link {
   color: var(--honey-color);
   line-height: 2;
@@ -75,9 +81,17 @@ footer section{
   transition: 0.5s;
   box-shadow: 0 0 10px #363636, inset 0 0 10px var(--honey-color);
   padding: 10px 20px;
+  transition:
+    scale 0.25s ease-in,
+    opacity 0.25s ease-in filter 0.25s ease-in;
+
+  &:hover {
+    scale: 1.2;
+  }
+
 }
 
-.menu__link::before {
+/* .menu__link::before {
   content: '';
   width: 0;
   height: 2px;
@@ -93,7 +107,7 @@ footer section{
 .menu__link:hover::before {
   width: 100%;
   left: 0;
-}
+} */
 
 
 /** #####################################################
