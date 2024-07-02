@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { RouterLink, RouterLinkActive, RouterModule, RouterOutlet } from '@angular/router';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-menuburger',
@@ -11,6 +12,7 @@ import { RouterLink, RouterLinkActive, RouterModule, RouterOutlet } from '@angul
     RouterLink,
     RouterLinkActive,
     RouterOutlet,
+    TranslateModule
    
     
   ],
@@ -22,7 +24,7 @@ export class MenuburgerComponent {
 
 
   constructor(
-    // public translate: TranslateService
+     public translate: TranslateService
   ) { }
   toggleMenu() {
     this.menuOpen = !this.menuOpen;

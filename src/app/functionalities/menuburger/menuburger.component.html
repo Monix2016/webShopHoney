@@ -4,10 +4,13 @@
   </div>
   <div class="menu-items" [ngClass]="{'show': menuOpen}">
     <a class="" routerLinkActive="activebutton" ariaCurrentWhenActive="page" routerLink="/">
-      Home
+      {{'Home.Title'|translate}}
     </a>
     <a class="" routerLinkActive="activebutton" ariaCurrentWhenActive="page" routerLink="/blog">
-      Blog
+      {{'Blog.Title'|translate}}
+    </a>
+    <a class="" routerLinkActive="activebutton" ariaCurrentWhenActive="page" routerLink="/blog">
+      {{'About.Title'|translate}}
     </a>
   </div>
 </div>
