@@ -17,7 +17,7 @@ export class ScrollAnimationService {
   }
 
   private checkPosition() {
-    const photos = document.querySelectorAll('.listing-photo');
+    const photos = document.querySelectorAll('.animated-img');
     const windowHeight = window.innerHeight;
 
     photos.forEach(photo => {

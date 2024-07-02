@@ -8,6 +8,7 @@ import { ICours } from '../interfaces/i-courses';
 import { IMaterial } from '../interfaces/i-material';
 import { MaterialHoneyComponent } from '../products/material-honey/material-honey.component';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { ScrollAnimationService } from '../services/scroll-animation.service';
 
 @Component({
   selector: 'app-home',
@@ -30,32 +31,37 @@ export class HomeComponent {
 
   housingService: HousingService = inject(HousingService);
   filteredLocationList: IHoney[] = [];
-  constructor(public translate: TranslateService) {
+  constructor(
+    public translate: TranslateService,
+    private scrollAnimationService: ScrollAnimationService
+  ) {
     this.housingLocationList = this.housingService.getAllHousingLocations();
     this.coursesHoneyList= this.housingService.getAllCourses();
     this.materialHoneyList=this.housingService.getAllMaterial();
     this.filteredLocationList = this.housingLocationList;
+    this.scrollAnimationService.initializeScrollAnimation();
+    
   }
 
-  @HostListener('window:scroll', ['$event'])
-  onWindowScroll() {
-    this.checkPosition();
-  }
+  // @HostListener('window:scroll', ['$event'])
+  // onWindowScroll() {
+  //   this.checkPosition();
+  // }
 
-  checkPosition() {
-    const photos = document.querySelectorAll('.listing-photo');
-    const windowHeight = window.innerHeight;
+  // checkPosition() {
+  //   const photos = document.querySelectorAll('.listing-photo');
+  //   const windowHeight = window.innerHeight;
 
-    photos.forEach(photo => {
-      const position = photo.getBoundingClientRect().top;
+  //   photos.forEach(photo => {
+  //     const position = photo.getBoundingClientRect().top;
 
-      if (position < windowHeight - 100) { // Ajusta el umbral según sea necesario
-        photo.classList.add('show');
-      } else {
-        photo.classList.remove('show');
-      }
-    });
-  }
+  //     if (position < windowHeight - 100) { // Ajusta el umbral según sea necesario
+  //       photo.classList.add('show');
+  //     } else {
+  //       photo.classList.remove('show');
+  //     }
+  //   });
+  // }
 
 
   filterResults(text: string) {
