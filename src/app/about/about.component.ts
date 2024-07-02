@@ -5,22 +5,27 @@ import { WhereareComponent } from './whereare/whereare.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { FollowUsComponent } from './follow-us/follow-us.component';
 import { RouterLink } from '@angular/router';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-about',
   standalone: true,
   imports: [
     RouterLink,
-
+    TranslateModule,
     PoliciesComponent,
     DeliveryComponent,
     WhereareComponent,
     ContactUsComponent,
-    FollowUsComponent
+    FollowUsComponent,
+    CommonModule
   ],
   templateUrl: './about.component.html',
   styleUrl: './about.component.css'
 })
 export class AboutComponent {
-
+  constructor(
+    public translate: TranslateService
+  ) { }
 }
