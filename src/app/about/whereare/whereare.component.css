@@ -8,7 +8,7 @@
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: stretch;
-    direction: rtl; /* Soporte para idiomas RTL */
+    
   }
   
   .flex-item {

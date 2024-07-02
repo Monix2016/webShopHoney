@@ -254,14 +254,23 @@ input[type="text"] {
   .flex-container {
     flex-direction: column-reverse;
   }
+  .flex-container-row{
+    flex-direction:column ;
+  }
 }
 
 @media (max-width: 499px) {
   .results {
     grid-template-columns: 1fr;
   }
+  .flex-container-row{
+    flex-direction:column ;
+  }
 
   .flex-container {
     flex-direction: column-reverse;
+  }
+  .flex-container-row{
+    flex-direction:column ;
   }
 }
