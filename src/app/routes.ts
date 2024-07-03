@@ -9,6 +9,7 @@ import { CoursComponent } from './cours/cours.component';
 import { AboutComponent } from './about/about.component';
 import { PoliciesComponent } from './about/policies/policies.component';
 import { DeliveryComponent } from './about/delivery/delivery.component';
+import { MaterialHoneyComponent } from './products/material-honey/material-honey.component';
 
 const routeConfig: Routes = [
   {
@@ -45,6 +46,11 @@ const routeConfig: Routes = [
     path: 'cours',
     component: CoursComponent,
     title: 'Cours'
+  },
+  {
+    path: 'material',
+    component: MaterialHoneyComponent,
+    title: 'Material'
   },
   {
     path: 'about',

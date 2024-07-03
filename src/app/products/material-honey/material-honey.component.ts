@@ -2,6 +2,8 @@ import { Component, Input } from '@angular/core';
 import { IMaterial } from '../../interfaces/i-material';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { TranslateService } from '@ngx-translate/core';
+import { ScrollAnimationService } from '../../services/scroll-animation.service';
 
 @Component({
   selector: 'app-material-honey',
@@ -15,5 +17,12 @@ import { RouterModule } from '@angular/router';
 })
 export class MaterialHoneyComponent {
   @Input() materialHoney!: IMaterial;
-
+  constructor(
+    public translate: TranslateService,
+    private scrollAnimationService: ScrollAnimationService
+  ) {
+    
+    this.scrollAnimationService.initializeScrollAnimation();
+    
+  }
 }
