@@ -7,6 +7,7 @@ import { FollowUsComponent } from './follow-us/follow-us.component';
 import { RouterLink } from '@angular/router';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { CommonModule } from '@angular/common';
+import { ActivitiesComponent } from './activities/activities.component';
 
 @Component({
   selector: 'app-about',
@@ -14,12 +15,15 @@ import { CommonModule } from '@angular/common';
   imports: [
     RouterLink,
     TranslateModule,
+    CommonModule,
+
     PoliciesComponent,
     DeliveryComponent,
     WhereareComponent,
     ContactUsComponent,
     FollowUsComponent,
-    CommonModule
+    ActivitiesComponent
+    
   ],
   templateUrl: './about.component.html',
   styleUrl: './about.component.css'
