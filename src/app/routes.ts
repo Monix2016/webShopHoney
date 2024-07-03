@@ -5,11 +5,12 @@ import { BlogComponent } from './blog/blog.component';
 import { BenefitComponent } from './benefit/benefit.component';
 import { DetailsCoursComponent } from './products/courses-honey/details-cours/details-cours.component';
 import { DetailsMaterialComponent } from './products/material-honey/details-material/details-material.component';
-import { CoursComponent } from './cours/cours.component';
+import { CoursComponent } from './products/cours/cours.component';
 import { AboutComponent } from './about/about.component';
 import { PoliciesComponent } from './about/policies/policies.component';
 import { DeliveryComponent } from './about/delivery/delivery.component';
 import { MaterialHoneyComponent } from './products/material-honey/material-honey.component';
+import { MaterialComponent } from './products/material/material.component';
 
 const routeConfig: Routes = [
   {
@@ -49,7 +50,7 @@ const routeConfig: Routes = [
   },
   {
     path: 'material',
-    component: MaterialHoneyComponent,
+    component: MaterialComponent,
     title: 'Material'
   },
   {

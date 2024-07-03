@@ -1,11 +1,11 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input, inject, input } from '@angular/core';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
-import { CoursesHoneyComponent } from '../products/courses-honey/courses-honey.component';
-import { ICours } from '../interfaces/i-courses';
-import { HousingService } from '../services/housing.service';
-import { ITeam } from '../interfaces/i-team';
-import { CoursTeamComponent } from '../products/courses-honey/cours-team/cours-team.component';
+import { CoursesHoneyComponent } from '../courses-honey/courses-honey.component';
+import { ICours } from '../../interfaces/i-courses';
+import { HousingService } from '../../services/housing.service';
+import { ITeam } from '../../interfaces/i-team';
+import { CoursTeamComponent } from '../courses-honey/cours-team/cours-team.component';
 
 @Component({
   selector: 'app-cours',
