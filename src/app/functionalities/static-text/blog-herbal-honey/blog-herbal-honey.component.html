@@ -1,14 +1,17 @@
-<section [ngClass]="{'rtl': translate.currentLang  === 'ar', 'ltr': translate.currentLang  === 'en'}">
-    <div class="flex-container">
-        <div>
-            <h3>{{'BenificesHerbalHoney.Title'| translate}}</h3>
-            <p>{{'BenificesHerbalHoney.PHerbalHoney'| translate}}</p>
-            <h5>{{'BenificesHerbalHoney.TitleBenifit'| translate}}</h5>
-        </div>
-    </div>
-</section>
 <section>
-    <app-benefit-herbal-honey></app-benefit-herbal-honey>
+    <section [ngClass]="{'rtl': translate.currentLang  === 'ar', 'ltr': translate.currentLang  === 'en'}">
+        <div class="flex-container">
+            <div>
+                <h3>{{'BenificesHerbalHoney.Title'| translate}}</h3>
+                <p>{{'BenificesHerbalHoney.PHerbalHoney'| translate}}</p>
+                <h5>{{'BenificesHerbalHoney.TitleBenifit'| translate}}</h5>
+            </div>
+        </div>
+    </section>
+    <section>
+        <app-benefit-herbal-honey></app-benefit-herbal-honey>
+    </section>
+    
 </section>
 
 

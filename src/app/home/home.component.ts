@@ -9,6 +9,7 @@ import { IMaterial } from '../interfaces/i-material';
 import { MaterialHoneyComponent } from '../products/material-honey/material-honey.component';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { ScrollAnimationService } from '../services/scroll-animation.service';
+import { ActivitiesComponent } from '../about/activities/activities.component';
 
 @Component({
   selector: 'app-home',
@@ -18,7 +19,8 @@ import { ScrollAnimationService } from '../services/scroll-animation.service';
     HousingLocationComponent,
     CoursesHoneyComponent,
     MaterialHoneyComponent,
-    TranslateModule
+    TranslateModule,
+    ActivitiesComponent
   ], 
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',

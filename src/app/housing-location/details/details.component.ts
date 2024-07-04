@@ -6,6 +6,7 @@ import { IHoney } from '../../interfaces/honey';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { BenefitHerbalHoneyComponent } from '../../functionalities/static-text/blog-herbal-honey/benefit-herbal-honey/benefit-herbal-honey.component';
+import { BlogHerbalHoneyComponent } from '../../functionalities/static-text/blog-herbal-honey/blog-herbal-honey.component';
 
 @Component({
   selector: 'app-details',
@@ -14,7 +15,7 @@ import { BenefitHerbalHoneyComponent } from '../../functionalities/static-text/b
     CommonModule,
     ReactiveFormsModule,
     TranslateModule,
-    BenefitHerbalHoneyComponent
+    BlogHerbalHoneyComponent
 
   ],
   templateUrl: './details.component.html',
