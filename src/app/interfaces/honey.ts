@@ -1,5 +1,6 @@
 export interface IHoney {
   id: number;
+  type:string;
   name: string;
   city: string;
   state: string;

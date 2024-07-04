@@ -33,16 +33,7 @@
             <p>Categoria: {{housingLocation?.category}}</p>
 
           </section>
-          <section *ngIf="housingLocation?.category === 'HH'">
-            <app-blog-herbal-honey></app-blog-herbal-honey>
-          </section>
 
-          <section *ngIf="housingLocation?.category === 'HC'">
-            <h1>Es una prueba</h1>
-            <p>A la espra de definir y preparar el resto de tipos De momemnto solo tengo lso benificios de la miel
-              Milaflores
-            </p>
-          </section>
         </div>
 
       </div>
@@ -50,10 +41,31 @@
         <img class="slit-in-vertical" [src]="housingLocation?.photo"
           alt="Exterior photo of {{housingLocation?.name}}" />
       </div>
+      <section class="listing-description">
+        <p>Stock limitée <q>En raison de notre engagement envers la qualité, notre miel est disponible en quantités limitées, garantissant une rareté précieuse et une fraîcheur absolue.</q></p>
+        <p>Produit Organique <q>Notre miel est cultivé avec respect pour l'environnement et votre bien-être.</q></p>
+        <p>Extraction à froid <q>Notre miel est extrait à froid pour préserver ses nutriments et ses saveurs délicates, offrant une expérience gustative authentique et riche.</q></p>
+      </section>
 
     </div>
-    <section>
-      <p>Produit Similar</p>
+    <section *ngIf="housingLocation?.category === 'HH'">
+      <app-blog-herbal-honey></app-blog-herbal-honey>
+    </section>
+
+    <section *ngIf="housingLocation?.category === 'HC'">
+      <h1>Es una prueba</h1>
+      <p>A la espra de definir y preparar el resto de tipos De momemnto solo tengo lso benificios de la miel
+        Milaflores
+      </p>
+    </section>
+    <section >
+      <h2 class="title">Produit Similar</h2>
+
+      <section class="results">
+      <app-housing-location *ngFor="let housingLocation of housingLocationList" [housingLocation]="housingLocation"></app-housing-location>
+      
+    </section>
+    
     </section>
   </div>
 

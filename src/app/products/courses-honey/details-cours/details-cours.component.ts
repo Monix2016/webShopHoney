@@ -6,6 +6,7 @@ import { ActivatedRoute } from '@angular/router';
 import { ICours } from '../../../interfaces/i-courses';
 import { CoursTeamComponent } from '../cours-team/cours-team.component';
 import { ITeam } from '../../../interfaces/i-team';
+import { CoursesHoneyComponent } from '../courses-honey.component';
 
 @Component({
   selector: 'app-details-cours',
@@ -13,7 +14,8 @@ import { ITeam } from '../../../interfaces/i-team';
   imports: [
     TranslateModule,
     CommonModule,
-    CoursTeamComponent
+    CoursTeamComponent,
+    CoursesHoneyComponent
   ],
   templateUrl: './details-cours.component.html',
   styleUrl: './details-cours.component.css'
@@ -23,12 +25,14 @@ export class DetailsCoursComponent {
   housingService = inject(HousingService);
   coursHoney:ICours | undefined;
   team: ITeam[] = [];
+  coursesHoneyList:ICours[]=[];
 
   
   constructor(public translate: TranslateService) {
     const coursId = parseInt(this.route.snapshot.params['id'], 10);
     this.coursHoney = this.housingService.getCoursById(coursId);
     this.team = this.housingService.getTeam();
+    this.coursesHoneyList= this.housingService.getAllCourses();
     
 
   }

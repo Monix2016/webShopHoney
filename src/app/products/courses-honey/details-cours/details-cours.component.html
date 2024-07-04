@@ -1,5 +1,4 @@
-<article
-    [ngClass]="{'rtl': translate.currentLang  === 'ar', 'ltr': translate.currentLang  === 'en'}">
+<article [ngClass]="{'rtl': translate.currentLang  === 'ar', 'ltr': translate.currentLang  === 'en'}">
     <div class="flex-container">
         <div class="flex-container-col">
             <section class="listing-description">
@@ -14,12 +13,18 @@
             </section>
         </div>
         <div>
-            <img class="listing-photo" [src]="coursHoney?.photo"
-                alt="Exterior photo of {{coursHoney?.title}}" />
+            <img class="listing-photo" [src]="coursHoney?.photo" alt="Exterior photo of {{coursHoney?.title}}" />
         </div>
     </div>
-<section class="results">
-    <app-cours-team *ngFor="let staff of team" [staff]="staff"></app-cours-team>
-</section>
+    <h2 class="title"> Nuestro equipo</h2>
+    <section class="results">
+        
+        <app-cours-team *ngFor="let staff of team" [staff]="staff"></app-cours-team>
+    </section>
+    <h2 class="title"> Otros cursos</h2>
+    <section class="results">
+      
+        <app-courses-honey *ngFor="let coursHoney of coursesHoneyList" [coursHoney]="coursHoney"></app-courses-honey>
+    </section>
 
 </article>

@@ -1,5 +1,6 @@
 export interface ICours {
     id: number;
+    type:string;
     title: string;
     ubication:string
     photo: string;

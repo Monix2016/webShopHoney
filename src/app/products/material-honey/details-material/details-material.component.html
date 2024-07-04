@@ -38,6 +38,13 @@
           <button type="submit" class="primary">Apply now</button>
         </form> -->
         </section>
+        
+
+       
 
     </div>
+    <h2 class="title">Productos similares</h2>
+    <section class="results">
+        <app-material-honey *ngFor="let materialHoney of materialList" [materialHoney]="materialHoney"></app-material-honey>
+    </section>
 </article>

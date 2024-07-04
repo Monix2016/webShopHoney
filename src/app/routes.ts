@@ -1,6 +1,6 @@
 import { Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
-import { DetailsComponent } from './housing-location/details/details.component';
+import { DetailsComponent } from './products/details/details.component';
 import { BlogComponent } from './blog/blog.component';
 import { BenefitComponent } from './benefit/benefit.component';
 import { DetailsCoursComponent } from './products/courses-honey/details-cours/details-cours.component';
