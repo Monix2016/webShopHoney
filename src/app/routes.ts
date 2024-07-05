@@ -11,6 +11,7 @@ import { PoliciesComponent } from './about/policies/policies.component';
 import { DeliveryComponent } from './about/delivery/delivery.component';
 import { MaterialHoneyComponent } from './products/material-honey/material-honey.component';
 import { MaterialComponent } from './products/material/material.component';
+import { WhereareComponent } from './about/whereare/whereare.component';
 
 const routeConfig: Routes = [
   {
@@ -67,6 +68,11 @@ const routeConfig: Routes = [
     path:'delivery',
     component:DeliveryComponent,
     title:'Delivery'
+  },
+  {
+    path:'whereare',
+    component:WhereareComponent,
+    title:'Whereare'
   }
   
 ];
