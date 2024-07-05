@@ -1,3 +1,8 @@
+
+.container {
+  width: 100%;
+  padding: 10px;
+}
 /* Estilos generales de la tarjeta de producto */
 .product-card {
     width: 262px;
