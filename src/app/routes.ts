@@ -12,6 +12,7 @@ import { DeliveryComponent } from './about/delivery/delivery.component';
 import { MaterialHoneyComponent } from './products/material-honey/material-honey.component';
 import { MaterialComponent } from './products/material/material.component';
 import { WhereareComponent } from './about/whereare/whereare.component';
+import { InzerkiComponent } from './functionalities/static-text/inzerki/inzerki.component';
 
 const routeConfig: Routes = [
   {
@@ -73,6 +74,11 @@ const routeConfig: Routes = [
     path:'whereare',
     component:WhereareComponent,
     title:'Whereare'
+  },
+  {
+    path:'inzerki',
+    component:InzerkiComponent,
+    title:'Inzerki'
   }
   
 ];
