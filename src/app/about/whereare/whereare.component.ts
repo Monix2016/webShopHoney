@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { ContactUsComponent } from '../contact-us/contact-us.component';
 import { FollowUsComponent } from '../follow-us/follow-us.component';
+import { ActivitiesComponent } from '../activities/activities.component';
 
 @Component({
   selector: 'app-whereare',
@@ -11,7 +12,8 @@ import { FollowUsComponent } from '../follow-us/follow-us.component';
     CommonModule,
     TranslateModule,
     ContactUsComponent,
-    FollowUsComponent
+    FollowUsComponent,
+    ActivitiesComponent
   ],
   templateUrl: './whereare.component.html',
   styleUrl: './whereare.component.css'
