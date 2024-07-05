@@ -6,6 +6,7 @@ import { ICours } from '../../interfaces/i-courses';
 import { HousingService } from '../../services/housing.service';
 import { ITeam } from '../../interfaces/i-team';
 import { CoursTeamComponent } from '../courses-honey/cours-team/cours-team.component';
+import { ScrollAnimationService } from '../../services/scroll-animation.service';
 
 @Component({
   selector: 'app-cours',
@@ -24,8 +25,12 @@ export class CoursComponent {
   team: ITeam[] = [];
   housingService: HousingService = inject(HousingService);
 
-  constructor(public translate: TranslateService){
+  constructor(
+    public translate: TranslateService,
+    private scrollAnimationService: ScrollAnimationService
+  ){
     this.coursesHoneyList= this.housingService.getAllCourses();
     this.team = this.housingService.getTeam();
+    this.scrollAnimationService.initializeScrollAnimation();
   }
 }
