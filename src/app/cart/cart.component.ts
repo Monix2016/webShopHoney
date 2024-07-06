@@ -31,14 +31,30 @@ import { ICartitem } from '../interfaces/i-cartitem';
 export class CartComponent implements OnInit{
   currentStep = 1;
   cartItems : ICartitem[]=[]; // Tipar el array con la interfaz
+  errorMessage: string = '';
+
+
+
   constructor(private cartService: CartService) {}
 
   ngOnInit(): void {
-    this.cartService.getCartItems().subscribe(items => this.cartItems = items);
+    this.cartService.getCartItems().subscribe(
+      items => this.cartItems = items,
+      error => this.errorMessage = 'Error loading cart items'
+    );
   }
 
   nextStep(): void {
-    this.currentStep++;
+    if (this.isStepValid()) {
+      this.currentStep++;
+    } else {
+      this.errorMessage = 'Please complete the current step before proceeding';
+    }
+  }
+
+  isStepValid(): boolean {
+    // Add your step validation logic here
+    return true;
   }
 
   prevStep(): void {
