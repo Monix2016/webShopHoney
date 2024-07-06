@@ -1,1 +1,4 @@
-<p>add-cart works!</p>
+<div *ngFor="let product of products" class="product">
+
+    <button (click)="addToCart(product)">Añadir al Carrito</button>
+</div>
