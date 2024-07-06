@@ -61,4 +61,12 @@ export class CartService {
   private saveCartItems(items: ICartitem[]) {
     localStorage.setItem('cartItems', JSON.stringify(items));
   }
+
+  clearCart(): void {
+    this.cartItems.next([]);
+  }
+
+  resetCartCount(): void {
+    this.cartItemCount.next(0);
+  }
 }
