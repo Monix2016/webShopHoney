@@ -13,6 +13,7 @@ import { MaterialHoneyComponent } from './products/material-honey/material-honey
 import { MaterialComponent } from './products/material/material.component';
 import { WhereareComponent } from './about/whereare/whereare.component';
 import { InzerkiComponent } from './functionalities/static-text/inzerki/inzerki.component';
+import { CartComponent } from './cart/cart.component';
 
 const routeConfig: Routes = [
   {
@@ -61,26 +62,31 @@ const routeConfig: Routes = [
     title: 'About'
   },
   {
-    path:'policies',
-    component:PoliciesComponent,
-    title:'Policies'
+    path: 'policies',
+    component: PoliciesComponent,
+    title: 'Policies'
   },
   {
-    path:'delivery',
-    component:DeliveryComponent,
-    title:'Delivery'
+    path: 'delivery',
+    component: DeliveryComponent,
+    title: 'Delivery'
   },
   {
-    path:'whereare',
-    component:WhereareComponent,
-    title:'Whereare'
+    path: 'whereare',
+    component: WhereareComponent,
+    title: 'Whereare'
   },
   {
-    path:'inzerki',
-    component:InzerkiComponent,
-    title:'Inzerki'
+    path: 'inzerki',
+    component: InzerkiComponent,
+    title: 'Inzerki'
+  },
+  {
+    path: 'cart',
+    component: CartComponent,
+    title: 'Cart'
   }
-  
+
 ];
 
 export default routeConfig;

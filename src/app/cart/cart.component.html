@@ -1,1 +1,18 @@
-<p>cart works!</p>
+<div class="cart-container">
+    <h2>Proceso de Compra</h2>
+    <div class="steps">
+      <div class="step" [class.completed]="currentStep > 0">1. Carrito</div>
+      <div class="step" [class.completed]="currentStep > 1">2. Validar</div>
+      <div class="step" [class.completed]="currentStep > 2">3. Confirmar</div>
+      <div class="step" [class.completed]="currentStep > 3">4. Datos Personales</div>
+      <div class="step" [class.completed]="currentStep > 4">5. Pagar</div>
+    </div>
+    <div class="step-content">
+      <app-cart-step *ngIf="currentStep === 0" (nextStep)="goToNextStep()"></app-cart-step>
+      <app-validate-step *ngIf="currentStep === 1" (nextStep)="goToNextStep()"></app-validate-step>
+      <app-confirm-step *ngIf="currentStep === 2" (nextStep)="goToNextStep()"></app-confirm-step>
+      <app-personal-info-step *ngIf="currentStep === 3" (nextStep)="goToNextStep()"></app-personal-info-step>
+      <app-payment-step *ngIf="currentStep === 4" (nextStep)="goToNextStep()"></app-payment-step>
+      <app-confirmation-step *ngIf="currentStep === 5"></app-confirmation-step>
+    </div>
+  </div>

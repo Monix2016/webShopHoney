@@ -33,7 +33,8 @@
         <div class="headerFor">
             <app-switch-lang></app-switch-lang>
             <div class="allIcon">
-                <i class="fas fa-shopping-cart"></i>
+                <i class="fas fa-shopping-cart"routerLinkActive="activebutton" ariaCurrentWhenActive="page"
+                routerLink="/cart" ></i>
                 <span class="cart-count">{{ cartCount }}</span>
             </div>
             <app-menuburger></app-menuburger>

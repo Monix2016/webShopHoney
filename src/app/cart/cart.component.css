@@ -1,0 +1,30 @@
+.cart-container {
+    width: 80%;
+    margin: auto;
+  }
+  
+  .steps {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .step {
+    width: 18%;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f8f8f8;
+  }
+  
+  .step.completed {
+    background-color: #4caf50;
+    color: white;
+  }
+  
+  .step-content {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+  }
