@@ -1,7 +1,14 @@
-<div class="cart-step">
-    <h3>Carrito</h3>
-    <ul>
-      <li *ngFor="let item of cartItems">{{ item.name }} - {{ item.price | currency }}</li>
-    </ul>
-    <!-- <button (click)="proceedToNextStep()" [disabled]="cartItems.length === 0">Validar</button> -->
+<div class="cart-list">
+  <div *ngFor="let item of cartItems" class="cart-item">
+    <div class="cart-item-details">
+      {{ item.name }} - {{ item.quantity }} - {{ item.weight }} kg
+    </div>
+    <div class="cart-item-actions">
+      <span class="btn-delete" (click)="removeItem(item.id)">
+        <i class="fas fa-trash-alt"></i>
+      </span>
+      <input class="input-quantity" type="number" [(ngModel)]="item.quantity" (change)="updateItem(item.id, item.quantity, item.weight)">
+      <input class="input-weight" type="number" [(ngModel)]="item.weight" (change)="updateItem(item.id, item.quantity, item.weight)">
+    </div>
   </div>
+</div>

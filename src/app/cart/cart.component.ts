@@ -52,9 +52,10 @@ export class CartComponent implements OnInit{
     }
   }
 
+
   isStepValid(): boolean {
-    // Add your step validation logic here
-    return true;
+    // Validar si todos los items tienen cantidad y peso válidos
+    return this.cartItems.every(item => item.quantity > 0 && item.weight > 0);
   }
 
   prevStep(): void {
