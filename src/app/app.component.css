@@ -114,6 +114,11 @@ footer section {
   font-weight: bold;
 }
 
+.headerONE{
+  flex: 1 1 auto;
+  padding: 15px;
+}
+
 .headerFor{
   display: flex;
   align-items: end;
