@@ -66,6 +66,20 @@ input[type="text"] {
   /* color: var(--honey-color); */
 }
 
+.allIcon {
+  /* font-size: 30px;*/
+  background-color: var(--honey-color); 
+  text-shadow: 2px 2px 4px var(--text-shadow-color);
+  z-index: 9999;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 5px var(--box-shadow-color);
+}
+
 /** #####################################################
     #   MOSTAR RESULTADO DE PORDUCTOS EN HOME                  #
     #####################################################*/

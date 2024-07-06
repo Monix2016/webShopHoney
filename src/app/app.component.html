@@ -1,43 +1,62 @@
 <main>
 
     <header class="brand-name containerHeader menus">
-        <nav class="flex-header-row">
-            <a class="spanMHS menu__link" routerLinkActive="activebutton" ariaCurrentWhenActive="page" routerLink="/">
-                {{'Home.Title'| translate}}
-            </a>
+        <div class="headerThree">
+            <nav class="flex-header-row">
+                <a class="spanMHS menu__link" routerLinkActive="activebutton" ariaCurrentWhenActive="page"
+                    routerLink="/">
+                    {{'Home.Title'| translate}}
+                </a>
+                <a class="spanMHS menu__link" routerLinkActive="activebutton" ariaCurrentWhenActive="page"
+                    routerLink="/blog">
+                    {{'Blog.Title'|translate}}
+                </a>
+                <a class="spanMHS menu__link" routerLinkActive="activebutton" ariaCurrentWhenActive="page"
+                    routerLink="/cours">
+                    {{'Cours.Title'|translate}}
+                </a>
+                <a class="spanMHS menu__link" routerLinkActive="activebutton" ariaCurrentWhenActive="page"
+                    routerLink="/about">
+                    {{'About.Title'|translate}}
+                </a>
 
-        </nav>
-        <nav class="flex-header-row">
-            <a class="spanMHS menu__link" routerLinkActive="activebutton" ariaCurrentWhenActive="page"
-                routerLink="/blog">
-                {{'Blog.Title'|translate}}
-            </a>
+            </nav>
+            <!-- <nav class="flex-header-row">
 
-        </nav>
-        <nav class="flex-header-row">
-            <a class="spanMHS menu__link" routerLinkActive="activebutton" ariaCurrentWhenActive="page"
-                routerLink="/cours">
-                {{'Cours.Title'|translate}}
-            </a>
+    
+            </nav> -->
+            <!-- <nav class="flex-header-row">
 
-        </nav>
-        <nav class="flex-header-row">
-            <a class="spanMHS menu__link" routerLinkActive="activebutton" ariaCurrentWhenActive="page"
-                routerLink="/about">
-                {{'About.Title'|translate}}
-            </a>
 
-        </nav>
-        <div>
+            </nav>
+            <nav class="flex-header-row">
+
+
+            </nav> -->
+        </div>
+
+
+
+        <div class="headerFor">
             <app-switch-lang></app-switch-lang>
+            <div class="allIcon">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-count">0</span>
+            </div>
             <app-menuburger></app-menuburger>
         </div>
+
+
 
     </header>
 
     <section class="content">
         <router-outlet></router-outlet>
     </section>
+
+
+
+
     <footer class="flex-container containerHeader"
         [ngClass]="{'rtl': translate.currentLang  === 'ar', 'ltr': translate.currentLang  === 'en'}">
         <!-- [ngClass]="{'rtl': translate.currentLang  === 'ar', 'ltr': translate.currentLang  === 'en'}"> -->
@@ -47,7 +66,8 @@
             <!-- <h4 class="AlignTxtCenter styleTitle">{{ 'About_Us' | translate}}</h4> -->
             <h4 class="title honey-color">{{ 'About_Us' | translate}}</h4>
             <nav class="flex-container-col">
-                <a class="honey-color" routerLinkActive="activebutton" ariaCurrentWhenActive="page" routerLink="/whereare">
+                <a class="honey-color" routerLinkActive="activebutton" ariaCurrentWhenActive="page"
+                    routerLink="/whereare">
                     {{'About.whereAre.Title'| translate}}
 
                 </a>
