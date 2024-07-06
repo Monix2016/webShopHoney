@@ -1,35 +1,51 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
+import { ICartitem } from '../interfaces/i-cartitem';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CartService {
+  private cartItems = new BehaviorSubject<ICartitem[]>([]);
   private cartItemCount = new BehaviorSubject<number>(0);
-  constructor() { 
-        // Inicializa el carrito con valores desde el almacenamiento local, una API, etc.
-        const initialCount = this.loadInitialCartCount();
-        this.cartItemCount.next(initialCount);
+
+  constructor() {
+    // Inicializa el carrito con valores desde el almacenamiento local, una API, etc.
+    const initialItems = this.loadInitialCartItems();
+    const initialCount = initialItems.reduce((count, item) => count + item.quantity, 0);
+    this.cartItems.next(initialItems);
+    this.cartItemCount.next(initialCount);
+  }
+
+  getCartItems(): Observable<ICartitem[]> {
+    return this.cartItems.asObservable();
   }
 
   getCartItemCount(): Observable<number> {
     return this.cartItemCount.asObservable();
   }
 
-  addToCart(item: any): void {
-    // Lógica para agregar un artículo al carrito
-    const currentCount = this.cartItemCount.value + 1;
-    this.cartItemCount.next(currentCount);
-    // Guarda el estado del carrito en el almacenamiento local, una API, etc.
-    this.saveCartCount(currentCount);
+  addToCart(item: ICartitem): void {
+    const currentItems = this.cartItems.value;
+    const existingItem = currentItems.find(cartItem => cartItem.id === item.id);
+
+    if (existingItem) {
+      existingItem.quantity += item.quantity;
+    } else {
+      currentItems.push(item);
+    }
+
+    this.cartItems.next(currentItems);
+    this.cartItemCount.next(this.cartItemCount.value + item.quantity);
+    this.saveCartItems(currentItems);
   }
 
-  private loadInitialCartCount(): number {
-    // Lógica para cargar el número inicial de artículos en el carrito
-    // Esto puede ser desde el almacenamiento local, una API, etc.
-    return 0; // Ejemplo: cambiar esto por la lógica real
+  private loadInitialCartItems(): ICartitem[] {
+    // Lógica para cargar los artículos iniciales en el carrito
+    return []; // Ejemplo: cambiar esto por la lógica real
   }
-  private saveCartCount(count: number): void {
+
+  private saveCartItems(items: ICartitem[]): void {
     // Lógica para guardar el estado del carrito
     // Esto puede ser en el almacenamiento local, una API, etc.
   }
