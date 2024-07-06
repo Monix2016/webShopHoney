@@ -1,0 +1,12 @@
+.confirmation-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Media Queries for Responsiveness */
+  @media (max-width: 768px) {
+    .confirmation-step p {
+      text-align: center;
+    }
+  }

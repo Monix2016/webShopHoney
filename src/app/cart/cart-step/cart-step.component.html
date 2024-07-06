@@ -1,1 +1,10 @@
-<p>cart-step works!</p>
+<div class="cart-step">
+    <h3>Carrito de Compras</h3>
+    <ul>
+      <li *ngFor="let item of cartItems">
+        <span>{{ item.name }} ({{ item.quantity }})</span>
+        <span>{{ item.price | currency }}</span>
+      </li>
+    </ul>
+    <button (click)="next()">Validar</button>
+  </div>

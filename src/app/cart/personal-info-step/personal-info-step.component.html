@@ -1,1 +1,10 @@
-<p>personal-info-step works!</p>
+<div class="personal-info-step">
+    <h3>Datos Personales</h3>
+    <form (ngSubmit)="onSubmit()">
+      <label for="name">Nombre:</label>
+      <input id="name" name="name" [(ngModel)]="personalInfo.name" required>
+      <label for="address">Dirección:</label>
+      <input id="address" name="address" [(ngModel)]="personalInfo.address" required>
+      <button type="submit">Continuar</button>
+    </form>
+  </div>

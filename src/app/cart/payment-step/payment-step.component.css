@@ -1,0 +1,44 @@
+.payment-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .payment-step form {
+    width: 100%;
+    max-width: 600px;
+  }
+  
+  .payment-step label,
+  .payment-step input {
+    width: 100%;
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  .payment-step input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .payment-step button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .payment-step button:hover {
+    background-color: #45a049;
+  }
+  
+  /* Media Queries for Responsiveness */
+  @media (max-width: 768px) {
+    .payment-step button {
+      width: 100%;
+    }
+  }

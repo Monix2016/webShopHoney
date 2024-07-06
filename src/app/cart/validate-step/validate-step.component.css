@@ -1,0 +1,26 @@
+.validate-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .validate-step button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .validate-step button:hover {
+    background-color: #45a049;
+  }
+  
+  /* Media Queries for Responsiveness */
+  @media (max-width: 768px) {
+    .validate-step button {
+      width: 100%;
+    }
+  }

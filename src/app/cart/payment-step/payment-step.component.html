@@ -1,1 +1,10 @@
-<p>payment-step works!</p>
+<div class="payment-step">
+    <h3>Pago</h3>
+    <form (ngSubmit)="onSubmit()">
+      <label for="cardNumber">Número de Tarjeta:</label>
+      <input id="cardNumber" name="cardNumber" [(ngModel)]="paymentInfo.cardNumber" required>
+      <label for="expiryDate">Fecha de Expiración:</label>
+      <input id="expiryDate" name="expiryDate" [(ngModel)]="paymentInfo.expiryDate" required>
+      <button type="submit">Pagar</button>
+    </form>
+  </div>
