@@ -3,4 +3,5 @@ export interface ICartitem {
     name: string;
     price: number;
     quantity: number;
+    weight:number;
 }

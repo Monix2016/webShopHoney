@@ -9,19 +9,11 @@ export class CartService {
   private cartItems = new BehaviorSubject<ICartitem[]>([]);
   private cartItemCount = new BehaviorSubject<number>(0);
 
-  constructor() {
-    // Inicializa el carrito con valores desde el almacenamiento local, una API, etc.
-    const initialItems = this.loadInitialCartItems();
-    const initialCount = initialItems.reduce((count, item) => count + item.quantity, 0);
-    this.cartItems.next(initialItems);
-    this.cartItemCount.next(initialCount);
-  }
-
-  getCartItems(): Observable<ICartitem[]> {
+  getCartItems() {
     return this.cartItems.asObservable();
   }
 
-  getCartItemCount(): Observable<number> {
+  getCartItemCount() {
     return this.cartItemCount.asObservable();
   }
 
@@ -35,22 +27,38 @@ export class CartService {
       currentItems.push(item);
     }
 
-    this.cartItems.next(currentItems);
-    this.cartItemCount.next(this.cartItemCount.value + item.quantity);
-    this.saveCartItems(currentItems);
+    this.updateCart(currentItems);
   }
 
-  private loadInitialCartItems(): ICartitem[] {
-    // Lógica para cargar los artículos iniciales en el carrito
-    return []; // Ejemplo: cambiar esto por la lógica real
+  removeFromCart(itemId: number): void {
+    let currentItems = this.cartItems.value;
+    currentItems = currentItems.filter(cartItem => cartItem.id !== itemId);
+    this.updateCart(currentItems);
   }
 
+  updateCartItem(itemId: number, quantity: number, weight: number): void {
+    let currentItems = this.cartItems.value;
+    const itemToUpdate = currentItems.find(cartItem => cartItem.id === itemId);
 
-  private saveCartItems(items: ICartitem[]) {
-    localStorage.setItem('cartItems', JSON.stringify(items));
+    if (itemToUpdate) {
+      itemToUpdate.quantity = quantity;
+      itemToUpdate.weight = weight;
+      this.updateCart(currentItems);
+    }
   }
 
   isCartEmpty(): boolean {
     return this.cartItemCount.value === 0;
+  }
+
+  private updateCart(items: ICartitem[]): void {
+    this.cartItems.next(items);
+    const totalCount = items.reduce((total, item) => total + item.quantity, 0);
+    this.cartItemCount.next(totalCount);
+    this.saveCartItems(items);
+  }
+
+  private saveCartItems(items: ICartitem[]) {
+    localStorage.setItem('cartItems', JSON.stringify(items));
   }
 }
