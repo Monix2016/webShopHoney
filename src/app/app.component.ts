@@ -11,6 +11,7 @@ import { PoliciesComponent } from './about/policies/policies.component';
 import { DeliveryComponent } from './about/delivery/delivery.component';
 import { FollowUsComponent } from './about/follow-us/follow-us.component';
 import { ContactUsComponent } from './about/contact-us/contact-us.component';
+import { CartService } from './services/cart.service';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return  new  TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -38,10 +39,15 @@ export function HttpLoaderFactory(http: HttpClient) {
  
 })
 export class AppComponent {
-
+  cartCount: number = 0;
   constructor(
-    public translate: TranslateService
+    public translate: TranslateService,
+    private cartService: CartService
   ) {
+    this.cartService.getCartItemCount().subscribe(count => {
+      this.cartCount = count;
+    }); 
+
     translate.addLangs(['en', 'es','fr','ar']);
     const lang=translate.getBrowserLang() as string;
     console.log(lang);
@@ -55,6 +61,8 @@ export class AppComponent {
     }
     this.translate.use(lang);
    
+
+
     
   }
 
