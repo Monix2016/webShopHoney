@@ -45,8 +45,12 @@ export class CartService {
     return []; // Ejemplo: cambiar esto por la lógica real
   }
 
-  private saveCartItems(items: ICartitem[]): void {
-    // Lógica para guardar el estado del carrito
-    // Esto puede ser en el almacenamiento local, una API, etc.
+
+  private saveCartItems(items: ICartitem[]) {
+    localStorage.setItem('cartItems', JSON.stringify(items));
+  }
+
+  isCartEmpty(): boolean {
+    return this.cartItemCount.value === 0;
   }
 }

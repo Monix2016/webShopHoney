@@ -9,6 +9,7 @@ import { PaymentStepComponent } from './payment-step/payment-step.component';
 import { ConfirmStepComponent } from './confirm-step/confirm-step.component';
 import { ConfirmationStepComponent } from './confirmation-step/confirmation-step.component';
 import { PersonalInfoStepComponent } from './personal-info-step/personal-info-step.component';
+import { ICartitem } from '../interfaces/i-cartitem';
 
 @Component({
   selector: 'app-cart',
@@ -28,15 +29,25 @@ import { PersonalInfoStepComponent } from './personal-info-step/personal-info-st
   styleUrl: './cart.component.css'
 })
 export class CartComponent implements OnInit{
-  currentStep: number = 0;
+  currentStep = 1;
+  cartItems : ICartitem[]=[]; // Tipar el array con la interfaz
+  constructor(private cartService: CartService) {}
 
-  constructor() {}
+  ngOnInit(): void {
+    this.cartService.getCartItems().subscribe(items => this.cartItems = items);
+  }
 
-  ngOnInit(): void {}
+  nextStep(): void {
+    this.currentStep++;
+  }
 
-  goToNextStep(): void {
-    if (this.currentStep < 5) {
-      this.currentStep++;
+  prevStep(): void {
+    if (this.currentStep > 1) {
+      this.currentStep--;
     }
+  }
+
+  isCartEmpty(): boolean {
+    return this.cartService.isCartEmpty();
   }
 }
