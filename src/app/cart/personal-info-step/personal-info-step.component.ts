@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component, EventEmitter, Output } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { PersonalInfoService } from '../../services/personal-info.service';
 
 @Component({
   selector: 'app-personal-info-step',
@@ -16,14 +17,22 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
 })
 export class PersonalInfoStepComponent {
   @Output() nextStep = new EventEmitter<void>();
-  personalInfo = { name: '', address: '' };
+  personalInfo = {
+    name: '',
+    address: '',
+    email: '',
+    phone: ''
+  };
 
 
   constructor(
-    public translate: TranslateService
-  ){}
+    public translate: TranslateService,
+    private personalInfoService: PersonalInfoService
+  ) { }
   onSubmit(): void {
-    // Lógica para guardar la información personal
+    // Guardar la información personal en el servicio
+    this.personalInfoService.setPersonalInfo(this.personalInfo);
+    // Emitir el evento para pasar al siguiente paso
     this.nextStep.emit();
   }
 }
