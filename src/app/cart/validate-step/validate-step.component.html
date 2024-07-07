@@ -1,5 +1,11 @@
 <div class="validate-step">
     <h3>Validar Pedido</h3>
-    <!-- Contenido de validación -->
+    <ul>
+      <li *ngFor="let item of cartItems" class="cart-item">
+        <div class="cart-item-details">
+          {{ item.name }} - Cantidad: {{ item.quantity }} - Peso: {{ item.weight }} kg
+        </div>
+      </li>
+    </ul>
     <button (click)="next()">Siguiente</button>
   </div>
