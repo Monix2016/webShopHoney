@@ -4,13 +4,15 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 import { ScrollAnimationService } from '../../services/scroll-animation.service';
+import { AddCartComponent } from '../../functionalities/add-cart/add-cart.component';
 
 @Component({
   selector: 'app-material-honey',
   standalone: true,
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+    AddCartComponent
   ],
   templateUrl: './material-honey.component.html',
   styleUrl: './material-honey.component.css'
