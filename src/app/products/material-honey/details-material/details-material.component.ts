@@ -5,6 +5,7 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { HousingService } from '../../../services/housing.service';
 import { IMaterial } from '../../../interfaces/i-material';
 import { MaterialHoneyComponent } from '../material-honey.component';
+import { AddCartComponent } from '../../../functionalities/add-cart/add-cart.component';
 
 @Component({
   selector: 'app-details-material',
@@ -12,7 +13,8 @@ import { MaterialHoneyComponent } from '../material-honey.component';
   imports: [
     TranslateModule,
     CommonModule,
-    MaterialHoneyComponent
+    MaterialHoneyComponent,
+    AddCartComponent
   ],
   templateUrl: './details-material.component.html',
   styleUrl: './details-material.component.css'
