@@ -3,6 +3,7 @@ import { Component, EventEmitter, Output } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { PersonalInfoService } from '../../services/personal-info.service';
+import { IPersonalInfo } from '../../interfaces/i-personal-info';
 
 @Component({
   selector: 'app-personal-info-step',
@@ -17,7 +18,7 @@ import { PersonalInfoService } from '../../services/personal-info.service';
 })
 export class PersonalInfoStepComponent {
   @Output() nextStep = new EventEmitter<void>();
-  personalInfo = {
+  personalInfo:IPersonalInfo = {
     name: '',
     address: '',
     email: '',
