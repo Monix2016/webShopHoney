@@ -62,6 +62,12 @@ export class CartService {
     localStorage.setItem('cartItems', JSON.stringify(items));
   }
 
+  getTotalPrice(): number {
+    const items = this.cartItems.value;
+    return items.reduce((total, item) => total + item.price * item.quantity, 0);
+  }
+
+
   clearCart(): void {
     this.cartItems.next([]);
   }
