@@ -4,6 +4,7 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { CartService } from '../../services/cart.service';
 import { Router } from '@angular/router';
 import { PersonalInfoService } from '../../services/personal-info.service';
+import { IPersonalInfo } from '../../interfaces/i-personal-info';
 
 @Component({
   selector: 'app-confirmation-step',
@@ -17,7 +18,7 @@ import { PersonalInfoService } from '../../services/personal-info.service';
 })
 export class ConfirmationStepComponent implements OnInit {
 
-  personalInfo: any;
+  personalInfo!: IPersonalInfo;
   cartItems: any[] = [];
   totalPrice: number = 0;
 
