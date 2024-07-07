@@ -1,12 +1,47 @@
-.confirmation-step {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+.confirmation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.confirmation h2, .confirmation h3 {
+  margin: 10px 0;
+}
+
+.confirmation p {
+  margin: 5px 0;
+}
+
+.confirmation ul {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+}
+
+.confirmation li {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.confirmation .btn-finish {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.confirmation .btn-finish:hover {
+  background-color: #45a049;
+}
   
   /* Media Queries for Responsiveness */
   @media (max-width: 768px) {
-    .confirmation-step p {
+    .confirmation p {
       text-align: center;
     }
   }
