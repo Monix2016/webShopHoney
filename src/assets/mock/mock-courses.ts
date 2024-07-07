@@ -17,7 +17,7 @@ export const MOCKCOURSES:ICours[]=[
     {
         id:1,
         type:"CC",
-        title: "Curso Sanidad Apícola (Varroa y otras enfermedades)",
+        title: "Curso Sanidad Apícola",
         ubication:"rabat",
         photo: `./assets/img/beekeeping-6206413_1280.png`,
         duration: 0,
@@ -29,7 +29,7 @@ export const MOCKCOURSES:ICours[]=[
     {
         id:2,
         type:"CC",
-        title: "Curso Miel, Polen, Propóleos, Jalea Y Cera",
+        title: "Curso Miel, Polen,Cera, ...",
         ubication:"rabat",
         photo: `./assets/img/ai-generated-8558236_1280.jpg`,
         duration: 0,
