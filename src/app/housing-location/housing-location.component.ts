@@ -3,6 +3,10 @@ import { CommonModule } from '@angular/common';
 import { IHoney } from '../interfaces/honey';
 import { RouterModule } from '@angular/router';
 import { AddCartComponent } from '../functionalities/add-cart/add-cart.component';
+import { TranslateService } from '@ngx-translate/core';
+import { MOCKHONEYS } from '../../assets/mock/mock-products';
+import { CartService } from '../services/cart.service';
+import { HousingService } from '../services/housing.service';
 
 @Component({
   selector: 'app-housing-location',
@@ -21,5 +25,27 @@ import { AddCartComponent } from '../functionalities/add-cart/add-cart.component
 export class HousingLocationComponent {
 
   @Input() housingLocation!: IHoney;
+
+  honeys: IHoney[] = MOCKHONEYS;
+
+
+  constructor(
+    private cartService: CartService,
+    public translate: TranslateService,
+    private housingService: HousingService
+  ) {}
+
+  addToCart(honeyId: number): void {
+    const honey = this.housingService.getHousingLocationById(honeyId);
+    if (honey) {
+      this.cartService.addToCart({
+        id: honey.id,
+        name: honey.name,
+        price: honey.price,
+        quantity: 1,
+        weight: honey.weight
+      });
+    }
+  }
 
 }
