@@ -22,7 +22,8 @@ export class PersonalInfoStepComponent {
     name: '',
     address: '',
     email: '',
-    phone: ''
+    phone: '',
+    paymentMethod: ''
   };
 
 

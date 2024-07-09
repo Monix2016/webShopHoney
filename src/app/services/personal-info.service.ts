@@ -9,7 +9,8 @@ export class PersonalInfoService {
     name: '',
     address: '',
     email: '',
-    phone: ''
+    phone: '',
+    paymentMethod: ''
   };
 
   constructor() { }

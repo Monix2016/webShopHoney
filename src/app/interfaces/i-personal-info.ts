@@ -3,4 +3,5 @@ export interface IPersonalInfo {
     address: string;
     email: string;
     phone: string;
+    paymentMethod: string;
 }

@@ -1,44 +1,79 @@
 .personal-info-step {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.personal-info-step form {
+  width: 100%;
+  max-width: 600px;
+}
+
+.personal-info-step label,
+.personal-info-step input {
+  width: 100%;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.personal-info-step input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.personal-info-step button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.personal-info-step button:hover {
+  background-color: #45a049;
+}
+
+
+.payment-method {
+  margin-top: 15px;
+}
+
+.payment-method h4 {
+  margin-bottom: 10px;
+}
+
+.payment-method label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* Estilos específicos para los iconos */
+.payment-method .fa-credit-card {
+  color: #007bff; /* Color para Tarjeta */
+}
+
+.payment-method .fa-paypal {
+  color: #003087; /* Color para PayPal */
+}
+
+.payment-method .fa-money-bill-wave {
+  color: #28a745; /* Color para Contra Reembolso */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .personal-info-step button {
+    width: 100%;
   }
-  
   .personal-info-step form {
     width: 100%;
-    max-width: 600px;
+    align-items: center;
   }
-  
-  .personal-info-step label,
+
   .personal-info-step input {
     width: 100%;
-    display: block;
-    margin-bottom: 10px;
   }
-  
-  .personal-info-step input {
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  
-  .personal-info-step button {
-    margin-top: 20px;
-    padding: 10px 20px;
-    background-color: #4caf50;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .personal-info-step button:hover {
-    background-color: #45a049;
-  }
-  
-  /* Media Queries for Responsiveness */
-  @media (max-width: 768px) {
-    .personal-info-step button {
-      width: 100%;
-    }
-  }
+}
