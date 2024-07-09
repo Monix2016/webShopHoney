@@ -30,11 +30,11 @@ export class PaymentStepComponent {
     public translate: TranslateService,
     private personalInfoService: PersonalInfoService
   ){
-
+    this.paymentMethod = this.personalInfoService.getPaymentMethod();
   }
 
   ngOnInit(): void {
-    this.paymentMethod = this.personalInfoService.getPaymentMethod();
+    
     console.log('el metodo de pago es:',this.paymentMethod)
   }
    

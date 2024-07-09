@@ -3,9 +3,9 @@
     <div class="step" [class.completed]="currentStep > 1">Carrito</div>
     <div class="step" [class.completed]="currentStep > 2">Validar</div>
     <div class="step" [class.completed]="currentStep > 3">Datos Personales</div>
-    <div class="step" [class.completed]="currentStep > 4">Confirmar</div> 
-    <div class="step" [class.completed]="currentStep > 5">Pagar</div>
-    <div class="step" [class.completed]="currentStep > 6">Confirmación</div>
+    <!-- <div class="step" [class.completed]="currentStep > 4">Confirmar</div>  -->
+    <div class="step" [class.completed]="currentStep > 4">Pagar</div>
+    <div class="step" [class.completed]="currentStep > 5">Confirmación</div>
   </div>
 
   <div class="step-content" *ngIf="currentStep === 1">
@@ -17,13 +17,13 @@
   <div class="step-content" *ngIf="currentStep === 3">
     <app-personal-info-step (nextStep)="nextStep()" (prevStep)="prevStep()"></app-personal-info-step>
   </div>
-  <div class="step-content" *ngIf="currentStep === 4">
+  <!-- <div class="step-content" *ngIf="currentStep === 4">
     <app-confirm-step (nextStep)="nextStep()" (prevStep)="prevStep()"></app-confirm-step>
-  </div>
-  <div class="step-content" *ngIf="currentStep === 5">
+  </div> -->
+  <div class="step-content" *ngIf="currentStep === 4">
     <app-payment-step (nextStep)="nextStep()" (prevStep)="prevStep()"></app-payment-step>
   </div>
-  <div class="step-content" *ngIf="currentStep === 6">
+  <div class="step-content" *ngIf="currentStep === 5">
     <app-confirmation-step></app-confirmation-step>
   </div>
 
