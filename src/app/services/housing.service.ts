@@ -7,6 +7,7 @@ import { IMaterial } from '../interfaces/i-material';
 import { MOCKMATERIAL } from '../../assets/mock/mock-material';
 import { ITeam } from '../interfaces/i-team';
 import { MOCKTEAM } from '../../assets/mock/mock-team';
+import { CartService } from './cart.service';
 
 @Injectable({
   providedIn: 'root'
@@ -17,7 +18,8 @@ export class HousingService {
   protected housingLocationList: IHoney[] = MOCKHONEYS;
   protected coursList: ICours[]=MOCKCOURSES;
   protected materialList: IMaterial[]=MOCKMATERIAL;
-  protected team:ITeam[]=MOCKTEAM
+  protected team:ITeam[]=MOCKTEAM;
+  private cartService!: CartService;
 
 
   getAllHousingLocations(): IHoney[] {
@@ -49,5 +51,18 @@ export class HousingService {
 
   submitApplication(firstName: string, lastName: string, email: string) {
     console.log(`Homes application received: firstName: ${firstName}, lastName: ${lastName}, email: ${email}.`);
+  }
+
+  addToCartHoney(id: number): any {
+    const honey = this.getHousingLocationById(id);
+    if (honey) {
+      this.cartService.addToCart({
+        id: honey.id,
+        name: honey.name,
+        price: honey.price,
+        quantity: 1,
+        weight: honey.weight
+      });
+    }
   }
 }

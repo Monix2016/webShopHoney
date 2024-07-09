@@ -9,6 +9,7 @@ import { BenefitHerbalHoneyComponent } from '../../functionalities/static-text/b
 import { BlogHerbalHoneyComponent } from '../../functionalities/static-text/blog-herbal-honey/blog-herbal-honey.component';
 import { HousingLocationComponent } from '../../housing-location/housing-location.component';
 import { AddCartComponent } from '../../functionalities/add-cart/add-cart.component';
+import { CartService } from '../../services/cart.service';
 
 @Component({
   selector: 'app-details',
@@ -38,13 +39,39 @@ export class DetailsComponent {
     email: new FormControl('')
   });
 
-  constructor(public translate: TranslateService) {
+  constructor(public translate: TranslateService,
+    private cartService: CartService,
+  ) {
     const housingLocationId = parseInt(this.route.snapshot.params['id'], 10);
     this.housingLocation = this.housingService.getHousingLocationById(housingLocationId);
     this.housingLocationList = this.housingService.getAllHousingLocations();
     
 
+
   }
+
+  addToCart(honeyId: any): void {
+    const honey = this.housingService.getHousingLocationById(honeyId);
+    if (honey) {
+      this.cartService.addToCart({
+        id: honey.id,
+        name: honey.name,
+        price: honey.price,
+        quantity: 1,
+        weight: honey.weight
+      });
+    }
+  }
+
+    //TODO
+  //Comporbar porque no funcion este metodo
+
+
+
+  // addToCart(honeyId: number): void {
+  //   this.housingService.addToCartHoney(honeyId);
+
+  // }
 
   submitApplication() {
     this.housingService.submitApplication(

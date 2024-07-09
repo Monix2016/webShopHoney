@@ -48,4 +48,12 @@ export class HousingLocationComponent {
     }
   }
 
+  //TODO
+  //Comporbar porque no funcion este metodo
+  
+  // addToCart(honeyId: number): void {
+  //   this.housingService.addToCartHoney(honeyId);
+
+  // }
+
 }
