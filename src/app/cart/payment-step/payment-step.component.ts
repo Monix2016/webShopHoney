@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, EventEmitter, Output } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { IPersonalInfo } from '../../interfaces/i-personal-info';
 import { PersonalInfoService } from '../../services/personal-info.service';
@@ -14,6 +14,8 @@ import { ConfirmStepComponent } from '../confirm-step/confirm-step.component';
     CommonModule,
     TranslateModule,
     FormsModule,
+    ReactiveFormsModule,
+    
     ConfirmationStepComponent,
     ConfirmStepComponent
   ],
@@ -22,28 +24,37 @@ import { ConfirmStepComponent } from '../confirm-step/confirm-step.component';
 })
 export class PaymentStepComponent {
   @Output() nextStep = new EventEmitter<void>();
-  paymentInfo = { cardNumber: '', expiryDate: '' };
+  paymentForm!: FormGroup;
   paymentMethod: string = '';
  
 
   constructor(
     public translate: TranslateService,
-    private personalInfoService: PersonalInfoService
+    private personalInfoService: PersonalInfoService,
+    private fb: FormBuilder
   ){
     this.paymentMethod = this.personalInfoService.getPaymentMethod();
   }
 
   ngOnInit(): void {
     
-    console.log('el metodo de pago es:',this.paymentMethod)
+    this.paymentForm = this.fb.group({
+      cardNumber: ['', [Validators.required, Validators.pattern('[0-9]{16}')]],
+      expiryDate: ['', [Validators.required, Validators.pattern('(0[1-9]|10|11|12)/[0-9]{2}')]],
+      cvv: ['', [Validators.required, Validators.pattern('[0-9]{3}')]]
+    });
   }
    
 
- 
-
   onSubmit(): void {
-    // Lógica para procesar el pago
-    this.nextStep.emit();
+    if (this.paymentForm.valid) {
+      // Lógica para enviar los datos del pago
+      this.nextStep.emit();
+      console.log('Formulario válido, enviando datos:', this.paymentForm.value);
+    } else {
+      // Marcar todos los campos como tocados para mostrar los mensajes de error
+      this.paymentForm.markAllAsTouched();
+    }
   }
 
   next(): void {
