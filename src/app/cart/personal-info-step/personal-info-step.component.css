@@ -81,11 +81,6 @@ button[type="submit"]:hover {
 }
 
 
-.invalid-feedback {
-  color: red;
-  font-size: 0.8em;
-  margin-top: 5px;
-}
 /* Media Queries for Responsiveness */
 @media (max-width: 768px) {
   .personal-info-step form {

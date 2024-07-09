@@ -68,7 +68,7 @@ input[type="text"] {
 
 .allIcon {
   /* font-size: 30px;*/
-  background-color: var(--honey-color); 
+  background-color: var(--honey-color);
   text-shadow: 2px 2px 4px var(--text-shadow-color);
   z-index: 9999;
   width: 40px;
@@ -317,6 +317,15 @@ section.listing a::after {
 
 .AlignTitleCenter {
   text-align: center;
+}
+
+/** #####################################################
+  #                 Estilo Alertas                 #
+  #####################################################*/
+.invalid-feedback {
+  color: red;
+  font-size: 0.8em;
+  margin-top: 5px;
 }
 
 
