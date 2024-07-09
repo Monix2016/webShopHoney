@@ -22,4 +22,9 @@ export class PersonalInfoService {
   getPersonalInfo(): IPersonalInfo {
     return this.personalInfo;
   }
+
+  getPaymentMethod(): string {
+    return this.personalInfo.paymentMethod;
+  }
+  
 }
