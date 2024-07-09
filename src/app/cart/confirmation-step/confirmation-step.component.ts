@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { CartService } from '../../services/cart.service';
 import { Router } from '@angular/router';
@@ -17,7 +17,7 @@ import { IPersonalInfo } from '../../interfaces/i-personal-info';
   styleUrl: './confirmation-step.component.css'
 })
 export class ConfirmationStepComponent implements OnInit {
-
+  //@Output() nextStep = new EventEmitter<void>();
   personalInfo!: IPersonalInfo;
   cartItems: any[] = [];
   totalPrice: number = 0;
@@ -30,7 +30,7 @@ export class ConfirmationStepComponent implements OnInit {
   ){}
 
   ngOnInit(): void {
-    this.personalInfo = this.personalInfoService.getPersonalInfo();
+    this.personalInfo = this.personalInfoService.getPersonalInfo();// Recuperar información del servicio
     this.cartService.getCartItems().subscribe(items => this.cartItems = items);
     this.totalPrice = this.cartService.getTotalPrice();
   }

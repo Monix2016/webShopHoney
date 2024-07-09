@@ -1,25 +1,67 @@
 <div class="personal-info-step">
-    <h3>Datos Personales</h3>
-    <form (ngSubmit)="onSubmit()">
+  <h3>Datos Personales</h3>
+  <form *ngIf="personalInfoForm" (ngSubmit)="onSubmit()" [formGroup]="personalInfoForm">
+    <div class="form-group">
       <label for="name">Nombre:</label>
-      <input id="name" name="name" [(ngModel)]="personalInfo.name" required>
-      <label for="address">Dirección:</label>
-      <input id="address" name="address" [(ngModel)]="personalInfo.address" required>
-      <div class="payment-method">
-        <h4>Modo de Pago:</h4>
-        <label>
-          <input type="radio" name="paymentMethod" [(ngModel)]="personalInfo.paymentMethod" value="Tarjeta" required>
-          <i class="fas fa-credit-card"></i> Tarjeta
-        </label>
-        <label>
-          <input type="radio" name="paymentMethod" [(ngModel)]="personalInfo.paymentMethod" value="PayPal">
-          <i class="fab fa-paypal"></i> PayPal
-        </label>
-        <label>
-          <input type="radio" name="paymentMethod" [(ngModel)]="personalInfo.paymentMethod" value="Contra Reembolso">
-          <i class="fas fa-money-bill-wave"></i> Contra Reembolso
-        </label>
+      <input id="name" formControlName="name">
+      <div *ngIf="personalInfoForm.get('name')?.invalid && personalInfoForm.get('name')?.touched" class="invalid-feedback">
+        Nombre es requerido
       </div>
-      <button type="submit">Continuar</button>
-    </form>
-  </div>
+    </div>
+
+    <div class="form-group">
+      <label for="firstName">First Name:</label>
+      <input id="firstName" formControlName="firstName">
+      <div *ngIf="personalInfoForm.get('firstName')?.invalid && personalInfoForm.get('firstName')?.touched" class="invalid-feedback">
+        First Name es requerido
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="phone">Teléfono:</label>
+      <input id="phone" type="tel" formControlName="phone">
+      <div *ngIf="personalInfoForm.get('phone')?.invalid && personalInfoForm.get('phone')?.touched" class="invalid-feedback">
+        <div *ngIf="personalInfoForm.get('phone')?.hasError('required')">Teléfono es requerido</div>
+        <div *ngIf="personalInfoForm.get('phone')?.hasError('pattern')">Teléfono debe tener un formato válido</div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="address">Dirección:</label>
+      <input id="address" formControlName="address">
+      <div *ngIf="personalInfoForm.get('address')?.invalid && personalInfoForm.get('address')?.touched" class="invalid-feedback">
+        Dirección es requerida
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input id="email" type="email" formControlName="email">
+      <div *ngIf="personalInfoForm.get('email')?.invalid && personalInfoForm.get('email')?.touched" class="invalid-feedback">
+        <div *ngIf="personalInfoForm.get('email')?.hasError('required')">Email es requerido</div>
+        <div *ngIf="personalInfoForm.get('email')?.hasError('email')">Email debe tener un formato válido</div>
+      </div>
+    </div>
+
+    <div class="form-group payment-method">
+      <h4>Modo de Pago:</h4>
+      <label class="payment-option">
+        <input type="radio" formControlName="paymentMethod" value="Tarjeta">
+        <i class="fas fa-credit-card"></i> Tarjeta
+      </label>
+      <label class="payment-option">
+        <input type="radio" formControlName="paymentMethod" value="PayPal">
+        <i class="fab fa-paypal"></i> PayPal
+      </label>
+      <label class="payment-option">
+        <input type="radio" formControlName="paymentMethod" value="Contra Reembolso">
+        <i class="fas fa-money-bill-wave"></i> Contra Reembolso
+      </label>
+      <div *ngIf="personalInfoForm.get('paymentMethod')?.invalid && personalInfoForm.get('paymentMethod')?.touched" class="invalid-feedback">
+        Selecciona un método de pago
+      </div>
+    </div>
+
+    <button type="submit" [disabled]="!personalInfoForm.valid">Continuar</button>
+  </form>
+</div>
