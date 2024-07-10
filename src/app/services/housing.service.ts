@@ -58,6 +58,7 @@ export class HousingService {
     if (honey) {
       this.cartService.addToCart({
         id: honey.id,
+        type:honey.type,
         name: honey.name,
         price: honey.price,
         quantity: 1,

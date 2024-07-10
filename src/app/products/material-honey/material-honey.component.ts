@@ -38,6 +38,7 @@ export class MaterialHoneyComponent {
     if (materialHoney) {
       this.cartService.addToCart({
         id: materialHoney.id,
+        type:materialHoney.type,
         name: materialHoney.name,
         price: materialHoney.price,
         quantity: 1,

@@ -2,7 +2,7 @@ import { IHoney } from "../../app/interfaces/honey";
 
 export const MOCKHONEYS:IHoney[]=[{
     id: 0,
-    type:"MH",
+    type:"HN",
     name: 'Miel de test 1',
     description: 'Miel de test 1',
     
@@ -22,7 +22,7 @@ export const MOCKHONEYS:IHoney[]=[{
   },
   {
     id: 1,
-    type:"MH",
+    type:"HN",
     name: 'Miel de test 2',
     description: 'Miel de test 2',
     
@@ -41,7 +41,7 @@ export const MOCKHONEYS:IHoney[]=[{
   },
   {
     id: 2,
-    type:"MH",
+    type:"HN",
     name: 'Miel de test 3',
     description: 'Miel de test 3',
     
@@ -60,7 +60,7 @@ export const MOCKHONEYS:IHoney[]=[{
   },
   {
     id: 3,
-    type:"MH",
+    type:"HN",
     name: 'Miel de test 4',
     description: 'Miel de test 4',
     
@@ -79,7 +79,7 @@ export const MOCKHONEYS:IHoney[]=[{
   },
   {
     id: 4,
-    type:"MH",
+    type:"HN",
     name: 'Miel de test 5',
     description: 'Miel de test 5',
     
@@ -98,7 +98,7 @@ export const MOCKHONEYS:IHoney[]=[{
   },
   {
     id: 5,
-    type:"MH",
+    type:"HN",
     name: 'Miel de test 6',
     description: 'Miel de test 6',
     
