@@ -47,6 +47,17 @@ export class CartService {
     }
   }
 
+  updateCartItemMaterial(itemId: number, quantity: number): void {
+    let currentItems = this.cartItems.value;
+    const itemToUpdate = currentItems.find(cartItem => cartItem.id === itemId);
+
+    if (itemToUpdate) {
+      itemToUpdate.quantity = quantity;
+
+      this.updateCart(currentItems);
+    }
+  }
+
   isCartEmpty(): boolean {
     return this.cartItemCount.value === 0;
   }

@@ -33,6 +33,9 @@ export class CartStepComponent implements OnInit  {
   updateItem(itemId: number, quantity: number, weight: number): void {
     this.cartService.updateCartItem(itemId, quantity, weight);
   }
+  updateItemMaterial(itemId: number, quantity: number): void {
+    this.cartService.updateCartItemMaterial(itemId, quantity);
+  }
 
   proceedToNextStep(): void {
     this.nextStep.emit();
