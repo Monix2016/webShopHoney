@@ -99,6 +99,8 @@ input[type="text"] {
 }
 
 .listing-heading {
+  font-size: 13px;
+  font-family: cursive;
   color: var(--primary-color);
   padding: 10px 20px 0 20px;
 }
