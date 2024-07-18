@@ -114,12 +114,10 @@ input[type="text"] {
 }
 
 
-
-
-
-
 .listing-location {
   padding: 10px 20px 20px 20px;
+  font-size: 13px;
+  font-family: cursive;
 }
 
 .listing-location::before {
@@ -130,6 +128,8 @@ section.listing a {
   padding-left: 20px;
   text-decoration: none;
   color: var(--primary-color);
+  font-size: 13px;
+  font-family: cursive;
 }
 
 section.listing a::after {

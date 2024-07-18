@@ -91,5 +91,26 @@
     "staff": {
         "role": "TestAPICULTOR profesional",
         "description": "TestCriador de reinas profesional dedicado a la producción de material vivo. Trabaja con diferentes razas. Especialista en Buckfast."
+    },
+    "Cart":{
+        "PersonalData":{
+            "Title":"Données personnelles",
+            "Name":"Prénom",
+            "FirstName":"Nom",
+            "Email":"Email",
+            "Direction":"Adresse",
+            "Phone":"Téléphone",
+            "paymentMethod":"Mode de payement"
+
+        },
+        "CartItems":{
+            "Title":"Articles dans le panier",
+            "Quantity":"Quantité",
+            "Weight":"Poids",
+            "Price":"Prix",
+            "Total":"Total á Payer"
+
+        }
+
     }
 }

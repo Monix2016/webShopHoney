@@ -90,5 +90,26 @@
     "staff": {
         "role": "APICULTOR profesional",
         "description": "Criador de reinas profesional dedicado a la producción de material vivo. Trabaja con diferentes razas. Especialista en Buckfast."
+    },
+    "cart":{
+        "Datos Personales":{
+            "Title":"Datos Personales",
+            "Name":"Nombre",
+            "FirstName":"Apellidos",
+            "Email":"Email",
+            "Direction":"Dirección",
+            "Phone":"Teléfono",
+            "paymentMethod":"Metodo de pago"
+
+        },
+        "CartItems":{
+            "Title":"Artículos en el CarritoEN",
+            "Quantity":"Cantidad",
+            "Weight":"Peso",
+            "Price":"Precio",
+            "Total":"Total a Pagar"
+
+        }
+
     }
 }

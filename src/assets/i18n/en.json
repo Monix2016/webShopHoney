@@ -23,6 +23,7 @@
     "Adress": "Av Mohamed 5 N65 Bl5 Porte4",
     "Help": "Help",
     "Info": "Info",
+
     "Titles": {
         "Heart_Of_Nature": "In the heart of nature"
     },
@@ -91,5 +92,26 @@
     "staff": {
         "role": "TestAPICULTOR profesional",
         "description": "TestCriador de reinas profesional dedicado a la producción de material vivo. Trabaja con diferentes razas. Especialista en Buckfast."
+    },
+    "cart":{
+        "Datos Personales":{
+            "Title":"Personal Data",
+            "Name":"Name",
+            "FirstName":"First Name",
+            "Email":"Email",
+            "Direction":"Direction",
+            "Phone":"Phone",
+            "paymentMethod":"Method of payment"
+
+        },
+        "CartItems":{
+            "Title":"Items in Cart",
+            "Quantity":"quantity",
+            "Weight":"weight",
+            "Price":"price",
+            "Total":"Total a Pagar"
+
+        }
+
     }
 }
