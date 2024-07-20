@@ -4,11 +4,11 @@
             <section class="listing-description">
                 <h2 class="listing-heading">{{coursHoney?.title}}</h2>
                 <p class="listing-location">{{coursHoney?.ubication}}</p>
-                <p class="">Precio: {{coursHoney?.price}}</p>
+                <p class="">{{'Price'|translate}}: {{coursHoney?.price}}</p>
 
                 <ul>
-                    <li>Ubicación: {{coursHoney?.state}}</li>
-                    <li>duracion: {{coursHoney?.duration}}</li>
+                    <li>{{'Location'|translate}}: {{coursHoney?.state}}</li>
+                    <li>{{'Duration'|translate}}: {{coursHoney?.duration}}</li>
                 </ul>
             </section>
         </div>
@@ -16,12 +16,12 @@
             <img class="listing-photo" [src]="coursHoney?.photo" alt="Exterior photo of {{coursHoney?.title}}" />
         </div>
     </div>
-    <h2 class="title"> Nuestro equipo</h2>
+    <h2 class="title"> {{'Our_Team'|translate}}</h2>
     <section class="results">
         
         <app-cours-team *ngFor="let staff of team" [staff]="staff"></app-cours-team>
     </section>
-    <h2 class="title"> Otros cursos</h2>
+    <h2 class="title"> {{'Cours.Other_Courses'|translate}}</h2>
     <section class="results">
       
         <app-courses-honey *ngFor="let coursHoney of coursesHoneyList" [coursHoney]="coursHoney"></app-courses-honey>

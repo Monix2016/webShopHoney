@@ -23,10 +23,13 @@
     "Adress": "Av Mohamed 5 N65 Bl5 Porte4",
     "Help": "Soporte",
     "Info": "Info",
-    "Our_Products":"Nuestros productos",
-    "Add_To_Cart":"Añadir a la cesta",
-    "Learn_More":"Más información",
-
+    "Our_Products": "Nuestros productos",
+    "Add_To_Cart": "Añadir a la cesta",
+    "Learn_More": "Más información",
+    "Our_Team": "Nuestro equipo",
+    "Price": "Precio",
+    "Location":"Ubicación",
+    "Duration":"Duración",
     "Titles": {
         "Heart_Of_Nature": "En pleno corazón de la naturaleza"
     },
@@ -83,7 +86,8 @@
         "TitleCours1": "Curso Miel, Polen, Propóleos, Jalea Y Cera",
         "TitleCours": "Cursos de Apicultura impartidos por referentes del sector",
         "TitleTeam": "Aprende de la mano de referentes del sector",
-        "DescriptionCours": "Esta es nuestra selección de cursos de apicultura, impartidos por los mejores profesionales en apicultura como FolanitoXXXXX o menganitoXXXXX entre otros. Ofrecemos una gama de formación para personas que pretenden iniciarse como apicultores así como cursos de especialización para apicultores profesionales.Es un proyecto formativo de nuestra XXXXXXXX."
+        "DescriptionCours": "Esta es nuestra selección de cursos de apicultura, impartidos por los mejores profesionales en apicultura como FolanitoXXXXX o menganitoXXXXX entre otros. Ofrecemos una gama de formación para personas que pretenden iniciarse como apicultores así como cursos de especialización para apicultores profesionales.Es un proyecto formativo de nuestra XXXXXXXX.",
+        "Other_Courses": "Otros cursos"
     },
     "Material": {
         "Title": "Materiales de tu interes"
@@ -95,25 +99,22 @@
         "role": "APICULTOR profesional",
         "description": "Criador de reinas profesional dedicado a la producción de material vivo. Trabaja con diferentes razas. Especialista en Buckfast."
     },
-    "cart":{
-        "Datos Personales":{
-            "Title":"Datos Personales",
-            "Name":"Nombre",
-            "FirstName":"Apellidos",
-            "Email":"Email",
-            "Direction":"Dirección",
-            "Phone":"Teléfono",
-            "paymentMethod":"Metodo de pago"
-
+    "cart": {
+        "Datos Personales": {
+            "Title": "Datos Personales",
+            "Name": "Nombre",
+            "FirstName": "Apellidos",
+            "Email": "Email",
+            "Direction": "Dirección",
+            "Phone": "Teléfono",
+            "paymentMethod": "Metodo de pago"
         },
-        "CartItems":{
-            "Title":"Artículos en el CarritoEN",
-            "Quantity":"Cantidad",
-            "Weight":"Peso",
-            "Price":"Precio",
-            "Total":"Total a Pagar"
-
+        "CartItems": {
+            "Title": "Artículos en el CarritoEN",
+            "Quantity": "Cantidad",
+            "Weight": "Peso",
+            "Price": "Precio",
+            "Total": "Total a Pagar"
         }
-
     }
 }
