@@ -1,8 +1,8 @@
 <div class="personal-info-step">
-  <h3>Datos Personales</h3>
+  <h3>{{'Cart.PersonalData.Title'|translate}}</h3>
   <form *ngIf="personalInfoForm" (ngSubmit)="onSubmit()" [formGroup]="personalInfoForm">
     <div class="form-group">
-      <label for="name">Nombre:</label>
+      <label for="name">{{'Cart.PersonalData.Title'|translate}}:</label>
       <input id="name" formControlName="name">
       <div *ngIf="personalInfoForm.get('name')?.invalid && personalInfoForm.get('name')?.touched" class="invalid-feedback">
         Nombre es requerido

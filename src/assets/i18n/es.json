@@ -100,6 +100,7 @@
         "description": "Criador de reinas profesional dedicado a la producción de material vivo. Trabaja con diferentes razas. Especialista en Buckfast."
     },
     "cart": {
+        "Title": "Carrito",
         "Datos Personales": {
             "Title": "Datos Personales",
             "Name": "Nombre",
@@ -110,7 +111,7 @@
             "paymentMethod": "Metodo de pago"
         },
         "CartItems": {
-            "Title": "Artículos en el CarritoEN",
+            "Title": "Artículos en el Carrito",
             "Quantity": "Cantidad",
             "Weight": "Peso",
             "Price": "Precio",

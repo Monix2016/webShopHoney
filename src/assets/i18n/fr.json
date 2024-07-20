@@ -100,6 +100,7 @@
         "description": "TestCriador de reinas profesional dedicado a la producción de material vivo. Trabaja con diferentes razas. Especialista en Buckfast."
     },
     "Cart": {
+        "Title": "Chariot",
         "PersonalData": {
             "Title": "Données personnelles",
             "Name": "Prénom",

@@ -10,24 +10,24 @@
 
     </div>
     <div>
-      <h3>Datos Personales</h3>
-      <p>Nombre: {{ personalInfo.name }}</p>
-      <p>Dirección: {{ personalInfo.address }}</p>
-      <p>Email: {{ personalInfo.email }}</p>
-      <p>Teléfono: {{ personalInfo.phone }}</p>
-      <p>Modo de pago: {{personalInfo.paymentMethod}}</p>
+      <h3>{{'Cart.PersonalData.Title'|translate}}</h3>
+      <p>{{'Cart.PersonalData.Name'|translate}}: {{ personalInfo.name }}</p>
+      <p>{{'Cart.PersonalData.Direction'|translate}}: {{ personalInfo.address }}</p>
+      <p>{{'Cart.PersonalData.Email'|translate}}: {{ personalInfo.email }}</p>
+      <p>{{'Cart.PersonalData.Phone'|translate}}: {{ personalInfo.phone }}</p>
+      <p>{{'Cart.PersonalData.paymentMethod'|translate}}: {{personalInfo.paymentMethod}}</p>
     </div>
 
     <div>
-      <h3>Artículos en el Carrito</h3>
+      <h3>{{'Cart.CartItems.Title'|translate}}</h3>
       <ul>
         <li *ngFor="let item of cartItems" class="cart-item">
           <div class="cart-item-details">
-            {{ item.name }} - Cantidad: {{ item.quantity }} - Peso: {{ item.weight }} kg - Precio: {{ item.price }} €
+            {{ item.name }} - {{'Cart.CartItems.Quantity'|translate}}: {{ item.quantity }} - {{'Cart.CartItems.Weight'|translate}}: {{ item.weight }} kg - {{'Cart.CartItems.Price'|translate}}: {{ item.price }} €
           </div>
         </li>
       </ul>
-      <h3>Total a Pagar: {{ totalPrice }} €</h3>
+      <h3>{{'Cart.CartItems.Total'|translate}}: {{ totalPrice }} €</h3>
     </div>
 
     <button class="btn-finish" (click)="finishPurchase()">Finalizar</button>
