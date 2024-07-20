@@ -2,7 +2,7 @@
     <img class="listing-photo animated-img" [src]="materialHoney.photo" alt="Exterior photo of {{materialHoney.name}}">
     <h2 class="listing-heading">{{ materialHoney.name }}</h2>
     <p class="listing-location">{{ materialHoney.ubication}}, {{materialHoney.price }}</p>
-    <a [routerLink]="['/detailsMaterial', materialHoney.id]">Learn More</a>
+    <a [routerLink]="['/detailsMaterial', materialHoney.id]">{{'Learn_More'|translate}}</a>
     <button class="CartBtn" (click)="addToCart(materialHoney.id)">
       <span class="IconContainer">
           <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512" fill="rgb(17, 17, 17)"

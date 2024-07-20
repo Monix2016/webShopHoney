@@ -2,5 +2,5 @@
   <img class="listing-photo animated-img" [src]="coursHoney.photo" alt="Exterior photo of {{coursHoney.title}}">
   <h2 class="listing-heading">{{ coursHoney.title }}</h2>
   <p class="listing-location">{{ coursHoney.ubication}}, {{coursHoney.price }}</p>
-  <a [routerLink]="['/detailsCours', coursHoney.id]">Learn More</a>
+  <a [routerLink]="['/detailsCours', coursHoney.id]">{{'Learn_More'|translate}}</a>
 </section>
