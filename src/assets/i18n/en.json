@@ -33,6 +33,7 @@
     "Confirmation":"Confirmation",
     "Next":"Next",
     "Continue":"Continue",
+    "Finish":"Finalizar",
     "Titles": {
         "Heart_Of_Nature": "In the heart of nature"
     },
@@ -123,6 +124,7 @@
             "Total": "Total a Pagar"
            
         },
-        "Title": "Cart"
+        "Title": "Cart",
+        "paymentMethodOption":"Select a payment method"
     }
 }

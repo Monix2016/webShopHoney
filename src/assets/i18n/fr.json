@@ -28,11 +28,12 @@
     "Learn_More": "En savoir plus",
     "Our_Team": "Notre équipe",
     "Price": "prix",
-    "Location":"Emplacement",
-    "Duration":"Duration",
-    "Confirmation":"Confirmation",
-    "Next":"Suivant",
-    "Continue":"Continuer",
+    "Location": "Emplacement",
+    "Duration": "Duration",
+    "Confirmation": "Confirmation",
+    "Next": "Suivant",
+    "Continue": "Continuer",
+    "Finish":"Terminer",
     "Titles": {
         "Heart_Of_Nature": "Au coeur de la nature"
     },
@@ -103,7 +104,6 @@
         "description": "TestCriador de reinas profesional dedicado a la producción de material vivo. Trabaja con diferentes razas. Especialista en Buckfast."
     },
     "cart": {
-       
         "PersonalData": {
             "Title": "Données personnelles",
             "Name": "Prénom",
@@ -112,8 +112,9 @@
             "Direction": "Adresse",
             "Phone": "Téléphone",
             "paymentMethod": "Mode de payement",
-            "Cash_On_Delivery":"Contre remboursement",
-            "Card":"Carte"
+            "Cash_On_Delivery": "Contre remboursement",
+            "Card": "Carte",
+            "paymentMethodOption": "Sélectionner un mode de paiement"
         },
         "CartItems": {
             "Title": "Articles dans le panier",
@@ -121,7 +122,6 @@
             "Weight": "Poids",
             "Price": "Prix",
             "Total": "Total á Payer"
-            
         },
         "Title": "Chariot"
     }

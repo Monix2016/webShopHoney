@@ -1,8 +1,8 @@
 <div class="personal-info-step">
-  <h3>{{'Cart.PersonalData.Title'|translate}}</h3>
+  <h3>{{'cart.Datos Personales.Title'|translate}}</h3>
   <form *ngIf="personalInfoForm" (ngSubmit)="onSubmit()" [formGroup]="personalInfoForm">
     <div class="form-group">
-      <label for="name">{{'Cart.PersonalData.Title'|translate}}:</label>
+      <label for="name">{{'cart.Datos Personales.Title'|translate}}:</label>
       <input id="name" formControlName="name">
       <div *ngIf="personalInfoForm.get('name')?.invalid && personalInfoForm.get('name')?.touched" class="invalid-feedback">
         Nombre es requerido
@@ -10,7 +10,7 @@
     </div>
 
     <div class="form-group">
-      <label for="firstName">First Name:</label>
+      <label for="firstName">{{'cart.Datos Personales.FirstName'|translate}}:</label>
       <input id="firstName" formControlName="firstName">
       <div *ngIf="personalInfoForm.get('firstName')?.invalid && personalInfoForm.get('firstName')?.touched" class="invalid-feedback">
         First Name es requerido
@@ -47,7 +47,7 @@
       <h4>{{'cart.Datos Personales.paymentMethod'| translate}}:</h4>
       <label class="payment-option">
         <input type="radio" formControlName="paymentMethod" value="Tarjeta">
-        <i class="fas fa-credit-card"></i> Tarjeta
+        <i class="fas fa-credit-card"></i> {{'cart.Datos Personales.Card'| translate}}
       </label>
       <label class="payment-option">
         <input type="radio" formControlName="paymentMethod" value="PayPal">
@@ -58,7 +58,7 @@
         <i class="fas fa-money-bill-wave"></i> {{'cart.Datos Personales.Cash_On_Delivery'| translate}}
       </label>
       <div *ngIf="personalInfoForm.get('paymentMethod')?.invalid && personalInfoForm.get('paymentMethod')?.touched" class="invalid-feedback">
-        Selecciona un método de pago
+        {{'cart.Datos Personales.paymentMethodOption'| translate}}
       </div>
     </div>
 

@@ -3,16 +3,16 @@
   <div class="confirmation">
 
     <div>
-      <h3>{{ 'Cart.PersonalData.Title'|translate }}</h3>
-      <p>{{ 'Cart.PersonalData.Name'|translate }}: {{ personalInfo.name }}</p>
-      <p>{{ 'Cart.PersonalData.Direction'|translate }}: {{ personalInfo.address }}</p>
-      <p>{{ 'Cart.PersonalData.Email'|translate }}: {{ personalInfo.email }}</p>
-      <p>{{ 'Cart.PersonalData.Phone'|translate }}: {{ personalInfo.phone }}</p>
-      <p>{{ 'Cart.PersonalData.paymentMethod'|translate }}: {{ personalInfo.paymentMethod }}</p>
+      <h3>{{ 'cart.Datos Personales.Title'|translate }}</h3>
+      <p>{{ 'cart.Datos Personales.Name'|translate }}: {{ personalInfo.name }}</p>
+      <p>{{ 'cart.Datos Personales.Direction'|translate }}: {{ personalInfo.address }}</p>
+      <p>{{ 'cart.Datos Personales.Email'|translate }}: {{ personalInfo.email }}</p>
+      <p>{{ 'cart.Datos Personales.Phone'|translate }}: {{ personalInfo.phone }}</p>
+      <p>{{ 'cart.Datos Personales.paymentMethod'|translate }}: {{ personalInfo.paymentMethod }}</p>
     </div>
     
     <div>
-      <h3>{{ 'Cart.CartItems.Title'|translate }}</h3>
+      <h3>{{ 'cart.CartItems.Title'|translate }}</h3>
       <ul>
         <li *ngFor="let item of cartItems" class="cart-item">
           <div class="cart-item-details">
@@ -20,7 +20,7 @@
           </div>
         </li>
       </ul>
-      <h3>{{ 'Cart.CartItems.Total'|translate }}: {{ totalPrice }} €</h3>
+      <h3>{{ 'cart.CartItems.Total'|translate }}: {{ totalPrice }} €</h3>
     </div>
     <!-- <button (click)="next()">{{'Next'| translate}}</button> -->
   </div>

@@ -28,11 +28,12 @@
     "Learn_More": "معرفة المزيد",
     "Our_Team": "فريق العمل",
     "Price": "السعر",
-    "Location":"الموقع",
-    "Duration":"المدة",
-    "Confirmation":"التأكيد",
-    "Next":"التالي",
-    "Continue":"تابع",
+    "Location": "الموقع",
+    "Duration": "المدة",
+    "Confirmation": "التأكيد",
+    "Next": "التالي",
+    "Continue": "تابع",
+    "Finish":"النهاية",
     "Titles": {
         "Heart_Of_Nature": "من قلب الطبيعة"
     },
@@ -103,7 +104,6 @@
         "description": "TestCriador de reinas profesional dedicado a la producción de material vivo. Trabaja con diferentes razas. Especialista en Buckfast."
     },
     "cart": {
-        
         "Datos Personales": {
             "Title": "البيانات الشخصية",
             "Name": "الاسم",
@@ -112,8 +112,9 @@
             "Direction": "العنوان",
             "Phone": "الهاتف",
             "paymentMethod": "طريقة الدفع",
-            "Cash_On_Delivery":"الدفع عند الاستلام",
-            "Card":"البطاقة"
+            "Cash_On_Delivery": "الدفع عند الاستلام",
+            "Card": "البطاقة",
+            "paymentMethodOption": "اختر طريقة الدفع"
         },
         "CartItems": {
             "Title": "العناصر في عربة التسوق",
@@ -121,8 +122,8 @@
             "Weight": "الوزن",
             "Price": "ثمن",
             "Total": "المجموع الواجب دفعه"
-
         },
         "Title": "سلة التسوق"
+       
     }
 }
