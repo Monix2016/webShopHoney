@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { IHoney } from '../interfaces/honey';
 import { RouterModule } from '@angular/router';
 import { AddCartComponent } from '../functionalities/add-cart/add-cart.component';
-import { TranslateService } from '@ngx-translate/core';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { MOCKHONEYS } from '../../assets/mock/mock-products';
 import { CartService } from '../services/cart.service';
 import { HousingService } from '../services/housing.service';
@@ -13,6 +13,7 @@ import { HousingService } from '../services/housing.service';
   standalone: true,
   imports: [
     CommonModule,
+    TranslateModule,
     RouterModule,
     AddCartComponent
   ],
