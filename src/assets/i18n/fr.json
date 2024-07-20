@@ -30,6 +30,7 @@
     "Price": "prix",
     "Location":"Emplacement",
     "Duration":"Duration",
+    "Confirmation":"Confirmation",
     "Titles": {
         "Heart_Of_Nature": "Au coeur de la nature"
     },
