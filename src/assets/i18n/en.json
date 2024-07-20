@@ -31,6 +31,8 @@
     "Location":"Location",
     "Duration":"Duration",
     "Confirmation":"Confirmation",
+    "Next":"Next",
+    "Continue":"Continue",
     "Titles": {
         "Heart_Of_Nature": "In the heart of nature"
     },
@@ -101,7 +103,7 @@
         "description": "TestCriador de reinas profesional dedicado a la producción de material vivo. Trabaja con diferentes razas. Especialista en Buckfast."
     },
     "cart": {
-        "Title": "Cart",
+       
         "Datos Personales": {
             "Title": "Personal Data",
             "Name": "Name",
@@ -109,7 +111,9 @@
             "Email": "Email",
             "Direction": "Direction",
             "Phone": "Phone",
-            "paymentMethod": "Method of payment"
+            "paymentMethod": "Method of payment",
+            "Cash_On_Delivery":"Cash on Delivery",
+            "Card":"Card"
         },
         "CartItems": {
             "Title": "Items in Cart",
@@ -117,6 +121,8 @@
             "Weight": "weight",
             "Price": "price",
             "Total": "Total a Pagar"
-        }
+           
+        },
+        "Title": "Cart"
     }
 }

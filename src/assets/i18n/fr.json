@@ -31,6 +31,8 @@
     "Location":"Emplacement",
     "Duration":"Duration",
     "Confirmation":"Confirmation",
+    "Next":"Suivant",
+    "Continue":"Continuer",
     "Titles": {
         "Heart_Of_Nature": "Au coeur de la nature"
     },
@@ -100,8 +102,8 @@
         "role": "TestAPICULTOR profesional",
         "description": "TestCriador de reinas profesional dedicado a la producción de material vivo. Trabaja con diferentes razas. Especialista en Buckfast."
     },
-    "Cart": {
-        "Title": "Chariot",
+    "cart": {
+       
         "PersonalData": {
             "Title": "Données personnelles",
             "Name": "Prénom",
@@ -109,7 +111,9 @@
             "Email": "Email",
             "Direction": "Adresse",
             "Phone": "Téléphone",
-            "paymentMethod": "Mode de payement"
+            "paymentMethod": "Mode de payement",
+            "Cash_On_Delivery":"Contre remboursement",
+            "Card":"Carte"
         },
         "CartItems": {
             "Title": "Articles dans le panier",
@@ -117,6 +121,8 @@
             "Weight": "Poids",
             "Price": "Prix",
             "Total": "Total á Payer"
-        }
+            
+        },
+        "Title": "Chariot"
     }
 }

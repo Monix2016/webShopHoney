@@ -3,9 +3,9 @@
     <ul>
       <li *ngFor="let item of cartItems" class="cart-item">
         <div class="cart-item-details">
-          {{ item.name }} - Cantidad: {{ item.quantity }} - Peso: {{ item.weight }} kg
+          {{ item.name }} - {{'cart.CartItems.Quantity'| translate}}: {{ item.quantity }} - {{'cart.CartItems.Weight'| translate}}: {{ item.weight }} kg
         </div>
       </li>
     </ul>
-    <button (click)="next()">Siguiente</button>
+    <button (click)="next()">{{'Next'| translate}}</button>
   </div>

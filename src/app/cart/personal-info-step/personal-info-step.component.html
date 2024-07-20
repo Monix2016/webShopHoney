@@ -18,7 +18,7 @@
     </div>
 
     <div class="form-group">
-      <label for="phone">Teléfono:</label>
+      <label for="phone">{{'cart.Datos Personales.Phone'| translate}}:</label>
       <input id="phone" type="tel" formControlName="phone">
       <div *ngIf="personalInfoForm.get('phone')?.invalid && personalInfoForm.get('phone')?.touched" class="invalid-feedback">
         <div *ngIf="personalInfoForm.get('phone')?.hasError('required')">Teléfono es requerido</div>
@@ -27,7 +27,7 @@
     </div>
 
     <div class="form-group">
-      <label for="address">Dirección:</label>
+      <label for="address">{{'cart.Datos Personales.Direction'| translate}}:</label>
       <input id="address" formControlName="address">
       <div *ngIf="personalInfoForm.get('address')?.invalid && personalInfoForm.get('address')?.touched" class="invalid-feedback">
         Dirección es requerida
@@ -35,7 +35,7 @@
     </div>
 
     <div class="form-group">
-      <label for="email">Email:</label>
+      <label for="email">{{'cart.Datos Personales.Email'| translate}}:</label>
       <input id="email" type="email" formControlName="email">
       <div *ngIf="personalInfoForm.get('email')?.invalid && personalInfoForm.get('email')?.touched" class="invalid-feedback">
         <div *ngIf="personalInfoForm.get('email')?.hasError('required')">Email es requerido</div>
@@ -44,7 +44,7 @@
     </div>
 
     <div class="form-group payment-method">
-      <h4>Modo de Pago:</h4>
+      <h4>{{'cart.Datos Personales.paymentMethod'| translate}}:</h4>
       <label class="payment-option">
         <input type="radio" formControlName="paymentMethod" value="Tarjeta">
         <i class="fas fa-credit-card"></i> Tarjeta
@@ -55,13 +55,13 @@
       </label>
       <label class="payment-option">
         <input type="radio" formControlName="paymentMethod" value="Contra Reembolso">
-        <i class="fas fa-money-bill-wave"></i> Contra Reembolso
+        <i class="fas fa-money-bill-wave"></i> {{'cart.Datos Personales.Cash_On_Delivery'| translate}}
       </label>
       <div *ngIf="personalInfoForm.get('paymentMethod')?.invalid && personalInfoForm.get('paymentMethod')?.touched" class="invalid-feedback">
         Selecciona un método de pago
       </div>
     </div>
 
-    <button type="submit" [disabled]="!personalInfoForm.valid">Continuar</button>
+    <button type="submit" [disabled]="!personalInfoForm.valid">{{'Continue'| translate}}</button>
   </form>
 </div>
