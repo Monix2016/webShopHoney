@@ -6,7 +6,7 @@
       <form [formGroup]="paymentForm" (ngSubmit)="onSubmit()">
         <div class="form-group">
           <label for="cardNumber">{{'Labels.CardNumber'|translate}}:</label>
-          <input id="cardNumber" formControlName="cardNumber" placeholder="Ingrese el número de tarjeta">
+          <input id="cardNumber" formControlName="cardNumber" placeholder="">
           <div *ngIf="paymentForm.get('cardNumber')?.invalid && paymentForm.get('cardNumber')?.touched" class="invalid-feedback">
             <div *ngIf="paymentForm.get('cardNumber')?.hasError('required')">{{'Notices.CardNumber_Is_Required'|translate}}</div>
             <div *ngIf="paymentForm.get('cardNumber')?.hasError('pattern')">{{'Notices.CardNumber_Valid_Format'|translate}}</div>
@@ -24,7 +24,7 @@
       
         <div class="form-group">
           <label for="cvv">{{'Labels.CVV'|translate}}:</label>
-          <input id="cvv" formControlName="cvv" placeholder="Ingrese el CVV">
+          <input id="cvv" formControlName="cvv" placeholder="">
           <div *ngIf="paymentForm.get('cvv')?.invalid && paymentForm.get('cvv')?.touched" class="invalid-feedback">
             <div *ngIf="paymentForm.get('cvv')?.hasError('required')">{{'Notices.CVV_Is_Required'|translate}}</div>
             <div *ngIf="paymentForm.get('cvv')?.hasError('pattern')">{{'Notices.CVV_Valid_Format'|translate}}</div>
