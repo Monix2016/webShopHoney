@@ -39,6 +39,7 @@
     "Validate": "Validate",
     "Similar_Product": "Similar Product",
     "See_Our_Products":"see our products",
+    "Previous":"Previous",
     "Titles": {
         "Heart_Of_Nature": "In the heart of nature"
     },
@@ -129,7 +130,8 @@
             "Total": "Total a Pagar"
         },
         "Title": "Cart",
-        "paymentMethodOption": "Select a payment method"
+        "paymentMethodOption": "Select a payment method",
+        "Validate_Order":"Validate Order"
     },
     "Notices": {
         "Name_Is_Required": "Name is required",

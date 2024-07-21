@@ -39,6 +39,7 @@
     "Validate": "Valider",
     "Similar_Product": "Produit Similaire",
     "See_Our_Products":"Voir nos produits",
+    "Previous":"Précédent",
     "Titles": {
         "Heart_Of_Nature": "Au coeur de la nature"
     },
@@ -129,7 +130,8 @@
             "Total": "Total á Payer"
         },
         "Title": "Chariot",
-        "paymentMethodOption": "Sélectionner un mode de paiement"
+        "paymentMethodOption": "Sélectionner un mode de paiement",
+        "Validate_Order":"Valider la commande"
     },
     "Notices": {
         "Name_Is_Required": "Le prénom est obligatoire",

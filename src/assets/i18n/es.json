@@ -39,6 +39,7 @@
     "Validate": "Validar",
     "Similar_Product": "productos Similares",
     "See_Our_Products":"Ver nuestros productos",
+    "Previous":"Anterior",
     "Titles": {
         "Heart_Of_Nature": "En pleno corazón de la naturaleza"
     },
@@ -129,7 +130,8 @@
             "Total": "Total a Pagar"
         },
         "Title": "Carrito",
-        "paymentMethodOption": "Selecciona un método de pago"
+        "paymentMethodOption": "Selecciona un método de pago",
+        "Validate_Order":"Validar Pedido"
     },
     "Notices": {
         "Name_Is_Required": "Nombre es requerido",

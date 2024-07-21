@@ -28,8 +28,8 @@
   </div>
 
   <div class="navigation-buttons">
-    <button *ngIf="currentStep > 1" (click)="prevStep()">Anterior</button>
-    <button *ngIf="currentStep === 1" (click)="nextStep()" [disabled]="isCartEmpty()">Validar</button>
+    <button *ngIf="currentStep > 1" (click)="prevStep()">{{'Previous'|translate}}</button>
+    <button *ngIf="currentStep === 1" (click)="nextStep()" [disabled]="isCartEmpty()">{{'Validate'|translate}}</button>
     
   </div>
 </div>

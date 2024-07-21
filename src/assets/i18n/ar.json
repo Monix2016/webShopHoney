@@ -39,6 +39,7 @@
     "Validate": "التحقق",
     "Similar_Product": "منتجات مماثلة",
     "See_Our_Products":"انظر منتجاتنا",
+    "Previous":"السابق",
     "Titles": {
         "Heart_Of_Nature": "من قلب الطبيعة"
     },
@@ -129,7 +130,8 @@
             "Total": "المجموع الواجب دفعه"
         },
         "Title": "سلة التسوق",
-        "paymentMethodOption": "اختر طريقة الدفع"
+        "paymentMethodOption": "اختر طريقة الدفع",
+        "Validate_Order":"التحقق من صحة الطلب"
     },
     "Notices": {
         "Name_Is_Required": "الاسم مطلوب",
