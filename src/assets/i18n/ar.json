@@ -30,12 +30,14 @@
     "Price": "السعر",
     "Location": "الموقع",
     "Duration": "المدة",
+    "Category": "التصنيف",
     "Confirmation": "التأكيد",
     "Next": "التالي",
     "Continue": "تابع",
     "Finish": "النهاية",
-    "Pay":"الدفع",
-    "Validate":"التحقق",
+    "Pay": "الدفع",
+    "Validate": "التحقق",
+    "Similar_Product": "منتجات مماثلة",
     "Titles": {
         "Heart_Of_Nature": "من قلب الطبيعة"
     },
@@ -116,7 +118,7 @@
             "paymentMethod": "طريقة الدفع",
             "Cash_On_Delivery": "الدفع عند الاستلام",
             "Card": "البطاقة",
-            "paymentMethodOption": "اختر طريقة الدفع"
+            "Card_Payment": "الدفع بالبطاقة"
         },
         "CartItems": {
             "Title": "العناصر في عربة التسوق",
@@ -125,7 +127,8 @@
             "Price": "ثمن",
             "Total": "المجموع الواجب دفعه"
         },
-        "Title": "سلة التسوق"
+        "Title": "سلة التسوق",
+        "paymentMethodOption": "اختر طريقة الدفع"
     },
     "Notices": {
         "Name_Is_Required": "الاسم مطلوب",
@@ -134,6 +137,17 @@
         "Email_Is_Required": "البريد الإلكتروني مطلوب",
         "Email_Valid_Format": "يجب أن يكون للبريد الإلكتروني صيغة صالحة",
         "Phone_Is_Required": "الهاتف مطلوب",
-        "Phone_Valid_Format": "يجب أن يكون للهاتف صيغة صالحة"
+        "Phone_Valid_Format": "يجب أن يكون للهاتف صيغة صالحة",
+        "CVV_Is_Required": "CVV مطلوب",
+        "CVV_Valid_Format": "يجب أن تحتوي بطاقة التحقق من البطاقة الائتمانية على 3 أرقام رقمية",
+        "CardNumber_Is_Required": "رقم البطاقة مطلوب",
+        "CardNumber_Valid_Format": "يجب أن يتكون رقم البطاقة من 16 رقماً رقمياً",
+        "ExpirationDate_Is_Required": "تاريخ الصلاحية مطلوب",
+        "ExpirationDate_Valid_Format": "يجب أن يكون تاريخ انتهاء الصلاحية بصيغة MM/YY."
+    },
+    "Labels": {
+        "ExpirationDate": "تاريخ انتهاء الصلاحية (MM/YY)",
+        "CardNumber": "رقم البطاقة",
+        "CVV": "CVV"
     }
 }

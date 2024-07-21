@@ -28,10 +28,10 @@
         <div class="flex-container-col">
           <section class="listing-description">
             <p class="listing-location">{{housingLocation?.city}}</p>
-            <p class="">Precio: {{housingLocation?.price}}</p>
-            <p>Ubicación: {{housingLocation?.state}}</p>
-            <p>Categoria: {{housingLocation?.category}}</p>
-            <p>Categoria: {{housingLocation?.id}}</p>
+            <p class="">{{'Price'|translate}}: {{housingLocation?.price}}</p>
+            <p>{{'Location'|translate}}: {{housingLocation?.state}}</p>
+            <p>{{'Category'|translate}}:: {{housingLocation?.category}}</p>
+            <p>{{'Category'|translate}}:: {{housingLocation?.id}}</p>
             <button class="CartBtn" (click)="addToCart(housingLocation?.id)">
               <span class="IconContainer">
                   <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512" fill="rgb(17, 17, 17)"
@@ -71,7 +71,7 @@
       </p>
     </section>
     <section >
-      <h2 class="title">Produit Similar</h2>
+      <h2 class="title">{{'Similar_Product'|translate}}</h2>
 
       <section class="results">
       <app-housing-location *ngFor="let housingLocation of housingLocationList" [housingLocation]="housingLocation"></app-housing-location>

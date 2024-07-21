@@ -30,12 +30,14 @@
     "Price": "Price",
     "Location": "Location",
     "Duration": "Duration",
+    "Category": "Category",
     "Confirmation": "Confirmation",
     "Next": "Next",
     "Continue": "Continue",
     "Finish": "Finalizar",
-    "Pay":"Pay",
-    "Validate":"Validate",
+    "Pay": "Pay",
+    "Validate": "Validate",
+    "Similar_Product": "Similar Product",
     "Titles": {
         "Heart_Of_Nature": "In the heart of nature"
     },
@@ -115,7 +117,8 @@
             "Phone": "Phone",
             "paymentMethod": "Method of payment",
             "Cash_On_Delivery": "Cash on Delivery",
-            "Card": "Card"
+            "Card": "Card",
+            "Card_Payment":"Card Payment"
         },
         "CartItems": {
             "Title": "Items in Cart",
@@ -134,6 +137,17 @@
         "Email_Is_Required": "Email is required",
         "Email_Valid_Format": "Email must have a valid format",
         "Phone_Is_Required": "Phone is required",
-        "Phone_Valid_Format": "Phone must have a valid format"
+        "Phone_Valid_Format": "Phone must have a valid format",
+        "CVV_Is_Required": "CVV is required",
+        "CVV_Valid_Format": "CVV must have 3 numeric digits",
+        "CardNumber_Is_Required": "Card number is required",
+        "CardNumber_Valid_Format": "Card number must have 16 numeric digits",
+        "ExpirationDate_Is_Required": "Expiration Date is required",
+        "ExpirationDate_Valid_Format": "Expiration Date must be in MM/YYY format."
+    },
+    "Labels": {
+        "ExpirationDate": "ExpirationDate (YY/MM)",
+        "CardNumber": "Card Number",
+        "CVV": "CVV"
     }
 }

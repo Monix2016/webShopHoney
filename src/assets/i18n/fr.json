@@ -30,12 +30,14 @@
     "Price": "prix",
     "Location": "Emplacement",
     "Duration": "Duration",
+    "Category": "Catégorie",
     "Confirmation": "Confirmation",
     "Next": "Suivant",
     "Continue": "Continuer",
     "Finish": "Terminer",
     "Pay": "Payer",
     "Validate": "Valider",
+    "Similar_Product": "Produit Similaire",
     "Titles": {
         "Heart_Of_Nature": "Au coeur de la nature"
     },
@@ -116,7 +118,7 @@
             "paymentMethod": "Mode de payement",
             "Cash_On_Delivery": "Contre remboursement",
             "Card": "Carte",
-            "paymentMethodOption": "Sélectionner un mode de paiement"
+            "Card_Payment": "Paiement par carte"
         },
         "CartItems": {
             "Title": "Articles dans le panier",
@@ -125,7 +127,8 @@
             "Price": "Prix",
             "Total": "Total á Payer"
         },
-        "Title": "Chariot"
+        "Title": "Chariot",
+        "paymentMethodOption": "Sélectionner un mode de paiement"
     },
     "Notices": {
         "Name_Is_Required": "Le prénom est obligatoire",
@@ -134,6 +137,17 @@
         "Email_Is_Required": "L'e-mail est obligatoire",
         "Email_Valid_Format": "L'e-mail doit avoir un format valide",
         "Phone_Is_Required": "Le téléphone est obligatoire",
-        "Phone_Valid_Format": "Le téléphone doit avoir un format valide"
+        "Phone_Valid_Format": "Le téléphone doit avoir un format valide",
+        "CVV_Is_Required": "CVV est obligatoire",
+        "CVV_Valid_Format": "Le CVV doit être composé de 3 chiffres",
+        "CardNumber_Is_Required": "Le numéro de la carte est demandé",
+        "CardNumber_Valid_Format": "Le numéro de la carte doit comporter 16 chiffres",
+        "ExpirationDate_Is_Required": "La date d'expiration est obligatoire",
+        "ExpirationDate_Valid_Format": "La date d'expiration doit être au format MM/AAAA."
+    },
+    "Labels": {
+        "ExpirationDate": "Date d'expiration (MM/AA)",
+        "CardNumber": "Numéro de la carte",
+        "CVV": "CVV"
     }
 }
