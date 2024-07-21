@@ -18,12 +18,12 @@
     </div>
     <h2 class="title"> {{'Our_Team'|translate}}</h2>
     <section class="results">
-        
+
         <app-cours-team *ngFor="let staff of team" [staff]="staff"></app-cours-team>
     </section>
     <h2 class="title"> {{'Cours.Other_Courses'|translate}}</h2>
     <section class="results">
-      
+
         <app-courses-honey *ngFor="let coursHoney of coursesHoneyList" [coursHoney]="coursHoney"></app-courses-honey>
     </section>
 

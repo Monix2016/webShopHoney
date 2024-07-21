@@ -38,8 +38,8 @@
     "Pay": "Pay",
     "Validate": "Validate",
     "Similar_Product": "Similar Product",
-    "See_Our_Products":"see our products",
-    "Previous":"Previous",
+    "See_Our_Products": "see our products",
+    "Previous": "Previous",
     "Titles": {
         "Heart_Of_Nature": "In the heart of nature"
     },
@@ -120,7 +120,7 @@
             "paymentMethod": "Method of payment",
             "Cash_On_Delivery": "Cash on Delivery",
             "Card": "Card",
-            "Card_Payment":"Card Payment"
+            "Card_Payment": "Card Payment"
         },
         "CartItems": {
             "Title": "Items in Cart",
@@ -131,7 +131,7 @@
         },
         "Title": "Cart",
         "paymentMethodOption": "Select a payment method",
-        "Validate_Order":"Validate Order"
+        "Validate_Order": "Validate Order"
     },
     "Notices": {
         "Name_Is_Required": "Name is required",

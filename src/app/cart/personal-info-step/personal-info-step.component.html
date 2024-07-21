@@ -4,7 +4,8 @@
     <div class="form-group">
       <label for="name">{{'cart.Datos Personales.Title'|translate}}:</label>
       <input id="name" formControlName="name">
-      <div *ngIf="personalInfoForm.get('name')?.invalid && personalInfoForm.get('name')?.touched" class="invalid-feedback">
+      <div *ngIf="personalInfoForm.get('name')?.invalid && personalInfoForm.get('name')?.touched"
+        class="invalid-feedback">
         {{'Notices.Name_Is_Required'|translate}}
       </div>
     </div>
@@ -12,7 +13,8 @@
     <div class="form-group">
       <label for="firstName">{{'cart.Datos Personales.FirstName'|translate}}:</label>
       <input id="firstName" formControlName="firstName">
-      <div *ngIf="personalInfoForm.get('firstName')?.invalid && personalInfoForm.get('firstName')?.touched" class="invalid-feedback">
+      <div *ngIf="personalInfoForm.get('firstName')?.invalid && personalInfoForm.get('firstName')?.touched"
+        class="invalid-feedback">
         {{'Notices.FirstName_Is_Required'|translate}}
       </div>
     </div>
@@ -20,7 +22,8 @@
     <div class="form-group">
       <label for="phone">{{'cart.Datos Personales.Phone'| translate}}:</label>
       <input id="phone" type="tel" formControlName="phone">
-      <div *ngIf="personalInfoForm.get('phone')?.invalid && personalInfoForm.get('phone')?.touched" class="invalid-feedback">
+      <div *ngIf="personalInfoForm.get('phone')?.invalid && personalInfoForm.get('phone')?.touched"
+        class="invalid-feedback">
         <div *ngIf="personalInfoForm.get('phone')?.hasError('required')">{{'Notices.Phone_Is_Required'|translate}}</div>
         <div *ngIf="personalInfoForm.get('phone')?.hasError('pattern')">{{'Notices.Phone_Valid_Format'|translate}}</div>
       </div>
@@ -29,7 +32,8 @@
     <div class="form-group">
       <label for="address">{{'cart.Datos Personales.Direction'| translate}}:</label>
       <input id="address" formControlName="address">
-      <div *ngIf="personalInfoForm.get('address')?.invalid && personalInfoForm.get('address')?.touched" class="invalid-feedback">
+      <div *ngIf="personalInfoForm.get('address')?.invalid && personalInfoForm.get('address')?.touched"
+        class="invalid-feedback">
         {{'Notices.Address_Is_Required'|translate}}
       </div>
     </div>
@@ -37,7 +41,8 @@
     <div class="form-group">
       <label for="email">{{'cart.Datos Personales.Email'| translate}}:</label>
       <input id="email" type="email" formControlName="email">
-      <div *ngIf="personalInfoForm.get('email')?.invalid && personalInfoForm.get('email')?.touched" class="invalid-feedback">
+      <div *ngIf="personalInfoForm.get('email')?.invalid && personalInfoForm.get('email')?.touched"
+        class="invalid-feedback">
         <div *ngIf="personalInfoForm.get('email')?.hasError('required')">{{'Notices.Email_Is_Required'|translate}}</div>
         <div *ngIf="personalInfoForm.get('email')?.hasError('email')">{{'Notices.Email_Valid_Format'|translate}}</div>
       </div>
@@ -57,7 +62,8 @@
         <input type="radio" formControlName="paymentMethod" value="Contra Reembolso">
         <i class="fas fa-money-bill-wave"></i> {{'cart.Datos Personales.Cash_On_Delivery'| translate}}
       </label>
-      <div *ngIf="personalInfoForm.get('paymentMethod')?.invalid && personalInfoForm.get('paymentMethod')?.touched" class="invalid-feedback">
+      <div *ngIf="personalInfoForm.get('paymentMethod')?.invalid && personalInfoForm.get('paymentMethod')?.touched"
+        class="invalid-feedback">
         {{'cart.Datos Personales.paymentMethodOption'| translate}}
       </div>
     </div>

@@ -1,4 +1,3 @@
-
 <section>
   <div class="confirmation">
 
@@ -10,13 +9,15 @@
       <p>{{ 'cart.Datos Personales.Phone'|translate }}: {{ personalInfo.phone }}</p>
       <p>{{ 'cart.Datos Personales.paymentMethod'|translate }}: {{ personalInfo.paymentMethod }}</p>
     </div>
-    
+
     <div>
       <h3>{{ 'cart.CartItems.Title'|translate }}</h3>
       <ul>
         <li *ngFor="let item of cartItems" class="cart-item">
           <div class="cart-item-details">
-            {{ item.name }} - {{ 'cart.CartItems.Quantity'|translate }}: {{ item.quantity }} - {{ 'cart.CartItems.Weight'|translate }}: {{ item.weight }} kg - {{ 'cart.CartItems.Price'|translate }}: {{ item.price }} €
+            {{ item.name }} - {{ 'cart.CartItems.Quantity'|translate }}: {{ item.quantity }} - {{
+            'cart.CartItems.Weight'|translate }}: {{ item.weight }} kg - {{ 'cart.CartItems.Price'|translate }}: {{
+            item.price }} €
           </div>
         </li>
       </ul>
