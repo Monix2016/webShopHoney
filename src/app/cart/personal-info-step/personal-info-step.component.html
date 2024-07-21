@@ -5,7 +5,7 @@
       <label for="name">{{'cart.Datos Personales.Title'|translate}}:</label>
       <input id="name" formControlName="name">
       <div *ngIf="personalInfoForm.get('name')?.invalid && personalInfoForm.get('name')?.touched" class="invalid-feedback">
-        Nombre es requerido
+        {{'Notices.Name_Is_Required'|translate}}
       </div>
     </div>
 
@@ -13,7 +13,7 @@
       <label for="firstName">{{'cart.Datos Personales.FirstName'|translate}}:</label>
       <input id="firstName" formControlName="firstName">
       <div *ngIf="personalInfoForm.get('firstName')?.invalid && personalInfoForm.get('firstName')?.touched" class="invalid-feedback">
-        First Name es requerido
+        {{'Notices.FirstName_Is_Required'|translate}}
       </div>
     </div>
 
@@ -21,8 +21,8 @@
       <label for="phone">{{'cart.Datos Personales.Phone'| translate}}:</label>
       <input id="phone" type="tel" formControlName="phone">
       <div *ngIf="personalInfoForm.get('phone')?.invalid && personalInfoForm.get('phone')?.touched" class="invalid-feedback">
-        <div *ngIf="personalInfoForm.get('phone')?.hasError('required')">Teléfono es requerido</div>
-        <div *ngIf="personalInfoForm.get('phone')?.hasError('pattern')">Teléfono debe tener un formato válido</div>
+        <div *ngIf="personalInfoForm.get('phone')?.hasError('required')">{{'Notices.Phone_Is_Required'|translate}}</div>
+        <div *ngIf="personalInfoForm.get('phone')?.hasError('pattern')">{{'Notices.Phone_Valid_Format'|translate}}</div>
       </div>
     </div>
 
@@ -30,7 +30,7 @@
       <label for="address">{{'cart.Datos Personales.Direction'| translate}}:</label>
       <input id="address" formControlName="address">
       <div *ngIf="personalInfoForm.get('address')?.invalid && personalInfoForm.get('address')?.touched" class="invalid-feedback">
-        Dirección es requerida
+        {{'Notices.Address_Is_Required'|translate}}
       </div>
     </div>
 
@@ -38,8 +38,8 @@
       <label for="email">{{'cart.Datos Personales.Email'| translate}}:</label>
       <input id="email" type="email" formControlName="email">
       <div *ngIf="personalInfoForm.get('email')?.invalid && personalInfoForm.get('email')?.touched" class="invalid-feedback">
-        <div *ngIf="personalInfoForm.get('email')?.hasError('required')">Email es requerido</div>
-        <div *ngIf="personalInfoForm.get('email')?.hasError('email')">Email debe tener un formato válido</div>
+        <div *ngIf="personalInfoForm.get('email')?.hasError('required')">{{'Notices.Email_Is_Required'|translate}}</div>
+        <div *ngIf="personalInfoForm.get('email')?.hasError('email')">{{'Notices.Email_Valid_Format'|translate}}</div>
       </div>
     </div>
 

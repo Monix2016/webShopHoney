@@ -33,7 +33,7 @@
     "Confirmation": "Confirmación",
     "Next": "Siguiente",
     "Continue": "Continuar",
-    "Finish":"Finalizar",
+    "Finish": "Finalizar",
     "Titles": {
         "Heart_Of_Nature": "En pleno corazón de la naturaleza"
     },
@@ -124,6 +124,14 @@
             "Total": "Total a Pagar"
         },
         "Title": "Carrito"
-        
+    },
+    "Notices": {
+        "Name_Is_Required": "Nombre es requerido",
+        "FirstName_Is_Required": "Apellido es requerido",
+        "Address_Is_Required": "Dirección es requerida",
+        "Email_Is_Required": "Email es requerido",
+        "Email_Valid_Format": "Email debe tener un formato válido",
+        "Phone_Is_Required": "Teléfono es requerido",
+        "Phone_Valid_Format": "Teléfono debe tener un formato válido"
     }
 }

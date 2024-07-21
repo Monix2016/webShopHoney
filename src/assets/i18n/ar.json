@@ -33,7 +33,7 @@
     "Confirmation": "التأكيد",
     "Next": "التالي",
     "Continue": "تابع",
-    "Finish":"النهاية",
+    "Finish": "النهاية",
     "Titles": {
         "Heart_Of_Nature": "من قلب الطبيعة"
     },
@@ -124,6 +124,14 @@
             "Total": "المجموع الواجب دفعه"
         },
         "Title": "سلة التسوق"
-       
+    },
+    "Notices": {
+        "Name_Is_Required": "الاسم مطلوب",
+        "FirstName_Is_Required": "اللقب مطلوب",
+        "Address_Is_Required": "العنوان مطلوب",
+        "Email_Is_Required": "البريد الإلكتروني مطلوب",
+        "Email_Valid_Format": "يجب أن يكون للبريد الإلكتروني صيغة صالحة",
+        "Phone_Is_Required": "الهاتف مطلوب",
+        "Phone_Valid_Format": "يجب أن يكون للهاتف صيغة صالحة"
     }
 }

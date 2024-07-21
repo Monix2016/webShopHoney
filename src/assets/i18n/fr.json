@@ -33,7 +33,7 @@
     "Confirmation": "Confirmation",
     "Next": "Suivant",
     "Continue": "Continuer",
-    "Finish":"Terminer",
+    "Finish": "Terminer",
     "Titles": {
         "Heart_Of_Nature": "Au coeur de la nature"
     },
@@ -124,5 +124,14 @@
             "Total": "Total á Payer"
         },
         "Title": "Chariot"
+    },
+    "Notices": {
+        "Name_Is_Required": "Le prénom est obligatoire",
+        "FirstName_Is_Required": "Le nom est requis",
+        "Address_Is_Required": "L'adresse est obligatoire",
+        "Email_Is_Required": "L'e-mail est obligatoire",
+        "Email_Valid_Format": "L'e-mail doit avoir un format valide",
+        "Phone_Is_Required": "Le téléphone est obligatoire",
+        "Phone_Valid_Format": "Le téléphone doit avoir un format valide"
     }
 }
