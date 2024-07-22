@@ -5,4 +5,5 @@ export interface ICartitem {
     price: number;
     quantity: number;
     weight:number;
+    photo:string;
 }

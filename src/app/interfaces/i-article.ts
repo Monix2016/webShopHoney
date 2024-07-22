@@ -6,4 +6,5 @@ export interface IArticle {
     price: number;
     weight:number;
     image: string;
+    photo:string;
 }

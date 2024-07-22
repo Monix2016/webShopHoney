@@ -62,7 +62,8 @@ export class HousingService {
         name: honey.name,
         price: honey.price,
         quantity: 1,
-        weight: honey.weight
+        weight: honey.weight,
+        photo:honey.photo,
       });
     }
   }

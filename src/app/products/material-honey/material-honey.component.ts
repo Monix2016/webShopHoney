@@ -44,6 +44,7 @@ export class MaterialHoneyComponent {
         price: materialHoney.price,
         quantity: 1,
         weight: materialHoney.weight,
+        photo:materialHoney.photo,
       });
     }
   }

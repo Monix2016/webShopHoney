@@ -17,7 +17,7 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
 export class AddCartComponent {
   products: IArticle[]= [
     // Ejemplo de productos, deberías cargar esto desde una API o servicio
-    { id: 1, name: 'Miel', description: 'Miel pura de abeja', price: 10, image: 'path-to-image',weight:2,type:'mater' }
+    { id: 1, name: 'Miel', description: 'Miel pura de abeja', price: 10, image: 'path-to-image',weight:2,type:'mater',photo:'hola' }
   ];
 
 
@@ -34,6 +34,7 @@ export class AddCartComponent {
       price: product.price,
       quantity: 1,
       weight:product.weight,
+      photo:product.photo,
     });
   }
 
