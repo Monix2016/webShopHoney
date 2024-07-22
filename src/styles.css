@@ -58,6 +58,12 @@ input[type="text"] {
   width: 30%;
 }
 
+q{
+
+  font-family: cursive;
+  padding: 0.5rem;
+}
+
 .title {
   text-align: center;
   font-size: 1.5rem;
@@ -78,6 +84,12 @@ input[type="text"] {
   align-items: center;
   justify-content: center;
   box-shadow: 0 2px 5px var(--box-shadow-color);
+}
+
+.underline {
+  text-decoration: underline;
+  padding: 0.5rem;
+  font-weight: bold;
 }
 
 /** #####################################################

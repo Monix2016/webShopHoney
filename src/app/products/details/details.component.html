@@ -50,17 +50,33 @@
 
       </div>
       <div class="flex-item">
-        <img class="animated-img" [src]="housingLocation?.photo"
-          alt="Exterior photo of {{housingLocation?.name}}" />
+        <img class="" [src]="housingLocation?.photo" alt="Exterior photo of {{housingLocation?.name}}" />
       </div>
-      <section class="listing-description">
-        <p>Stock limitée <q>En raison de notre engagement envers la qualité, notre miel est disponible en quantités
-            limitées, garantissant une rareté précieuse et une fraîcheur absolue.</q></p>
-        <p>Produit Organique <q>Notre miel est cultivé avec respect pour l'environnement et votre bien-être.</q></p>
-        <p>Extraction à froid <q>Notre miel est extrait à froid pour préserver ses nutriments et ses saveurs délicates,
-            offrant une expérience gustative authentique et riche.</q></p>
-      </section>
+      <div class="flex-item">
+        <section class="">
+          <p class="underline">Stock limitée</p>
+          <blockquote>
+            <q>En raison de notre engagement envers la qualité, notre miel est disponible en quantités
+              limitées, garantissant une rareté précieuse et une fraîcheur absolue.
+            </q>
+          </blockquote>
 
+          <p class="underline">Produit Organique</p>
+          <blockquote>
+            <q>Notre miel est cultivé avec respect pour l'environnement et votre bien-être.
+            </q>
+          </blockquote>
+
+          <p class="underline">Extraction à froid</p>
+          <blockquote>
+            <q>Notre miel est extrait à froid pour préserver ses nutriments et ses saveurs délicates,
+              offrant une expérience gustative authentique et riche.
+            </q>
+          </blockquote>
+
+
+        </section>
+      </div>
     </div>
     <section *ngIf="housingLocation?.category === 'HH'">
       <app-blog-herbal-honey></app-blog-herbal-honey>
