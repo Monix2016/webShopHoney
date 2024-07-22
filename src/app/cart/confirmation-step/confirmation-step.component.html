@@ -24,7 +24,7 @@
         <li *ngFor="let item of cartItems" class="cart-item">
           <div class="cart-item-details">
             {{ item.name }} - {{'cart.CartItems.Quantity'|translate}}: {{ item.quantity }} -
-            {{'cart.CartItems.Weight'|translate}}: {{ item.weight }} kg - {{'cart.CartItems.Price'|translate}}: {{
+            {{'cart.CartItems.Weight'|translate}}: {{ item.weight }} g - {{'cart.CartItems.Price'|translate}}: {{
             item.price  | currency }}
           </div>
         </li>

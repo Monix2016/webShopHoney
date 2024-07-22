@@ -9,7 +9,7 @@
 
       <div class="cart-item" *ngIf="item.type=== 'HN'">
         <div class="cart-item-details">
-          {{ item.name }} - {{ item.quantity }} - {{ item.weight }} kg - {{ item.price | currency }}
+          {{ item.name }} - {{ item.quantity }} - {{ item.weight }} g - {{ item.price | currency }}
         </div>
         <div class="cart-item-actions">
           <span class="btn-delete" (click)="removeItem(item.id)">
@@ -19,7 +19,7 @@
             (change)="updateItem(item.id, item.quantity, item.weight)">
           <select class="input-weight styled-select" [(ngModel)]="item.weight"
             (change)="updateItem(item.id, item.quantity, item.weight)">
-            <option value="1000">1kg</option>
+            <option value="1000">1000g</option>
             <option value="500">500g</option>
             <option value="250">250g</option>
           </select>
