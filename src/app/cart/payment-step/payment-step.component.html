@@ -1,4 +1,4 @@
-<section *ngIf="paymentMethod === 'Tarjeta'">
+<section *ngIf="paymentMethod === 'Tarjeta'" [ngClass]="{'rtl': translate.currentLang  === 'ar', 'ltr': translate.currentLang  === 'en'}">
   <div class="payment-step">
     <h3>{{'cart.Datos Personales.Card_Payment'|translate}}</h3>
     <app-confirm-step></app-confirm-step>

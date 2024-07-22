@@ -1,7 +1,7 @@
 <section [ngClass]="{'rtl': translate.currentLang  === 'ar', 'ltr': translate.currentLang  === 'en'}">
   <div class="confirmation">
 
-    <div>
+    <div [ngClass]="{'rtl': translate.currentLang  === 'ar', 'ltr': translate.currentLang  === 'en'}">
       <h3>{{ 'cart.Datos Personales.Title'|translate }}</h3>
       <p>{{ 'cart.Datos Personales.Name'|translate }}: {{ personalInfo.name }}</p>
       <p>{{ 'cart.Datos Personales.Direction'|translate }}: {{ personalInfo.address }}</p>
