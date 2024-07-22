@@ -246,16 +246,19 @@ section.listing a::after {
     #####################################################*/
 
 .animated-img {
-  transform: translateX(400%);
+  /* transform: translateX(400%); */
+  transform: rotateZ(150deg);
   transition: all 0.4s ease;
 }
 
 .animated-img:nth-of-type(even) {
-  transform: translateX(400%);
+  /* transform: translateX(400%); */
+  transform: rotateZ(150deg);
 }
 
 .animated-img.show {
-  transform: translateX(0);
+  /* transform: translateX(0); */
+  transform: rotateZ(0deg);
 }
 
 
