@@ -102,17 +102,16 @@
   border-radius: 5px;
 }
 
-/* Estilos para el icono de eliminar */
-/* .cart-item-actions .btn-delete {
-  color: #f44336; 
-  font-size: 1.5rem; 
-  cursor: pointer;
-  margin-left: 10px;
+.cart-img{
+height: 150px;
+width: 150px;
 }
 
-.cart-item-actions .btn-delete:hover {
-  color: #d32f2f; 
-} */
+.cart-box{
+ 
+  padding: 10px;
+  box-shadow: 5px 10px 8px #888888;
+}
 
 /* Media Queries for Responsiveness */
 @media (max-width: 768px) {

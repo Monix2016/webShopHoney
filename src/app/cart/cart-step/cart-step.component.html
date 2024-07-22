@@ -1,10 +1,10 @@
 <section>
   <div class="cart-list">
 
-    <div *ngFor="let item of cartItems">
+    <div *ngFor="let item of cartItems" class="flex-container cart-box">
 
       <div>
-        <img [src]="item?.photo" alt="Exterior photo of {{item?.name}}" />
+        <img class="cart-img" [src]="item?.photo" alt="Exterior photo of {{item?.name}}" />
       </div>
 
       <div class="cart-item" *ngIf="item.type=== 'HN'">
