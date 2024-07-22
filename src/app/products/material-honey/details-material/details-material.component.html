@@ -5,10 +5,10 @@
             <section class="listing-description">
                 <h2 class="listing-heading">{{materialHoney?.name}}</h2>
                 <p class="listing-location">{{materialHoney?.ubication}}</p>
-                <p class="">Precio: {{materialHoney?.price}}</p>
+                <p class="">{{'Price'|translate}}: {{materialHoney?.price}}</p>
                 <ul>
-                    <li>Ubicación: {{materialHoney?.ubication}}</li>
-                    <li>duration: {{materialHoney?.duration}}</li>
+                    <li>{{'Location'|translate}}: {{materialHoney?.ubication}}</li>
+                    <li>{{'Duration'|translate}}duration: {{materialHoney?.duration}}</li>
                 </ul>
                 <button class="CartBtn" (click)="addToCart(materialHoney?.id)">
                     <span class="IconContainer">
