@@ -4,7 +4,7 @@
             <section class="listing-description">
                 <h2 class="listing-heading">{{coursHoney?.title}}</h2>
                 <p class="listing-location">{{coursHoney?.ubication}}</p>
-                <p class="">{{'Price'|translate}}: {{coursHoney?.price}}</p>
+                <p class="">{{'Price'|translate}}: {{coursHoney?.price | currency }}</p>
 
                 <ul>
                     <li>{{'Location'|translate}}: {{coursHoney?.state}}</li>

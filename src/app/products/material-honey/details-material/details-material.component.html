@@ -6,7 +6,7 @@
                 <div class="flex-container-col">
                     <section class="listing-description">
                         <p class="listing-location">{{materialHoney?.ubication}}</p>
-                        <p class="">{{'Price'|translate}}: {{materialHoney?.price}}</p>
+                        <p class="">{{'Price'|translate}}: {{materialHoney?.price | currency }}</p>
                         <ul>
                             <li>{{'Location'|translate}}: {{materialHoney?.ubication}}</li>
                             <li>{{'Duration'|translate}}duration: {{materialHoney?.duration}}</li>

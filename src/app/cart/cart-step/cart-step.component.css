@@ -113,6 +113,31 @@ width: 150px;
   box-shadow: 5px 10px 8px #888888;
 }
 
+
+.styled-select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 5px 10px;
+  font-size: 14px;
+  margin-right: 10px;
+  cursor: pointer;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.styled-select:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  outline: none;
+}
+
+.styled-select option {
+  padding: 10px;
+}
+
 /* Media Queries for Responsiveness */
 @media (max-width: 768px) {
   .cart-step li {

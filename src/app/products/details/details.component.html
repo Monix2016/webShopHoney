@@ -28,7 +28,7 @@
         <div class="flex-container-col">
           <section class="listing-description">
             <p class="listing-location">{{housingLocation?.city}}</p>
-            <p class="">{{'Price'|translate}}: {{housingLocation?.price}}</p>
+            <p class="">{{'Price'|translate}}: {{housingLocation?.price | currency }}</p>
             <p>{{'Location'|translate}}: {{housingLocation?.state}}</p>
             <p>{{'Category'|translate}}:: {{housingLocation?.category}}</p>
             <p>{{'Category'|translate}}:: {{housingLocation?.id}}</p>

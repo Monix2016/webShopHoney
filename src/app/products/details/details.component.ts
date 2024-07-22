@@ -59,7 +59,7 @@ export class DetailsComponent {
         name: honey.name,
         price: honey.price,
         quantity: 1,
-        weight: honey.weight,
+        weight: honey.weight  || 500,
         photo:honey.photo,
       });
     }

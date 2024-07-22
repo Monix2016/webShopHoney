@@ -33,7 +33,7 @@ export class AddCartComponent {
       name: product.name,
       price: product.price,
       quantity: 1,
-      weight:product.weight,
+      weight:product.weight || 500,
       photo:product.photo,
     });
   }

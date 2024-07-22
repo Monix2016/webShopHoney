@@ -17,11 +17,11 @@
           <div class="cart-item-details">
             {{ item.name }} - {{ 'cart.CartItems.Quantity'|translate }}: {{ item.quantity }} - {{
             'cart.CartItems.Weight'|translate }}: {{ item.weight }} kg - {{ 'cart.CartItems.Price'|translate }}: {{
-            item.price }} €
+            item.price | currency  }} 
           </div>
         </li>
       </ul>
-      <h3>{{ 'cart.CartItems.Total'|translate }}: {{ totalPrice }} €</h3>
+      <h3>{{ 'cart.CartItems.Total'|translate }}: {{ totalPrice | currency  }}</h3>
     </div>
     <!-- <button (click)="next()">{{'Next'| translate}}</button> -->
   </div>
