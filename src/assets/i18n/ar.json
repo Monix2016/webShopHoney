@@ -40,6 +40,7 @@
     "Similar_Product": "منتجات مماثلة",
     "See_Our_Products": "انظر منتجاتنا",
     "Previous": "السابق",
+    "Search": "البحث",
     "Titles": {
         "Heart_Of_Nature": "من قلب الطبيعة"
     },
@@ -152,5 +153,8 @@
         "ExpirationDate": "تاريخ انتهاء الصلاحية (MM/YY)",
         "CardNumber": "رقم البطاقة",
         "CVV": "CVV"
+    },
+    "Placeholder": {
+        "Filter_By_City": "تصنيف حسب المدينة"
     }
 }

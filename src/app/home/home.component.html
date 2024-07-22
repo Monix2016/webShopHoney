@@ -1,7 +1,7 @@
 <section [ngClass]="{'rtl': translate.currentLang  === 'ar', 'ltr': translate.currentLang  === 'en'}">
   <form>
-    <input type="text" placeholder="Filter by city" #filter>
-    <button class="primary" type="button" (click)="filterResults(filter.value)">Search</button>
+    <input type="text" placeholder="{{'Placeholder.Filter_By_City'| translate}}" #filter>
+    <button class="primary" type="button" (click)="filterResults(filter.value)">{{ 'Search' | translate}}</button>
   </form>
 </section>
 

@@ -40,6 +40,7 @@
     "Similar_Product": "productos Similares",
     "See_Our_Products": "Ver nuestros productos",
     "Previous": "Anterior",
+    "Search": "Búsqueda",
     "Titles": {
         "Heart_Of_Nature": "En pleno corazón de la naturaleza"
     },
@@ -152,5 +153,8 @@
         "ExpirationDate": "Fecha de Expiración (MM/AA)",
         "CardNumber": "Numero de Tarjeta",
         "CVV": "CVV"
+    },
+    "Placeholder": {
+        "Filter_By_City": "Filtrar por ciudad"
     }
 }
