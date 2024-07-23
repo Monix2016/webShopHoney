@@ -36,7 +36,7 @@ export class DetailsMaterialComponent {
   }
 
   addToCart(materialId: any): void {
-    const materialHoney = this.housingService.getHousingLocationById(materialId);
+    const materialHoney = this.housingService.getMaterialById(materialId);
     if (materialHoney) {
       this.cartService.addToCart({
         id: materialHoney.id,
