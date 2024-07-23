@@ -22,14 +22,19 @@
       <h3>{{'cart.CartItems.Title'|translate}}</h3>
       <ul>
         <li *ngFor="let item of cartItems" class="cart-item">
-          <div class="cart-item-details">
+          <div class="cart-item-details" *ngIf="item.type=== 'HN'">
             {{ item.name }} - {{'cart.CartItems.Quantity'|translate}}: {{ item.quantity }} -
             {{'cart.CartItems.Weight'|translate}}: {{ item.weight }} g - {{'cart.CartItems.Price'|translate}}: {{
-            item.price  | currency }}
+            item.price | currency }}
+          </div>
+          <div class="cart-item-details" *ngIf="item.type=== 'MT'">
+            {{ item.name }} -
+            {{'cart.CartItems.Quantity'|translate}}: {{ item.quantity }} -
+            {{'cart.CartItems.Price'|translate}}: {{item.price | currency }}
           </div>
         </li>
       </ul>
-      <h3>{{'cart.CartItems.Total'|translate}}: {{ totalPrice | currency  }}</h3>
+      <h3>{{'cart.CartItems.Total'|translate}}: {{ totalPrice | currency }}</h3>
     </div>
 
     <button class="btn-finish" (click)="finishPurchase()">{{'Finish'|translate}}</button>

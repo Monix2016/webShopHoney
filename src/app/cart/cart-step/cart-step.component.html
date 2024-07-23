@@ -9,7 +9,10 @@
 
       <div class="cart-item" *ngIf="item.type=== 'HN'">
         <div class="cart-item-details">
-          {{ item.name }} - {{ item.quantity }} - {{ item.weight }} g - {{ item.price | currency }}
+          {{ item.name }} -
+          {{ item.quantity }} -
+          {{ item.weight }} g -
+          {{ item.price | currency }}
         </div>
         <div class="cart-item-actions">
           <span class="btn-delete" (click)="removeItem(item.id)">
@@ -28,14 +31,14 @@
 
       <div class="cart-item" *ngIf="item.type=== 'MT'">
         <div class="cart-item-details">
-          {{ item.name }} - {{ item.quantity }} unidad
+          {{ item.name }} - {{ item.quantity }} unidad - {{item.price | currency}}
         </div>
         <div class="cart-item-actions">
           <span class="btn-delete" (click)="removeItem(item.id)">
             <i class="fas fa-trash-alt"></i>
           </span>
           <input class="input-quantity" type="number" [(ngModel)]="item.quantity"
-            (change)="updateItemMaterial(item.id, item.quantity)">
+            (change)="updateItemMaterial(item.id, item.quantity, item.price)">
 
         </div>
       </div>

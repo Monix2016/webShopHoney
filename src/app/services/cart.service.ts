@@ -81,12 +81,13 @@ export class CartService {
     }
   }
 
-  updateCartItemMaterial(itemId: number, quantity: number): void {
+  updateCartItemMaterial(itemId: number, quantity: number, price:number): void {
     let currentItems = this.cartItems.value;
     const itemToUpdate = currentItems.find(cartItem => cartItem.id === itemId);
 
     if (itemToUpdate) {
       itemToUpdate.quantity = quantity;
+      itemToUpdate.price = price;
 
       this.updateCart(currentItems);
     }

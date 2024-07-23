@@ -15,7 +15,7 @@ import { HousingService } from '../../services/housing.service';
     CommonModule,
     TranslateModule,
     RouterModule,
-   
+
   ],
   templateUrl: './material-honey.component.html',
   styleUrl: './material-honey.component.css'
@@ -28,24 +28,16 @@ export class MaterialHoneyComponent {
     private housingService: HousingService,
     private scrollAnimationService: ScrollAnimationService
   ) {
-    
+
     this.scrollAnimationService.initializeScrollAnimation();
-    
+
   }
 
-  
-  addToCart(honeyId: number): void {
-    const materialHoney = this.housingService.getMaterialById(honeyId);
-    if (materialHoney) {
-      this.cartService.addToCart({
-        id: materialHoney.id,
-        type:materialHoney.type,
-        name: materialHoney.name,
-        price: materialHoney.price,
-        quantity: 1,
-        weight: materialHoney.weight || 500,
-        photo:materialHoney.photo,
-      });
+  addToCart(materialId: number): void {
+    if (materialId) {
+      this.cartService.addMaterialToCart(materialId);
+    } else {
+      console.error('material ID is undefined');
     }
   }
 }
