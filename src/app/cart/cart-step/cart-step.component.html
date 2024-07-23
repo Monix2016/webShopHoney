@@ -16,9 +16,9 @@
             <i class="fas fa-trash-alt"></i>
           </span>
           <input class="input-quantity" type="number" [(ngModel)]="item.quantity"
-            (change)="updateItem(item.id, item.quantity, item.weight)">
+            (change)="updateItem(item.id, item.quantity, item.weight, item.price)">
           <select class="input-weight styled-select" [(ngModel)]="item.weight"
-            (change)="updateItem(item.id, item.quantity, item.weight)">
+            (change)="updateItem(item.id, item.quantity, item.weight, item.price)">
             <option value="1000">1000g</option>
             <option value="500">500g</option>
             <option value="250">250g</option>
