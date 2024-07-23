@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
 import { HousingService } from '../../services/housing.service';
 import { IHoney } from '../../interfaces/honey';
-import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
+import { FormControl, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { BenefitHerbalHoneyComponent } from '../../functionalities/static-text/blog-herbal-honey/benefit-herbal-honey/benefit-herbal-honey.component';
 import { BlogHerbalHoneyComponent } from '../../functionalities/static-text/blog-herbal-honey/blog-herbal-honey.component';
@@ -17,6 +17,7 @@ import { CartService } from '../../services/cart.service';
   imports: [
     CommonModule,
     ReactiveFormsModule,
+    FormsModule,
     TranslateModule,
     BlogHerbalHoneyComponent,
     HousingLocationComponent,
@@ -30,8 +31,9 @@ export class DetailsComponent {
 
   route: ActivatedRoute = inject(ActivatedRoute);
   housingService = inject(HousingService);
-  housingLocation: IHoney | undefined;
+  housingLocation?: IHoney;
   housingLocationList: IHoney[] = [];
+  selectedWeight: number = 1000; // Valor por defecto
 
   applyForm = new FormGroup({
     firstName: new FormControl(''),
@@ -49,20 +51,8 @@ export class DetailsComponent {
 
 
   }
-
-  addToCart(honeyId: any): void {
-    const honey = this.housingService.getHousingLocationById(honeyId);
-    if (honey) {
-      this.cartService.addToCart({
-        id: honey.id,
-        type:honey.type,
-        name: honey.name,
-        price: honey.price,
-        quantity: 1,
-        weight: honey.weight  || 500,
-        photo:honey.photo,
-      });
-    }
+  addToCart(honeyId?: number): void {
+    this.cartService.addHoneyToCart(honeyId, this.selectedWeight);
   }
 
     //TODO
@@ -74,6 +64,10 @@ export class DetailsComponent {
   //   this.housingService.addToCartHoney(honeyId);
 
   // }
+
+  getPrice(): number {
+    return this.housingLocation?.prices[this.selectedWeight] || 0;
+  }
 
   submitApplication() {
     this.housingService.submitApplication(

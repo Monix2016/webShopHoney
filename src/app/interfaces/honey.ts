@@ -9,7 +9,7 @@ export interface IHoney {
   state: string;
   photo: string;
   category:string;
-  price:number;
+  prices: { [weight: number]: number };// Prices based on weight
   quantity:number;
   availableUnits: number;
   wifi: boolean;

@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { ICartitem } from '../interfaces/i-cartitem';
+import { HousingService } from './housing.service';
 
 @Injectable({
   providedIn: 'root'
@@ -8,6 +9,8 @@ import { ICartitem } from '../interfaces/i-cartitem';
 export class CartService {
   private cartItems = new BehaviorSubject<ICartitem[]>([]);
   private cartItemCount = new BehaviorSubject<number>(0);
+
+  constructor(private housingService: HousingService) {}
 
   getCartItems() {
     return this.cartItems.asObservable();
@@ -28,6 +31,36 @@ export class CartService {
     }
 
     this.updateCart(currentItems);
+  }
+
+  addHoneyToCart(honeyId?: number, weight: number = 500): void {
+    const honey = this.housingService.getHousingLocationById(honeyId);
+    if (honey) {
+      this.addToCart({
+        id: honey.id,
+        type: honey.type,
+        name: honey.name,
+        price: honey.prices[weight],
+        quantity: 1,
+        weight: weight,
+        photo: honey.photo,
+      });
+    }
+  }
+
+  addMaterialToCart(materialId: number): void {
+    const material = this.housingService.getMaterialById(materialId);
+    if (material) {
+      this.addToCart({
+        id: material.id,
+        type: material.type,
+        name: material.name,
+        price: material.price,
+        quantity: 1,
+        weight: material.weight,
+        photo: material.photo,
+      });
+    }
   }
 
   removeFromCart(itemId: number): void {

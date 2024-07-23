@@ -37,7 +37,7 @@ export class HousingService {
     return this.team;
   }
 
-  getHousingLocationById(id: number): IHoney | undefined {
+  getHousingLocationById(id?: number): IHoney | undefined {
     return this.housingLocationList.find(housingLocation => housingLocation.id === id);
   }
 
@@ -53,18 +53,18 @@ export class HousingService {
     console.log(`Homes application received: firstName: ${firstName}, lastName: ${lastName}, email: ${email}.`);
   }
 
-  addToCartHoney(id: number): any {
-    const honey = this.getHousingLocationById(id);
-    if (honey) {
-      this.cartService.addToCart({
-        id: honey.id,
-        type:honey.type,
-        name: honey.name,
-        price: honey.price,
-        quantity: 1,
-        weight: honey.weight || 500,
-        photo:honey.photo,
-      });
-    }
-  }
+  // addToCartHoney(id: number): any {
+  //   const honey = this.getHousingLocationById(id);
+  //   if (honey) {
+  //     this.cartService.addToCart({
+  //       id: honey.id,
+  //       type:honey.type,
+  //       name: honey.name,
+  //       price: honey.price,
+  //       quantity: 1,
+  //       weight: honey.weight || 500,
+  //       photo:honey.photo,
+  //     });
+  //   }
+  // }
 }

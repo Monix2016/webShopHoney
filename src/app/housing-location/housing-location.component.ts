@@ -28,7 +28,7 @@ export class HousingLocationComponent {
   @Input() housingLocation!: IHoney;
 
   honeys: IHoney[] = MOCKHONEYS;
-
+  selectedWeight: number = 1000; // Valor por defecto
 
   constructor(
     private cartService: CartService,
@@ -37,19 +37,12 @@ export class HousingLocationComponent {
   ) {}
 
   addToCart(honeyId: number): void {
-    const honey = this.housingService.getHousingLocationById(honeyId);
-    if (honey) {
-      this.cartService.addToCart({
-        id: honey.id,
-        type:honey.type,
-        name: honey.name,
-        price: honey.price,
-        quantity: 1,
-        weight: honey.weight || 500,
-        photo:honey.photo,
-      });
-    }
+    this.cartService.addHoneyToCart(honeyId, this.selectedWeight);
   }
+  getPrice(): number {
+    return this.housingLocation.prices[this.selectedWeight] || 0;
+  }
+
 
   //TODO
   //Comporbar porque no funcion este metodo

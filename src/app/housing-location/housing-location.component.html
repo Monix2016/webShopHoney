@@ -2,6 +2,8 @@
     <img class="listing-photo animated-img" [src]="housingLocation.photo" alt="Exterior photo of {{housingLocation.name}}">
     <h2 class="listing-heading">{{ housingLocation.name }}</h2>
     <p class="listing-location">{{ housingLocation.city}}, {{housingLocation.state }}</p>
+    <p>{{selectedWeight}}</p>
+    <p>{{'Price' | translate}}: {{ getPrice() | currency }}</p>
     <a [routerLink]="['/details', housingLocation.id]">{{'Learn_More'|translate}}</a>
     <button class="CartBtn" (click)="addToCart(housingLocation.id)">
       <span class="IconContainer">
