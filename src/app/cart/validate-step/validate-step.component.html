@@ -3,9 +3,10 @@
   <ul>
     <li *ngFor="let item of cartItems" class="cart-item">
       <div class="cart-item-details" *ngIf="item.type=== 'HN'">
-        {{ item.name }} - {{'cart.CartItems.Quantity'|translate}}: {{ item.quantity }} -
-        {{'cart.CartItems.Weight'|translate}}: {{ item.weight }} g - {{'cart.CartItems.Price'|translate}}: {{
-        item.price  | currency }}
+        {{ item.name }} - 
+        {{'cart.CartItems.Quantity'|translate}}: {{ item.quantity }} -
+        {{'cart.CartItems.Weight'|translate}}: {{ item.weight }} g - 
+        {{'cart.CartItems.Price'|translate}}: {{item.price  | currency }}
       </div>
 
       <div class="cart-item-details" *ngIf="item.type=== 'MT'">
