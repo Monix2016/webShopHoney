@@ -55,26 +55,9 @@ export class DetailsComponent {
     this.cartService.addHoneyToCart(honeyId, this.selectedWeight);
   }
 
-    //TODO
-  //Comporbar porque no funcion este metodo
-
-
-
-  // addToCart(honeyId: number): void {
-  //   this.housingService.addToCartHoney(honeyId);
-
-  // }
-
   getPrice(): number {
     return this.housingLocation?.prices[this.selectedWeight] || 0;
   }
 
-  submitApplication() {
-    this.housingService.submitApplication(
-      this.applyForm.value.firstName ?? '',
-      this.applyForm.value.lastName ?? '',
-      this.applyForm.value.email ?? ''
-    );
-  }
 
 }
