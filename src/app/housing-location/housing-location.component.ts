@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { IHoney } from '../interfaces/honey';
 import { RouterModule } from '@angular/router';
-import { AddCartComponent } from '../functionalities/add-cart/add-cart.component';
+
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { MOCKHONEYS } from '../../assets/mock/mock-products';
 import { CartService } from '../services/cart.service';
@@ -15,7 +15,7 @@ import { HousingService } from '../services/housing.service';
     CommonModule,
     TranslateModule,
     RouterModule,
-    AddCartComponent
+   
   ],
 
 

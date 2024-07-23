@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { ScrollAnimationService } from '../../services/scroll-animation.service';
-import { AddCartComponent } from '../../functionalities/add-cart/add-cart.component';
+
 import { CartService } from '../../services/cart.service';
 import { HousingService } from '../../services/housing.service';
 
@@ -15,7 +15,7 @@ import { HousingService } from '../../services/housing.service';
     CommonModule,
     TranslateModule,
     RouterModule,
-    AddCartComponent
+   
   ],
   templateUrl: './material-honey.component.html',
   styleUrl: './material-honey.component.css'

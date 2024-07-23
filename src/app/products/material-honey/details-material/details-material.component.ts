@@ -5,7 +5,7 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { HousingService } from '../../../services/housing.service';
 import { IMaterial } from '../../../interfaces/i-material';
 import { MaterialHoneyComponent } from '../material-honey.component';
-import { AddCartComponent } from '../../../functionalities/add-cart/add-cart.component';
+
 import { CartService } from '../../../services/cart.service';
 
 @Component({
@@ -15,7 +15,7 @@ import { CartService } from '../../../services/cart.service';
     TranslateModule,
     CommonModule,
     MaterialHoneyComponent,
-    AddCartComponent
+  
   ],
   templateUrl: './details-material.component.html',
   styleUrl: './details-material.component.css'

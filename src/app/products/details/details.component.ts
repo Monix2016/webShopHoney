@@ -8,7 +8,7 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { BenefitHerbalHoneyComponent } from '../../functionalities/static-text/blog-herbal-honey/benefit-herbal-honey/benefit-herbal-honey.component';
 import { BlogHerbalHoneyComponent } from '../../functionalities/static-text/blog-herbal-honey/blog-herbal-honey.component';
 import { HousingLocationComponent } from '../../housing-location/housing-location.component';
-import { AddCartComponent } from '../../functionalities/add-cart/add-cart.component';
+
 import { CartService } from '../../services/cart.service';
 
 @Component({
@@ -20,7 +20,7 @@ import { CartService } from '../../services/cart.service';
     TranslateModule,
     BlogHerbalHoneyComponent,
     HousingLocationComponent,
-    AddCartComponent
+   
 
   ],
   templateUrl: './details.component.html',
