@@ -24,7 +24,7 @@
   <app-activities></app-activities>
 </section>
 
-<h1 class="title" [ngClass]="{'rtl': translate.currentLang  === 'ar', 'ltr': translate.currentLang  === 'en'}">
+<h1 class="title">
   {{'Honeys'|translate}}
 </h1>
 <section class="results">
@@ -34,7 +34,7 @@
 
 
 
-<h1 class="title" [ngClass]="{'rtl': translate.currentLang  === 'ar', 'ltr': translate.currentLang  === 'en'}">
+<h1 class="title">
   {{'Material.Title'|translate}}</h1>
 <section class="results">
   <app-material-honey *ngFor="let materialHoney of materialHoneyList"
@@ -42,7 +42,7 @@
 </section>
 
 
-<h1 class="title" [ngClass]="{'rtl': translate.currentLang  === 'ar', 'ltr': translate.currentLang  === 'en'}">
+<h1 class="title">
   {{'Cours.Title'|translate}}</h1>
 <section class="results">
   <app-courses-honey *ngFor="let coursHoney of coursesHoneyList" [coursHoney]="coursHoney"></app-courses-honey>
