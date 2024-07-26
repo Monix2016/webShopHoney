@@ -6,14 +6,17 @@ section {
   }
   
   .newspaper-section {
-    background-color: var(--honey-color); /* White background for the section */
+    background-color: #ffffff; /* White background for the section */
     padding: 20px;
     margin: 20px auto;
-   
+    width: 80%;
     max-width: 800px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
     line-height: 1.6; /* Increase line height for readability */
     font-family: 'Georgia', serif; /* Traditional newspaper font */
+    position: relative; /* Ensure the pseudo-element positions correctly */
+    background-size: cover; /* Ensure the background image covers the section */
+    background-position: center; /* Center the background image */
   }
   
   .newspaper-section h1 {
@@ -29,19 +32,15 @@ section {
   }
   
   .newspaper-section::before {
-
-    background-image: src="./assets/img/pexels-hebertsantos-3913549.jpg"; /* Background image with newspaper pattern */
-    opacity: 0.1; /* Light opacity for subtle effect */
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.8); /* Slight white overlay for readability */
     position: absolute;
     top: 0;
     left: 0;
     z-index: -1; /* Position behind the content */
-  }
-  
-  .newspaper-section::after {
-    content: "";
-    display: block;
-    clear: both;
   }
   
   .newspaper-section img {
@@ -49,6 +48,13 @@ section {
     margin: 0 20px 20px 0;
     width: 50%;
     height: auto;
+  }
+  
+  .flex-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
   }
 
   @media (min-width: 768px) {
