@@ -12,7 +12,7 @@ import { DeliveryComponent } from './about/delivery/delivery.component';
 import { MaterialHoneyComponent } from './products/material-honey/material-honey.component';
 import { MaterialComponent } from './products/material/material.component';
 import { WhereareComponent } from './about/whereare/whereare.component';
-import { InzerkiComponent } from './functionalities/static-text/inzerki/inzerki.component';
+import { InzerkiComponent } from './blog/inzerki/inzerki.component';
 import { CartComponent } from './cart/cart.component';
 
 const routeConfig: Routes = [
