@@ -11,7 +11,7 @@ section {
     margin: 20px auto;
     width: 80%;
     max-width: 800px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 13.1); /* Soft shadow for depth */
     line-height: 1.6; /* Increase line height for readability */
     font-family: 'Georgia', serif; /* Traditional newspaper font */
     position: relative; /* Ensure the pseudo-element positions correctly */
