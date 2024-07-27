@@ -19,20 +19,6 @@ button {
 
 }
 
-
-
-
-.flex-item {
-  flex: 1 1 calc(50% - 10px);
-  /* Cada elemento ocupa aproximadamente el 50% del ancho menos el margen */
-  margin: 5px;
-  height: 300px;
-  /* Ajusta la altura según sea necesario */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 .flex-item img,
 .flex-item iframe {
   width: 100%;
