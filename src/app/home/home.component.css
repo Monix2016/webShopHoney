@@ -16,13 +16,15 @@ button {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: stretch;
-  
+
 }
 
 .flex-item {
-  flex: 1 1 calc(50% - 10px); /* Cada elemento ocupa aproximadamente el 50% del ancho menos el margen */
+  flex: 1 1 calc(50% - 10px);
+  /* Cada elemento ocupa aproximadamente el 50% del ancho menos el margen */
   margin: 5px;
-  height: 300px; /* Ajusta la altura según sea necesario */
+  height: 300px;
+  /* Ajusta la altura según sea necesario */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -38,14 +40,17 @@ button {
 
 @media (max-width: 1200px) {
   .flex-item {
-    flex: 1 1 calc(50% - 10px); /* Ajuste para pantallas grandes */
+    flex: 1 1 calc(50% - 10px);
+    /* Ajuste para pantallas grandes */
   }
 }
 
 @media (max-width: 992px) {
   .flex-item {
-    flex: 1 1 100%; /* Ancho completo en pantallas medianas */
-    height: 250px; /* Ajusta la altura según sea necesario */
+    flex: 1 1 100%;
+    /* Ancho completo en pantallas medianas */
+    height: 250px;
+    /* Ajusta la altura según sea necesario */
   }
 }
 
@@ -53,7 +58,8 @@ button {
   .flex-item {
     flex: 1 1 100%;
     margin: 5px 0;
-    height: 200px; /* Ajusta la altura según sea necesario */
+    height: 200px;
+    /* Ajusta la altura según sea necesario */
   }
 }
 
@@ -61,6 +67,7 @@ button {
   .flex-item {
     flex: 1 1 100%;
     margin: 5px 0;
-    height: 150px; /* Ajusta la altura según sea necesario */
+    height: 150px;
+    /* Ajusta la altura según sea necesario */
   }
 }

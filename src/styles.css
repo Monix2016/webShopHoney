@@ -59,7 +59,7 @@ input[type="text"] {
   width: 30%;
 }
 
-q{
+q {
 
   font-family: cursive;
   padding: 0.5rem;
@@ -122,14 +122,16 @@ q::after {
   font-weight: bold;
 }
 
-.background{
+.background {
   background-color: var(--honey-sec-color);
   padding: 20px;
   margin: 20px auto;
   width: 80%;
   max-width: 800px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 13.1); /* Soft shadow for depth */
-  line-height: 1.6; /* Increase line height for readability */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 13.1);
+  /* Soft shadow for depth */
+  line-height: 1.6;
+  /* Increase line height for readability */
   font-family: 'Georgia', serif;
 }
 
@@ -139,17 +141,24 @@ q::after {
     #####################################################*/
 
 .newspaper-section {
-  background-color: #ffffff; /* White background for the section */
+  background-color: #ffffff;
+  /* White background for the section */
   /* padding: 20px; */
   margin: 20px auto;
   width: 80%;
   max-width: 800px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 13.1); /* Soft shadow for depth */
-  line-height: 1.6; /* Increase line height for readability */
-  font-family: 'Georgia', serif; /* Traditional newspaper font */
-  position: relative; /* Ensure the pseudo-element positions correctly */
-  background-size: cover; /* Ensure the background image covers the section */
-  background-position: center; /* Center the background image */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 13.1);
+  /* Soft shadow for depth */
+  line-height: 1.6;
+  /* Increase line height for readability */
+  font-family: 'Georgia', serif;
+  /* Traditional newspaper font */
+  position: relative;
+  /* Ensure the pseudo-element positions correctly */
+  background-size: cover;
+  /* Ensure the background image covers the section */
+  background-position: center;
+  /* Center the background image */
 }
 
 .newspaper-section h1 {
@@ -171,11 +180,13 @@ q::after {
   display: block;
   width: 100%;
   height: 100%;
-  background-color: rgba(255, 255, 255, 0.8); /* Slight white overlay for readability */
+  background-color: rgba(255, 255, 255, 0.8);
+  /* Slight white overlay for readability */
   position: absolute;
   top: 0;
   left: 0;
-  z-index: -1; /* Position behind the content */
+  z-index: -1;
+  /* Position behind the content */
 }
 
 
@@ -293,7 +304,7 @@ section.listing a::after {
   position: relative;
 }
 
-  
+
 .IconContainer {
   position: absolute;
   left: -50px;
@@ -333,7 +344,7 @@ section.listing a::after {
 }
 
 .CartBtn:hover .text {
-  transform: translate(10px,0px);
+  transform: translate(10px, 0px);
   transition-duration: .5s;
 }
 
@@ -341,6 +352,7 @@ section.listing a::after {
   transform: scale(0.95);
   transition-duration: .5s;
 }
+
 /** #####################################################
     #   Animation                     #
     #####################################################*/
@@ -431,7 +443,7 @@ section.listing a::after {
   flex: 1 1 calc(50% - 10px);
   /* Cada elemento ocupa aproximadamente el 50% del ancho menos el margen */
   margin: 5px;
-  height: 100%;
+  height: 300px;
   /* Ajusta la altura según sea necesario */
   display: flex;
   align-items: center;
@@ -576,8 +588,9 @@ section.listing a::after {
     height: 200px;
     /* Ajusta la altura según sea necesario */
   }
-  .newspaper-section{
-    padding: 2px;
+
+  .newspaper-section {
+    width: 100%;
   }
 }
 
@@ -587,5 +600,8 @@ section.listing a::after {
     margin: 5px 0;
     height: 150px;
     /* Ajusta la altura según sea necesario */
+  }
+  .newspaper-section {
+    width: 100%;
   }
 }

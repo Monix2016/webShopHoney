@@ -4,6 +4,7 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { ContactUsComponent } from '../contact-us/contact-us.component';
 import { FollowUsComponent } from '../follow-us/follow-us.component';
 import { ActivitiesComponent } from '../activities/activities.component';
+import { DeliveryComponent } from '../delivery/delivery.component';
 
 @Component({
   selector: 'app-whereare',
@@ -13,7 +14,8 @@ import { ActivitiesComponent } from '../activities/activities.component';
     TranslateModule,
     ContactUsComponent,
     FollowUsComponent,
-    ActivitiesComponent
+    ActivitiesComponent,
+    DeliveryComponent
   ],
   templateUrl: './whereare.component.html',
   styleUrl: './whereare.component.css'
@@ -21,6 +23,6 @@ import { ActivitiesComponent } from '../activities/activities.component';
 export class WhereareComponent {
   constructor(
     public translate: TranslateService
-  ) {}
+  ) { }
 
 }
