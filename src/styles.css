@@ -141,12 +141,12 @@ q::after {
     #####################################################*/
 
 .newspaper-section {
-  background-color: #ffffff;
+  /* background-color: #ffffff; */
   /* White background for the section */
   /* padding: 20px; */
   margin: 20px auto;
   width: 80%;
-  max-width: 800px;
+  /* max-width: 800px; */
   box-shadow: 0 0 10px rgba(0, 0, 0, 13.1);
   /* Soft shadow for depth */
   line-height: 1.6;
@@ -157,7 +157,7 @@ q::after {
   /* Ensure the pseudo-element positions correctly */
   background-size: cover;
   /* Ensure the background image covers the section */
-  background-position: center;
+  /* background-position: center; */
   /* Center the background image */
 }
 

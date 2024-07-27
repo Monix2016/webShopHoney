@@ -1,21 +1,20 @@
 <section class="flex-container">
 
-    <div class="flex-container-row">
-        <section class="flex-item newspaper-section" [ngClass]="{'rtl': translate.currentLang  === 'ar', 'ltr': translate.currentLang  === 'en'}" style=" background-image: url('/assets/img/pexels-neosiam-4498792.jpg');">
-            <!-- <div class="flex-container"> -->
-                <div>
-                    <h3 class="title">{{'BenificesHerbalHoney.Title'| translate}}</h3>
-                    <p>{{'BenificesHerbalHoney.PHerbalHoney'| translate}}</p>
-                    
-                </div>
-            <!-- </div> -->
+   
+        <section class="flex-item background-image newspaper-section"
+            [ngClass]="{'rtl': translate.currentLang  === 'ar', 'ltr': translate.currentLang  === 'en'}">
+
+            <div>
+                <h3 class="title">{{'BenificesHerbalHoney.Title'| translate}}</h3>
+                <p>{{'BenificesHerbalHoney.PHerbalHoney'| translate}}</p>
+
+            </div>
+
         </section>
-        <section  class="flex-item newspaper-section background-image">
+        <section class="flex-item background-image">
             <app-benefit-herbal-honey></app-benefit-herbal-honey>
         </section>
-    </div>
+  
 
-    
+
 </section>
-
-
