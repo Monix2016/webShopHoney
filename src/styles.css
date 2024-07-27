@@ -235,6 +235,10 @@ q::after {
   content: url("/assets/location-pin.svg") / "";
 }
 
+.background-image{
+  background-image: url('/assets/img/pexels-lamiko-3616764.jpg');
+}
+
 section.listing a {
   padding-left: 20px;
   text-decoration: none;

@@ -19,6 +19,9 @@ button {
 
 }
 
+
+
+
 .flex-item {
   flex: 1 1 calc(50% - 10px);
   /* Cada elemento ocupa aproximadamente el 50% del ancho menos el margen */
@@ -37,6 +40,7 @@ button {
   object-fit: cover;
   border: none;
 }
+
 
 @media (max-width: 1200px) {
   .flex-item {
