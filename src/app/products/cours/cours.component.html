@@ -3,16 +3,46 @@
         [ngClass]="{'rtl': translate.currentLang  === 'ar', 'ltr': translate.currentLang  === 'en'}">
 
         <div class="flex-container-col">
-            <h4 class="title">{{'Cours.TitleCours'|translate}}</h4>
-            <p>{{'Cours.DescriptionCours'|translate}}</p>
+            <h4 class="title"> A quién van dirigidos nuestros cursos</h4>
+            <p>En esta página podrás encontrar diferentes tipos de cursos relacionados con la apicultura y los productos
+                derivados de esta actividad, que van dirigidos a las personas:</p>
         </div>
+    </div>
+    <div>
+        <h5>Amantes de la naturaleza</h5>
+        <p>Que les gusta el campo, la naturaleza en general y quieren conocer una nueva actividad que puede convertirse
+            en un fantástico hoobie, para producir su propia miel, polen, etc.</p>
+    </div>
+    <div>
+        <h5>Primer contacto</h5>
+        <p>Que desean tener un primer contacto real con colmenas y con abejas, de forma totalmente segura y guiada.
+            Que quieren descubrir una nueva oportunidad de negocio, ya sea complementaria a su trabajo habitual o
+            definitivamente encontrar una nueva profesión con muchísimas oportunidades.
+        </p>
+    </div>
+    <div>
+        <h5>Con experiencia</h5>
+        <p>Apicultores con experiencia, que quizás nunca han recibido un curso de apicultura y que necesitan reforzar
+            sus conocimientos en diferentes los ámbitos como la cría de abejas reinas, alimentación o sanidad apícola.
+            Que tienen ya algunas colmenas, pero quieren aclarar dudas, compartir experiencias y sensaciones, así como
+            reafirmar sus conocimientos para evitar errores típicos.
+        </p>
+    </div>
+    <div>
+        <h5>Un hobby saludable</h5>
+        <p>A todas las personas amantes de la vida sana, de las terapias alternativas, a quienes busquen algún tipo de
+            salida laboral, a jóvenes, niños o ancianos que busquen un hobby que además les reporte alguna ganancia.</p>
     </div>
 
     <section class="results">
         <app-courses-honey *ngFor="let coursHoney of coursesHoneyList" [coursHoney]="coursHoney"></app-courses-honey>
     </section>
 
-    <h4 class="title">{{'Cours.TitleTeam'|translate}}</h4>
+    <div>
+        <h4 class="title">{{'Cours.TitleTeam'|translate}}</h4>
+        <p>{{'Cours.DescriptionCours'|translate}}</p>
+    </div>
+
     <section class="results">
         <app-cours-team *ngFor="let staff of team" [staff]="staff"></app-cours-team>
     </section>
