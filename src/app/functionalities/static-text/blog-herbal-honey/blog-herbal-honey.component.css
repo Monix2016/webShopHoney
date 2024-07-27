@@ -5,50 +5,7 @@ section {
     background-color: #f0f0f0; /* Light grey background */
   }
   
-  .newspaper-section {
-    background-color: #ffffff; /* White background for the section */
-    padding: 20px;
-    margin: 20px auto;
-    width: 80%;
-    max-width: 800px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 13.1); /* Soft shadow for depth */
-    line-height: 1.6; /* Increase line height for readability */
-    font-family: 'Georgia', serif; /* Traditional newspaper font */
-    position: relative; /* Ensure the pseudo-element positions correctly */
-    background-size: cover; /* Ensure the background image covers the section */
-    background-position: center; /* Center the background image */
-  }
-  
-  .newspaper-section h1 {
-    font-size: 2.5em;
-    text-align: center;
-    margin-bottom: 20px;
-    font-weight: bold;
-  }
-  
-  .newspaper-section p {
-    text-align: justify;
-    margin-bottom: 20px;
-  }
-  
-  .newspaper-section::before {
-    content: "";
-    display: block;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(255, 255, 255, 0.8); /* Slight white overlay for readability */
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1; /* Position behind the content */
-  }
-  
-  .newspaper-section img {
-    float: left;
-    margin: 0 20px 20px 0;
-    width: 50%;
-    height: auto;
-  }
+ 
   
   .flex-item {
     display: flex;
