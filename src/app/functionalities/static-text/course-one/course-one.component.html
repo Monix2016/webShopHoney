@@ -2,16 +2,16 @@
     <div class="flex-item right-block">
         <div class="content-wrapper">
             <div>
-                <div class="flex-container-row">
-                    
-                        <div class="">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="43" viewBox="0 0 10 43">
-                                <line id="Línea_10" data-name="Línea 10" y2="33" transform="translate(5 5)"
-                                    fill="none" stroke="#e89002" stroke-linecap="round" stroke-width="10"></line>
-                            </svg>
-                        </div>
-                    
-                    <h2 class="title">Por asistir a este curso</h2>
+                <div class="title_Bloque">
+
+                    <div class="">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="43" viewBox="0 0 10 43">
+                            <line id="Línea_10" data-name="Línea 10" y2="33" transform="translate(5 5)" fill="none"
+                                stroke="#e89002" stroke-linecap="round" stroke-width="10"></line>
+                        </svg>
+                    </div>
+
+                    <h2 class="">Por asistir a este curso</h2>
                 </div>
                 <ul>
                     <li>Cada alumno recibirá un manual...</li>
@@ -24,16 +24,16 @@
                 </ul>
             </div>
             <div>
-                <div class="flex-container-row">
-                    
-                        <div class="">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="43" viewBox="0 0 10 43">
-                                <line id="Línea_10" data-name="Línea 10" y2="33" transform="translate(5 5)"
-                                    fill="none" stroke="#e89002" stroke-linecap="round" stroke-width="10"></line>
-                            </svg>
-                        </div>
-                    
-                    <h2 class="title">Información importante</h2>
+                <div class="title_Bloque">
+
+                    <div class="">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="43" viewBox="0 0 10 43">
+                            <line id="Línea_10" data-name="Línea 10" y2="33" transform="translate(5 5)" fill="none"
+                                stroke="#e89002" stroke-linecap="round" stroke-width="10"></line>
+                        </svg>
+                    </div>
+
+                    <h2 class="">Información importante</h2>
                 </div>
                 <p>Recuerda traer ropa y calzado que sea cómoda y práctica para salir al campo.</p>
                 <p>Si vienes de lejos y necesitas quedarte a dormir por la zona, te podemos ayudar con la gestión
@@ -48,15 +48,15 @@
                     plazas.</p>
             </div>
             <div>
-                <div class="flex-container-row">
-                    
-                        <div class="">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="43" viewBox="0 0 10 43">
-                                <line id="Línea_10" data-name="Línea 10" y2="33" transform="translate(5 5)"
-                                    fill="none" stroke="#e89002" stroke-linecap="round" stroke-width="10"></line>
-                            </svg>
-                        </div>
-                   
+                <div class="title_Bloque">
+
+                    <div class="">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="43" viewBox="0 0 10 43">
+                            <line id="Línea_10" data-name="Línea 10" y2="33" transform="translate(5 5)" fill="none"
+                                stroke="#e89002" stroke-linecap="round" stroke-width="10"></line>
+                        </svg>
+                    </div>
+
                     <h2>Por asistir a este curso</h2>
                 </div>
                 <ul>
@@ -70,19 +70,25 @@
                 </ul>
             </div>
         </div>
+        <button class="button_main" routerLinkActive="activebutton" ariaCurrentWhenActive="page" routerLink="/">
+            Reservar Curso
+        </button>
     </div>
     <div class="flex-item left-block">
         <div class="content-wrapper">
-            <div class="flex-container-row">
-                
-                    <div class="">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="43" viewBox="0 0 10 43">
-                            <line id="Línea_10" data-name="Línea 10" y2="33" transform="translate(5 5)" fill="none"
-                                stroke="#e89002" stroke-linecap="round" stroke-width="10"></line>
-                        </svg>
-                    </div>
-                
-                <h2 class="title">Temario</h2>
+            <button class="button_main" routerLinkActive="activebutton" ariaCurrentWhenActive="page" routerLink="/">
+                Reservar Curso
+            </button>
+            <div class="title_Bloque">
+
+                <div class="">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="10" height="43" viewBox="0 0 10 43">
+                        <line id="Línea_10" data-name="Línea 10" y2="33" transform="translate(5 5)" fill="none"
+                            stroke="#e89002" stroke-linecap="round" stroke-width="10"></line>
+                    </svg>
+                </div>
+
+                <h2 class="">Temario</h2>
             </div>
             <p><strong>INTRODUCCIÓN A LA APICULTURA</strong></p>
             <p>Conceptos básicos de apicultura<br>
@@ -167,7 +173,7 @@
                     Tema 3
                 </p>
             </div>
-            <button class="toggle-button" (click)="toggleContent()">
+            <button class="button_main" (click)="toggleContent()">
                 {{ showMore ? 'Mostrar menos' : 'Mostrar más' }}
             </button>
         </div>
