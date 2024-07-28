@@ -7,6 +7,7 @@ import { ICours } from '../../../interfaces/i-courses';
 import { CoursTeamComponent } from '../cours-team/cours-team.component';
 import { ITeam } from '../../../interfaces/i-team';
 import { CoursesHoneyComponent } from '../courses-honey.component';
+import { CourseOneComponent } from '../../../functionalities/static-text/course-one/course-one.component';
 
 @Component({
   selector: 'app-details-cours',
@@ -15,7 +16,8 @@ import { CoursesHoneyComponent } from '../courses-honey.component';
     TranslateModule,
     CommonModule,
     CoursTeamComponent,
-    CoursesHoneyComponent
+    CoursesHoneyComponent,
+    CourseOneComponent
   ],
   templateUrl: './details-cours.component.html',
   styleUrl: './details-cours.component.css'
@@ -26,11 +28,7 @@ export class DetailsCoursComponent {
   coursHoney:ICours | undefined;
   team: ITeam[] = [];
   coursesHoneyList:ICours[]=[];
-  showMore: boolean = false;
 
-  toggleContent() {
-    this.showMore = !this.showMore;
-  }
   
   constructor(public translate: TranslateService) {
     const coursId = parseInt(this.route.snapshot.params['id'], 10);
