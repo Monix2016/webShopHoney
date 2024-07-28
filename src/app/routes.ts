@@ -14,6 +14,7 @@ import { MaterialComponent } from './products/material/material.component';
 import { WhereareComponent } from './about/whereare/whereare.component';
 import { InzerkiComponent } from './blog/inzerki/inzerki.component';
 import { CartComponent } from './cart/cart.component';
+import { RegistrationComponent } from './functionalities/registration/registration.component';
 
 const routeConfig: Routes = [
   {
@@ -85,6 +86,11 @@ const routeConfig: Routes = [
     path: 'cart',
     component: CartComponent,
     title: 'Cart'
+  },
+  {
+    path:'registration',
+    component: RegistrationComponent,
+    title:'Registration'
   }
 
 ];
