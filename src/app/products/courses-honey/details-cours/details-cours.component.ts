@@ -26,7 +26,11 @@ export class DetailsCoursComponent {
   coursHoney:ICours | undefined;
   team: ITeam[] = [];
   coursesHoneyList:ICours[]=[];
+  showMore: boolean = false;
 
+  toggleContent() {
+    this.showMore = !this.showMore;
+  }
   
   constructor(public translate: TranslateService) {
     const coursId = parseInt(this.route.snapshot.params['id'], 10);

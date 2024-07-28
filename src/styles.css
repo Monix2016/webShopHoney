@@ -20,6 +20,8 @@ body {
   --honey-sec-color: #fde6b1;
   --svg-color: #f2f2f2;
 
+  --global-color-title: #021C10;
+
   --facebook-color: #3b5998;
   --facebook-hover-color: #3b5998;
   --linkedin-color: #0077b5;
@@ -71,6 +73,9 @@ q::after {
   display: inline-block;
   transform: rotate(13deg);
 }
+strong{
+  font-weight: bolder;
+}
 
 @keyframes dancing {
   0% {
@@ -99,7 +104,9 @@ q::after {
   font-size: 1.5rem;
   line-height: 2rem;
   font-weight: 700;
-  /* color: var(--honey-color); */
+  color: var(--honey-color); 
+  /* color: var(--global-color-title);
+  font-family: "Dosis", Sans-serif; */
 }
 
 .allIcon {
@@ -447,7 +454,7 @@ section.listing a::after {
   flex: 1 1 calc(50% - 10px);
   /* Cada elemento ocupa aproximadamente el 50% del ancho menos el margen */
   margin: 5px;
-  height: 300px;
+  min-height: 300px;
   /* Ajusta la altura según sea necesario */
   display: flex;
   align-items: center;
