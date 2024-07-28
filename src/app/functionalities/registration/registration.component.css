@@ -1,0 +1,13 @@
+.effects-layer{
+    /* background-position: center;
+    background-repeat: no-repeat; */
+    background-size: cover;
+    background-image: url('/assets/img/ai-generated-8558236_1280.jpg');
+    min-height: 420px;
+}
+.effects-layer-title{
+    color: var(--e-global-color-c785e97);
+    font-family: "Dosis", Sans-serif;
+    font-size: 80px;
+    font-weight: 900;
+}
