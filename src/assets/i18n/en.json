@@ -112,7 +112,8 @@
         "ImportantInformation":"Important information"
     },
     "Material": {
-        "Title": "Materials of your interest"
+        "Title": "Materials of your interest",
+        "Pollen":"Polen"
     },
     "Blog": {
         "Title": "Blog"

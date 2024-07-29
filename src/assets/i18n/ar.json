@@ -112,7 +112,8 @@
         "ImportantInformation":"معلومات هامة"
     },
     "Material": {
-        "Title": "المواد التي تهمك"
+        "Title": "المواد التي تهمك",
+        "Pollen":"حبوب اللقاح"
     },
     "Blog": {
         "Title": "مدونة"
