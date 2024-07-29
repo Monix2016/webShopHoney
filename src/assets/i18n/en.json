@@ -41,6 +41,7 @@
     "See_Our_Products": "see our products",
     "Previous": "Previous",
     "Search": "Search",
+    "Date": "Date",
     "Titles": {
         "Heart_Of_Nature": "In the heart of nature"
     },
@@ -99,7 +100,16 @@
         "TitleTeam": "Learn from leading industry experts",
         "DescriptionCours": "This is our selection of beekeeping courses, given by the best professionals in beekeeping such as FolanitoXXXXXXX or menganitoXXXXXXX among others. We offer a range of training for people who want to start as beekeepers as well as specialised courses for professional beekeepers, a training project of our XXXXXXXXXXXX.",
         "Other_Courses": "Other Courses",
-        "Lunch": "INCLUDES LUNCH ON THE FIRST DAY"
+        "Lunch": "INCLUDES LUNCH ON THE FIRST DAY",
+        "Lunch_Break": "we will stop at midday to have lunch together",
+        "Course_Data": "Course data",
+        "First_Day": "First day",
+        "Second_Day": "Second day",
+        "BookCourse": "Book Course",
+        "Program": "Program",
+        "ShowLess":"Show less",
+        "ShowMore":"Show More",
+        "ImportantInformation":"Important information"
     },
     "Material": {
         "Title": "Materials of your interest"

@@ -41,6 +41,7 @@
     "See_Our_Products": "Voir nos produits",
     "Previous": "Précédent",
     "Search": "Rechercher",
+    "Date": "Date",
     "Titles": {
         "Heart_Of_Nature": "Au coeur de la nature"
     },
@@ -99,7 +100,16 @@
         "TitleTeam": "Apprendre auprès d'experts du secteur",
         "DescriptionCours": "Voici notre sélection de cours d'apiculture, dispensés par les meilleurs professionnels de l'apiculture tels que FolanitoXXXXX ou menganitoXXXXX entre autres. Nous proposons une gamme de formations pour les personnes qui souhaitent se lancer dans l'apiculture ainsi que des cours spécialisés pour les apiculteurs professionnels, un projet de formation de notre XXXXXXXXXXXX.",
         "Other_Courses": "Autres cours",
-        "Lunch": "INCLUYE LA COMIDA DEL PRIMER DÍA"
+        "Lunch": "INCLUYE LA COMIDA DEL PRIMER DÍA",
+        "Lunch_Break": "La pause de midi sera l'occasion de déjeuner tous ensemble.",
+        "Course_Data": "Détails du cours",
+        "First_Day": "Premier jour",
+        "Second_Day": "Deuxième jour",
+        "BookCourse": "S'inscrire à un cours",
+        "Program": "Programme",
+        "ShowLess": "Afficher moins",
+        "ShowMore": "Afficher plus",
+        "ImportantInformation":"Information importante"
     },
     "Material": {
         "Title": "Matériel d'intérêt"

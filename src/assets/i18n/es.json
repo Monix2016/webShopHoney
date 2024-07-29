@@ -41,6 +41,7 @@
     "See_Our_Products": "Ver nuestros productos",
     "Previous": "Anterior",
     "Search": "Búsqueda",
+    "Date": "Fecha",
     "Titles": {
         "Heart_Of_Nature": "En pleno corazón de la naturaleza"
     },
@@ -99,7 +100,16 @@
         "TitleTeam": "Aprende de la mano de referentes del sector",
         "DescriptionCours": "Esta es nuestra selección de cursos de apicultura, impartidos por los mejores profesionales en apicultura como FolanitoXXXXX o menganitoXXXXX entre otros. Ofrecemos una gama de formación para personas que pretenden iniciarse como apicultores así como cursos de especialización para apicultores profesionales.Es un proyecto formativo de nuestra XXXXXXXX.",
         "Other_Courses": "Otros cursos",
-        "Lunch": "INCLUYE LA COMIDA DEL PRIMER DÍA"
+        "Lunch": "INCLUYE LA COMIDA DEL PRIMER DÍA",
+        "Lunch_Break": "pararemos al medio día para ir a comer todos juntos",
+        "Course_Data": "Datos del curso",
+        "First_Day": "Primer día",
+        "Second_Day": "Segundo día",
+        "BookCourse":"Reservar Curso",
+        "Program":"Temario",
+        "ShowLess":"Mostrar menos",
+        "ShowMore":"Mostrar más",
+        "ImportantInformation":"Información importante"
     },
     "Material": {
         "Title": "Materiales de tu interes"
