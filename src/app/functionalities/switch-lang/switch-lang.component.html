@@ -1,12 +1,14 @@
-<span class="form-inline">
-    <select 
-        class="form-control allIcon" 
-        #selectedLang 
-        (change)="switchLang(selectedLang.value)">
-      <option *ngFor="let language of translate.getLangs()" 
-        [value]="language"
-        [selected]="language === translate.currentLang">
-        {{ language }}
-      </option>
-    </select>
-  </span>
+<div class="form-inline">
+  <div class="custom-select-container" (click)="toggleDropdown()">
+    <div class="selected-flag">
+      <img [src]="currentFlag" alt="{{ selectedLang }}" width="35" height="35" />
+      <span>{{ selectedLang }}</span>
+    </div>
+    <div class="dropdown-content" [class.show]="dropdownOpen">
+      <div *ngFor="let language of translate.getLangs()" (click)="switchLang(language)">
+        <img [src]="getFlagUrl(language)" alt="{{ language }}" width="20" height="20" />
+        <span>{{ language }}</span>
+      </div>
+    </div>
+  </div>
+</div>

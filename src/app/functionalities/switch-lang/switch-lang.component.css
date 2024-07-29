@@ -1,6 +1,51 @@
-.form-control{
-    border-radius: 50%;
-    box-shadow: 0 2px 5px var(--box-shadow-color); 
-    background-color: var(--honey-color);
-    
-}
+.custom-select-container {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+  }
+  
+  .selected-flag {
+    display: flex;
+    align-items: center;
+    /* padding: 8px; */
+    border: 1px solid #ccc;
+    border-radius: 34px;
+    background-color:var(--honey-color);
+  }
+  
+  .selected-flag img {
+    margin-right: 4px;
+    width: 35;
+    height:35;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-top: 4px;
+  }
+  
+  .dropdown-content div {
+    padding: 12px 16px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .dropdown-content div:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .dropdown-content div img {
+    margin-right: 8px;
+  }
+  
+  .show {
+    display: block;
+  }
