@@ -88,6 +88,7 @@ footer section {
   position: relative;
   border: none;
   border-radius: 10px;
+  text-decoration: none;
   transition: 0.5s;
   box-shadow: 0 0 10px #363636, inset 0 0 10px var(--honey-color);
   padding: 10px 20px;
