@@ -16,7 +16,7 @@ export const MOCKHONEYS:IHoney[]=[{
     photo: `./assets/img/honey-823614_1280.jpg`,
     availableUnits: 4,
     wifi: true,
-    laundry: true,
+    discount: 60,
 
 
   },
@@ -36,7 +36,7 @@ export const MOCKHONEYS:IHoney[]=[{
     photo: `./assets/img/honey-507139_1280.jpg`,
     availableUnits: 0,
     wifi: false,
-    laundry: true,
+    discount: 60,
 
   },
   {
@@ -55,7 +55,7 @@ export const MOCKHONEYS:IHoney[]=[{
     photo: `./assets/img/honey-507147_1280.jpg`,
     availableUnits: 1,
     wifi: false,
-    laundry: false,
+    discount: 20,
 
   },
   {
@@ -74,7 +74,7 @@ export const MOCKHONEYS:IHoney[]=[{
     photo: `./assets/img/honey-4926890_1280.jpg`,
     availableUnits: 1,
     wifi: true,
-    laundry: false,
+    discount: 20,
 
   },
   {
@@ -93,7 +93,7 @@ export const MOCKHONEYS:IHoney[]=[{
     photo: `./assets/img/honey-5043708_1280.jpg`,
     availableUnits: 1,
     wifi: true,
-    laundry: false,
+    discount: 20,
 
   },
   {
@@ -112,7 +112,7 @@ export const MOCKHONEYS:IHoney[]=[{
     photo: `./assets/img/honey-823614_1280.jpg`,
     availableUnits: 2,
     wifi: true,
-    laundry: true,
+    discount: 60,
 
 }
 ]

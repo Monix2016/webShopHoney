@@ -129,6 +129,30 @@ strong {
   font-weight: bold;
 }
 
+.discount{
+  /* position: relative; */
+  background-color:var(--global-color-title);
+  font-weight:700 ;
+  color: white;
+  /* display: block; */
+  /* text-transform: uppercase; */
+  /* height: 70px; */
+  width: max-content;
+  border-radius: 0 15px 15px 0;
+  font-style: italic;
+  /* left: -9px; */
+  /* top:30px */
+}
+
+.discount::after{
+  border-top: 6px solid var(--honey-color);
+  content: '';
+  /* position: absolute; */
+  bottom: -6px;
+
+
+}
+
 .background {
   background-color: var(--honey-sec-color);
   padding: 20px;
@@ -219,7 +243,8 @@ strong {
 .listing-heading {
   font-size: 13px;
   font-family: cursive;
-  color: var(--primary-color);
+  font-weight:700 ;
+  color: var(--global-color-title);
   padding: 10px 20px 0 20px;
 }
 

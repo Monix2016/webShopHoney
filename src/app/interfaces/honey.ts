@@ -13,5 +13,5 @@ export interface IHoney {
   quantity:number;
   availableUnits: number;
   wifi: boolean;
-  laundry: boolean;
+  discount: number;
 }
