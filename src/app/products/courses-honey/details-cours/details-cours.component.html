@@ -14,18 +14,18 @@
                         </svg>
                     </div>
 
-                    <h2 class="">{{'Courses.Course_Data'|translate}}</h2>
+                    <h2 class="">{{'Cours.Course_Data'|translate}}</h2>
                 </div>
                 <p class="listing-location">{{coursHoney?.ubication}}</p>
-                <p class="">{{'Price'|translate}}: {{coursHoney?.price | currency }}, ({{'Courses.Lunch'|translate}})
+                <p class="">{{'Price'|translate}}: {{coursHoney?.price | currency }}, ({{'Cours.Lunch'|translate}})
                 </p>
 
                 <ul>
                     <li>{{'Location'|translate}}: {{coursHoney?.state}}</li>
                     <li>{{'Duration'|translate}}: {{coursHoney?.duration}}: Curso de dos días
                         <ul>
-                            <li>{{'Courses.First_Day'|translate}}: de 8:30 a 20:00, {{'Courses.Lunch_Break'|translate}}</li>
-                            <li>{{'Courses.Second_Day'|translate}}: de 9:00 a 13:30</li>
+                            <li>{{'Cours.First_Day'|translate}}: de 8:30 a 20:00, {{'Cours.Lunch_Break'|translate}}</li>
+                            <li>{{'Cours.Second_Day'|translate}}: de 9:00 a 13:30</li>
                         </ul>
                     </li>
                 </ul>
@@ -39,6 +39,9 @@
 
     <section>
         <app-course-one></app-course-one>
+    </section>
+    <section>
+        <app-cours-team></app-cours-team>
     </section>
 
     <section>

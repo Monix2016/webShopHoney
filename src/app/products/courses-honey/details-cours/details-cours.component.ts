@@ -17,7 +17,8 @@ import { CourseOneComponent } from '../../../functionalities/static-text/course-
     CommonModule,
     CoursTeamComponent,
     CoursesHoneyComponent,
-    CourseOneComponent
+    CourseOneComponent,
+    CoursTeamComponent
   ],
   templateUrl: './details-cours.component.html',
   styleUrl: './details-cours.component.css'

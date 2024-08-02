@@ -1,40 +1,57 @@
-<section [ngClass]="{'rtl': translate.currentLang  === 'ar', 'ltr': translate.currentLang  === 'en'}">
-    <h3 class="title">{{'About.whereAre.Title'|translate}}</h3>
-    <div class="container">
-        <div class="flex-container">
+<section>
+    <section>
+        <div class="container"
+            [ngClass]="{'rtl': translate.currentLang  === 'ar', 'ltr': translate.currentLang  === 'en'}">
+            <h1 class="title"> {{ 'Titles.Heart_Of_Nature' | translate}}</h1>
+            <div class="flex-container">
+                <div class="flex-item newspaper-section background-image">
+                    <p>{{ 'Home.Parraph' | translate}}</p>
+                </div>
+                <div class="flex-item newspaper-section">
+                    <iframe class="" src="https://www.youtube.com/embed/4je67CjobZI">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section [ngClass]="{'rtl': translate.currentLang  === 'ar', 'ltr': translate.currentLang  === 'en'}">
+        <h3 class="title">{{'About.whereAre.Title'|translate}}</h3>
+        <div class="container">
+            <div class="flex-container">
 
-            <div class="flex-item newspaper-section background-image">
-                <p>
-                    <q><span>{{'About.whereAre.Region'|translate}}</span> {{'About.whereAre.Located'|translate}}</q>
-                </p>
+                <div class="flex-item newspaper-section background-image">
+                    <p>
+                        <q><span>{{'About.whereAre.Region'|translate}}</span> {{'About.whereAre.Located'|translate}}</q>
+                    </p>
+                </div>
+                <div class="flex-item newspaper-section">
+                    <iframe class=""
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d105885.07179715105!2d-6.939664507842876!3d33.96919139212627!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda76b871f50c5c1%3A0x7ac946ed7408076b!2sRabat%2C%20Marruecos!5e0!3m2!1ses!2ses!4v1719930107154!5m2!1ses!2ses"
+                        frameborder="0" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+
             </div>
-            <div class="flex-item newspaper-section">
-                <iframe class=""
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d105885.07179715105!2d-6.939664507842876!3d33.96919139212627!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda76b871f50c5c1%3A0x7ac946ed7408076b!2sRabat%2C%20Marruecos!5e0!3m2!1ses!2ses!4v1719930107154!5m2!1ses!2ses"
-                    frameborder="0" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="container flex-container">
+            <div class="flex-container">
+                <section class="background">
+                    <app-contact-us></app-contact-us>
+                </section>
+                <section class="background">
+                    <app-follow-us></app-follow-us>
+                </section>
             </div>
+            <section class="flex-item">
+                <app-delivery></app-delivery>
+            </section>
 
         </div>
-    </div>
-    <div class="container flex-container">
-        <div class="flex-container">
-            <section class="background">
-                <app-contact-us></app-contact-us>
-            </section>
-            <section class="background">
-                <app-follow-us></app-follow-us>
-            </section>
-        </div>
-        <section class="flex-item">
-            <app-delivery></app-delivery>
+        <section>
+            <app-activities></app-activities>
         </section>
 
-    </div>
-    <section>
-        <app-activities></app-activities>
+
+
     </section>
-
-
-
 </section>
