@@ -7,6 +7,7 @@ import { ScrollAnimationService } from '../../services/scroll-animation.service'
 
 import { CartService } from '../../services/cart.service';
 import { HousingService } from '../../services/housing.service';
+import { BaseMaterialComponent } from '../../functionalities/base-material/base-material.component';
 
 @Component({
   selector: 'app-material-honey',
@@ -20,24 +21,6 @@ import { HousingService } from '../../services/housing.service';
   templateUrl: './material-honey.component.html',
   styleUrl: './material-honey.component.css'
 })
-export class MaterialHoneyComponent {
-  @Input() materialHoney!: IMaterial;
-  constructor(
-    private cartService: CartService,
-    public translate: TranslateService,
-    private housingService: HousingService,
-    private scrollAnimationService: ScrollAnimationService
-  ) {
-
-    this.scrollAnimationService.initializeScrollAnimation();
-
-  }
-
-  addToCart(materialId: number): void {
-    if (materialId) {
-      this.cartService.addMaterialToCart(materialId);
-    } else {
-      console.error('material ID is undefined');
-    }
-  }
+export class MaterialHoneyComponent extends BaseMaterialComponent {
+  
 }

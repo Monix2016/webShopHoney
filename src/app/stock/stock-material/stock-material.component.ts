@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { BaseMaterialComponent } from '../../functionalities/base-material/base-material.component';
 
 @Component({
   selector: 'app-stock-material',
@@ -7,6 +8,6 @@ import { Component } from '@angular/core';
   templateUrl: './stock-material.component.html',
   styleUrl: './stock-material.component.css'
 })
-export class StockMaterialComponent {
+export class StockMaterialComponent extends BaseMaterialComponent {
 
 }

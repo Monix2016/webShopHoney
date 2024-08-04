@@ -12,6 +12,7 @@ import { IMaterial } from '../interfaces/i-material';
 import { HousingService } from '../services/housing.service';
 import { ScrollAnimationService } from '../services/scroll-animation.service';
 import { StockHoneyComponent } from './stock-honey/stock-honey.component';
+import { StockMaterialComponent } from './stock-material/stock-material.component';
 
 @Component({
   selector: 'app-stock',
@@ -19,7 +20,8 @@ import { StockHoneyComponent } from './stock-honey/stock-honey.component';
   imports: [
     CommonModule,
     TranslateModule,
-    StockHoneyComponent
+    StockHoneyComponent,
+    StockMaterialComponent
   ],
   templateUrl: './stock.component.html',
   styleUrl: './stock.component.css'

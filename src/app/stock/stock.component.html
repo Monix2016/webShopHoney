@@ -4,14 +4,16 @@
     <input type="text" placeholder="{{'Placeholder.Filter_By_City'| translate}}" #filter>
     <button class="primary" type="button" (click)="filterResults(filter.value)">{{ 'Search' | translate}}</button>
   </form>
-  <h1 class="title">
-    {{'Honeys'|translate}}
-  </h1>
+  <h1 class="title">{{'Honeys'|translate}}</h1>
   <section>
     <app-stock-honey *ngFor="let housingLocation of housingLocationList" [housingLocation]="housingLocation">
     </app-stock-honey>
   </section>
 
+  <h1 class="title">{{'Material.Title'|translate}}</h1>
+  <section>
+    <app-stock-material></app-stock-material>
+  </section>
 
 
 
