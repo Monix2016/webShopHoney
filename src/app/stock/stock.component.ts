@@ -11,6 +11,7 @@ import { ICours } from '../interfaces/i-courses';
 import { IMaterial } from '../interfaces/i-material';
 import { HousingService } from '../services/housing.service';
 import { ScrollAnimationService } from '../services/scroll-animation.service';
+import { StockHoneyComponent } from './stock-honey/stock-honey.component';
 
 @Component({
   selector: 'app-stock',
@@ -18,17 +19,15 @@ import { ScrollAnimationService } from '../services/scroll-animation.service';
   imports: [
     CommonModule,
     TranslateModule,
-    HousingLocationComponent,
-    MaterialHoneyComponent,
-    CoursesHoneyComponent
+    StockHoneyComponent
   ],
   templateUrl: './stock.component.html',
   styleUrl: './stock.component.css'
 })
 export class StockComponent {
   housingLocationList: IHoney[] = [];
-  coursesHoneyList:ICours[]=[];
-  materialHoneyList:IMaterial[]=[];
+  coursesHoneyList: ICours[] = [];
+  materialHoneyList: IMaterial[] = [];
 
   housingService: HousingService = inject(HousingService);
   filteredLocationList: IHoney[] = [];
@@ -37,11 +36,11 @@ export class StockComponent {
     private scrollAnimationService: ScrollAnimationService
   ) {
     this.housingLocationList = this.housingService.getAllHousingLocations();
-    this.coursesHoneyList= this.housingService.getAllCourses();
-    this.materialHoneyList=this.housingService.getAllMaterial();
+    this.coursesHoneyList = this.housingService.getAllCourses();
+    this.materialHoneyList = this.housingService.getAllMaterial();
     this.filteredLocationList = this.housingLocationList;
- 
-    
+
+
   }
 
   filterResults(text: string): void {

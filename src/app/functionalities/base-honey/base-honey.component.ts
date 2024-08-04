@@ -1,14 +1,18 @@
 import { Component, Input } from '@angular/core';
-import { TranslateService } from '@ngx-translate/core';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { MOCKHONEYS } from '../../../assets/mock/mock-products';
 import { IHoney } from '../../interfaces/honey';
 import { CartService } from '../../services/cart.service';
 import { HousingService } from '../../services/housing.service';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-base-honey',
   standalone: true,
-  imports: [],
+  imports: [
+    CommonModule,
+    TranslateModule,
+  ],
   templateUrl: './base-honey.component.html',
   styleUrl: './base-honey.component.css'
 })
@@ -22,7 +26,7 @@ export class BaseHoneyComponent {
     private cartService: CartService,
     public translate: TranslateService,
     private housingService: HousingService
-  ) {}
+  ) { }
 
   addToCart(honeyId: number): void {
     this.cartService.addHoneyToCart(honeyId, this.selectedWeight);
@@ -34,7 +38,7 @@ export class BaseHoneyComponent {
 
   //TODO
   //Comporbar porque no funcion este metodo
-  
+
   // addToCart(honeyId: number): void {
   //   this.housingService.addToCartHoney(honeyId);
 
