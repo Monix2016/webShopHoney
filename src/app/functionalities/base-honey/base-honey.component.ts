@@ -1,0 +1,43 @@
+import { Component, Input } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
+import { MOCKHONEYS } from '../../../assets/mock/mock-products';
+import { IHoney } from '../../interfaces/honey';
+import { CartService } from '../../services/cart.service';
+import { HousingService } from '../../services/housing.service';
+
+@Component({
+  selector: 'app-base-honey',
+  standalone: true,
+  imports: [],
+  templateUrl: './base-honey.component.html',
+  styleUrl: './base-honey.component.css'
+})
+export class BaseHoneyComponent {
+  @Input() housingLocation!: IHoney;
+
+  honeys: IHoney[] = MOCKHONEYS;
+  selectedWeight: number = 1000; // Valor por defecto
+
+  constructor(
+    private cartService: CartService,
+    public translate: TranslateService,
+    private housingService: HousingService
+  ) {}
+
+  addToCart(honeyId: number): void {
+    this.cartService.addHoneyToCart(honeyId, this.selectedWeight);
+  }
+  getPrice(): number {
+    return this.housingLocation.prices[this.selectedWeight] || 0;
+  }
+
+
+  //TODO
+  //Comporbar porque no funcion este metodo
+  
+  // addToCart(honeyId: number): void {
+  //   this.housingService.addToCartHoney(honeyId);
+
+  // }
+
+}

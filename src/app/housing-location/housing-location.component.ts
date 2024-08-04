@@ -7,6 +7,7 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { MOCKHONEYS } from '../../assets/mock/mock-products';
 import { CartService } from '../services/cart.service';
 import { HousingService } from '../services/housing.service';
+import { BaseHoneyComponent } from '../functionalities/base-honey/base-honey.component';
 
 @Component({
   selector: 'app-housing-location',
@@ -23,33 +24,8 @@ import { HousingService } from '../services/housing.service';
   styleUrl: './housing-location.component.css',
 })
 
-export class HousingLocationComponent {
-
-  @Input() housingLocation!: IHoney;
-
-  honeys: IHoney[] = MOCKHONEYS;
-  selectedWeight: number = 1000; // Valor por defecto
-
-  constructor(
-    private cartService: CartService,
-    public translate: TranslateService,
-    private housingService: HousingService
-  ) {}
-
-  addToCart(honeyId: number): void {
-    this.cartService.addHoneyToCart(honeyId, this.selectedWeight);
-  }
-  getPrice(): number {
-    return this.housingLocation.prices[this.selectedWeight] || 0;
-  }
+export class HousingLocationComponent extends BaseHoneyComponent {
 
 
-  //TODO
-  //Comporbar porque no funcion este metodo
-  
-  // addToCart(honeyId: number): void {
-  //   this.housingService.addToCartHoney(honeyId);
-
-  // }
 
 }
