@@ -15,6 +15,7 @@ import { WhereareComponent } from './about/whereare/whereare.component';
 import { InzerkiComponent } from './blog/inzerki/inzerki.component';
 import { CartComponent } from './cart/cart.component';
 import { RegistrationComponent } from './functionalities/registration/registration.component';
+import { StockComponent } from './stock/stock.component';
 
 const routeConfig: Routes = [
   {
@@ -91,6 +92,11 @@ const routeConfig: Routes = [
     path:'registration',
     component: RegistrationComponent,
     title:'Registration'
+  },
+  {
+    path:'stock',
+    component: StockComponent,
+    title:'Stock'
   }
 
 ];
