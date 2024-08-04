@@ -19,6 +19,7 @@ export class HousingService {
   protected coursList: ICours[]=MOCKCOURSES;
   protected materialList: IMaterial[]=MOCKMATERIAL;
   protected team:ITeam[]=MOCKTEAM;
+  filteredLocationList: IHoney[] = [];
   private cartService!: CartService;
 
 
@@ -51,6 +52,16 @@ export class HousingService {
 
   submitApplication(firstName: string, lastName: string, email: string) {
     console.log(`Homes application received: firstName: ${firstName}, lastName: ${lastName}, email: ${email}.`);
+  }
+
+  filterResults(text: string): IHoney[] {
+    if (!text) {
+      return this.housingLocationList;
+    }
+
+    return this.housingLocationList.filter(
+      housingLocation => housingLocation?.city.toLowerCase().includes(text.toLowerCase())
+    );
   }
 
   // addToCartHoney(id: number): any {

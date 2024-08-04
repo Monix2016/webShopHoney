@@ -1,1 +1,30 @@
-<div *ngIf="isVisible">This is a hidden module!</div>
+<section>
+
+  <form>
+    <input type="text" placeholder="{{'Placeholder.Filter_By_City'| translate}}" #filter>
+    <button class="primary" type="button" (click)="filterResults(filter.value)">{{ 'Search' | translate}}</button>
+  </form>
+    <h1 class="title">
+        {{'Honeys'|translate}}
+      </h1>
+      <section class="results">
+        <app-housing-location *ngFor="let housingLocation of housingLocationList" [housingLocation]="housingLocation">
+        </app-housing-location>
+      </section>
+      
+      
+      
+      <h1 class="title">
+        {{'Material.Title'|translate}}</h1>
+      <section class="results">
+        <app-material-honey *ngFor="let materialHoney of materialHoneyList"
+          [materialHoney]="materialHoney"></app-material-honey>
+      </section>
+      
+      
+      <h1 class="title">
+        {{'Cours.Title'|translate}}</h1>
+      <section class="results">
+        <app-courses-honey *ngFor="let coursHoney of coursesHoneyList" [coursHoney]="coursHoney"></app-courses-honey>
+      </section>
+</section>
