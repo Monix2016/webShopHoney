@@ -16,5 +16,15 @@ import { TranslateModule } from '@ngx-translate/core';
   styleUrl: './stock-honey.component.css'
 })
 export class StockHoneyComponent extends BaseHoneyComponent {
-
+  onFileSelected(event: Event): void {
+    const input = event.target as HTMLInputElement;
+    if (input.files && input.files[0]) {
+      const file = input.files[0];
+      const reader = new FileReader();
+      reader.onload = (e: any) => {
+        this.housingLocation.photo = e.target.result;
+      };
+      reader.readAsDataURL(file);
+    }
+  }
 }

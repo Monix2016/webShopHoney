@@ -3,6 +3,9 @@
         <div class="flex-container cart-box">
             <div>
                 <img class="cart-img" [src]="housingLocation.photo" alt="Exterior photo of {{housingLocation.name}}" />
+                <!-- Botón para cargar nueva imagen -->
+                <button (click)="fileInput.click()">Cargar nueva imagen</button>
+                <input type="file" #fileInput (change)="onFileSelected($event)" style="display: none;" />
             </div>
             <div class="cart-item" *ngIf="housingLocation.type=== 'HN'">
                 <div class="cart-item-details">
@@ -11,19 +14,17 @@
                     {{ housingLocation.weight }} g -
                     {{getPrice() | currency }}
                 </div>
-                <!-- <div class="cart-item-actions">
-                  <span class="btn-delete" (click)="removeItem(item.id)">
-                    <i class="fas fa-trash-alt"></i>
-                  </span>
-                  <input class="input-quantity" type="number" [(ngModel)]="item.quantity"
-                    (change)="updateItem(item.id, item.quantity, item.weight, item.price)">
-                  <select class="input-weight styled-select" [(ngModel)]="item.weight"
-                    (change)="updateItem(item.id, item.quantity, item.weight, item.price)">
-                    <option value="1000">1000g</option>
-                    <option value="500">500g</option>
-                    <option value="250">250g</option>
-                  </select>
-                </div> -->
+                <div class="cart-item-actions">
+                    <!-- <input class="input-quantity" type="number" [(ngModel)]="item.quantity"
+                    (change)="updateItem(item.id, item.quantity, item.weight, item.price)"> -->
+                    <input class="input-name" type="text" [(ngModel)]="housingLocation.name">
+                    <input class="input-quantity" type="number" [(ngModel)]="housingLocation.quantity">
+                    <select class="input-weight styled-select" [(ngModel)]="housingLocation.weight">
+                        <option value="1000">1000g</option>
+                        <option value="500">500g</option>
+                        <option value="250">250g</option>
+                    </select>
+                </div>
             </div>
         </div>
 

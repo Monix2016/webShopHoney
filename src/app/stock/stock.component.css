@@ -101,6 +101,16 @@
     border: 1px solid #ccc;
     border-radius: 5px;
   }
+
+  
+    .cart-item-actions .input-name {
+      width: 120px;
+      padding: 5px;
+      text-align: center;
+      margin-left: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
   
   .cart-img{
   height: 150px;
