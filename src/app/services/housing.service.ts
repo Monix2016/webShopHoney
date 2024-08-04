@@ -58,9 +58,17 @@ export class HousingService {
     if (!text) {
       return this.housingLocationList;
     }
-
+    const lowercasedText = text.toLowerCase();
     return this.housingLocationList.filter(
-      housingLocation => housingLocation?.city.toLowerCase().includes(text.toLowerCase())
+      housingLocation => 
+        
+        {
+          const matchesCity = housingLocation.city.toLowerCase().includes(lowercasedText);
+          const matchesType = housingLocation.type.toLowerCase().includes(lowercasedText);
+          const matchesState = housingLocation.state.toLowerCase().includes(lowercasedText);
+          // Agregar más campos de filtro aquí si es necesario
+          return matchesCity || matchesType || matchesState ;
+        }
     );
   }
 
