@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { HomeComponent } from './home/home.component';
 import { RouterLink, RouterOutlet } from '@angular/router';
 import { MenuburgerComponent } from './functionalities/menuburger/menuburger.component';
@@ -40,6 +40,7 @@ export function HttpLoaderFactory(http: HttpClient) {
 })
 export class AppComponent {
   cartCount: number = 0;
+  showStockComponent = false;
   constructor(
     public translate: TranslateService,
     private cartService: CartService
@@ -64,6 +65,11 @@ export class AppComponent {
 
 
     
+  }
+
+  @HostListener('window:keydown.control.alt.c', ['$event'])
+  handleKeyboardEvent(event: KeyboardEvent) {
+    this.showStockComponent = !this.showStockComponent;
   }
 
   title = 'homes';
