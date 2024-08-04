@@ -14,7 +14,7 @@ import { ContactUsComponent } from './about/contact-us/contact-us.component';
 import { CartService } from './services/cart.service';
 
 export function HttpLoaderFactory(http: HttpClient) {
-  return  new  TranslateHttpLoader(http, './assets/i18n/', '.json');
+  return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 }
 
 @Component({
@@ -28,15 +28,13 @@ export function HttpLoaderFactory(http: HttpClient) {
     TranslateModule,
     CommonModule,
     SwitchLangComponent,
-    PoliciesComponent,
-    DeliveryComponent,
     FollowUsComponent,
     ContactUsComponent
 
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
- 
+
 })
 export class AppComponent {
   cartCount: number = 0;
@@ -47,24 +45,19 @@ export class AppComponent {
   ) {
     this.cartService.getCartItemCount().subscribe(count => {
       this.cartCount = count;
-    }); 
+    });
 
-    translate.addLangs(['en', 'es','fr','ar']);
-    const lang=translate.getBrowserLang() as string;
-    console.log(lang);
+    translate.addLangs(['en', 'es', 'fr', 'ar']);
+    const lang = translate.getBrowserLang() as string;
 
-
-  if((lang ==='')){
+    if ((lang === '')) {
       translate.setDefaultLang('ar');
     }
-  else if( (lang !=='es') && (lang !=='en') && (lang !== 'fr') && (lang !=='ar')){
+    else if ((lang !== 'es') && (lang !== 'en') && (lang !== 'fr') && (lang !== 'ar')) {
       translate.setDefaultLang('ar');
     }
     this.translate.use(lang);
-   
 
-
-    
   }
 
   @HostListener('window:keydown.control.alt.c', ['$event'])
