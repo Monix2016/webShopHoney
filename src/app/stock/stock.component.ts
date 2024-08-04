@@ -27,6 +27,8 @@ import { StockMaterialComponent } from './stock-material/stock-material.componen
   styleUrl: './stock.component.css'
 })
 export class StockComponent {
+
+  // TODO : ESO SE REPITE CON EL HOME LO PUEDEO PONER COMO BASE.
   housingLocationList: IHoney[] = [];
   coursesHoneyList: ICours[] = [];
   materialHoneyList: IMaterial[] = [];
@@ -48,4 +50,6 @@ export class StockComponent {
   filterResults(text: string): void {
     this.filteredLocationList = this.housingService.filterResults(text);
   }
+
+  
 }

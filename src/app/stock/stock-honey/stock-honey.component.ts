@@ -16,6 +16,8 @@ import { TranslateModule } from '@ngx-translate/core';
   styleUrl: './stock-honey.component.css'
 })
 export class StockHoneyComponent extends BaseHoneyComponent {
+
+  // TODO: eso se repite ver mas tarde como ponerlo en el servicio
   onFileSelected(event: Event): void {
     const input = event.target as HTMLInputElement;
     if (input.files && input.files[0]) {

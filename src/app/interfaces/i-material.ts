@@ -8,5 +8,6 @@ export interface IMaterial {
     price:number;
     valoration: string;
     desc:number;
+    quantity:number;
     weight:number;
 }

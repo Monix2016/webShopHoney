@@ -12,6 +12,7 @@ export const MOCKMATERIAL: IMaterial[] = [{
     valoration: "",
     desc: 20,
     weight:1,
+    quantity:1,
 },
 {
     id: 1,
@@ -25,6 +26,7 @@ export const MOCKMATERIAL: IMaterial[] = [{
     valoration: "",
     desc: 20,
     weight:1,
+    quantity:1,
 },
 {
     id: 2,
@@ -38,6 +40,7 @@ export const MOCKMATERIAL: IMaterial[] = [{
     valoration: "",
     desc: 15,
     weight:1,
+    quantity:1,
 },
 {
     id: 3,
@@ -51,6 +54,7 @@ export const MOCKMATERIAL: IMaterial[] = [{
     valoration: "",
     desc: 20,
     weight:1,
+    quantity:1,
 },
 {
     id: 4,
@@ -64,6 +68,7 @@ export const MOCKMATERIAL: IMaterial[] = [{
     valoration: "",
     desc: 20,
     weight:1,
+    quantity:1,
 },
 {
     id: 5,
@@ -77,6 +82,7 @@ export const MOCKMATERIAL: IMaterial[] = [{
     valoration: "",
     desc: 15,
     weight:1,
+    quantity:1,
 }
 ,
 {
@@ -91,6 +97,7 @@ export const MOCKMATERIAL: IMaterial[] = [{
     valoration: "",
     desc: 15,
     weight:1,
+    quantity:1,
 }
 ,
 {
@@ -105,6 +112,7 @@ export const MOCKMATERIAL: IMaterial[] = [{
     valoration: "",
     desc: 15,
     weight:1,
+    quantity:1,
 }
 ,
 {
@@ -119,6 +127,7 @@ export const MOCKMATERIAL: IMaterial[] = [{
     valoration: "",
     desc: 15,
     weight:1,
+    quantity:1,
 }
 
 ]

@@ -1,1 +1,28 @@
+<section>
+    <div class="cart-list">
+        <div class="flex-container cart-box">
+            <div>
+                <img class="cart-img" [src]="materialHoney.photo" alt="Exterior photo of {{materialHoney.name}}" />
+                <!-- Botón para cargar nueva imagen -->
+                <button (click)="fileInput.click()">Cargar nueva imagen</button>
+                <input type="file" #fileInput (change)="onFileSelected($event)" style="display: none;" />
+            </div>
+            <div class="cart-item" >
+                <div class="cart-item-details">
+                    {{ materialHoney.name }} -
+                    {{ materialHoney.quantity }} -
+                    
+                    {{materialHoney.price | currency }}
+                </div>
+                <div class="cart-item-actions">
+                    <!-- <input class="input-quantity" type="number" [(ngModel)]="item.quantity"
+                    (change)="updateItem(item.id, item.quantity, item.weight, item.price)"> -->
+                    <input class="input-name" type="text" [(ngModel)]="materialHoney.name">
+                    <input class="input-quantity" type="number" [(ngModel)]="materialHoney.quantity">
+                </div>
+            </div>
+            
 
+        </div>
+    </div>
+</section>
