@@ -23,7 +23,7 @@
             ],
             "styles": [
               "src/styles.css",
-              "src/assets/css/cart-styles.css"
+              "src/assets/css/item-styles.css"
             ],
             "scripts": []
           },

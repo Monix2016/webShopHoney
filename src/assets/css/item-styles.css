@@ -102,9 +102,34 @@
   border-radius: 5px;
 }
 
-.cart-img{
-height: 150px;
-width: 150px;
+.image-container {
+  position: relative;
+  display: inline-block;
+}
+
+.cart-img {
+  height: 150px;
+  width: 150px;
+  object-fit: cover;
+}
+
+.upload-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.image-container:hover .upload-btn {
+  opacity: 1;
 }
 
 .cart-box{
