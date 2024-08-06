@@ -100,7 +100,7 @@
   
   /* Botón de compra */
   .btn-buy {
-    background-color: var(--primary-color);
+    background-color: var(--honey-sec-color);
     color: var(--honey-color);
     border: none;
     padding: 10px 20px;

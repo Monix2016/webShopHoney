@@ -4,3 +4,10 @@
     align-items: center;
     justify-content: space-evenly;
 }
+
+.image-container {
+    position: relative;
+    width: 100%;
+  }
+
+ 

@@ -131,27 +131,22 @@ strong {
 }
 
 .discount {
-  /* position: relative; */
+  position: absolute;
+  top: 10px; /* Ajusta esta posición según sea necesario */
+  left: -20px; /* Ajusta esta posición según sea necesario */
+  transform: rotate(-45deg);
   background-color: var(--global-color-title);
   font-weight: 700;
   color: white;
-  /* display: block; */
-  /* text-transform: uppercase; */
-  /* height: 70px; */
-  width: max-content;
-  border-radius: 0 15px 15px 0;
+  padding: 10px; /* Ajusta el tamaño del relleno según sea necesario */
   font-style: italic;
-  /* left: -9px; */
-  /* top:30px */
+  z-index: 10;
 }
 
 .discount::after {
   border-top: 6px solid var(--honey-color);
   content: '';
-  /* position: absolute; */
   bottom: -6px;
-
-
 }
 
 .background {
@@ -183,7 +178,7 @@ strong {
   /* Soft shadow for depth */
   line-height: 1.6;
   /* Increase line height for readability */
-  font-family: 'Georgia', serif;
+  /* font-family: 'Georgia', serif; */
   /* Traditional newspaper font */
   position: relative;
   /* Ensure the pseudo-element positions correctly */

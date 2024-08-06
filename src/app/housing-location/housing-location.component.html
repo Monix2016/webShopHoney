@@ -1,9 +1,13 @@
 <section class="listing">
-    <div class="discount">
-        <p>DTO {{ housingLocation.discount }} %</p>
+    <div class="image-container">
+        <div class="discount">
+            <p>DTO {{ housingLocation.discount }} %</p>
+        </div>
+        <img class="listing-photo animated-img" [src]="housingLocation.photo"
+            alt="Exterior photo of {{housingLocation.name}}" [routerLink]="['/details', housingLocation.id]">
+
     </div>
-    <img class="listing-photo animated-img" [src]="housingLocation.photo"
-        alt="Exterior photo of {{housingLocation.name}}" [routerLink]="['/details', housingLocation.id]">
+
     <h2 class="listing-heading">{{ housingLocation.name }}</h2>
     <p class="listing-location">
         {{ housingLocation.city}},

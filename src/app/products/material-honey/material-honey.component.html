@@ -1,7 +1,18 @@
 <section class="listing">
-    <img class="listing-photo animated-img" [src]="materialHoney.photo" alt="Exterior photo of {{materialHoney.name}}" [routerLink]="['/detailsMaterial', materialHoney.id]">
+    <div class="image-container">
+        <div class="discount">
+            <p>DTO {{ materialHoney.desc }} %</p>
+        </div>
+        <img class="listing-photo animated-img" 
+        [src]="materialHoney.photo" alt="Exterior photo of 
+        {{materialHoney.name}}" 
+        [routerLink]="['/detailsMaterial', materialHoney.id]">
+    </div>
+    
     <h2 class="listing-heading">{{ materialHoney.name }}</h2>
-    <p class="listing-location">{{ materialHoney.ubication}}, {{materialHoney.price | currency }}</p>
+    <p class="listing-location">
+        {{ materialHoney.ubication}}, 
+        {{materialHoney.price | currency }}</p>
     <div class="this-flex-item">
         <a [routerLink]="['/detailsMaterial', materialHoney.id]">{{'Learn_More'|translate}}</a>
         <button class="CartBtn" (click)="addToCart(materialHoney.id)">
