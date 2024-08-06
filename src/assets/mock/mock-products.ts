@@ -16,7 +16,7 @@ export const MOCKHONEYS:IHoney[]=[{
     photo: `./assets/img/honey-823614_1280.jpg`,
     availableUnits: 4,
     wifi: true,
-    discount: 60,
+    discount: 0,
 
 
   },

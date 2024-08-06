@@ -1,6 +1,6 @@
 <section class="listing">
     <div class="image-container">
-        <div class="discount">
+        <div class="discount" *ngIf="housingLocation.discount !==0">
             <p>DTO {{ housingLocation.discount }} %</p>
         </div>
         <img class="listing-photo animated-img" [src]="housingLocation.photo"
