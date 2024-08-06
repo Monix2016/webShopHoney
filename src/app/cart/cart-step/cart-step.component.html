@@ -20,12 +20,25 @@
           </span>
           <input class="input-quantity" type="number" [(ngModel)]="item.quantity"
             (change)="updateItem(item.id, item.quantity, item.weight, item.price)">
-          <select class="input-weight styled-select" [(ngModel)]="item.weight"
+          <!-- <select class="input-weight styled-select" [(ngModel)]="item.weight"
             (change)="updateItem(item.id, item.quantity, item.weight, item.price)">
             <option value="1000">1000g</option>
             <option value="500">500g</option>
             <option value="250">250g</option>
-          </select>
+          </select> -->
+
+          <div class="form-inline-select">
+            <label for="weightSelector">Peso: </label>
+            <div class="custom-select-wrapper">
+              <select id="weightSelector" [(ngModel)]="item.weight"
+              (change)="updateItem(item.id, item.quantity, item.weight, item.price)" class="form-control custom-select">
+                
+                <option value="1000">1000g</option>
+                <option value="500">500g</option>
+                <option value="250">250g</option>
+              </select>
+            </div>
+          </div>
         </div>
       </div>
 

@@ -18,11 +18,11 @@
   
   .custom-select {
     display: block;
-    width: 50%;
+    width: 100%;
     padding: 10px 15px;
     font-size: 16px;
-    /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
-    border: 2px solid var(--honey-color);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border: 1px solid #ccc;
     border-radius: 8px;
     appearance: none;
     background-color: #fff;
@@ -35,14 +35,20 @@
     transition: box-shadow 0.3s ease, border-color 0.3s ease;
   }
   
-  .custom-select:hover {
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  .custom-select option {
+    background-color: #fff;
+    color: #333;
   }
   
+  /* Remove blue highlight on focus */
   .custom-select:focus {
-    border-color: #007bff;
-    box-shadow: 0 6px 12px rgba(30, 144, 255, 0.4);
+    border-color:var(--honey-color);
+    box-shadow: 0 6px 12px rgba(216, 149, 24, 0.4);
     outline: none;
+  }
+  
+  .custom-select::-ms-expand {
+    display: none;
   }
   
   .custom-select-wrapper::after {
@@ -54,4 +60,11 @@
     height: 10px;
     pointer-events: none;
     transform: translateY(-50%);
+  }
+  
+  /* Style options on hover */
+  .custom-select option:hover,
+  .custom-select option:focus {
+    background-color: #007bff; /* Background color for hovered option */
+    color: #fff; /* Text color for hovered option */
   }
