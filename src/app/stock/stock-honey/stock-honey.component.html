@@ -33,11 +33,18 @@
                     (change)="updateItem(item.id, item.quantity, item.weight, item.price)"> -->
                     <input class="input-name" type="text" [(ngModel)]="housingLocation.name">
                     <input class="input-quantity" type="number" [(ngModel)]="housingLocation.quantity">
-                    <select class="input-weight styled-select" [(ngModel)]="housingLocation.weight">
-                        <option value="1000">1000g</option>
-                        <option value="500">500g</option>
-                        <option value="250">250g</option>
-                    </select>
+                    <!-- <select class="input-weight styled-select" [(ngModel)]="housingLocation.weight"> -->
+                        <div class="form-inline">
+                            <label for="weightSelector">Peso: </label>
+                            <div class="custom-select-wrapper">
+                              <select id="weightSelector" [(ngModel)]="housingLocation.weight" class="form-control custom-select">
+                                <option value=" ">Peso</option>
+                                <option value="1000">1000g</option>
+                                <option value="500">500g</option>
+                                <option value="250">250g</option>
+                              </select>
+                            </div>
+                          </div>
                 </div>
             </div>
         </div>

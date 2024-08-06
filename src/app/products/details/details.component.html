@@ -13,15 +13,21 @@
 
       <div class="flex-item">
         <div class="flex-container-col">
-          <section class="listing-description">
+          <section class="">
 
             <p class="listing-location">{{housingLocation?.city}}</p>
             
-            <select [(ngModel)]="selectedWeight">
-              <option value="1000">1000g</option>
-              <option value="500">500g</option>
-              <option value="250">250g</option>
-            </select>
+            <div class="form-inline">
+              <label for="weightSelector">Peso: </label>
+              <div class="custom-select-wrapper">
+                <select id="weightSelector" [(ngModel)]="selectedWeight" class="form-control custom-select">
+                  
+                  <option value="1000">1000g</option>
+                  <option value="500">500g</option>
+                  <option value="250">250g</option>
+                </select>
+              </div>
+            </div>
             <p>{{'Price' | translate}}: {{ getPrice() | currency }}</p>
             <p>{{'Location'|translate}}: {{housingLocation?.state}}</p>
             <p>{{'Category'|translate}}:: {{housingLocation?.category}}</p>

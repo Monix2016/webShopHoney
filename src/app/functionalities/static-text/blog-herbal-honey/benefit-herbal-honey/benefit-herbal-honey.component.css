@@ -13,7 +13,9 @@ section {
   /* Soft shadow for depth */
 
   /* Increase line height for readability */
-  font-family: 'Times New Roman', Times, serif;
+  /* font-family: 'Times New Roman', Times, serif; */
 
+  font-size: small;
 
   }
+ 

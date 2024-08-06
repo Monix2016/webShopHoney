@@ -7,7 +7,7 @@
 }
 .effects-layer-title{
     color: var(--e-global-color-c785e97);
-    font-family: "Dosis", Sans-serif;
+    /* font-family: "Dosis", Sans-serif; */
     font-size: 80px;
     font-weight: 900;
 }
