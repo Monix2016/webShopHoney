@@ -1,5 +1,14 @@
 <section [ngClass]="{'rtl': translate.currentLang  === 'ar', 'ltr': translate.currentLang  === 'en'}">
-    <h3 class="title">{{materialHoney?.name}}</h3>
+
+    <div class="title_Bloque">
+        <div class="">
+            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="43" viewBox="0 0 10 43">
+                <line id="Línea_10" data-name="Línea 10" y2="33" transform="translate(5 5)" fill="none" stroke="#e89002"
+                    stroke-linecap="round" stroke-width="10"></line>
+            </svg>
+        </div>
+        <h1 class="title">{{materialHoney?.name}}</h1>
+    </div>
     <div class="container">
         <div class="flex-container">
             <div class="flex-item">
@@ -56,7 +65,16 @@
         </div>
 
         <section>
-            <h2 class="title">{{'Similar_Product'|translate}}</h2>
+
+            <div class="title_Bloque">
+                <div class="">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="10" height="43" viewBox="0 0 10 43">
+                        <line id="Línea_10" data-name="Línea 10" y2="33" transform="translate(5 5)" fill="none"
+                            stroke="#e89002" stroke-linecap="round" stroke-width="10"></line>
+                    </svg>
+                </div>
+                <h1 class="title">{{'Similar_Product'|translate}}</h1>
+            </div>
             <section class="results">
                 <app-material-honey *ngFor="let materialHoney of materialList"
                     [materialHoney]="materialHoney"></app-material-honey>

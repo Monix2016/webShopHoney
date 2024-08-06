@@ -4,13 +4,31 @@
     <input type="text" placeholder="{{'Placeholder.Filter_By_City'| translate}}" #filter>
     <button class="primary" type="button" (click)="filterResults(filter.value)">{{ 'Search' | translate}}</button>
   </form>
-  <h1 class="title">{{'Honeys'|translate}}</h1>
+
+  <div class="title_Bloque">
+    <div class="">
+      <svg xmlns="http://www.w3.org/2000/svg" width="10" height="43" viewBox="0 0 10 43">
+        <line id="Línea_10" data-name="Línea 10" y2="33" transform="translate(5 5)" fill="none" stroke="#e89002"
+          stroke-linecap="round" stroke-width="10"></line>
+      </svg>
+    </div>
+    <h1 class="title">{{'Honeys'|translate}}</h1>
+  </div>
   <section>
     <app-stock-honey *ngFor="let housingLocation of housingLocationList" [housingLocation]="housingLocation">
     </app-stock-honey>
   </section>
 
-  <h1 class="title">{{'Material.Title'|translate}}</h1>
+
+  <div class="title_Bloque">
+    <div class="">
+      <svg xmlns="http://www.w3.org/2000/svg" width="10" height="43" viewBox="0 0 10 43">
+        <line id="Línea_10" data-name="Línea 10" y2="33" transform="translate(5 5)" fill="none" stroke="#e89002"
+          stroke-linecap="round" stroke-width="10"></line>
+      </svg>
+    </div>
+    <h1 class="title">{{'Material.Title'|translate}}</h1>
+  </div>
   <section>
     <app-stock-material></app-stock-material>
   </section>
