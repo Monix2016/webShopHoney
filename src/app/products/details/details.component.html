@@ -14,12 +14,14 @@
       <div class="flex-item">
         <div class="flex-container-col">
           <section class="listing-description">
+
+            <p class="listing-location">{{housingLocation?.city}}</p>
+            
             <select [(ngModel)]="selectedWeight">
-              <option value="1000">1kg</option>
+              <option value="1000">1000g</option>
               <option value="500">500g</option>
               <option value="250">250g</option>
             </select>
-            <p class="listing-location">{{housingLocation?.city}}</p>
             <p>{{'Price' | translate}}: {{ getPrice() | currency }}</p>
             <p>{{'Location'|translate}}: {{housingLocation?.state}}</p>
             <p>{{'Category'|translate}}:: {{housingLocation?.category}}</p>
@@ -81,7 +83,15 @@
       </p>
     </section>
     <section>
-      <h2 class="title">{{'Similar_Product'|translate}}</h2>
+      <div class="title_Bloque">
+        <div class="">
+            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="43" viewBox="0 0 10 43">
+                <line id="Línea_10" data-name="Línea 10" y2="33" transform="translate(5 5)" fill="none"
+                    stroke="#e89002" stroke-linecap="round" stroke-width="10"></line>
+            </svg>
+        </div>
+        <h1 class="title">{{'Similar_Product'|translate}}</h1>
+    </div>
 
       <section class="results">
         <app-housing-location *ngFor="let housingLocation of housingLocationList"
