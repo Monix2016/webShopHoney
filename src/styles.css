@@ -18,6 +18,7 @@ body {
   --shadow-color: #E8E8E8;
   --honey-color: #efa909;
   --honey-sec-color: #fde6b1;
+  --honey-tree-color: #efcd7d;
   --svg-color: #f2f2f2;
 
   --global-color-title: #021C10;
@@ -110,7 +111,7 @@ strong {
 }
 
 .allIcon {
-
+  cursor: pointer;
   background-color: var(--honey-color);
   text-shadow: 2px 2px 4px var(--text-shadow-color);
   z-index: 9999;
@@ -129,10 +130,10 @@ strong {
   font-weight: bold;
 }
 
-.discount{
+.discount {
   /* position: relative; */
-  background-color:var(--global-color-title);
-  font-weight:700 ;
+  background-color: var(--global-color-title);
+  font-weight: 700;
   color: white;
   /* display: block; */
   /* text-transform: uppercase; */
@@ -144,7 +145,7 @@ strong {
   /* top:30px */
 }
 
-.discount::after{
+.discount::after {
   border-top: 6px solid var(--honey-color);
   content: '';
   /* position: absolute; */
@@ -235,7 +236,7 @@ strong {
 }
 
 .listing {
-  background: var(--honey-color);
+  background: var(--honey-tree-color);
   border-radius: 30px;
   padding-bottom: 30px;
 }
@@ -243,12 +244,13 @@ strong {
 .listing-heading {
   font-size: 13px;
   font-family: cursive;
-  font-weight:700 ;
+  font-weight: 700;
   color: var(--global-color-title);
   padding: 10px 20px 0 20px;
 }
 
 .listing-photo {
+  cursor: pointer;
   height: 250px;
   width: 100%;
   object-fit: cover;

@@ -1,0 +1,6 @@
+/* TODO: esta repetido */
+.this-flex-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}

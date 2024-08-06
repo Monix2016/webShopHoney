@@ -1,26 +1,13 @@
-<!-- <section [ngClass]="{'rtl': translate.currentLang  === 'ar', 'ltr': translate.currentLang  === 'en'}">
-        <section class="listing-apply">-->
-<!--<h2 class="section-heading">Apply now to live here</h2>
-        <form [formGroup]="applyForm" (submit)="submitApplication()">
-          <label for="first-name">First Name</label>
-          <input id="first-name" type="text" formControlName="firstName">
-  
-          <label for="last-name">Last Name</label>
-          <input id="last-name" type="text" formControlName="lastName">
-  
-          <label for="email">Email</label>
-          <input id="email" type="email" formControlName="email">
-          <button type="submit" class="primary">Apply now</button>
-        </form> -->
-<!-- </section>
-    </div>
-  </div>
-
-
-</section> -->
-
 <section [ngClass]="{'rtl': translate.currentLang  === 'ar', 'ltr': translate.currentLang  === 'en'}">
-  <h3 class="title">{{housingLocation?.name}}</h3>
+  <div class="title_Bloque">
+    <div class="">
+      <svg xmlns="http://www.w3.org/2000/svg" width="10" height="43" viewBox="0 0 10 43">
+        <line id="Línea_10" data-name="Línea 10" y2="33" transform="translate(5 5)" fill="none" stroke="#e89002"
+          stroke-linecap="round" stroke-width="10"></line>
+      </svg>
+    </div>
+    <h3 class="title"> {{housingLocation?.name}}</h3>
+  </div>
   <div class="container">
     <div class="flex-container">
 
