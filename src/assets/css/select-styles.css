@@ -1,10 +1,10 @@
-.form-inline {
+.form-inline-select {
     display: flex;
     align-items: center;
     margin: 20px 0;
   }
   
-  .form-inline label {
+  .form-inline-select label {
     margin-right: 15px;
     /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
     font-size: 16px;
