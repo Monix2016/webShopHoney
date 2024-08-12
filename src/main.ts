@@ -9,6 +9,7 @@ import routeConfig from './app/routes';
 import { HttpClient, provideHttpClient } from '@angular/common/http';
 import { importProvidersFrom } from '@angular/core';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 
 bootstrapApplication(AppComponent,
   {
@@ -25,7 +26,7 @@ bootstrapApplication(AppComponent,
             deps: [HttpClient],
           },
         })
-      ), 
+      ), provideAnimationsAsync('noop'), 
       // provideAnimationsAsync(),
       ]
     }

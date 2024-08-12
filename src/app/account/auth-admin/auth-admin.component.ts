@@ -1,9 +1,12 @@
 import { CommonModule } from '@angular/common';
-import { Component, inject } from '@angular/core';
-import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
+import { Component, OnInit, inject } from '@angular/core';
+import { FormBuilder, FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { AuthenticatorService } from '../../services/authenticator.service';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
+import { MatDialogRef } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-auth-admin',
@@ -17,22 +20,45 @@ import { AuthenticatorService } from '../../services/authenticator.service';
   templateUrl: './auth-admin.component.html',
   styleUrl: './auth-admin.component.css'
 })
-export class AuthAdminComponent {
-  authAdmin=inject(AuthenticatorService);
-  applyForm = new FormGroup({
-    userName: new FormControl(''),
-    password:new FormControl(''),
-  });
+export class AuthAdminComponent implements OnInit {
+  // authAdmin=inject(AuthenticatorService);
 
-  constructor(public translate: TranslateService,) { }
 
-  submitLogin() {
-    this.authAdmin.submitLogin(
-      this.applyForm.value.userName ?? '',
+  loginForm: FormGroup;
+  hide = true;
 
-      this.applyForm.value.password ?? ''
+  constructor(
+    public translate: TranslateService,
+    public dialogRef: MatDialogRef<AuthAdminComponent>,
+    private fb: FormBuilder,
+    // private http: HttpClient,
+    private authService:AuthenticatorService,
+  
+  ) { 
+    this.loginForm = this.fb.group({
+      email: ['', [Validators.required, Validators.email]],
+      password: ['', Validators.required]
+    });
+  }
 
-    );
-    this.applyForm.reset();
+  ngOnInit(): void {}
+
+  onSubmit() {
+    if (this.loginForm.valid) {
+      console.log('es el formulario:',this.loginForm)
+      this.authService.login(this.loginForm.value).subscribe(
+        (response: any) => {
+          console.log('la respuesta API:',response)
+          if (response && response.access_token) {
+            this.dialogRef.close(true);
+          } else {
+            console.error('Login failed', response);
+          }
+        },
+        (error) => {
+          console.error('Error en el login', error);
+        }
+      );
+    }
   }
 }
