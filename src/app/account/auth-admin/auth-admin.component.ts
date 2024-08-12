@@ -4,8 +4,6 @@ import { FormBuilder, FormControl, FormGroup, ReactiveFormsModule, Validators } 
 import { RouterModule } from '@angular/router';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { AuthenticatorService } from '../../services/authenticator.service';
-import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
 import { MatDialogRef } from '@angular/material/dialog';
 
 @Component({
@@ -36,7 +34,8 @@ export class AuthAdminComponent implements OnInit {
   
   ) { 
     this.loginForm = this.fb.group({
-      email: ['', [Validators.required, Validators.email]],
+      // email: ['', [Validators.required, Validators.email]],
+      name: ['', Validators.required],
       password: ['', Validators.required]
     });
   }
