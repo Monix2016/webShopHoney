@@ -1,0 +1,41 @@
+.forgot {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 0.75rem;
+    line-height: 1rem;
+    color: rgba(156, 163, 175,1);
+    margin: 8px 0 14px 0;
+  }
+  
+  .forgot a,.signup a {
+    color: rgba(243, 244, 246, 1);
+    text-decoration: none;
+    font-size: 14px;
+  }
+  
+  .forgot a:hover, .signup a:hover {
+    text-decoration: underline var(--primary-color);
+  }
+  
+  
+  .line {
+    height: 1px;
+    flex: 1 1 0%;
+    background-color: var(--line-color);
+  }
+  
+
+  
+  .flex-container-row .icon {
+    border-radius: 0.125rem;
+    padding: 0.75rem;
+    border: none;
+    background-color: transparent;
+    margin-left: 8px;
+  }
+  
+  .flex-container-row .icon svg {
+    height: 1.25rem;
+    width: 1.25rem;
+    fill: var(--svg-color)
+  }
