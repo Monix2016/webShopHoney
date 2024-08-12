@@ -1,0 +1,83 @@
+/** #####################################################
+    #    ESTILOS FORMULARIOS                            #
+    #####################################################*/
+
+    .form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        max-width: 350px;
+        padding: 20px;
+        border-radius: 20px;
+        position: relative;
+        background-color: var(--background-account);
+        color: var(--honey-color);
+        border: 1px solid #333;
+        margin-top: 1.5rem;
+      }
+      
+      .message {
+        font-size: 14.5px;
+        color: var(--primary-color);
+      }
+      
+      
+      .flex {
+        display: flex;
+        width: 100%;
+        gap: 6px;
+      }
+      
+      .form label {
+        position: relative;
+      }
+      
+      .form label .input {
+        background-color: #333;
+        color: var(--honey-color);
+        width: 100%;
+        padding: 20px 05px 05px 10px;
+        outline: 0;
+        border: 1px solid var(--honey-color);
+        border-radius: 10px;
+      }
+      
+      .form label .input+span {
+        color: var(--honey-color);
+        position: absolute;
+        left: 10px;
+        top: 0px;
+        font-size: 0.9em;
+        cursor: text;
+        transition: 0.3s ease;
+      }
+      
+      .form label .input:placeholder-shown+span {
+        top: 12.5px;
+        font-size: 0.9em;
+      }
+      
+      .form label .input:focus+span,
+      .form label .input:valid+span {
+        color: var(--white-color);
+        top: 0px;
+        font-size: 0.7em;
+        font-weight: 600;
+      }
+      
+      .input {
+        font-size: medium;
+      }
+      
+      @keyframes pulse {
+        from {
+          transform: scale(0.9);
+          opacity: 1;
+        }
+      
+        to {
+          transform: scale(1.8);
+          opacity: 0;
+        }
+      }
+      
