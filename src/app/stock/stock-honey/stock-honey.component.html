@@ -77,18 +77,23 @@
                             <div class="form-inline-select">
                                 <label for="weightSelector">{{'cart.CartItems.Weight'|translate}}: </label>
                                 <div class="custom-select-wrapper">
-                                    <select id="weightSelector" [(ngModel)]="product.weight"
-                                        class="form-control custom-select" name="productWeight" (change)="onWeightChange(product)">
-                                        <option value=" ">{{'cart.CartItems.Weight'|translate}}</option>
-                                        <option value="1000">1000g</option>
-                                        <option value="500">500g</option>
-                                        <option value="250">250g</option>
-                                    </select>
+                                  <select id="weightSelector" [(ngModel)]="product.weight"
+                                          class="form-control custom-select" name="productWeight" 
+                                          (change)="onWeightChange(product)">
+                                    <option value="">{{'cart.CartItems.Weight'|translate}}</option>
+                                    <option value="1000">1000g</option>
+                                    <option value="500">500g</option>
+                                    <option value="250">250g</option>
+                                  </select>
                                 </div>
-                            </div>
-
-                            <label>{{'cart.CartItems.Price'|translate}}: <input [(ngModel)]="product.selectedPrice" name="productPrice"></label>
-                            <label>Discount: <input [(ngModel)]="product.discount" name="productDiscount"></label>
+                              </div>
+                              
+                              <label>{{'cart.CartItems.Price'|translate}}: 
+                                <input [(ngModel)]="product.selectedPrice" name="productPrice">
+                              </label>
+                              <label>Discount: 
+                                <input [(ngModel)]="product.selectedDto" name="productDiscount">
+                              </label>
                         </div>
 
                     </div>

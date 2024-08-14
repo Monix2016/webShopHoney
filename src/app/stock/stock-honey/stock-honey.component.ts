@@ -145,12 +145,17 @@ export class StockHoneyComponent implements OnInit {
   onWeightChange(product: any): void {
     const selectedWeight = product.weight;
     const price = this.stockService.getPrice(product, selectedWeight);
-    const dto = this.stockService.getDto(product, selectedWeight);
+    const discount = this.stockService.getDto(product, selectedWeight);
     if (price !== null) {
       product.selectedPrice = price;
-      product.selectedDto = dto;
     } else {
       console.error('Price not found for the selected weight.');
+    }
+  
+    if (discount !== null) {
+      product.selectedDto = discount;
+    } else {
+      console.error('Discount not found for the selected weight.');
     }
   }
 }

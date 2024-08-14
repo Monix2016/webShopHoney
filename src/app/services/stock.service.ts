@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { map } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -14,7 +15,13 @@ export class StockService {
 
 
   getProducts() {
-    return this.http.get<any[]>(this.apiUrl);
+    return this.http.get<any[]>(this.apiUrl).pipe(
+      map(products => products.map(product => {
+        product.prices = JSON.parse(product.prices || '{}');
+        product.discounts = JSON.parse(product.discounts || '{}');
+        return product;
+      }))
+    );
   }
 
   updateProduct(product: any) {
@@ -26,21 +33,17 @@ export class StockService {
   }
 
   getPrice(product: any, selectedWeight: string): number | null {
-    // Verifica si el producto tiene un campo de precios y si contiene el peso seleccionado
     if (product && product.prices && product.prices[selectedWeight]) {
       return product.prices[selectedWeight];
-    } else {
-      return 0; // Si no se encuentra el peso seleccionado, devuelve null
     }
+    return null; // Devuelve null si no se encuentra el peso seleccionado
   }
-
+  
   getDto(product: any, selectedWeight: string): number | null {
-    // Verifica si el producto tiene un campo de precios y si contiene el peso seleccionado
     if (product && product.discounts && product.discounts[selectedWeight]) {
       return product.discounts[selectedWeight];
-    } else {
-      return 0; // Si no se encuentra el peso seleccionado, devuelve null
     }
+    return null; // Devuelve null si no se encuentra el peso seleccionado
   }
 
 }
