@@ -4,7 +4,7 @@
             <div class="flex-container">
                 <div class="product-card">
                     <div class="product-image">
-                        <img [src]="product.image" alt="Exterior photo of {{product.name}}" alt="">
+                        <img src="./assets/img/{{product.image}}" alt="Exterior photo of {{product.name}}" alt="">
                         <div class="titleCard">CARGAR IMAGEN</div>
                         <div class="overlay"></div>
                     </div>
@@ -40,7 +40,6 @@
                     </div>
                     <div class="cart-item">
                         <div class="cart-item-actions">
-                            <label>State: <input [(ngModel)]="product.state" name="productState"></label>
 
                             <div class="form-inline-select">
                                 <label for="stateSelector">State: </label>
@@ -97,6 +96,7 @@
                 </div>
 
             </div>
+            <button type="button" class="button_main" (click)="saveChanges(product)">Guardar</button>
         </div>
     </div>
 

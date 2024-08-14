@@ -21,6 +21,7 @@ export class StockHoneyComponent implements OnInit {
   
   selectedFile: File | null = null;
   products: any[] = [];
+  
   newProduct: any = {
     name: '',
     description: '',
@@ -30,6 +31,7 @@ export class StockHoneyComponent implements OnInit {
   };
   showAddProductForm: boolean = false;
   http: any;
+
 
   constructor(private stockService: StockService) {}
 
@@ -52,7 +54,9 @@ export class StockHoneyComponent implements OnInit {
   }
 
 
+
   saveChanges(product: any): void {
+    console.log('Saving changes for product:', product); // Debugging
     this.stockService.updateProduct(product).subscribe(
       (response) => {
         console.log('Product updated', response);
