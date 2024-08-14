@@ -25,9 +25,16 @@ export class StockHoneyComponent implements OnInit {
   newProduct: any = {
     name: '',
     description: '',
-    price: '',
-    stock: '',
-    image: `./assets/img/honey-5043708_1280.jpg`
+    prices: { '1000': 0, '500': 0, '250': 0 },
+    discounts: { '1000': 0, '500': 0, '250': 0 }, 
+    stock: null,
+    type: '',
+    weight: '',
+    image: `./assets/img/honey-5043708_1280.jpg`,
+    state: '',
+    category: '',
+    city: '',
+    
   };
   showAddProductForm: boolean = false;
   http: any;
@@ -85,6 +92,24 @@ export class StockHoneyComponent implements OnInit {
     );
   }
 
+    // Método para guardar el producto
+    saveProduct() {
+      const productData = {
+        ...this.newProduct,
+        prices: this.newProduct.prices,
+        discounts: this.newProduct.discounts,
+        
+      };
+  
+      this.stockService.saveProduct(productData).subscribe(
+        (response) => {
+          console.log('Producto guardado', response);
+        },
+        (error) => {
+          console.error('Error al guardar el producto', error);
+        }
+      );
+    }
 
   // TODO: eso se repite ver mas tarde como ponerlo en el servicio
   // onFileSelected(event: Event): void {
@@ -115,5 +140,17 @@ export class StockHoneyComponent implements OnInit {
     this.http.post('api/v1/products', formData).subscribe((response: any) => {
       console.log('Producto guardado', response);
     });
+  }
+
+  onWeightChange(product: any): void {
+    const selectedWeight = product.weight;
+    const price = this.stockService.getPrice(product, selectedWeight);
+    const dto = this.stockService.getDto(product, selectedWeight);
+    if (price !== null) {
+      product.selectedPrice = price;
+      product.selectedDto = dto;
+    } else {
+      console.error('Price not found for the selected weight.');
+    }
   }
 }

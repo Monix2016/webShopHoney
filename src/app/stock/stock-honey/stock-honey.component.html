@@ -78,7 +78,7 @@
                                 <label for="weightSelector">{{'cart.CartItems.Weight'|translate}}: </label>
                                 <div class="custom-select-wrapper">
                                     <select id="weightSelector" [(ngModel)]="product.weight"
-                                        class="form-control custom-select" name="productWeight">
+                                        class="form-control custom-select" name="productWeight" (change)="onWeightChange(product)">
                                         <option value=" ">{{'cart.CartItems.Weight'|translate}}</option>
                                         <option value="1000">1000g</option>
                                         <option value="500">500g</option>
@@ -87,8 +87,7 @@
                                 </div>
                             </div>
 
-                            <label>{{'cart.CartItems.Price'|translate}}: <input [(ngModel)]="product.price"
-                                    name="productPrice"></label>
+                            <label>{{'cart.CartItems.Price'|translate}}: <input [(ngModel)]="product.selectedPrice" name="productPrice"></label>
                             <label>Discount: <input [(ngModel)]="product.discount" name="productDiscount"></label>
                         </div>
 
@@ -183,30 +182,33 @@
                         <div class="cart-item">
                             <div class="cart-item-actions">
 
-
+<!-- 
                                 <div class="form-inline-select">
                                     <label for="weightSelector">{{'cart.CartItems.Weight'|translate}}: </label>
                                     <div class="custom-select-wrapper">
                                         <select id="weightSelector" [(ngModel)]="newProduct.weight"
-                                            class="form-control custom-select" name="productWeight">
+                                            class="form-control custom-select" name="productWeight" (change)="onWeightChange(newProduct)">
                                             <option value=" ">{{'cart.CartItems.Weight'|translate}}</option>
                                             <option value="1000">1000g</option>
                                             <option value="500">500g</option>
                                             <option value="250">250g</option>
                                         </select>
                                     </div>
-                                </div>
-
-                                <label>{{'cart.CartItems.Price'|translate}}: <input [(ngModel)]="newProduct.price"
-                                        name="productPrice"></label>
-                                <label>Discount: <input [(ngModel)]="newProduct.discount"
-                                        name="productDiscount"></label>
+                                </div> -->
+                                <label>{{'cart.CartItems.Price'|translate}} 1000g: <input [(ngModel)]="newProduct.prices['1000']" name="price1000"></label>
+                                <label>{{'cart.CartItems.Price'|translate}} 500g: <input [(ngModel)]="newProduct.prices['500']" name="price500"></label>
+                                <label>{{'cart.CartItems.Price'|translate}} 250g: <input [(ngModel)]="newProduct.prices['250']" name="price250"></label>
+                                
+                                <label>Discount 1000g: <input [(ngModel)]="newProduct.discounts['1000']" name="productDiscount1000"></label>
+                                <label>Discount 500g: <input [(ngModel)]="newProduct.discounts['500']" name="productDiscount500"></label>
+                                <label>Discount 250g: <input [(ngModel)]="newProduct.discounts['250']" name="productDiscount250"></label>
                             </div>
 
                         </div>
                     </div>
                 </div>
-                <button type="button" class="button_main" (click)="saveNewProduct()">Añadir</button>
+                <!-- <button type="button" class="button_main" (click)="saveNewProduct()">Añadir</button> -->
+                <button type="button" class="button_main" (click)="saveProduct()">Añadir</button>
             </form>
         </div>
 
