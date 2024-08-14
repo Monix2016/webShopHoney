@@ -80,10 +80,10 @@
         <div *ngIf="showAddProductForm">
           <h3>Añadir Nuevo Producto</h3>
           <form>
-            <label>Nombre: <input [(ngModel)]="newProduct.name"></label>
-            <label>Descripción: <input [(ngModel)]="newProduct.description"></label>
-            <label>Precio: <input [(ngModel)]="newProduct.price"></label>
-            <label>Stock: <input [(ngModel)]="newProduct.stock"></label>
+            <label>Nombre: <input [(ngModel)]="newProduct.name" name="productName"></label>
+            <label>Descripción: <input [(ngModel)]="newProduct.description" name="productDescription"></label>
+            <label>Precio: <input [(ngModel)]="newProduct.price" name="productPrice"></label>
+            <label>Stock: <input [(ngModel)]="newProduct.stock" name="productStock"></label>
             <label>Imagen: <input type="file" (change)="onFileChange($event)"></label>
             <button type="button" (click)="saveNewProduct()">Guardar</button>
           </form>
