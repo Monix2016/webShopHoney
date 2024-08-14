@@ -1,94 +1,119 @@
 <section>
-    <!-- <div class="cart-list">
-        <div class="flex-container cart-box">
-
-            <div class="product-card">
-                <div class="product-image">
-                    <img [src]=".photo" alt="Exterior photo of {{.name}}" alt="">
-                    <div class="titleCard">CARGAR IMAGEN</div>
-                    <div class="overlay"></div>
-                </div>
-                <div class="product-info">
-                    <p>CARGAR IMAGEN</p>
-                    
-                    <button class="CartBtn honey-color"
-                        (click)="fileInput.click()">Cargar nueva imagen
-                    </button>
-                    <input type="file" #fileInput (change)="onFileSelected($event)" style="display: none;" />
-                </div>
-            </div>
 
 
+    <div>
 
 
-            <div class="cart-item" *ngIf=".type=== 'HN'">
-                <div class="cart-item-details">
-                    {{ .name }} -
-                    {{ .quantity }} -
-                    {{ .weight }} g -
-                    {{getPrice() | currency }}
-                </div>
-                <div class="cart-item-actions">
+        <div class="cart-list">
+            <div class="flex-col cart-box" *ngFor="let product of products">
+                <div class="flex-container">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img [src]="product.image" alt="Exterior photo of {{product.name}}" alt="">
+                            <div class="titleCard">CARGAR IMAGEN</div>
+                            <div class="overlay"></div>
+                        </div>
+                        <div class="product-info">
+                            <p>CARGAR IMAGEN</p>
 
-                    <input class="input-name" type="text" [(ngModel)]=".name">
-                    <input class="input-quantity" type="number" [(ngModel)]=".quantity">
-                  
-                        <div class="form-inline-select">
-                            <label for="weightSelector">Peso: </label>
-                            <div class="custom-select-wrapper">
-                              <select id="weightSelector" [(ngModel)]=".weight" class="form-control custom-select">
-                                <option value=" ">Peso</option>
-                                <option value="1000">1000g</option>
-                                <option value="500">500g</option>
-                                <option value="250">250g</option>
-                              </select>
+                            <button class="CartBtn honey-color" (click)="fileInput.click()">Cargar nueva imagen
+                            </button>
+                            <input type="file" #fileInput (change)="onFileChange($event)" style="display: none;" />
+                        </div>
+                    </div>
+                    <div class="flex-col">
+                        <div class="cart-item">
+                            <div class="cart-item-actions">
+                                <div class="form-inline-select">
+                                    <label for="typeSelector">type: </label>
+                                    <div class="custom-select-wrapper">
+                                        <select id="typeSelector" [(ngModel)]="product.type"
+                                            class="form-control custom-select" name="productType">
+                                            <option value="HN">{{'Honey'|translate}}</option>
+                                            <option value="MT">{{'Material.Title'| translate}}</option>
+                                            <option value="CC">{{'Cours.Title'|translate}}</option>
+
+
+                                        </select>
+                                    </div>
+                                </div>
+                                <label>Name: <input [(ngModel)]="product.name" name="productName"></label>
+                                <label>Descripción: <input [(ngModel)]="product.description"
+                                        name="productDescription"></label>
+                                <label>Stock: <input [(ngModel)]="product.stock" name="productStock"></label>
                             </div>
-                          </div>
+                        </div>
+                        <div class="cart-item">
+                            <div class="cart-item-actions">
+                                <label>State: <input [(ngModel)]="product.state" name="productState"></label>
+
+                                <div class="form-inline-select">
+                                    <label for="stateSelector">State: </label>
+                                    <div class="custom-select-wrapper">
+                                        <select id="stateSelector" [(ngModel)]="product.state" 
+                                        class="form-control custom-select" name="productState">
+                                        <option value="NO">No Disponible</option>
+                                        <option value="SI">Disponible</option>
+                                    </select>
+                                    </div>
+                                </div>
+
+                                <div class="form-inline-select">
+                                    <label for="categorySelector">Category: </label>
+                                    <div class="custom-select-wrapper">
+                                        <select id="categorySelector" [(ngModel)]="product.category" 
+                                        class="form-control custom-select" name="productCategory">
+                                        <option value="HN">{{'BenificesHerbalHoney.Title'| translate}}</option>
+                                        <option value="HX">{{'BenificesHerbalHoney.Title'| translate}}</option>
+                                        <option value="HY">{{'BenificesHerbalHoney.Title'| translate}}</option>
+                                        <option value="HA">{{'BenificesHerbalHoney.Title'| translate}}</option>
+                                        <option value="HB">{{'BenificesHerbalHoney.Title'| translate}}</option>
+
+
+                                    </select>
+                                    </div>
+                                </div>
+                                <label>City: <input [(ngModel)]="product.city" name="productCity"></label>
+                            </div>
+                        </div>
+                        <div class="cart-item">
+                            <div class="cart-item-actions">
+
+
+                                <div class="form-inline-select">
+                                    <label for="weightSelector">{{'cart.CartItems.Weight'|translate}}: </label>
+                                    <div class="custom-select-wrapper">
+                                        <select id="weightSelector" [(ngModel)]="product.weight"
+                                            class="form-control custom-select" name="productWeight">
+                                            <option value=" ">{{'cart.CartItems.Weight'|translate}}</option>
+                                            <option value="1000">1000g</option>
+                                            <option value="500">500g</option>
+                                            <option value="250">250g</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <label>{{'cart.CartItems.Price'|translate}}: <input [(ngModel)]="product.price"
+                                    name="productPrice"></label>
+                                <label>Discount: <input [(ngModel)]="product.discount"
+                                        name="productDiscount"></label>
+                            </div>
+
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
 
+        <button  class="primary" (click)="addProduct()">Añadir Producto</button>
 
-    </div> -->
-
-    <div>
-        <h2>Stock de Productos</h2>
-        
-        <table>
-          <thead>
-            <tr>
-              <th>Nombre</th>
-              <th>Descripción</th>
-              <th>Precio</th>
-              <th>Stock</th>
-              <th>Acciones</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr *ngFor="let product of products">
-                <div class="product-image">
-                    <img [src]="product.image" alt="Exterior photo of {{product.name}}" alt="">
-                    <div class="titleCard">CARGAR IMAGEN</div>
-                    <div class="overlay"></div>
-                </div>
-              <td><input [(ngModel)]="product.name" /></td>
-              <td><input [(ngModel)]="product.description" /></td>
-              <td><input [(ngModel)]="product.price" /></td>
-              <td><input [(ngModel)]="product.stock" /></td>
-              <td><button (click)="saveChanges(product)">Guardar Cambios</button></td>
-            </tr>
-          </tbody>
-        </table>
-      
-        <button (click)="addProduct()">Añadir Producto</button>
-      
         <div class="cart-list" *ngIf="showAddProductForm">
+            <h3>Añadir Nuevo Producto</h3>
             <div class="flex-col cart-box">
-                <h3>Añadir Nuevo Producto</h3>
-                <form>
-                    
 
-                        <!-- <label>Imagen: <input type="file" (change)="onFileChange($event)"></label> -->
+                <form>
+                    <div class="flex-container">
                         <div class="product-card">
                             <div class="product-image">
                                 <img [src]="newProduct.image" alt="Exterior photo of {{newProduct.name}}" alt="">
@@ -97,54 +122,101 @@
                             </div>
                             <div class="product-info">
                                 <p>CARGAR IMAGEN</p>
-                                
-                                <button class="CartBtn honey-color"
-                                    (click)="fileInput.click()">Cargar nueva imagen
+
+                                <button class="CartBtn honey-color" (click)="fileInput.click()">Cargar nueva imagen
                                 </button>
                                 <input type="file" #fileInput (change)="onFileChange($event)" style="display: none;" />
                             </div>
                         </div>
-
-                        <div class="cart-item">
-                            <div class="cart-item-actions">
-                                <label>Type: <input [(ngModel)]="newProduct.type" name="productType"></label>
-                                <label>Name: <input [(ngModel)]="newProduct.name" name="productName"></label>
-                                <label>Descripción: <input [(ngModel)]="newProduct.description" name="productDescription"></label>
-                                <label>Stock: <input [(ngModel)]="newProduct.stock" name="productStock"></label>
-                            </div> </div>
+                        <div class="flex-col">
                             <div class="cart-item">
-                        <div class="cart-item-actions">
-                            <label>State: <input [(ngModel)]="newProduct.state" name="productState"></label>
-                            <label>Category: <input [(ngModel)]="newProduct.category" name="productCategory"></label>
-                            <label>City: <input [(ngModel)]="newProduct.city" name="productCity"></label>
-                        </div></div>
-            
-                        <div class="cart-item">
-                        <div class="cart-item-actions">
-                            <label>Precio: <input [(ngModel)]="newProduct.price" name="productPrice"></label>
-                            <label>Weight: <input [(ngModel)]="newProduct.weight" name="productWeight"></label>
-                            <label>Discount: <input [(ngModel)]="newProduct.discount" name="productDiscount"></label>
+                                <div class="cart-item-actions">
+
+                                    <div class="form-inline-select">
+                                        <label for="typeSelector">type: </label>
+                                        <div class="custom-select-wrapper">
+                                            <select id="typeSelector" [(ngModel)]="newProduct.type"
+                                                class="form-control custom-select" name="productType">
+                                                <option value="HN">{{'Honey'|translate}}</option>
+                                                <option value="MT">{{'Material.Title'| translate}}</option>
+                                                <option value="CC">{{'Cours.Title'|translate}}</option>
+
+
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <label>Name: <input [(ngModel)]="newProduct.name" name="productName"></label>
+                                    <label>Descripción: <input [(ngModel)]="newProduct.description"
+                                            name="productDescription"></label>
+                                    <label>Stock: <input [(ngModel)]="newProduct.stock" name="productStock"></label>
+                                </div>
+                            </div>
+                            <div class="cart-item">
+                                <div class="cart-item-actions">
+                                    <div class="form-inline-select">
+                                        <label for="stateSelector">State: </label>
+                                        <div class="custom-select-wrapper">
+                                            <select id="stateSelector" [(ngModel)]="newProduct.state" 
+                                            class="form-control custom-select" name="productState">
+                                            <option value="NO">No Disponible</option>
+                                            <option value="SI">Disponible</option>
+                                        </select>
+                                        </div>
+                                    </div>
+                                 
+
+                                    <div class="form-inline-select">
+                                        <label for="categorySelector">Category: </label>
+                                        <div class="custom-select-wrapper">
+                                            <select id="categorySelector" [(ngModel)]="newProduct.category" 
+                                            class="form-control custom-select" name="productCategory">
+                                            <option value="HN">{{'BenificesHerbalHoney.Title'| translate}}</option>
+                                            <option value="HX">{{'BenificesHerbalHoney.Title'| translate}}</option>
+                                            <option value="HY">{{'BenificesHerbalHoney.Title'| translate}}</option>
+                                            <option value="HA">{{'BenificesHerbalHoney.Title'| translate}}</option>
+                                            <option value="HB">{{'BenificesHerbalHoney.Title'| translate}}</option>
+
+
+                                        </select>
+                                        </div>
+                                    </div>
+
+
+                                    <label>City: <input [(ngModel)]="newProduct.city" name="productCity"></label>
+                                </div>
+                            </div>
+
+                            <div class="cart-item">
+                                <div class="cart-item-actions">
+
+
+                                    <div class="form-inline-select">
+                                        <label for="weightSelector">{{'cart.CartItems.Weight'|translate}}: </label>
+                                        <div class="custom-select-wrapper">
+                                            <select id="weightSelector" [(ngModel)]="newProduct.weight"
+                                                class="form-control custom-select" name="productWeight">
+                                                <option value=" ">{{'cart.CartItems.Weight'|translate}}</option>
+                                                <option value="1000">1000g</option>
+                                                <option value="500">500g</option>
+                                                <option value="250">250g</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <label>{{'cart.CartItems.Price'|translate}}: <input [(ngModel)]="newProduct.price"
+                                        name="productPrice"></label>
+                                    <label>Discount: <input [(ngModel)]="newProduct.discount"
+                                            name="productDiscount"></label>
+                                </div>
+
+                            </div>
                         </div>
-
                     </div>
-      
-
-
-                 
-                  
-      
-      
-      
-      
-      
-      
-                  
-                  <button type="button" 
-                 class="button_main" (click)="saveNewProduct()">Añadir</button>
+                    <button type="button" class="button_main" (click)="saveNewProduct()">Añadir</button>
                 </form>
             </div>
 
         </div>
-      </div>
+    </div>
 
 </section>
