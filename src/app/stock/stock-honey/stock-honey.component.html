@@ -1,5 +1,5 @@
 <section>
-    <div class="cart-list">
+    <!-- <div class="cart-list">
         <div class="flex-container cart-box">
 
             <div class="product-card">
@@ -29,11 +29,10 @@
                     {{getPrice() | currency }}
                 </div>
                 <div class="cart-item-actions">
-                    <!-- <input class="input-quantity" type="number" [(ngModel)]="item.quantity"
-                    (change)="updateItem(item.id, item.quantity, item.weight, item.price)"> -->
+
                     <input class="input-name" type="text" [(ngModel)]="housingLocation.name">
                     <input class="input-quantity" type="number" [(ngModel)]="housingLocation.quantity">
-                    <!-- <select class="input-weight styled-select" [(ngModel)]="housingLocation.weight"> -->
+                  
                         <div class="form-inline-select">
                             <label for="weightSelector">Peso: </label>
                             <div class="custom-select-wrapper">
@@ -50,5 +49,45 @@
         </div>
 
 
-    </div>
+    </div> -->
+
+    <div>
+        <h2>Stock de Productos</h2>
+        
+        <table>
+          <thead>
+            <tr>
+              <th>Nombre</th>
+              <th>Descripción</th>
+              <th>Precio</th>
+              <th>Stock</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let product of products">
+              <td><input [(ngModel)]="product.name" /></td>
+              <td><input [(ngModel)]="product.description" /></td>
+              <td><input [(ngModel)]="product.price" /></td>
+              <td><input [(ngModel)]="product.stock" /></td>
+              <td><button (click)="saveChanges(product)">Guardar Cambios</button></td>
+            </tr>
+          </tbody>
+        </table>
+      
+        <button (click)="addProduct()">Añadir Producto</button>
+      
+        <div *ngIf="showAddProductForm">
+          <h3>Añadir Nuevo Producto</h3>
+          <form>
+            <label>Nombre: <input [(ngModel)]="newProduct.name"></label>
+            <label>Descripción: <input [(ngModel)]="newProduct.description"></label>
+            <label>Precio: <input [(ngModel)]="newProduct.price"></label>
+            <label>Stock: <input [(ngModel)]="newProduct.stock"></label>
+            <label>Imagen: <input type="file" (change)="onFileChange($event)"></label>
+            <button type="button" (click)="saveNewProduct()">Guardar</button>
+          </form>
+        </div>
+      </div>
+
 </section>
