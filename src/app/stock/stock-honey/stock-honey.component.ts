@@ -17,15 +17,19 @@ import { StockService } from '../../services/stock.service';
   styleUrl: './stock-honey.component.css'
 })
 export class StockHoneyComponent implements OnInit {
+  
+  
+  selectedFile: File | null = null;
   products: any[] = [];
   newProduct: any = {
     name: '',
     description: '',
     price: '',
     stock: '',
-    image: null
+    image: `./assets/img/honey-5043708_1280.jpg`
   };
   showAddProductForm: boolean = false;
+  http: any;
 
   constructor(private stockService: StockService) {}
 
@@ -91,10 +95,21 @@ export class StockHoneyComponent implements OnInit {
   //   }
   // }
 
+ 
+
   onFileChange(event: any) {
     if (event.target.files.length > 0) {
-      const file = event.target.files[0];
-      this.newProduct.image = file;
+      this.selectedFile = event.target.files[0];
     }
+  }
+  
+  onSubmit() {
+    const formData = new FormData();
+    formData.append('image', this.selectedFile!); // Añadir la imagen al FormData
+    formData.append('otherField', this.newProduct.otherField);
+  
+    this.http.post('api/v1/products', formData).subscribe((response: any) => {
+      console.log('Producto guardado', response);
+    });
   }
 }

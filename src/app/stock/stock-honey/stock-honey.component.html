@@ -4,7 +4,7 @@
 
             <div class="product-card">
                 <div class="product-image">
-                    <img [src]="housingLocation.photo" alt="Exterior photo of {{housingLocation.name}}" alt="">
+                    <img [src]=".photo" alt="Exterior photo of {{.name}}" alt="">
                     <div class="titleCard">CARGAR IMAGEN</div>
                     <div class="overlay"></div>
                 </div>
@@ -21,22 +21,22 @@
 
 
 
-            <div class="cart-item" *ngIf="housingLocation.type=== 'HN'">
+            <div class="cart-item" *ngIf=".type=== 'HN'">
                 <div class="cart-item-details">
-                    {{ housingLocation.name }} -
-                    {{ housingLocation.quantity }} -
-                    {{ housingLocation.weight }} g -
+                    {{ .name }} -
+                    {{ .quantity }} -
+                    {{ .weight }} g -
                     {{getPrice() | currency }}
                 </div>
                 <div class="cart-item-actions">
 
-                    <input class="input-name" type="text" [(ngModel)]="housingLocation.name">
-                    <input class="input-quantity" type="number" [(ngModel)]="housingLocation.quantity">
+                    <input class="input-name" type="text" [(ngModel)]=".name">
+                    <input class="input-quantity" type="number" [(ngModel)]=".quantity">
                   
                         <div class="form-inline-select">
                             <label for="weightSelector">Peso: </label>
                             <div class="custom-select-wrapper">
-                              <select id="weightSelector" [(ngModel)]="housingLocation.weight" class="form-control custom-select">
+                              <select id="weightSelector" [(ngModel)]=".weight" class="form-control custom-select">
                                 <option value=" ">Peso</option>
                                 <option value="1000">1000g</option>
                                 <option value="500">500g</option>
@@ -66,6 +66,11 @@
           </thead>
           <tbody>
             <tr *ngFor="let product of products">
+                <div class="product-image">
+                    <img [src]="product.image" alt="Exterior photo of {{product.name}}" alt="">
+                    <div class="titleCard">CARGAR IMAGEN</div>
+                    <div class="overlay"></div>
+                </div>
               <td><input [(ngModel)]="product.name" /></td>
               <td><input [(ngModel)]="product.description" /></td>
               <td><input [(ngModel)]="product.price" /></td>
@@ -77,16 +82,67 @@
       
         <button (click)="addProduct()">Añadir Producto</button>
       
-        <div *ngIf="showAddProductForm">
-          <h3>Añadir Nuevo Producto</h3>
-          <form>
-            <label>Nombre: <input [(ngModel)]="newProduct.name" name="productName"></label>
-            <label>Descripción: <input [(ngModel)]="newProduct.description" name="productDescription"></label>
-            <label>Precio: <input [(ngModel)]="newProduct.price" name="productPrice"></label>
-            <label>Stock: <input [(ngModel)]="newProduct.stock" name="productStock"></label>
-            <label>Imagen: <input type="file" (change)="onFileChange($event)"></label>
-            <button type="button" (click)="saveNewProduct()">Guardar</button>
-          </form>
+        <div class="cart-list" *ngIf="showAddProductForm">
+            <div class="flex-col cart-box">
+                <h3>Añadir Nuevo Producto</h3>
+                <form>
+                    
+
+                        <!-- <label>Imagen: <input type="file" (change)="onFileChange($event)"></label> -->
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img [src]="newProduct.image" alt="Exterior photo of {{newProduct.name}}" alt="">
+                                <div class="titleCard">CARGAR IMAGEN</div>
+                                <div class="overlay"></div>
+                            </div>
+                            <div class="product-info">
+                                <p>CARGAR IMAGEN</p>
+                                
+                                <button class="CartBtn honey-color"
+                                    (click)="fileInput.click()">Cargar nueva imagen
+                                </button>
+                                <input type="file" #fileInput (change)="onFileChange($event)" style="display: none;" />
+                            </div>
+                        </div>
+
+                        <div class="cart-item">
+                            <div class="cart-item-actions">
+                                <label>Type: <input [(ngModel)]="newProduct.type" name="productType"></label>
+                                <label>Name: <input [(ngModel)]="newProduct.name" name="productName"></label>
+                                <label>Descripción: <input [(ngModel)]="newProduct.description" name="productDescription"></label>
+                                <label>Stock: <input [(ngModel)]="newProduct.stock" name="productStock"></label>
+                            </div> </div>
+                            <div class="cart-item">
+                        <div class="cart-item-actions">
+                            <label>State: <input [(ngModel)]="newProduct.state" name="productState"></label>
+                            <label>Category: <input [(ngModel)]="newProduct.category" name="productCategory"></label>
+                            <label>City: <input [(ngModel)]="newProduct.city" name="productCity"></label>
+                        </div></div>
+            
+                        <div class="cart-item">
+                        <div class="cart-item-actions">
+                            <label>Precio: <input [(ngModel)]="newProduct.price" name="productPrice"></label>
+                            <label>Weight: <input [(ngModel)]="newProduct.weight" name="productWeight"></label>
+                            <label>Discount: <input [(ngModel)]="newProduct.discount" name="productDiscount"></label>
+                        </div>
+
+                    </div>
+      
+
+
+                 
+                  
+      
+      
+      
+      
+      
+      
+                  
+                  <button type="button" (click)="saveNewProduct()">Añadir</button>
+                </form>
+            </div>
+
         </div>
       </div>
 
