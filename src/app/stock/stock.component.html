@@ -1,4 +1,4 @@
-<section>
+<section [ngClass]="{'rtl': translate.currentLang  === 'ar', 'ltr': translate.currentLang  === 'en'}">
 
   <form>
     <input type="text" placeholder="{{'Placeholder.Filter_By_City'| translate}}" #filter>
