@@ -45,27 +45,6 @@ export class HomeComponent {
     
   }
 
-  // @HostListener('window:scroll', ['$event'])
-  // onWindowScroll() {
-  //   this.checkPosition();
-  // }
-
-  // checkPosition() {
-  //   const photos = document.querySelectorAll('.listing-photo');
-  //   const windowHeight = window.innerHeight;
-
-  //   photos.forEach(photo => {
-  //     const position = photo.getBoundingClientRect().top;
-
-  //     if (position < windowHeight - 100) { // Ajusta el umbral según sea necesario
-  //       photo.classList.add('show');
-  //     } else {
-  //       photo.classList.remove('show');
-  //     }
-  //   });
-  // }
-
-
   filterResults(text: string): void {
     this.filteredLocationList = this.housingService.filterResults(text);
   }
