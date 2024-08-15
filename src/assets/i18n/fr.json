@@ -60,7 +60,9 @@
         "Learn_More": "En savoir plus"
     },
     "Titles": {
-        "Heart_Of_Nature": "Au coeur de la nature"
+        "Heart_Of_Nature": "Au coeur de la nature",
+        "HoneyStock":"Stock de miel",
+        "MaterialStock":"Stock de matériel"
     },
     "Home": {
         "Title": "Home",

@@ -60,7 +60,9 @@
         "Learn_More": "Learn More"
     },
     "Titles": {
-        "Heart_Of_Nature": "In the heart of nature"
+        "Heart_Of_Nature": "In the heart of nature",
+        "HoneyStock":"Honey Stock",
+        "MaterialStock":"Material Stock"
     },
     "Home": {
         "Title": "Home",

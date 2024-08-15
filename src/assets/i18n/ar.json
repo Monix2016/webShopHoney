@@ -60,7 +60,9 @@
     "Learn_More": "معرفة المزيد"
     },
     "Titles": {
-        "Heart_Of_Nature": "من قلب الطبيعة"
+        "Heart_Of_Nature": "من قلب الطبيعة",
+        "HoneyStock":"مخزون العسل",
+        "MaterialStock":"مخزون المواد"
     },
     "Home": {
         "Title": "الصفحة الرئيسية",
