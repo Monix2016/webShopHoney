@@ -19,7 +19,8 @@ export class HousingService {
 
   protected housingLocationList: IHoney[] = [];
   protected coursList: ICours[]=MOCKCOURSES;
-  protected materialList: IMaterial[]=MOCKMATERIAL;
+  //protected materialList: IMaterial[]=MOCKMATERIAL;
+  protected materialList: IMaterial[]=[];
   protected team:ITeam[]=MOCKTEAM;
   filteredLocationList: IHoney[] = [];
   private cartService!: CartService;

@@ -1,4 +1,4 @@
-<section class="listing">
+<section class="listing"  *ngIf="materialHoney.type === 'MT'">
     <div class="image-container">
         <div class="discount" *ngIf="materialHoney.desc !==0">
             <p>DTO {{ materialHoney.desc }} %</p>
