@@ -10,6 +10,7 @@ import { MaterialHoneyComponent } from '../products/material-honey/material-hone
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { ScrollAnimationService } from '../services/scroll-animation.service';
 import { ActivitiesComponent } from '../about/activities/activities.component';
+import { BaseComponent } from '../functionalities/base/base.component';
 
 @Component({
   selector: 'app-home',
@@ -26,28 +27,8 @@ import { ActivitiesComponent } from '../about/activities/activities.component';
   styleUrl: './home.component.css',
 })
 
-export class HomeComponent {
-  housingLocationList: IHoney[] = [];
-  coursesHoneyList:ICours[]=[];
-  materialHoneyList:IMaterial[]=[];
+export class HomeComponent extends BaseComponent {
 
-  housingService: HousingService = inject(HousingService);
-  filteredLocationList: IHoney[] = [];
-  constructor(
-    public translate: TranslateService,
-    private scrollAnimationService: ScrollAnimationService
-  ) {
-    this.housingLocationList = this.housingService.getAllHousingLocations();
-    this.coursesHoneyList= this.housingService.getAllCourses();
-    this.materialHoneyList=this.housingService.getAllMaterial();
-    this.filteredLocationList = this.housingLocationList;
-    this.scrollAnimationService.initializeScrollAnimation();
-    
-  }
-
-  filterResults(text: string): void {
-    this.filteredLocationList = this.housingService.filterResults(text);
-  }
 
 
 

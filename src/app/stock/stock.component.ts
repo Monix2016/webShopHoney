@@ -13,6 +13,7 @@ import { HousingService } from '../services/housing.service';
 import { ScrollAnimationService } from '../services/scroll-animation.service';
 import { StockHoneyComponent } from './stock-honey/stock-honey.component';
 import { StockMaterialComponent } from './stock-material/stock-material.component';
+import { BaseComponent } from '../functionalities/base/base.component';
 
 @Component({
   selector: 'app-stock',
@@ -26,30 +27,8 @@ import { StockMaterialComponent } from './stock-material/stock-material.componen
   templateUrl: './stock.component.html',
   styleUrl: './stock.component.css'
 })
-export class StockComponent {
+export class StockComponent extends BaseComponent {
 
-  // TODO : ESO SE REPITE CON EL HOME LO PUEDEO PONER COMO BASE.
-  housingLocationList: IHoney[] = [];
-  coursesHoneyList: ICours[] = [];
-  materialHoneyList: IMaterial[] = [];
-
-  housingService: HousingService = inject(HousingService);
-  filteredLocationList: IHoney[] = [];
-  constructor(
-    public translate: TranslateService,
-    private scrollAnimationService: ScrollAnimationService
-  ) {
-    this.housingLocationList = this.housingService.getAllHousingLocations();
-    this.coursesHoneyList = this.housingService.getAllCourses();
-    this.materialHoneyList = this.housingService.getAllMaterial();
-    this.filteredLocationList = this.housingLocationList;
-
-
-  }
-
-  filterResults(text: string): void {
-    this.filteredLocationList = this.housingService.filterResults(text);
-  }
-
+  
   
 }

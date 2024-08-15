@@ -8,6 +8,8 @@ import { MOCKMATERIAL } from '../../assets/mock/mock-material';
 import { ITeam } from '../interfaces/i-team';
 import { MOCKTEAM } from '../../assets/mock/mock-team';
 import { CartService } from './cart.service';
+import { StockService } from './stock.service';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -15,13 +17,19 @@ import { CartService } from './cart.service';
 export class HousingService {
   readonly baseUrl = 'https://angular.io/assets/images/tutorials/faa';
 
-  protected housingLocationList: IHoney[] = MOCKHONEYS;
+  protected housingLocationList: IHoney[] = [];
   protected coursList: ICours[]=MOCKCOURSES;
   protected materialList: IMaterial[]=MOCKMATERIAL;
   protected team:ITeam[]=MOCKTEAM;
   filteredLocationList: IHoney[] = [];
   private cartService!: CartService;
+ 
+  constructor(private stockService: StockService) {}
 
+    // Método para obtener los productos
+    getHousingLocations(): Observable<IHoney[]> {
+      return this.stockService.getProducts();
+    }
 
   getAllHousingLocations(): IHoney[] {
     return this.housingLocationList;
