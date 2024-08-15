@@ -24,24 +24,41 @@
     "Help": "Support",
     "Info": "Info",
     "Our_Products": "Nos produits",
-    "Add_To_Cart": "Ajouter à votre panier",
-    "Learn_More": "En savoir plus",
     "Our_Team": "Notre équipe",
     "Price": "prix",
     "Location": "Emplacement",
     "Duration": "Duration",
-    "Category": "Catégorie",
     "Confirmation": "Confirmation",
-    "Next": "Suivant",
-    "Continue": "Continuer",
-    "Finish": "Terminer",
-    "Pay": "Payer",
-    "Validate": "Valider",
     "Similar_Product": "Produit Similaire",
     "See_Our_Products": "Voir nos produits",
-    "Previous": "Précédent",
-    "Search": "Rechercher",
     "Date": "Date",
+    "City":"Ville",
+    "Item":{
+        "Name":"Nom",
+        "Available":"Disponible",
+        "NotAvailable":"Non Disponible",
+        "State":"État",
+        "Type":"type",
+        "Description":"Description",
+        "Stock":"Stock",
+        "Category": "Catégorie",
+        "DTO":"Remise"
+    },
+    "Action": {
+        "Add": "Ajouter",
+        "UploadImage":"UPLOAD IMAGE",
+        "Save":"Save",
+        "AddProduct":"Ajouter un produit",
+        "Previous": "Précédent",
+        "Search": "Rechercher",
+        "Next": "Suivant",
+        "Continue": "Continuer",
+        "Finish": "Terminer",
+        "Pay": "Payer",
+        "Validate": "Valider",
+        "Add_To_Cart": "Ajouter à votre panier",
+        "Learn_More": "En savoir plus"
+    },
     "Titles": {
         "Heart_Of_Nature": "Au coeur de la nature"
     },
@@ -169,4 +186,5 @@
     "Placeholder": {
         "Filter_By_City": "Filtrer par ville"
     }
+
 }

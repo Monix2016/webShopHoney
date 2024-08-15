@@ -24,24 +24,41 @@
     "Help": "Soporte",
     "Info": "Info",
     "Our_Products": "Nuestros productos",
-    "Add_To_Cart": "Añadir a la cesta",
-    "Learn_More": "Más información",
     "Our_Team": "Nuestro equipo",
     "Price": "Precio",
     "Location": "Ubicación",
     "Duration": "Duración",
-    "Category": "Categoria",
     "Confirmation": "Confirmación",
-    "Next": "Siguiente",
-    "Continue": "Continuar",
-    "Finish": "Finalizar",
-    "Pay": "Pagar",
-    "Validate": "Validar",
     "Similar_Product": "productos Similares",
     "See_Our_Products": "Ver nuestros productos",
-    "Previous": "Anterior",
-    "Search": "Búsqueda",
     "Date": "Fecha",
+    "City":"Ciudad",
+    "Item":{
+        "Name":"Nombre",
+        "Available":"Disponible",
+        "NotAvailable":"No Disponible",
+        "State":"Estado",
+        "Type":"tipo",
+        "Description":"Descripción",
+        "Stock":"Stock",
+        "Category": "Categoria",
+        "DTO":"Descuento"
+    },
+    "Action": {
+        "Add": "Añadir",
+        "UploadImage":"CARGAR IMAGEN",
+        "Save":"Save",
+        "AddProduct":"Añadir Producto",
+        "Previous": "Anterior",
+        "Search": "Búsqueda",
+        "Next": "Siguiente",
+        "Continue": "Continuar",
+        "Finish": "Finalizar",
+        "Pay": "Pagar",
+        "Validate": "Validar",
+        "Add_To_Cart": "Añadir a la cesta",
+    "Learn_More": "Más información"
+    },
     "Titles": {
         "Heart_Of_Nature": "En pleno corazón de la naturaleza"
     },
@@ -105,15 +122,15 @@
         "Course_Data": "Datos del curso",
         "First_Day": "Primer día",
         "Second_Day": "Segundo día",
-        "BookCourse":"Reservar Curso",
-        "Program":"Temario",
-        "ShowLess":"Mostrar menos",
-        "ShowMore":"Mostrar más",
-        "ImportantInformation":"Información importante"
+        "BookCourse": "Reservar Curso",
+        "Program": "Temario",
+        "ShowLess": "Mostrar menos",
+        "ShowMore": "Mostrar más",
+        "ImportantInformation": "Información importante"
     },
     "Material": {
         "Title": "Materiales de tu interes",
-        "Pollen":"Pollen"
+        "Pollen": "Pollen"
     },
     "Blog": {
         "Title": "Blog"
@@ -169,4 +186,5 @@
     "Placeholder": {
         "Filter_By_City": "Filtrar por ciudad"
     }
+
 }

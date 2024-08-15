@@ -24,24 +24,41 @@
     "Help": "مساعد و اتصال",
     "Info": "معلومات",
     "Our_Products": "منتجاتنا",
-    "Add_To_Cart": "أضف إلى سلة التسوق",
-    "Learn_More": "معرفة المزيد",
     "Our_Team": "فريق العمل",
     "Price": "السعر",
     "Location": "الموقع",
     "Duration": "المدة",
-    "Category": "التصنيف",
     "Confirmation": "التأكيد",
-    "Next": "التالي",
-    "Continue": "تابع",
-    "Finish": "النهاية",
-    "Pay": "الدفع",
-    "Validate": "التحقق",
     "Similar_Product": "منتجات مماثلة",
     "See_Our_Products": "انظر منتجاتنا",
-    "Previous": "السابق",
-    "Search": "البحث",
     "Date": "تاريخ",
+    "City":"مدينة",
+    "Item":{
+        "Name":"الاسم",
+        "Available":"متوفرة",
+        "NotAvailable":"غير متوفر",
+        "State":"الحالة",
+        "Type":"النوع",
+        "Description":"الوصف",
+        "Stock":"المخزون",
+        "Category": "التصنيف",
+        "DTO":"خصم"
+    },
+    "Action": {
+        "Add": "إضافة",
+        "UploadImage":"تحميل صورة",
+        "Save":"الحفظ",
+        "AddProduct":"أضف منتجاً",
+        "Previous": "السابق",
+        "Search": "البحث",
+        "Next": "التالي",
+        "Continue": "تابع",
+        "Finish": "النهاية",
+        "Pay": "الدفع",
+        "Validate": "التحقق",
+        "Add_To_Cart": "أضف إلى سلة التسوق",
+    "Learn_More": "معرفة المزيد"
+    },
     "Titles": {
         "Heart_Of_Nature": "من قلب الطبيعة"
     },
@@ -169,4 +186,5 @@
     "Placeholder": {
         "Filter_By_City": "تصنيف حسب المدينة"
     }
+
 }

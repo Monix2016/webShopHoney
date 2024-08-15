@@ -24,24 +24,41 @@
     "Help": "Help",
     "Info": "Info",
     "Our_Products": "Our Products",
-    "Add_To_Cart": "Add to Cart",
-    "Learn_More": "Learn More",
     "Our_Team": "Our team",
     "Price": "Price",
     "Location": "Location",
     "Duration": "Duration",
-    "Category": "Category",
     "Confirmation": "Confirmation",
-    "Next": "Next",
-    "Continue": "Continue",
-    "Finish": "Finalizar",
-    "Pay": "Pay",
-    "Validate": "Validate",
     "Similar_Product": "Similar Product",
     "See_Our_Products": "see our products",
-    "Previous": "Previous",
-    "Search": "Search",
     "Date": "Date",
+    "City":"City",
+    "Item":{
+        "Name":"Name",
+        "Available":"Available",
+        "NotAvailable":"Not Available",
+        "State":"State",
+        "Type":"type",
+        "Description":"Description",
+        "Stock":"Stock",
+        "Category": "Category",
+        "DTO":"Discount"
+    },
+    "Action": {
+        "Add": "Add",
+        "UploadImage":"UPLOAD IMAGE",
+        "Save":"Save",
+        "AddProduct":"Add Product",
+        "Previous": "Previous",
+        "Search": "Search",
+        "Next": "Next",
+        "Continue": "Continue",
+        "Finish": "Finish",
+        "Pay": "Pay",
+        "Validate": "Validate",
+        "Add_To_Cart": "Add to Cart",
+        "Learn_More": "Learn More"
+    },
     "Titles": {
         "Heart_Of_Nature": "In the heart of nature"
     },
@@ -169,4 +186,5 @@
     "Placeholder": {
         "Filter_By_City": "Filter by city"
     }
+
 }

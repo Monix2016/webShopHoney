@@ -5,13 +5,13 @@
                 <div class="product-card">
                     <div class="product-image">
                         <img src="./assets/img/{{product.image}}" alt="Exterior photo of {{product.name}}" alt="">
-                        <div class="titleCard">CARGAR IMAGEN</div>
+                        <div class="titleCard">{{'Action.UploadImage'|translate}}</div>
                         <div class="overlay"></div>
                     </div>
                     <div class="product-info">
-                        <p>CARGAR IMAGEN</p>
+                        <p>{{'Action.UploadImage'|translate}}</p>
 
-                        <button class="CartBtn honey-color" (click)="fileInput.click()">Cargar nueva imagen
+                        <button class="CartBtn honey-color" (click)="fileInput.click()">{{'Action.UploadImage'|translate}}
                         </button>
                         <input type="file" #fileInput (change)="onFileChange($event)" style="display: none;" />
                     </div>
@@ -20,7 +20,7 @@
                     <div class="cart-item">
                         <div class="cart-item-actions">
                             <div class="form-inline-select">
-                                <label for="typeSelector">type: </label>
+                                <label for="typeSelector">{{'Item.Type'|translate}}: </label>
                                 <div class="custom-select-wrapper">
                                     <select id="typeSelector" [(ngModel)]="product.type"
                                         class="form-control custom-select" name="productType">
@@ -32,28 +32,28 @@
                                     </select>
                                 </div>
                             </div>
-                            <label>Name: <input [(ngModel)]="product.name" name="productName"></label>
-                            <label>Descripción: <input [(ngModel)]="product.description"
+                            <label>{{'Item.Name'| translate}}: <input [(ngModel)]="product.name" name="productName"></label>
+                            <label>{{'Item.Description'| translate}}: <input [(ngModel)]="product.description"
                                     name="productDescription"></label>
-                            <label>Stock: <input [(ngModel)]="product.stock" name="productStock"></label>
+                            <label>{{'Item.Stock'| translate}}: <input [(ngModel)]="product.stock" name="productStock"></label>
                         </div>
                     </div>
                     <div class="cart-item">
                         <div class="cart-item-actions">
 
                             <div class="form-inline-select">
-                                <label for="stateSelector">State: </label>
+                                <label for="stateSelector">{{'Item.State'| translate}}: </label>
                                 <div class="custom-select-wrapper">
                                     <select id="stateSelector" [(ngModel)]="product.state"
                                         class="form-control custom-select" name="productState">
-                                        <option value="NO">No Disponible</option>
-                                        <option value="SI">Disponible</option>
+                                        <option value="NO">{{'Item.NotAvailable'| translate}}</option>
+                                        <option value="SI">{{'Item.Available'| translate}}</option>
                                     </select>
                                 </div>
                             </div>
 
                             <div class="form-inline-select">
-                                <label for="categorySelector">Category: </label>
+                                <label for="categorySelector">{{'Item.Category'| translate}}: </label>
                                 <div class="custom-select-wrapper">
                                     <select id="categorySelector" [(ngModel)]="product.category"
                                         class="form-control custom-select" name="productCategory">
@@ -91,7 +91,7 @@
                               <label>{{'cart.CartItems.Price'|translate}}: 
                                 <input [(ngModel)]="product.selectedPrice" name="productPrice">
                               </label>
-                              <label>Discount: 
+                              <label>{{'Item.DTO'|translate}}: 
                                 <input [(ngModel)]="product.selectedDto" name="productDiscount">
                               </label>
                         </div>
@@ -100,11 +100,11 @@
                 </div>
 
             </div>
-            <button type="button" class="button_main" (click)="saveChanges(product)">Guardar</button>
+            <button type="button" class="button_main" (click)="saveChanges(product)">{{'Action.Save'|translate}}</button>
         </div>
     </div>
 
-    <button class="primary" (click)="addProduct()">Añadir Producto</button>
+    <button class="primary" (click)="addProduct()">{{'Action.AddProduct'|translate}}</button>
 
     <div class="cart-list" *ngIf="showAddProductForm">
         <h3>Añadir Nuevo Producto</h3>
@@ -115,13 +115,13 @@
                     <div class="product-card">
                         <div class="product-image">
                             <img [src]="newProduct.image" alt="Exterior photo of {{newProduct.name}}" alt="">
-                            <div class="titleCard">CARGAR IMAGEN</div>
+                            <div class="titleCard">{{'Action.UploadImage'|translate}}</div>
                             <div class="overlay"></div>
                         </div>
                         <div class="product-info">
-                            <p>CARGAR IMAGEN</p>
+                            <p>{{'Action.UploadImage'|translate}}</p>
 
-                            <button class="CartBtn honey-color" (click)="fileInput.click()">Cargar nueva imagen
+                            <button class="CartBtn honey-color" (click)="fileInput.click()">{{'Action.UploadImage'|translate}}
                             </button>
                             <input type="file" #fileInput (change)="onFileChange($event)" style="display: none;" />
                         </div>
@@ -143,28 +143,28 @@
                                         </select>
                                     </div>
                                 </div>
-                                <label>Name: <input [(ngModel)]="newProduct.name" name="productName"></label>
-                                <label>Descripción: <input [(ngModel)]="newProduct.description"
+                                <label>{{'Item.Name'|translate}}: <input [(ngModel)]="newProduct.name" name="productName"></label>
+                                <label>{{'Item.Description'|translate}}: <input [(ngModel)]="newProduct.description"
                                         name="productDescription"></label>
-                                <label>Stock: <input [(ngModel)]="newProduct.stock" name="productStock"></label>
+                                <label>{{'Item.Stock'|translate}}: <input [(ngModel)]="newProduct.stock" name="productStock"></label>
                             </div>
                         </div>
                         <div class="cart-item">
                             <div class="cart-item-actions">
                                 <div class="form-inline-select">
-                                    <label for="stateSelector">State: </label>
+                                    <label for="stateSelector">{{'Item.State'|translate}}: </label>
                                     <div class="custom-select-wrapper">
                                         <select id="stateSelector" [(ngModel)]="newProduct.state"
                                             class="form-control custom-select" name="productState">
-                                            <option value="NO">No Disponible</option>
-                                            <option value="SI">Disponible</option>
+                                            <option value="NO">{{'Item.NotAvailable'|translate}}</option>
+                                            <option value="SI">{{'Item.Available'|translate}}</option>
                                         </select>
                                     </div>
                                 </div>
 
 
                                 <div class="form-inline-select">
-                                    <label for="categorySelector">Category: </label>
+                                    <label for="categorySelector">{{'Item.Category'|translate}}: </label>
                                     <div class="custom-select-wrapper">
                                         <select id="categorySelector" [(ngModel)]="newProduct.category"
                                             class="form-control custom-select" name="productCategory">
@@ -186,34 +186,20 @@
 
                         <div class="cart-item">
                             <div class="cart-item-actions">
-
-<!-- 
-                                <div class="form-inline-select">
-                                    <label for="weightSelector">{{'cart.CartItems.Weight'|translate}}: </label>
-                                    <div class="custom-select-wrapper">
-                                        <select id="weightSelector" [(ngModel)]="newProduct.weight"
-                                            class="form-control custom-select" name="productWeight" (change)="onWeightChange(newProduct)">
-                                            <option value=" ">{{'cart.CartItems.Weight'|translate}}</option>
-                                            <option value="1000">1000g</option>
-                                            <option value="500">500g</option>
-                                            <option value="250">250g</option>
-                                        </select>
-                                    </div>
-                                </div> -->
                                 <label>{{'cart.CartItems.Price'|translate}} 1000g: <input [(ngModel)]="newProduct.prices['1000']" name="price1000"></label>
                                 <label>{{'cart.CartItems.Price'|translate}} 500g: <input [(ngModel)]="newProduct.prices['500']" name="price500"></label>
                                 <label>{{'cart.CartItems.Price'|translate}} 250g: <input [(ngModel)]="newProduct.prices['250']" name="price250"></label>
                                 
-                                <label>Discount 1000g: <input [(ngModel)]="newProduct.discounts['1000']" name="productDiscount1000"></label>
-                                <label>Discount 500g: <input [(ngModel)]="newProduct.discounts['500']" name="productDiscount500"></label>
-                                <label>Discount 250g: <input [(ngModel)]="newProduct.discounts['250']" name="productDiscount250"></label>
+                                <label>{{'Item.DTO'|translate}} 1000g: <input [(ngModel)]="newProduct.discounts['1000']" name="productDiscount1000"></label>
+                                <label>{{'Item.DTO'|translate}} 500g: <input [(ngModel)]="newProduct.discounts['500']" name="productDiscount500"></label>
+                                <label>{{'Item.DTO'|translate}}250g: <input [(ngModel)]="newProduct.discounts['250']" name="productDiscount250"></label>
                             </div>
 
                         </div>
                     </div>
                 </div>
                 <!-- <button type="button" class="button_main" (click)="saveNewProduct()">Añadir</button> -->
-                <button type="button" class="button_main" (click)="saveProduct()">Añadir</button>
+                <button type="button" class="button_main" (click)="saveProduct()">{{'Action.Add'|translate}}</button>
             </form>
         </div>
 
