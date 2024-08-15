@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core';
 import { StockService } from '../../services/stock.service';
+import { IHoney } from '../../interfaces/honey';
 
 @Component({
   selector: 'app-stock-honey',
@@ -20,21 +21,23 @@ export class StockHoneyComponent implements OnInit {
   
   
   selectedFile: File | null = null;
-  products: any[] = [];
+  products: IHoney[] = [];
   
-  newProduct: any = {
+  // Definir `newProduct` utilizando la interfaz IHoney
+  newProduct: IHoney = {
     name: '',
     description: '',
     prices: { '1000': 0, '500': 0, '250': 0 },
-    discounts: { '1000': 0, '500': 0, '250': 0 }, 
+    discounts: { '1000': 0, '500': 0, '250': 0 },
     stock: null,
     type: '',
-    weight: '',
-    image: `./assets/img/honey-5043708_1280.jpg`,
+    weight: '1000',
+    image: './assets/img/honey-5043708_1280.jpg',
     state: '',
     category: '',
     city: '',
-    
+    quantity: 2,
+    id: 0
   };
   showAddProductForm: boolean = false;
   http: any;
@@ -49,10 +52,10 @@ export class StockHoneyComponent implements OnInit {
 
   getProducts(): void {
     this.stockService.getProducts().subscribe(
-      
-      (products: any[]) => {
+	  
+      (products: IHoney[]) => {
         this.products = products;
-        console.log('ese el prod:',products);
+        console.log('ese el prod:', products);
       },
       (error) => {
         console.error('Error fetching products', error);
@@ -62,7 +65,7 @@ export class StockHoneyComponent implements OnInit {
 
 
 
-  saveChanges(product: any): void {
+  saveChanges(product: IHoney): void {
     console.log('Saving changes for product:', product); // Debugging
     this.stockService.updateProduct(product).subscribe(
       (response) => {
@@ -80,11 +83,10 @@ export class StockHoneyComponent implements OnInit {
 
   saveNewProduct(): void {
     this.stockService.saveProduct(this.newProduct).subscribe(
-      (response) => {
-        console.log('New product added', response);
-        this.products.push(response); // Añadir el nuevo producto a la lista
+      (response: IHoney) => {
+        this.products.push(response); // El ID se incluye aquí desde la respuesta del servidor
         this.showAddProductForm = false;
-        this.newProduct = {}; // Resetear el formulario
+        this.newProduct = {} as IHoney; // Resetear el formulario
       },
       (error) => {
         console.error('Error saving product', error);
@@ -94,7 +96,7 @@ export class StockHoneyComponent implements OnInit {
 
     // Método para guardar el producto
     saveProduct() {
-      const productData = {
+      const productData: IHoney  = {
         ...this.newProduct,
         prices: this.newProduct.prices,
         discounts: this.newProduct.discounts,
@@ -134,12 +136,26 @@ export class StockHoneyComponent implements OnInit {
   
   onSubmit() {
     const formData = new FormData();
-    formData.append('image', this.selectedFile!); // Añadir la imagen al FormData
-    formData.append('otherField', this.newProduct.otherField);
+    
+    // Verificar que la imagen no sea undefined
+    if (this.selectedFile) {
+      formData.append('image', this.selectedFile);
+    }
+    
+    // Verificar que 'otherField' esté definido antes de agregarlo a formData
+    if (this.newProduct.otherField) {
+      formData.append('otherField', this.newProduct.otherField);
+    }
   
-    this.http.post('api/v1/products', formData).subscribe((response: any) => {
-      console.log('Producto guardado', response);
-    });
+    // Puedes hacer lo mismo con otros campos opcionales
+    this.http.post('api/v1/products', formData).subscribe(
+      (response: any) => {
+        console.log('Producto guardado', response);
+      },
+      (error: any) => {
+        console.error('Error al guardar el producto', error);
+      }
+    );
   }
 
   onWeightChange(product: any): void {
@@ -158,4 +174,21 @@ export class StockHoneyComponent implements OnInit {
       console.error('Discount not found for the selected weight.');
     }
   }
+
+    // Método para resetear `newProduct` al añadir un nuevo producto
+    // defaultProduct(): IHoney {
+    //   return {
+    //     name: '',
+    //     description: '',
+    //     prices: { '1000': 0, '500': 0, '250': 0 },
+    //     discounts: { '1000': 0, '500': 0, '250': 0 },
+    //     stock: null,
+    //     type: '',
+    //     weight: '',
+    //     image: './assets/img/honey-5043708_1280.jpg',
+    //     state: '',
+    //     category: '',
+    //     city: ''
+    //   };
+    // }
 }

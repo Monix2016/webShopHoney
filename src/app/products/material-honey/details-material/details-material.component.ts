@@ -40,12 +40,13 @@ export class DetailsMaterialComponent {
     if (materialHoney) {
       this.cartService.addToCart({
         id: materialHoney.id,
-        type:materialHoney.type,
+        type: materialHoney.type,
         name: materialHoney.name,
         price: materialHoney.price,
         quantity: 1,
         weight: materialHoney.weight || 500,
-        photo:materialHoney.photo,
+        photo: materialHoney.photo,
+        discount: materialHoney.desc
       });
     }
   }

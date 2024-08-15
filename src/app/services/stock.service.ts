@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { map } from 'rxjs';
+import { Observable, map } from 'rxjs';
+import { IHoney } from '../interfaces/honey';
 
 @Injectable({
   providedIn: 'root'
@@ -14,7 +15,7 @@ export class StockService {
   ) { }
 
 
-  getProducts() {
+  getProducts(): Observable<IHoney[]> {
     return this.http.get<any[]>(this.apiUrl).pipe(
       map(products => products.map(product => {
         product.prices = JSON.parse(product.prices || '{}');
@@ -28,8 +29,8 @@ export class StockService {
     return this.http.put(`${this.apiUrl}/${product.id}`, product);
   }
 
-  saveProduct(product: any) {
-    return this.http.post(this.apiUrl, product);
+  saveProduct(product: IHoney): Observable<IHoney> {
+    return this.http.post<IHoney>(this.apiUrl, product);
   }
 
   getPrice(product: any, selectedWeight: string): number | null {

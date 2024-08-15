@@ -54,6 +54,17 @@ input[type="text"] {
   margin-right: 4px;
   display: inline-block;
   width: 30%;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+input[type="number"] {
+  border: solid 1px var(--primary-color);
+  padding: 10px;
+  border-radius: 8px;
+  margin-right: 4px;
+  display: inline-block;
+  width: 30%;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 q {

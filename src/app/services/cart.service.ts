@@ -40,10 +40,11 @@ export class CartService {
         id: honey.id,
         type: honey.type,
         name: honey.name,
-        price: honey.prices[weight],
+        price: honey.prices[weight.toString()],
+        discount: honey.discounts[weight.toString()],
         quantity: 1,
         weight: weight,
-        photo: honey.photo,
+        photo: honey.image,
       });
     }
   }
@@ -59,6 +60,7 @@ export class CartService {
         quantity: 1,
         weight: material.weight,
         photo: material.photo,
+        discount: material.desc,
       });
     }
   }

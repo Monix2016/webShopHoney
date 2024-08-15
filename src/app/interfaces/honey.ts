@@ -1,17 +1,18 @@
 export interface IHoney {
-  id: number;
-  type:string;
+  id:number;
   name: string;
   description: string;
-  weight:number;
+  prices: { [key: string]: number };
+  discounts: { [key: string]: number };
+  stock: number | null;
+  type: string;
+  weight: string;
   image: string;
-  city: string;
   state: string;
-  photo: string;
-  category:string;
-  prices: { [weight: number]: number };// Prices based on weight
-  quantity:number;
-  availableUnits: number;
-  wifi: boolean;
-  discount: number;
+  category: string;
+  city: string;
+  quantity: number;
+  selectedPrice?: number;  // Propiedad opcional para el precio seleccionado
+  selectedDto?: number;    // Propiedad opcional para el descuento seleccionado
+  otherField?: string;     // Campo opcional utilizado en el formulario
 }

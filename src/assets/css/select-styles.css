@@ -68,3 +68,14 @@
     background-color: #007bff; /* Background color for hovered option */
     color: #fff; /* Text color for hovered option */
   }
+
+  @media (min-width: 500px) and (max-width: 768px) {
+
+    .custom-select-wrapper {
+      width: auto;
+    }
+  }
+  @media (max-width: 576px) {
+    .custom-select-wrapper {
+      width: auto;
+  }}
