@@ -125,136 +125,6 @@
     <div class="cart-list" *ngIf="showAddProductForm">
         <h3>Añadir Nuevo Producto</h3>
         <div class="flex-col cart-box">
-
-            <!-- <form>
-                <div class="flex-container">
-                    <div class="product-card">
-                        <div class="product-image">
-                            <img src="" alt="Exterior photo of">
-                            <div class="titleCard">{{'Action.UploadImage'|translate}}</div>
-                            <div class="overlay"></div>
-                        </div>
-                        <div class="product-info">
-                            <p>{{'Action.UploadImage'|translate}}</p>
-
-                            <app-upload-img (imageUploaded)="onImageUploaded($event)"></app-upload-img>
-                        </div>
-                    </div>
-                    <div class="flex-col">
-                        <div class="cart-item">
-                            <div class="cart-item-actions">
-                                <div class="form-inline-select  flex-container-col">
-                                    <label for="typeSelector">{{'Item.Type'|translate}} </label>
-                                    <div class="custom-select-wrapper">
-                                        <select id="typeSelector"  formControlName="type"
-                                            class="form-control custom-select" name="productType">
-                                            <option value="HN">{{'Honey'|translate}}</option>
-                                            <option value="MT">{{'Material.Title'| translate}}</option>
-                                            <option value="CC">{{'Cours.Title'|translate}}</option>
-
-
-                                        </select>
-                                    </div>
-                                </div>
-
-                                <div class="form-inline-select  flex-container-col">
-                                    <label for="stateSelector">{{'Item.State'|translate}} </label>
-                                    <div class="custom-select-wrapper">
-                                        <select id="stateSelector"  formControlName="state"
-                                            class="form-control custom-select" name="productState">
-                                            <option value="NO">{{'Item.NotAvailable'|translate}}</option>
-                                            <option value="SI">{{'Item.Available'|translate}}</option>
-                                        </select>
-                                    </div>
-                                </div>
-
-                                <div class="form-inline-select  flex-container-col">
-                                    <label for="categorySelector">{{'Item.Category'|translate}} </label>
-                                    <div class="custom-select-wrapper">
-                                        <select id="categorySelector"  formControlName="category"
-                                            class="form-control custom-select" name="productCategory">
-                                            <option value="HN">{{'BenificesHerbalHoney.Title'| translate}}</option>
-                                            <option value="HX">{{'BenificesHerbalHoney.Title'| translate}}</option>
-                                            <option value="HY">{{'BenificesHerbalHoney.Title'| translate}}</option>
-                                            <option value="HA">{{'BenificesHerbalHoney.Title'| translate}}</option>
-                                            <option value="HB">{{'BenificesHerbalHoney.Title'| translate}}</option>
-
-
-                                        </select>
-                                    </div>
-                                </div>
-
-
-                            </div>
-                        </div>
-                        <div class="cart-item">
-                            <div class="cart-item-actions">
-
-
-                                <label>{{'Item.Name'|translate}} <input type="text" class="input"
-                                         formControlName="name" name="productName"></label>
-                                <label>{{'Item.Description'|translate}} <input type="text" class="input"
-                                         formControlName="description" name="productDescription"></label>
-                                <label>{{'Item.Stock'|translate}} <input type="number" class="input"
-                                         formControlName="stock" name="productStock"></label>
-                                <label>{{'City'|translate}} <input type="text" class="input"
-                                         formControlName="city" name="productCity"></label>
-                            </div>
-                        </div>
-
-
-                        <div class="cart-item">
-                            <div class="cart-item-actions">
-                                <div class="flex-container-col">
-                                    <div class="flex-container-col">
-                                        <label>{{'cart.CartItems.Price'|translate}} 1000g </label>
-                                        <input type="number" class="input"  formControlName="prices['1000']"
-                                            name="price1000">
-                                    </div>
-                                    <div class="flex-container-col">
-                                        <label>{{'Item.DTO'|translate}} 1000g </label>
-                                        <input type="number" class="input"  formControlName="discounts['1000']"
-                                            name="DTO1000">
-                                    </div>
-
-                                </div>
-
-                                <div class="flex-container-col">
-                                    <div class="flex-container-col">
-                                        <label>{{'cart.CartItems.Price'|translate}} 500g </label>
-                                        <input type="number" class="input"  formControlName="prices['500']"
-                                            name="price500">
-                                    </div>
-
-                                    <div class="flex-container-col">
-                                        <label>{{'Item.DTO'|translate}} 500g </label>
-                                        <input type="number" class="input"  formControlName="discounts['500']"
-                                            name="DTO500">
-                                    </div>
-
-                                </div>
-                                <div class="flex-container-col">
-                                    <div class="flex-container-col">
-                                        <label>{{'cart.CartItems.Price'|translate}} 250g </label>
-                                        <input type="number" class="input"  formControlName="prices['250']"
-                                            name="price250">
-                                    </div>
-                                    <div class="flex-container-col">
-                                        <label>{{'Item.DTO'|translate}}250g</label>
-                                        <input type="number" class="input"  formControlName="discounts['250']"
-                                            name="DTO250">
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-
-                <button type="submit" class="button_main">{{'Action.Add'|translate}}</button>
-            </form> -->
-
-
             <form [formGroup]="productForm" (ngSubmit)="saveNewProduct()">
 
                 <div class="flex-container">
@@ -300,7 +170,6 @@
                                             <option value="HA">{{'BenificesHerbalHoney.Title'| translate}}</option>
                                             <option value="HB">{{'BenificesHerbalHoney.Title'| translate}}</option>
                                         </select>
-
                                     </div>
                                 </div>
 
@@ -320,52 +189,68 @@
 
                         <div class="cart-item">
                             <div class="cart-item-actions">
-                                <label>{{'Item.Name'|translate}} <input type="text" formControlName="name"></label>
 
-                                <label>{{'Item.Description'|translate}} <input type="text"
-                                        formControlName="description"></label>
+                                <div class="flex-container-col">
+                                    <label>{{'Item.Name'|translate}} </label>
+                                    <input type="text" formControlName="name">
+                                </div>
 
-                                <label>{{'Item.Stock'|translate}} <input type="number" formControlName="stock"></label>
 
-                                <label>{{'City'|translate}} <input type="text" formControlName="city"></label>
+                                <div class="flex-container-col">
+                                    <label>{{'Item.Description'|translate}} </label>
+                                    <input type="text" formControlName="description">
+                                </div>
+
+
+                                <div class="flex-container-col">
+                                    <label>{{'Item.Stock'|translate}} </label>
+                                    <input type="number" formControlName="stock">
+                                </div>
+
+                                <div class="flex-container-col"><label>{{'City'|translate}} </label>
+                                    <input type="text" formControlName="city">
+                                </div>
+
                             </div>
                         </div>
+                        <div class="flex-container">
+                            <div class="cart-item">
+                                <div class="cart-item-actions">
+                                    <div formGroupName="prices" class="flex-col">
+                                        <div class="flex-col"><label>Precio 1000g<input type="number"
+                                                    formControlName="1000"> </label>
+                                        </div>
 
-                        <div class="cart-item">
-                            <div class="cart-item-actions">
-                                <div formGroupName="prices" class="flex-col">
-                                    <label>Precio 1000g <input type="number" formControlName="1000"></label>
-                                    <label>Precio 500g <input type="number" formControlName="500"></label>
-                                    <label>Precio 250g <input type="number" formControlName="250"></label>
+                                        <div class="flex-col"><label>Precio 500g <input type="number"
+                                                    formControlName="500"></label>
+                                        </div>
+
+                                        <div class="flex-col"> <label>Precio 250g<input type="number"
+                                                    formControlName="250"></label>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cart-item">
+                                <div class="cart-item-actions">
+                                    <div formGroupName="discounts">
+                                        <div class="flex-col">
+                                            <label>Descuento 1000g <input type="number" formControlName="1000"></label>
+                                        </div>
+                                        <div class="flex-col">
+                                            <label>Descuento 500g <input type="number" formControlName="500"></label>
+                                        </div>
+                                        <div class="flex-col">
+                                            <label>Descuento 250g <input type="number" formControlName="250"></label>
+                                        </div>
+
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="cart-item">
-                            <div class="cart-item-actions">
-                                <div formGroupName="discounts">
-                                    <label>Descuento 1000g <input type="number" formControlName="1000"></label>
-                                    <label>Descuento 500g <input type="number" formControlName="500"></label>
-                                    <label>Descuento 250g <input type="number" formControlName="250"></label>
-                                </div>
-                            </div>
-                        </div>
-
                     </div>
-
-
-
-
-
-
-
-
-
-
-
                 </div>
-
-
-
                 <button type="submit" class="button_main">{{'Action.Add'|translate}}</button>
             </form>
 
