@@ -1,10 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule,FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core';
 import { StockService } from '../../services/stock.service';
 import { IHoney } from '../../interfaces/honey';
 import { UploadImgComponent } from '../../functionalities/upload-img/upload-img.component';
+
 
 @Component({
   selector: 'app-stock-honey',
@@ -12,6 +13,7 @@ import { UploadImgComponent } from '../../functionalities/upload-img/upload-img.
   imports: [
     FormsModule,
     CommonModule,
+    ReactiveFormsModule,
     TranslateModule,
     UploadImgComponent
   ],
@@ -21,32 +23,47 @@ import { UploadImgComponent } from '../../functionalities/upload-img/upload-img.
 export class StockHoneyComponent implements OnInit {
   
    products: IHoney[] = [];  
-  // Definir `newProduct` utilizando la interfaz IHoney
-  newProduct: IHoney = {
-    name: '',
-    description: '',
-    prices: { '1000': 0, '500': 0, '250': 0 },
-    discounts: { '1000': 0, '500': 0, '250': 0 },
-    stock: null,
-    type: '',
-    weight: '1000',
-    image: 'honey-5043708_1280.jpg',
-    state: '',
-    category: '',
-    city: '',
-    quantity: 2,
-    id: 0
-  };
+   productForm!: FormGroup;
+
   showAddProductForm: boolean = false;
   http: any;
 
 
-  constructor(private stockService: StockService) {}
+  constructor(
+    private stockService: StockService,
+    private fb: FormBuilder,
+  ) {}
 
   ngOnInit(): void {
+    this.initializeForm();
     this.getProducts();
   }
 
+// Inicializa el FormGroup
+initializeForm(): void {
+  this.productForm = this.fb.group({
+    name: ['tstForm', Validators.required],
+    description: ['tstForm'],
+    prices: this.fb.group({
+      '1000': [0, Validators.required],
+      '500': [0, Validators.required],
+      '250': [0, Validators.required]
+    }),
+    discounts: this.fb.group({
+      '1000': [0],
+      '500': [0],
+      '250': [0]
+    }),
+    stock: [null, Validators.required],
+    type: ['HN', Validators.required],
+    weight: ['1000'],
+    image: ['honey-5043708_1280.jpg'],
+    state: ['SI', Validators.required],
+    category: ['HH', Validators.required],
+    city: ['Rabat'],
+    quantity: [2],
+  });
+}
 
   getProducts(): void {
     this.stockService.getProducts().subscribe(
@@ -62,9 +79,28 @@ export class StockHoneyComponent implements OnInit {
   }
 
 
+  addProduct(): void {
+    this.showAddProductForm = true;
+  }
+
+  saveNewProduct(): void {
+    if (this.productForm.valid) {
+      const newProduct: IHoney = this.productForm.value;
+      this.stockService.saveProduct(newProduct).subscribe(
+        (response: IHoney) => {
+          this.products.push(response);
+          this.showAddProductForm = false;
+          console.log('Los datos del nuevo Formulario',response);
+          this.productForm.reset();  // Resetear el formulario después de guardar
+        },
+        (error) => {
+          console.error('Error saving product', error);
+        }
+      );
+    }
+  }
 
   saveChanges(product: IHoney): void {
-    console.log('Saving changes for product:', product); // Debugging
     this.stockService.updateProduct(product).subscribe(
       (response) => {
         console.log('Product updated', response);
@@ -75,64 +111,26 @@ export class StockHoneyComponent implements OnInit {
     );
   }
 
-  addProduct(): void {
-    this.showAddProductForm = true;
+
+
+  onImageUploaded(imageName: string): void {
+    this.productForm.patchValue({ image: imageName });
   }
-
-  saveNewProduct(): void {
-    this.stockService.saveProduct(this.newProduct).subscribe(
-      (response: IHoney) => {
-        this.products.push(response); // El ID se incluye aquí desde la respuesta del servidor
-        this.showAddProductForm = false;
-        this.newProduct = {} as IHoney; // Resetear el formulario
-      },
-      (error) => {
-        console.error('Error saving product', error);
-      }
-    );
-  }
-
-    // Método para guardar el producto
-    saveProduct() {
-      const productData: IHoney  = {
-        ...this.newProduct,
-        prices: this.newProduct.prices,
-        discounts: this.newProduct.discounts,
-        
-      };
-  
-      this.stockService.saveProduct(productData).subscribe(
-        (response) => {
-          console.log('Producto guardado', response);
-        },
-        (error) => {
-          console.error('Error al guardar el producto', error);
-        }
-      );
-    }
-
-    onImageUploaded(imageName: string): void {
-      this.newProduct.image = imageName; // Guardar el nombre de la imagen en el producto
-      console.log("El nombre de la imagen desde TS",imageName)
-    }
-
 
 
   onWeightChange(product: any): void {
     const selectedWeight = product.weight;
     const price = this.stockService.getPrice(product, selectedWeight);
     const discount = this.stockService.getDto(product, selectedWeight);
+
     if (price !== null) {
       product.selectedPrice = price;
-    } else {
-      console.error('Price not found for the selected weight.');
     }
-  
+
     if (discount !== null) {
       product.selectedDto = discount;
-    } else {
-      console.error('Discount not found for the selected weight.');
     }
   }
-
 }
+
+
