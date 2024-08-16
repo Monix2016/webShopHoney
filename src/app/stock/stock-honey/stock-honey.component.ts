@@ -113,6 +113,7 @@ export class StockHoneyComponent implements OnInit {
 
     onImageUploaded(imageName: string): void {
       this.newProduct.image = imageName; // Guardar el nombre de la imagen en el producto
+      console.log("El nombre de la imagen desde TS",imageName)
     }
 
 
