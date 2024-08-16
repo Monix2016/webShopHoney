@@ -9,10 +9,11 @@
                         <div class="overlay"></div>
                     </div>
                     <div class="product-info">
-                        <button class="CartBtn honey-color"
+                        <!-- <button class="CartBtn honey-color"
                             (click)="fileInput.click()">{{'Action.UploadImage'|translate}}
                         </button>
-                        <input type="file" #fileInput (change)="onFileChange($event)" style="display: none;" />
+                        <input type="file" #fileInput (change)="onFileChange($event)" style="display: none;" /> -->
+                        <app-upload-img (imageUploaded)="onImageUploaded($event)"></app-upload-img>
                     </div>
                 </div>
                 <div class="flex-col">

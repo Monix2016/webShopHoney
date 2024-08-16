@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core';
 import { StockService } from '../../services/stock.service';
 import { IHoney } from '../../interfaces/honey';
+import { UploadImgComponent } from '../../functionalities/upload-img/upload-img.component';
 
 @Component({
   selector: 'app-stock-honey',
@@ -12,6 +13,7 @@ import { IHoney } from '../../interfaces/honey';
     FormsModule,
     CommonModule,
     TranslateModule,
+    UploadImgComponent
   ],
   templateUrl: './stock-honey.component.html',
   styleUrl: './stock-honey.component.css'
@@ -110,6 +112,10 @@ export class StockHoneyComponent implements OnInit {
           console.error('Error al guardar el producto', error);
         }
       );
+    }
+
+    onImageUploaded(imageName: string): void {
+      this.newProduct.image = imageName; // Guardar el nombre de la imagen en el producto
     }
 
   // TODO: eso se repite ver mas tarde como ponerlo en el servicio
