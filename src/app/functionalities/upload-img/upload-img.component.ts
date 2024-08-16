@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, EventEmitter, Output } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
 
@@ -13,10 +14,12 @@ import { TranslateModule } from '@ngx-translate/core';
 export class UploadImgComponent {
 
   selectedFile: File | null = null;
-
-  http: any;
+  //http://127.0.0.1:8000/api/v1/upload-image
+  private apiUrl = 'http://127.0.0.1:8000/api/v1/upload-image';
+ 
 
   @Output() imageUploaded = new EventEmitter<string>();
+
 
   onFileChange(event: any): void {
     if (event.target.files.length > 0) {
@@ -24,24 +27,23 @@ export class UploadImgComponent {
     }
   }
 
+  constructor(private http: HttpClient) {}
+
   uploadImage(): void {
-    if (this.selectedFile) {
+    if (this.http) {
       const formData = new FormData();
-      formData.append('image', this.selectedFile);
-
-      // Aquí harás la llamada HTTP a tu backend
-      // Puedes usar HttpClient para enviar la imagen al servidor
-      // Ejemplo (suponiendo que ya tienes un servicio para esto):
-
-      this.http.post('http://127.0.0.1:8000/api/v1/upload-image', formData).subscribe(
-        (response: any) => {
-          const uploadedImageName = response.imageName; // Nombre de la imagen guardada en el servidor
-          this.imageUploaded.emit(uploadedImageName);  // Emitir el nombre al componente padre
+      formData.append('image', this.selectedFile!);
+  
+      this.http.post(this.apiUrl, formData).subscribe(
+        (response) => {
+          console.log('Image uploaded successfully', response);
         },
-        (error: any) => {
+        (error) => {
           console.error('Error uploading image', error);
         }
       );
+    } else {
+      console.error('HTTP client not initialized');
     }
   }
 }

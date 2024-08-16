@@ -32,7 +32,10 @@ export class BaseHoneyComponent {
     this.cartService.addHoneyToCart(honeyId, this.selectedWeight);
   }
   getPrice(): number {
-    return this.housingLocation.prices[this.selectedWeight] || 0;
+    if (this.housingLocation && this.housingLocation.prices && this.housingLocation.prices[this.selectedWeight]) {
+      return this.housingLocation.prices[this.selectedWeight];
+    }
+    return 0;
   }
 
 

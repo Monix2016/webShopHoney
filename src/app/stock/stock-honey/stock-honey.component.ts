@@ -20,10 +20,7 @@ import { UploadImgComponent } from '../../functionalities/upload-img/upload-img.
 })
 export class StockHoneyComponent implements OnInit {
   
-  
-  selectedFile: File | null = null;
-  products: IHoney[] = [];
-  
+   products: IHoney[] = [];  
   // Definir `newProduct` utilizando la interfaz IHoney
   newProduct: IHoney = {
     name: '',
@@ -118,50 +115,7 @@ export class StockHoneyComponent implements OnInit {
       this.newProduct.image = imageName; // Guardar el nombre de la imagen en el producto
     }
 
-  // TODO: eso se repite ver mas tarde como ponerlo en el servicio
-  // onFileSelected(event: Event): void {
-  //   const input = event.target as HTMLInputElement;
-  //   if (input.files && input.files[0]) {
-  //     const file = input.files[0];
-  //     const reader = new FileReader();
-  //     reader.onload = (e: any) => {
-  //       this.housingLocation.photo = e.target.result;
-  //     };
-  //     reader.readAsDataURL(file);
-  //   }
-  // }
 
- 
-
-  onFileChange(event: any) {
-    if (event.target.files.length > 0) {
-      this.selectedFile = event.target.files[0];
-    }
-  }
-  
-  onSubmit() {
-    const formData = new FormData();
-    
-    // Verificar que la imagen no sea undefined
-    if (this.selectedFile) {
-      formData.append('image', this.selectedFile);
-    }
-    
-    // Verificar que 'otherField' esté definido antes de agregarlo a formData
-    if (this.newProduct.otherField) {
-      formData.append('otherField', this.newProduct.otherField);
-    }
-  
-    // Puedes hacer lo mismo con otros campos opcionales
-    this.http.post('api/v1/products', formData).subscribe(
-      (response: any) => {
-        console.log('Producto guardado', response);
-      },
-      (error: any) => {
-        console.error('Error al guardar el producto', error);
-      }
-    );
-  }
 
   onWeightChange(product: any): void {
     const selectedWeight = product.weight;
@@ -180,20 +134,4 @@ export class StockHoneyComponent implements OnInit {
     }
   }
 
-    // Método para resetear `newProduct` al añadir un nuevo producto
-    // defaultProduct(): IHoney {
-    //   return {
-    //     name: '',
-    //     description: '',
-    //     prices: { '1000': 0, '500': 0, '250': 0 },
-    //     discounts: { '1000': 0, '500': 0, '250': 0 },
-    //     stock: null,
-    //     type: '',
-    //     weight: '',
-    //     image: './assets/img/honey-5043708_1280.jpg',
-    //     state: '',
-    //     category: '',
-    //     city: ''
-    //   };
-    // }
 }

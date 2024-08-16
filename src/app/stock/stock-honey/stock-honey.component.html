@@ -8,7 +8,7 @@
                         <div class="titleCard">{{'Action.UploadImage'|translate}}</div>
                         <div class="overlay"></div>
                     </div>
-                    <div class="product-info">
+                    <div class="">
                         <!-- <button class="CartBtn honey-color"
                             (click)="fileInput.click()">{{'Action.UploadImage'|translate}}
                         </button>
@@ -141,17 +141,14 @@
                 <div class="flex-container">
                     <div class="product-card">
                         <div class="product-image">
-                            <img [src]="newProduct.image" alt="Exterior photo of {{newProduct.name}}">
+                            <img src="./assets/img/{{newProduct.image}}" alt="Exterior photo of {{newProduct.name}}">
                             <div class="titleCard">{{'Action.UploadImage'|translate}}</div>
                             <div class="overlay"></div>
                         </div>
                         <div class="product-info">
                             <p>{{'Action.UploadImage'|translate}}</p>
 
-                            <button class="CartBtn honey-color"
-                                (click)="fileInput.click()">{{'Action.UploadImage'|translate}}
-                            </button>
-                            <input type="file" #fileInput (change)="onFileChange($event)" style="display: none;" />
+                            <app-upload-img (imageUploaded)="onImageUploaded($event)"></app-upload-img>
                         </div>
                     </div>
                     <div class="flex-col">
