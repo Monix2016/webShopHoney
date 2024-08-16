@@ -9,10 +9,6 @@
                         <div class="overlay"></div>
                     </div>
                     <div class="">
-                        <!-- <button class="CartBtn honey-color"
-                            (click)="fileInput.click()">{{'Action.UploadImage'|translate}}
-                        </button>
-                        <input type="file" #fileInput (change)="onFileChange($event)" style="display: none;" /> -->
                         <app-upload-img (imageUploaded)="onImageUploaded($event)"></app-upload-img>
                     </div>
                 </div>
