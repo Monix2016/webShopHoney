@@ -4,7 +4,7 @@
             <div class="flex-container">
                 <div class="product-card">
                     <div class="product-image">
-                        <img src="{{product.image}}" alt="Exterior photo of {{product.name}}" alt="">
+                        <img src="./assets/img/{{product.image}}" alt="Exterior photo of {{product.name}}" alt="">
                         <div class="titleCard">{{'Action.UploadImage'|translate}}</div>
                         <div class="overlay"></div>
                     </div>
@@ -20,6 +20,20 @@
                     <div class="cart-item">
                         <div class="cart-item-actions">
                             <div class="form-inline-select  flex-container-col">
+                                <label for="categorySelector">{{'Item.Category'| translate}} </label>
+                                <div class="custom-select-wrapper">
+                                    <select id="categorySelector" [(ngModel)]="product.category"
+                                        class="form-control custom-select" name="productCategory">
+                                        <option value="HN">{{'BenificesHerbalHoney.Title'| translate}}</option>
+                                        <option value="HX">{{'BenificesHerbalHoney.Title'| translate}}</option>
+                                        <option value="HY">{{'BenificesHerbalHoney.Title'| translate}}</option>
+                                        <option value="HA">{{'BenificesHerbalHoney.Title'| translate}}</option>
+                                        <option value="HB">{{'BenificesHerbalHoney.Title'| translate}}</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-inline-select  flex-container-col">
                                 <label for="typeSelector">{{'Item.Type'|translate}} </label>
                                 <div class="custom-select-wrapper">
                                     <select id="typeSelector" [(ngModel)]="product.type"
@@ -27,8 +41,6 @@
                                         <option value="HN">{{'Honey'|translate}}</option>
                                         <option value="MT">{{'Material.Title'| translate}}</option>
                                         <option value="CC">{{'Cours.Title'|translate}}</option>
-
-
                                     </select>
                                 </div>
                             </div>
@@ -40,22 +52,6 @@
                                         class="form-control custom-select" name="productState">
                                         <option value="NO">{{'Item.NotAvailable'| translate}}</option>
                                         <option value="SI">{{'Item.Available'| translate}}</option>
-                                    </select>
-                                </div>
-                            </div>
-
-                            <div class="form-inline-select  flex-container-col">
-                                <label for="categorySelector">{{'Item.Category'| translate}} </label>
-                                <div class="custom-select-wrapper">
-                                    <select id="categorySelector" [(ngModel)]="product.category"
-                                        class="form-control custom-select" name="productCategory">
-                                        <option value="HN">{{'BenificesHerbalHoney.Title'| translate}}</option>
-                                        <option value="HX">{{'BenificesHerbalHoney.Title'| translate}}</option>
-                                        <option value="HY">{{'BenificesHerbalHoney.Title'| translate}}</option>
-                                        <option value="HA">{{'BenificesHerbalHoney.Title'| translate}}</option>
-                                        <option value="HB">{{'BenificesHerbalHoney.Title'| translate}}</option>
-
-
                                     </select>
                                 </div>
                             </div>

@@ -30,7 +30,7 @@ export class StockHoneyComponent implements OnInit {
     stock: null,
     type: '',
     weight: '1000',
-    image: './assets/img/honey-5043708_1280.jpg',
+    image: 'honey-5043708_1280.jpg',
     state: '',
     category: '',
     city: '',
