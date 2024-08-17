@@ -44,6 +44,7 @@
                                         <select id="categorySelector" formControlName="category"
                                             class="form-control custom-select" name="category">
                                             <option value="HN">{{'BenificesHerbalHoney.Title'|translate}}</option>
+                                            <option value="HN">{{'BenificesHerbalHoney.Title'|translate}}</option>
                                             <option value="HN">{{'BenificesHerbalHoney.Title'| translate}}</option>
                                             <option value="HX">{{'BenificesHerbalHoney.Title'| translate}}</option>
                                             <option value="HY">{{'BenificesHerbalHoney.Title'| translate}}</option>
@@ -210,10 +211,10 @@
                                     <label for="categorySelector">{{ 'Item.Category' | translate }}</label>
                                     <div class="custom-select-wrapper">
                                         <select formControlName="category" class="form-control custom-select">
-                                            <option value="HN">{{ 'BenificesHerbalHoney.Title' | translate }}</option>
+                                            <option value="HA">{{ 'BenificesHerbalHoney.Title' | translate }}</option>
                                             <option value="HH">{{ 'BenificesHerbalHoney.Title' | translate }}</option>
-                                            <option value="HN">{{'BenificesHerbalHoney.Title'|translate}}</option>
-                                            <option value="HN">{{'BenificesHerbalHoney.Title'| translate}}</option>
+                                            <option value="HC">{{'BenificesHerbalHoney.Title'|translate}}</option>
+                                            <option value="HD">{{'BenificesHerbalHoney.Title'| translate}}</option>
                                             <option value="HX">{{'BenificesHerbalHoney.Title'| translate}}</option>
                                             <option value="HY">{{'BenificesHerbalHoney.Title'| translate}}</option>
                                             <option value="HA">{{'BenificesHerbalHoney.Title'| translate}}</option>
@@ -297,7 +298,7 @@
                 </div>
                 <button type="submit" class="button_main" (click)="saveChanges(product.id)">{{ 'Action.Save' | translate
                     }}</button>
-                <button type="submit" class="button_main" (click)="removeProduct(product.id)">Eliminar</button>
+                <!-- <button type="submit" class="button_main" (click)="removeProduct(product.id)">Eliminar</button> -->
             </div>
         </div>
     </form>

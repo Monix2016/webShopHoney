@@ -62,7 +62,7 @@ export class StockHoneyComponent implements OnInit {
       weight: ['1000', Validators.required],
       image: ['honey-5043708_1280.jpg'],
       state: ['SI', Validators.required],
-      category: ['HH', Validators.required],
+      category: ['HD', Validators.required],
       city: ['Rabat', Validators.required],
       quantity: [2],
     });
@@ -139,6 +139,7 @@ export class StockHoneyComponent implements OnInit {
           });
         }
       );
+      this.getProducts();
     }
   }
 
