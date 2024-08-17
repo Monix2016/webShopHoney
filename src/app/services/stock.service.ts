@@ -25,8 +25,15 @@ export class StockService {
     );
   }
 
-  updateProduct(product: any) {
-    return this.http.put(`${this.apiUrl}/${product.id}`, product);
+  updateProduct(product: any, index:any) {
+    console.log('el index para el update',product )
+   console.log('el index para el update',index )
+    return this.http.put(`${this.apiUrl}/${index}`, product);
+
+  }
+
+  deleteProduct(index1: any) {
+    return this.http.delete(`${this.apiUrl}/${index1}`, index1);
   }
 
   saveProduct(product: IHoney): Observable<IHoney> {

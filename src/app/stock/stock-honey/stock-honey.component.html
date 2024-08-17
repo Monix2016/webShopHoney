@@ -73,22 +73,39 @@
                                 <div class="flex-container-col">
                                     <label>{{'Item.Name'|translate}} </label>
                                     <input type="text" formControlName="name">
+                                    <div *ngIf="productForm.get('name')?.invalid && productForm.get('name')?.touched"
+                                        class="invalid-feedback">
+                                        {{'Notices.Name_Is_Required'|translate}}
+                                    </div>
                                 </div>
 
 
                                 <div class="flex-container-col">
                                     <label>{{'Item.Description'|translate}} </label>
                                     <input type="text" formControlName="description">
+                                    <div *ngIf="productForm.get('description')?.invalid && productForm.get('description')?.touched"
+                                        class="invalid-feedback">
+                                        {{'Notices.Name_Is_Required'|translate}}
+                                    </div>
                                 </div>
 
 
                                 <div class="flex-container-col">
                                     <label>{{'Item.Stock'|translate}} </label>
                                     <input type="number" formControlName="stock">
+                                    <div *ngIf="productForm.get('stock')?.invalid && productForm.get('stock')?.touched"
+                                        class="invalid-feedback">
+                                        {{'Notices.Name_Is_Required'|translate}}
+                                    </div>
                                 </div>
 
-                                <div class="flex-container-col"><label>{{'City'|translate}} </label>
+                                <div class="flex-container-col">
+                                    <label>{{'City'|translate}} </label>
                                     <input type="text" formControlName="city">
+                                    <div *ngIf="productForm.get('city')?.invalid && productForm.get('city')?.touched"
+                                        class="invalid-feedback">
+                                        {{'Notices.Name_Is_Required'|translate}}
+                                    </div>
                                 </div>
 
                             </div>
@@ -100,16 +117,28 @@
                                         <div class="flex-container-col">
                                             <label>Precio 1000g </label>
                                             <input type="number" formControlName="1000">
+                                            <div *ngIf="productForm.get('prices.1000')?.invalid && productForm.get('prices.1000')?.touched"
+                                                class="invalid-feedback">
+                                                {{'Notices.Name_Is_Required'|translate}}
+                                            </div>
                                         </div>
 
                                         <div class="flex-container-col">
                                             <label>Precio 500g</label>
                                             <input type="number" formControlName="500">
+                                            <div *ngIf="productForm.get('prices.500')?.invalid && productForm.get('prices.500')?.touched"
+                                                class="invalid-feedback">
+                                                {{'Notices.Name_Is_Required'|translate}}
+                                            </div>
                                         </div>
 
-                                        <div class="flex-container-col"> 
+                                        <div class="flex-container-col">
                                             <label>Precio 250g </label>
                                             <input type="number" formControlName="250">
+                                            <div *ngIf="productForm.get('prices.250')?.invalid && productForm.get('prices.250')?.touched"
+                                                class="invalid-feedback">
+                                                {{'Notices.Name_Is_Required'|translate}}
+                                            </div>
                                         </div>
 
                                     </div>
@@ -121,14 +150,26 @@
                                         <div class="flex-container-col">
                                             <label>Descuento 1000g</label>
                                             <input type="number" formControlName="1000">
+                                            <div *ngIf="productForm.get('discounts.100')?.invalid && productForm.get('discounts.1000')?.touched"
+                                                class="invalid-feedback">
+                                                {{'Notices.Name_Is_Required'|translate}}
+                                            </div>
                                         </div>
                                         <div class="flex-container-col">
-                                            <label>Descuento 500g </label>
+                                            <label>Descuento 500g</label>
                                             <input type="number" formControlName="500">
+                                            <div *ngIf="productForm.get('discounts.500')?.invalid && productForm.get('discounts.500')?.touched"
+                                                class="invalid-feedback">
+                                                {{'Notices.Name_Is_Required'|translate}}
+                                            </div>
                                         </div>
                                         <div class="flex-container-col">
                                             <label>Descuento 250g </label>
                                             <input type="number" formControlName="250">
+                                            <div *ngIf="productForm.get('discounts.250')?.invalid && productForm.get('discounts.250')?.touched"
+                                                class="invalid-feedback">
+                                                {{'Notices.Name_Is_Required'|translate}}
+                                            </div>
                                         </div>
 
                                     </div>
@@ -137,133 +178,128 @@
                         </div>
                     </div>
                 </div>
-                <button type="submit" class="button_main">{{'Action.Add'|translate}}</button>
+                <button type="submit" class="button_main"
+                    [disabled]="!productForm.valid">{{'Action.Add'|translate}}</button>
             </form>
 
         </div>
 
     </div>
 
-    <div class="cart-list">
-        <div class="flex-col cart-box" *ngFor="let product of products">
-            <div class="flex-container">
-                <div class="product-card">
-                    <div class="product-image">
-                        <img src="./assets/img/{{product.image}}" alt="Exterior photo of {{product.name}}" alt="">
-                        <div class="titleCard">{{'Action.UploadImage'|translate}}</div>
-                        <div class="overlay"></div>
+
+    <form [formGroup]="productForm">
+        <div class="cart-list">
+            <div class="flex-col cart-box" *ngFor="let product of products">
+                <div class="flex-container">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img [src]="'./assets/img/' + productForm.get('image')?.value"
+                                alt="Exterior photo of {{ product.name }}">
+                            <div class="titleCard">{{ 'Action.UploadImage' | translate }}</div>
+                            <div class="overlay"></div>
+                        </div>
+                        <div>
+                            <app-upload-img (imageUploaded)="onImageUploaded($event)"></app-upload-img>
+                        </div>
                     </div>
-                    <div class="">
-                        <app-upload-img (imageUploaded)="onImageUploaded($event)"></app-upload-img>
+                    <div class="flex-col">
+                        <div class="cart-item">
+                            <div class="cart-item-actions">
+                                <!-- Categoría -->
+                                <div class="form-inline-select flex-container-col">
+                                    <label for="categorySelector">{{ 'Item.Category' | translate }}</label>
+                                    <div class="custom-select-wrapper">
+                                        <select formControlName="category" class="form-control custom-select">
+                                            <option value="HN">{{ 'BenificesHerbalHoney.Title' | translate }}</option>
+                                            <option value="HH">{{ 'BenificesHerbalHoney.Title' | translate }}</option>
+                                            <option value="HN">{{'BenificesHerbalHoney.Title'|translate}}</option>
+                                            <option value="HN">{{'BenificesHerbalHoney.Title'| translate}}</option>
+                                            <option value="HX">{{'BenificesHerbalHoney.Title'| translate}}</option>
+                                            <option value="HY">{{'BenificesHerbalHoney.Title'| translate}}</option>
+                                            <option value="HA">{{'BenificesHerbalHoney.Title'| translate}}</option>
+                                            <option value="HB">{{'BenificesHerbalHoney.Title'| translate}}</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <!-- Tipo -->
+                                <div class="form-inline-select flex-container-col">
+                                    <label for="typeSelector">{{ 'Item.Type' | translate }}</label>
+                                    <div class="custom-select-wrapper">
+                                        <select formControlName="type" class="form-control custom-select">
+                                            <option value="HN">{{ 'Honey' | translate }}</option>
+                                            <option value="MT">{{ 'Material.Title' | translate }}</option>
+                                            <option value="CC">{{'Cours.Title'|translate}}</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <!-- Estado -->
+                                <div class="form-inline-select flex-container-col">
+                                    <label for="stateSelector">{{ 'Item.State' | translate }}</label>
+                                    <div class="custom-select-wrapper">
+                                        <select formControlName="state" class="form-control custom-select">
+                                            <option value="SI">{{ 'Item.Available' | translate }}</option>
+                                            <option value="NO">{{ 'Item.NotAvailable' | translate }}</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Detalles del Producto -->
+                        <div class="cart-item">
+                            <div class="cart-item-actions">
+                                <div class="flex-container-col">
+                                    <label>{{ 'Item.Name' | translate }}</label>
+                                    <input formControlName="name" type="text" class="input">
+                                </div>
+                                <div class="flex-container-col">
+                                    <label>{{ 'Item.Description' | translate }}</label>
+                                    <input formControlName="description" type="text" class="input">
+                                </div>
+                                <div class="flex-container-col">
+                                    <label>{{ 'Item.Stock' | translate }}</label>
+                                    <input formControlName="stock" type="number" class="input">
+                                </div>
+                                <div class="flex-container-col">
+                                    <label>{{ 'City' | translate }}</label>
+                                    <input formControlName="city" type="text" class="input">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Precio y Descuento -->
+                        <div class="cart-item">
+                            <div class="cart-item-actions">
+                                <div class="form-inline-select flex-container-col">
+                                    <label for="weightSelector">{{ 'cart.CartItems.Weight' | translate }}</label>
+                                    <div class="custom-select-wrapper">
+                                        <select formControlName="weight" class="form-control custom-select"
+                                            (change)="onWeightChange(product)">
+                                            <option value="1000">1000g</option>
+                                            <option value="500">500g</option>
+                                            <option value="250">250g</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="flex-container-col" formGroupName="prices">
+                                    <label>{{ 'cart.CartItems.Price' | translate }}</label>
+                                    <input formControlName="1000" type="number" class="input">
+                                </div>
+                                <div class="flex-container-col" formGroupName="discounts">
+                                    <label>{{ 'Item.DTO' | translate }}</label>
+                                    <input formControlName="1000" type="number" class="input">
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="flex-col">
-                    <div class="cart-item">
-                        <div class="cart-item-actions">
-                            <div class="form-inline-select  flex-container-col">
-                                <label for="categorySelector">{{'Item.Category'| translate}} </label>
-                                <div class="custom-select-wrapper">
-                                    <select id="categorySelector" [(ngModel)]="product.category"
-                                        class="form-control custom-select" name="productCategory">
-                                        <option value="HN">{{'BenificesHerbalHoney.Title'| translate}}</option>
-                                        <option value="HX">{{'BenificesHerbalHoney.Title'| translate}}</option>
-                                        <option value="HY">{{'BenificesHerbalHoney.Title'| translate}}</option>
-                                        <option value="HA">{{'BenificesHerbalHoney.Title'| translate}}</option>
-                                        <option value="HB">{{'BenificesHerbalHoney.Title'| translate}}</option>
-                                    </select>
-                                </div>
-                            </div>
-
-                            <div class="form-inline-select  flex-container-col">
-                                <label for="typeSelector">{{'Item.Type'|translate}} </label>
-                                <div class="custom-select-wrapper">
-                                    <select id="typeSelector" [(ngModel)]="product.type"
-                                        class="form-control custom-select" name="productType">
-                                        <option value="HN">{{'Honey'|translate}}</option>
-                                        <option value="MT">{{'Material.Title'| translate}}</option>
-                                        <option value="CC">{{'Cours.Title'|translate}}</option>
-                                    </select>
-                                </div>
-                            </div>
-
-                            <div class="form-inline-select  flex-container-col">
-                                <label for="stateSelector">{{'Item.State'| translate}}</label>
-                                <div class="custom-select-wrapper">
-                                    <select id="stateSelector" [(ngModel)]="product.state"
-                                        class="form-control custom-select" name="productState">
-                                        <option value="NO">{{'Item.NotAvailable'| translate}}</option>
-                                        <option value="SI">{{'Item.Available'| translate}}</option>
-                                    </select>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                    <div class="cart-item">
-                        <div class="cart-item-actions">
-                            <div class="flex-container-col">
-                                <label>{{'Item.Name'| translate}} </label>
-                                <input type="text" class="input" [(ngModel)]="product.name" name="productName">
-                            </div>
-
-                            <div class="flex-container-col">
-                                <label>{{'Item.Description'| translate}} </label>
-                                <input type="text" class="input" [(ngModel)]="product.description"
-                                    name="productDescription">
-                            </div>
-
-                            <div class="flex-container-col">
-                                <label>{{'Item.Stock'| translate}} </label>
-                                <input type="number" class="input" [(ngModel)]="product.stock" name="productStock">
-                            </div>
-
-                            <div class="flex-container-col">
-                                <label>{{'City'| translate}} </label>
-                                <input type="text" class="input" [(ngModel)]="product.city" name="productCity">
-                            </div>
-
-                        </div>
-                    </div>
-
-                    <div class="cart-item">
-                        <div class="cart-item-actions">
-
-
-                            <div class="form-inline-select  flex-container-col flex-container-col">
-                                <label for="weightSelector">{{'cart.CartItems.Weight'|translate}} </label>
-                                <div class="custom-select-wrapper">
-                                    <select id="weightSelector" [(ngModel)]="product.weight"
-                                        class="form-control custom-select" name="productWeight"
-                                        (change)="onWeightChange(product)">
-                                        <option value="">{{'cart.CartItems.Weight'|translate}}</option>
-                                        <option value="1000">1000g</option>
-                                        <option value="500">500g</option>
-                                        <option value="250">250g</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="flex-container-col">
-                                <label>{{'cart.CartItems.Price'|translate}}</label>
-                                <input type="number" class="input" [(ngModel)]="product.selectedPrice"
-                                    name="productPrice">
-                            </div>
-
-                            <div class="flex-container-col">
-                                <label>{{'Item.DTO'|translate}} </label>
-                                <input type="number" class="input" [(ngModel)]="product.selectedDto"
-                                    name="productDiscount">
-                            </div>
-
-                        </div>
-
-                    </div>
-                </div>
-
+                <button type="submit" class="button_main" (click)="saveChanges(product.id)">{{ 'Action.Save' | translate
+                    }}</button>
+                <button type="submit" class="button_main" (click)="removeProduct(product.id)">Eliminar</button>
             </div>
-            <button type="button" class="button_main"
-                (click)="saveChanges(product)">{{'Action.Save'|translate}}</button>
         </div>
-    </div>
-
+    </form>
 
 </section>
