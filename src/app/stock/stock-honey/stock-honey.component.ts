@@ -176,8 +176,9 @@ export class StockHoneyComponent implements OnInit {
 
 
 
-  onImageUploaded(imageName: string): void {
-    this.productForm.patchValue({ image: imageName });
+  onImageUploaded(imageName: string, index: number): void {
+    console.log('Imagen subida:', imageName);
+    this.productForms[index].patchValue({ image: imageName });
   }
 
 
@@ -199,33 +200,15 @@ export class StockHoneyComponent implements OnInit {
 
 
   removeProduct(index: number): void {
-    // Verifica que el índice esté dentro de los límites del array
-    console.log('Estoy en el removeProduct :', index);
-    console.log('el numero de registros :', this.productForms.length);
-    if (index >= 0 && index <= this.productForms.length) {
-      // Eliminar producto
+    if (index >= 0 && index < this.products.length) {
       this.products.splice(index, 1);
-  
-      // Eliminar el formulario correspondiente
       this.productForms.splice(index, 1);
-
-      console.log('Estoy en el removeProduct ante de llamar al  metodo deleteProduct :', index);
       this.stockService.deleteProduct(index).subscribe(
-        (response) => {
-          console.log('Product updated', response);
-          this.snackBar.open('Producto eliminado correctamente', 'Cerrar', { duration: 3000 });
-        },
-        (error) => {
-          console.error('Error updating product', error);
-          this.snackBar.open('Error al eliminar el producto', 'Cerrar', { duration: 3000 });
-        }
+        () => this.snackBar.open('Producto eliminado correctamente', 'Cerrar', { duration: 3000 }),
+        (error) => console.error('Error eliminando producto', error)
       );
-      this.snackBar.open('Producto eliminado correctamente', 'Cerrar', { duration: 3000 });
-      // Opcional: reindexar si es necesario
-      this.reindexForms();
     } else {
       console.error(`Index ${index} is out of bounds`);
-      this.snackBar.open('Error al eliminar', 'Cerrar', { duration: 3000 });
     }
   }
 

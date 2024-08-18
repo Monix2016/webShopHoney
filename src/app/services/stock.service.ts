@@ -20,6 +20,7 @@ export class StockService {
       map(products => products.map(product => {
         product.prices = JSON.parse(product.prices || '{}');
         product.discounts = JSON.parse(product.discounts || '{}');
+        console.log('estoy en el StockService los productos son:',product)
         return product;
       }))
     );
