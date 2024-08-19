@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable, map } from 'rxjs';
+import { Observable, catchError, map, throwError } from 'rxjs';
 import { IHoney } from '../interfaces/honey';
 
 @Injectable({
@@ -53,6 +53,19 @@ export class StockService {
       return product.discounts[selectedWeight];
     }
     return null; // Devuelve null si no se encuentra el peso seleccionado
+  }
+
+  uploadImage(file: File): Observable<string> {
+    const formData = new FormData();
+    formData.append('image', file);
+
+    return this.http.post<{ path: string }>(this.apiUrl, formData).pipe(
+      map(response => response.path),
+      catchError((error) => {
+        console.error('Error uploading image', error);
+        return throwError(error);
+      })
+    );
   }
 
 }
