@@ -6,6 +6,7 @@ import { StockService } from '../../services/stock.service';
 import { IHoney } from '../../interfaces/honey';
 import { UploadImgComponent } from '../../functionalities/upload-img/upload-img.component';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { AddProductComponent } from './add-product/add-product.component';
 
 @Component({
   selector: 'app-stock-honey',
@@ -15,7 +16,8 @@ import { MatSnackBar } from '@angular/material/snack-bar';
     CommonModule,
     ReactiveFormsModule,
     TranslateModule,
-    UploadImgComponent
+    UploadImgComponent,
+    AddProductComponent
   ],
   templateUrl: './stock-honey.component.html',
   styleUrl: './stock-honey.component.css'
@@ -23,11 +25,11 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 export class StockHoneyComponent implements OnInit {
 
   products: IHoney[] = [];
-  productForm!: FormGroup;
+
 
   productForms: FormGroup[] = [];
 
-  showAddProductForm: boolean = false;
+
   http: any;
 
 
@@ -38,35 +40,11 @@ export class StockHoneyComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.initializeForm();
+
     this.getProducts();
   }
 
-  // Inicializa el FormGroup
-  initializeForm(): void {
-    this.productForm = this.fb.group({
-      name: ['tstForm', Validators.required],
-      description: ['tstForm', Validators.required],
-      prices: this.fb.group({
-        '1000': [0, Validators.required],
-        '500': [0, Validators.required],
-        '250': [0, Validators.required]
-      }),
-      discounts: this.fb.group({
-        '1000': [0],
-        '500': [0],
-        '250': [0]
-      }),
-      stock: [0, Validators.required],
-      type: ['HN', Validators.required],
-      weight: ['1000', Validators.required],
-      image: ['honey-5043708_1280.jpg'],
-      state: ['SI', Validators.required],
-      category: ['HD', Validators.required],
-      city: ['Rabat', Validators.required],
-      quantity: [2],
-    });
-  }
+ 
 
   createProductForm(product: IHoney): FormGroup {
     return this.fb.group({
@@ -106,42 +84,8 @@ export class StockHoneyComponent implements OnInit {
   }
 
 
-  addProduct(): void {
-    this.showAddProductForm = true;
-    this.initializeForm();
-  }
 
-  saveNewProduct(): void {
-    if (this.productForm.invalid) {
-      this.productForm.markAllAsTouched();
-      return;
-    }
 
-    if (this.productForm.valid) {
-      const newProduct: IHoney = this.productForm.value;
-      this.stockService.saveProduct(newProduct).subscribe(
-        (response: IHoney) => {
-          this.products.push(response);
-          this.showAddProductForm = false;
-          console.log('Los datos del nuevo Formulario', response);
-          this.productForm.reset();  // Resetear el formulario después de guardar
-          
-          this.snackBar.open('Producto añadido correctamente', 'Cerrar', {
-            duration: 3000,
-          });
-          this.getProducts();
-          //this.initializeForm();
-        },
-        (error) => {
-          console.error('Error saving product', error);
-          this.snackBar.open('Error al añadir el producto', 'Cerrar', {
-            duration: 3000,
-          });
-        }
-      );
-      this.getProducts();
-    }
-  }
 
   saveChanges(index: number): void {
     console.log('Product Forms:', this.productForms);

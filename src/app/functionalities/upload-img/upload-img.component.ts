@@ -30,6 +30,10 @@ export class UploadImgComponent {
   constructor(private http: HttpClient) {}
 
   uploadImage(): void {
+    if (!this.selectedFile) {
+      console.error("No file selected");
+      return;
+   }
     if (this.http) {
       const formData = new FormData();
       formData.append('image', this.selectedFile!);
