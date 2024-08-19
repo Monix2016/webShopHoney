@@ -3,7 +3,7 @@
         <div class="discount" >
             <p>DTO {{ housingLocation.discounts }} %</p>
         </div>
-        <img class="listing-photo animated-img" [src]="housingLocation.image"
+        <img class="listing-photo animated-img" src="./assets/img/{{housingLocation.image}}"
             alt="Exterior photo of {{housingLocation.name}}" [routerLink]="['/details', housingLocation.id]">
 
     </div>
