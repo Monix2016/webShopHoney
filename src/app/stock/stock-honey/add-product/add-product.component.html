@@ -28,7 +28,7 @@
                             <div class="overlay"></div>
                         </div>
                         <div>
-                            <app-upload-img (imageUploaded)="onImageNewUploaded($event)"></app-upload-img>
+                            <input type="file" (change)="onFileChange($event)" />
                         </div>
                     </div>
 
@@ -81,7 +81,7 @@
 
                         <div class="cart-item">
                             <div class="cart-item-actions">
-
+                                <input formControlName="image" placeholder="Image" readonly />
                                 <div class="flex-container-col">
                                     <label>{{'Item.Name'|translate}} </label>
                                     <input type="text" formControlName="name">

@@ -26,6 +26,7 @@ export class AddProductComponent implements OnInit {
   productForm!: FormGroup;
   showAddProductForm: boolean = false;
   products: IHoney[] = [];
+  selectedFile: File | null = null;
 
   constructor(
     private snackBar: MatSnackBar,
@@ -51,7 +52,8 @@ export class AddProductComponent implements OnInit {
       stock: [0, Validators.required],
       type: ['HN', Validators.required],
       weight: ['1000', Validators.required],
-      image: ['honey-5043708_1280.jpg'],
+      // image: ['honey-5043708_1280.jpg'],
+      image: [''],
       state: ['SI', Validators.required],
       category: ['HD', Validators.required],
       city: ['Rabat', Validators.required],
@@ -66,6 +68,16 @@ export class AddProductComponent implements OnInit {
   addProduct(): void {
     this.showAddProductForm = true;
     // this.initializeForm();
+  }
+
+  onFileChange(event: any) {
+    if (event.target.files.length > 0) {
+      this.selectedFile = event.target.files[0].name;
+      console.log('el file selecionado',this.selectedFile)
+          // Actualiza el campo 'image' en el formulario
+    this.productForm.patchValue({ image: this.selectedFile });
+    }
+   
   }
 
 
@@ -101,9 +113,10 @@ export class AddProductComponent implements OnInit {
     }
   }
 
-  onImageNewUploaded(imageName: string): void {
-    console.log('Imagen subida:', imageName);
+  onImageUploaded(imageName: string): void {
+    console.log('Nombre de imagen recibido onImageUploaded:', imageName);
     this.productForm.patchValue({ image: imageName });
+    console.log('Formulario actualizado con imagen:', this.productForm.value);
   }
 
 }
