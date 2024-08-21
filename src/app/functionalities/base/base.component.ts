@@ -4,6 +4,7 @@ import { IHoney } from '../../interfaces/honey';
 import { ICours } from '../../interfaces/i-courses';
 import { IMaterial } from '../../interfaces/i-material';
 import { HousingService } from '../../services/housing.service';
+import { ScrollAnimationService } from '../../services/scroll-animation.service';
 
 @Component({
   selector: 'app-base',
@@ -22,9 +23,13 @@ export class BaseComponent {
 
   constructor(
     public translate: TranslateService,
+    private scrollAnimationService: ScrollAnimationService
+
   ) {
     this.coursesHoneyList = this.housingService.getAllCourses();
     this.materialHoneyList = this.housingService.getAllMaterial();
+    this.scrollAnimationService.initializeScrollAnimation();
+    
   }
 
   ngOnInit(): void {
