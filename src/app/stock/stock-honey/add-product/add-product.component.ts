@@ -98,6 +98,8 @@ export class AddProductComponent implements OnInit {
           this.stockService.getProducts(),
           this.snackBar.open('Producto añadido correctamente', 'Cerrar', {
             duration: 3000,
+            horizontalPosition: "start",
+            verticalPosition: "top",
           }
          
         );
