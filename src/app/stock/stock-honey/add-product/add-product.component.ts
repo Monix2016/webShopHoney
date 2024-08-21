@@ -95,10 +95,12 @@ export class AddProductComponent implements OnInit {
           this.showAddProductForm = false;
           console.log('Los datos del nuevo Formulario', response);
           this.productForm.reset();  // Resetear el formulario después de guardar
-
+          this.stockService.getProducts(),
           this.snackBar.open('Producto añadido correctamente', 'Cerrar', {
             duration: 3000,
-          });
+          }
+         
+        );
           // this.getProducts();
 
         },
@@ -106,6 +108,7 @@ export class AddProductComponent implements OnInit {
           console.error('Error saving product', error);
           this.snackBar.open('Error al añadir el producto', 'Cerrar', {
             duration: 3000,
+           
           });
         }
       );
