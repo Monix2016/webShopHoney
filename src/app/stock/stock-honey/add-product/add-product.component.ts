@@ -110,6 +110,8 @@ export class AddProductComponent implements OnInit {
           console.error('Error saving product', error);
           this.snackBar.open('Error al añadir el producto', 'Cerrar', {
             duration: 3000,
+            horizontalPosition: "start",
+            verticalPosition: "top",
            
           });
         }

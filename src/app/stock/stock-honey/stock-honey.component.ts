@@ -44,7 +44,7 @@ export class StockHoneyComponent implements OnInit {
     this.getProducts();
   }
 
- 
+
 
   createProductForm(product: IHoney): FormGroup {
     return this.fb.group({
@@ -106,26 +106,34 @@ export class StockHoneyComponent implements OnInit {
       return;
     }
 
-    this.stockService.updateProduct(updatedProduct,index).subscribe(
+    this.stockService.updateProduct(updatedProduct, index).subscribe(
       (response) => {
         console.log('Product updated', response);
-        this.snackBar.open('Producto actualizado correctamente', 'Cerrar', { duration: 3000 });
+        this.snackBar.open('Producto actualizado correctamente', 'Cerrar', {
+          duration: 3000,
+          horizontalPosition: "start",
+          verticalPosition: "top",
+        });
       },
       (error) => {
         console.error('Error updating product', error);
-        this.snackBar.open('Error al actualizar el producto', 'Cerrar', { duration: 3000 });
+        this.snackBar.open('Error al actualizar el producto', 'Cerrar', {
+          duration: 3000,
+          horizontalPosition: "start",
+          verticalPosition: "top",
+        });
       }
     );
   }
 
-  onFileChange(event: any,index: number) {
+  onFileChange(event: any, index: number) {
     if (event.target.files.length > 0) {
       this.selectedFile = event.target.files[0].name;
-      console.log('el file selecionado',this.selectedFile)
-          // Actualiza el campo 'image' en el formulario
-    this.productForms[index].patchValue({ image: this.selectedFile });
+      console.log('el file selecionado', this.selectedFile)
+      // Actualiza el campo 'image' en el formulario
+      this.productForms[index].patchValue({ image: this.selectedFile });
     }
-   
+
   }
 
   onImageUploaded(imageName: string, index: number): void {
@@ -164,7 +172,7 @@ export class StockHoneyComponent implements OnInit {
     }
   }
 
-  
+
   reindexForms(): void {
     this.productForms.forEach((form, i) => {
       form.get('id')?.setValue(i); // Actualiza el índice o ID si lo estás manejando en los formularios
