@@ -88,25 +88,28 @@ export class StockHoneyComponent implements OnInit {
 
 
   saveChanges(index: number): void {
+
+
     console.log('Product Forms:', this.productForms);
     console.log('Index:', index);
     console.log('Product Forms length:', this.productForms.length);
     const updatedProduct = this.productForms[index]?.value;  // Obtén los valores del formulario
+    const productId = this.products[index].id;  // Obtener el verdadero ID del producto
 
-    if (index < 0 || index >= this.productForms.length) {
+    if (productId < 0 || productId >= this.productForms.length) {
       console.error(`Index ${index} is out of bounds`);
       return;
     }
-    if (!this.productForms[index]) {
-      console.error(`Form at index ${index} is undefined`);
+    if (!this.productForms[productId]) {
+      console.error(`Form at index ${productId} is undefined`);
       return;
     }
-    if (this.productForms[index].invalid) {
-      this.productForms[index].markAllAsTouched();
+    if (this.productForms[productId].invalid) {
+      this.productForms[productId].markAllAsTouched();
       return;
     }
 
-    this.stockService.updateProduct(updatedProduct, index).subscribe(
+    this.stockService.updateProduct(updatedProduct, productId).subscribe(
       (response) => {
         console.log('Product updated', response);
         this.snackBar.open('Producto actualizado correctamente', 'Cerrar', {

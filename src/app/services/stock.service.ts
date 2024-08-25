@@ -26,10 +26,10 @@ export class StockService {
     );
   }
 
-  updateProduct(product: any, index:any) {
+  updateProduct(product: IHoney, id:number) {
     console.log('el index para el update',product )
-   console.log('el index para el update',index )
-    return this.http.put(`${this.apiUrl}/${index}`, product);
+   console.log('el index para el update',id )
+    return this.http.put<IHoney>(`${this.apiUrl}/${id}`, product);
 
   }
 

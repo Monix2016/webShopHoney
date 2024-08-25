@@ -85,17 +85,16 @@ export class AddProductComponent implements OnInit {
     if (this.productForm.invalid) {
       this.productForm.markAllAsTouched();
       return;
-    }
+  }
 
-    if (this.productForm.valid) {
-      const newProduct: IHoney = this.productForm.value;
-      this.stockService.saveProduct(newProduct).subscribe(
-        (response: IHoney) => {
-          this.products.push(response);
-          this.showAddProductForm = false;
+  if (this.productForm.valid) {
+    const newProduct: IHoney = this.productForm.value;
+    this.stockService.saveProduct(newProduct).subscribe(
+      (response: IHoney) => {
+        this.products.push(response);  // El producto con el ID ya generado
+        this.showAddProductForm = false;
+        this.productForm.reset();  // Resetea el formulario
           console.log('Los datos del nuevo Formulario', response);
-          this.productForm.reset();  // Resetear el formulario después de guardar
-          this.stockService.getProducts(),
           this.snackBar.open('Producto añadido correctamente', 'Cerrar', {
             duration: 3000,
             horizontalPosition: "start",
