@@ -18,32 +18,44 @@ export class HousingService {
   readonly baseUrl = 'https://angular.io/assets/images/tutorials/faa';
 
   protected housingLocationList: IHoney[] = [];
-  protected coursList: ICours[]=MOCKCOURSES;
+  protected coursList: ICours[] = MOCKCOURSES;
   //protected materialList: IMaterial[]=MOCKMATERIAL;
-  protected materialList: IMaterial[]=[];
-  protected team:ITeam[]=MOCKTEAM;
+  protected materialList: IMaterial[] = [];
+  protected team: ITeam[] = MOCKTEAM;
   filteredLocationList: IHoney[] = [];
   private cartService!: CartService;
- 
-  constructor(private stockService: StockService) {}
 
-    // Método para obtener los productos
-    getHousingLocations(): Observable<IHoney[]> {
-      return this.stockService.getProducts();
-    }
+  constructor(private stockService: StockService) { }
 
-  getAllHousingLocations(): IHoney[] {
+  // Método para obtener los productos
+  getHousingLocations(): Observable<IHoney[]> {
+    return this.stockService.getProducts();
+  }
+
+  getAllHousingLocations2(): IHoney[] {
     return this.housingLocationList;
   }
-  getAllCourses(): ICours[]{
+
+  getAllHousingLocations(): void {
+    this.stockService.getProducts().subscribe(
+      (products: IHoney[]) => {
+        this.housingLocationList = products;
+      },
+      (error) => {
+        console.error('Error al obtener los productos', error);
+      }
+    );
+  }
+
+  getAllCourses(): ICours[] {
     return this.coursList;
   }
 
-  getAllMaterial():IMaterial[]{
+  getAllMaterial(): IMaterial[] {
     return this.materialList;
   }
 
-  getTeam():ITeam[]{
+  getTeam(): ITeam[] {
     return this.team;
   }
 
@@ -51,12 +63,12 @@ export class HousingService {
     return this.housingLocationList.find(housingLocation => housingLocation.id === id);
   }
 
-  getCoursById(id:number):ICours |undefined{
-    return this.coursList.find(coursHoney=> coursHoney.id===id);
+  getCoursById(id: number): ICours | undefined {
+    return this.coursList.find(coursHoney => coursHoney.id === id);
   }
 
-  getMaterialById(id:number):IMaterial| undefined{
-    return this.materialList.find(materialHoney => materialHoney.id===id)
+  getMaterialById(id: number): IMaterial | undefined {
+    return this.materialList.find(materialHoney => materialHoney.id === id)
   }
 
   submitApplication(firstName: string, lastName: string, email: string) {
@@ -69,15 +81,13 @@ export class HousingService {
     }
     const lowercasedText = text.toLowerCase();
     return this.housingLocationList.filter(
-      housingLocation => 
-        
-        {
-          const matchesCity = housingLocation.city.toLowerCase().includes(lowercasedText);
-          const matchesType = housingLocation.type.toLowerCase().includes(lowercasedText);
-          const matchesState = housingLocation.state.toLowerCase().includes(lowercasedText);
-          // Agregar más campos de filtro aquí si es necesario
-          return matchesCity || matchesType || matchesState ;
-        }
+      housingLocation => {
+        const matchesCity = housingLocation.city.toLowerCase().includes(lowercasedText);
+        const matchesType = housingLocation.type.toLowerCase().includes(lowercasedText);
+        const matchesState = housingLocation.state.toLowerCase().includes(lowercasedText);
+        // Agregar más campos de filtro aquí si es necesario
+        return matchesCity || matchesType || matchesState;
+      }
     );
   }
 
