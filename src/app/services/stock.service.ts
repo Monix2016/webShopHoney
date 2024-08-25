@@ -41,19 +41,31 @@ export class StockService {
     return this.http.post<IHoney>(this.apiUrl, product);
   }
 
-  getPrice(product: any, selectedWeight: string): number | null {
+  getPrice1(product: any, selectedWeight: string): number | null {
     if (product && product.prices && product.prices[selectedWeight]) {
       return product.prices[selectedWeight];
     }
     return null; // Devuelve null si no se encuentra el peso seleccionado
   }
   
-  getDto(product: any, selectedWeight: string): number | null {
+  getDto1(product: any, selectedWeight: string): number | null {
     if (product && product.discounts && product.discounts[selectedWeight]) {
       return product.discounts[selectedWeight];
     }
     return null; // Devuelve null si no se encuentra el peso seleccionado
   }
+
+  getPrice(product: IHoney, weight: string): number | null {
+    console.log('Product Prices desde StockService:', product.prices);
+    console.log('Requested Weight desde StockService:', weight);
+    return product.prices[weight] || null;
+}
+
+getDto(product: IHoney, weight: string): number | null {
+    return product.discounts[weight] || null;
+}
+
+
 
   // uploadImage(file: File): Observable<string> {
   //   const formData = new FormData();

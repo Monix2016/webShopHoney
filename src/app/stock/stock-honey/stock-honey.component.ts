@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { FormsModule, FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core';
@@ -32,11 +32,13 @@ export class StockHoneyComponent implements OnInit {
 
   http: any;
   selectedFile: File | null = null;
+  selectedWeight: string = '1000'; // Valor inicial, puede cambiar
 
   constructor(
     private stockService: StockService,
     private fb: FormBuilder,
-    private snackBar: MatSnackBar
+    private snackBar: MatSnackBar,
+    private cd: ChangeDetectorRef
   ) { }
 
   ngOnInit(): void {
@@ -48,8 +50,7 @@ export class StockHoneyComponent implements OnInit {
 
   createProductForm(product: IHoney): FormGroup {
     return this.fb.group({
-      name: [product.name, Validators.required],
-      description: [product.description, Validators.required],
+      weight: [product.weight, Validators.required],
       prices: this.fb.group({
         '1000': [product.prices['1000'], Validators.required],
         '500': [product.prices['500'], Validators.required],
@@ -60,9 +61,11 @@ export class StockHoneyComponent implements OnInit {
         '500': [product.discounts['500']],
         '250': [product.discounts['250']],
       }),
+
+      name: [product.name, Validators.required],
+      description: [product.description, Validators.required],
       stock: [product.stock, Validators.required],
       type: [product.type, Validators.required],
-      weight: [product.weight, Validators.required],
       image: [product.image],
       state: [product.state, Validators.required],
       category: [product.category, Validators.required],
@@ -145,7 +148,7 @@ export class StockHoneyComponent implements OnInit {
   }
 
 
-  onWeightChange(product: any): void {
+  onWeightChange1(product: any): void {
     const selectedWeight = product.weight;
     const price = this.stockService.getPrice(product, selectedWeight);
     const discount = this.stockService.getDto(product, selectedWeight);
@@ -157,8 +160,45 @@ export class StockHoneyComponent implements OnInit {
     if (discount !== null) {
       product.selectedDto = discount;
     }
+
+    console.log('estoy en onWeightChange y el peso es ', selectedWeight)
+    console.log('estoy en onWeightChange y el precio es ', price)
   }
 
+  onWeightChange(event: any, product: any): void {
+    this.selectedWeight = event.target.value;
+    const formGroup = this.productForms[product.id];
+
+    if (formGroup) {
+      const priceControl = formGroup.get('prices')?.get(this.selectedWeight);
+      const discountControl = formGroup.get('discounts')?.get(this.selectedWeight);
+
+      if (priceControl) {
+        const price = this.stockService.getPrice(product, this.selectedWeight);
+        if (price !== null) {
+          priceControl.setValue(price);
+        }
+      }
+
+      if (discountControl) {
+        const discount = this.stockService.getDto(product, this.selectedWeight);
+        if (discount !== null) {
+          discountControl.setValue(discount);
+        }
+      }
+
+      formGroup.get('weight')?.setValue(this.selectedWeight);
+      console.log('formGroup:', formGroup);
+      console.log('Selected Weight:', this.selectedWeight);
+      console.log('Price Control:', formGroup.get('prices')?.get(this.selectedWeight)?.value);
+      console.log('Discount Control:', formGroup.get('discounts')?.get(this.selectedWeight)?.value);
+      console.log('Price Control:', priceControl);
+console.log('Discount Control:', discountControl);
+
+              // Forzar actualización
+              this.cd.detectChanges();
+    }
+  }
 
 
 
