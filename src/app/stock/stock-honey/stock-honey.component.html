@@ -25,6 +25,19 @@
                     <div class="flex-col">
                         <div class="cart-item">
                             <div class="cart-item-actions">
+
+                                <!-- Tipo -->
+                                <div class="form-inline-select flex-container-col">
+                                    <label for="typeSelector">{{ 'Item.Type' | translate }}</label>
+                                    <div class="custom-select-wrapper">
+                                        <select formControlName="type" class="form-control custom-select">
+                                            <option value="HN">{{ 'Honey' | translate }}</option>
+                                            <option value="MT">{{ 'Material.Title' | translate }}</option>
+                                            <option value="CC">{{'Cours.Title'|translate}}</option>
+                                        </select>
+                                    </div>
+                                </div>
+
                                 <!-- Categoría -->
                                 <div class="form-inline-select flex-container-col">
                                     <label for="categorySelector">{{ 'Item.Category' | translate }}</label>
@@ -38,18 +51,6 @@
                                             <option value="HY">{{'BenificesHerbalHoney.Title'| translate}}</option>
                                             <option value="HA">{{'BenificesHerbalHoney.Title'| translate}}</option>
                                             <option value="HB">{{'BenificesHerbalHoney.Title'| translate}}</option>
-                                        </select>
-                                    </div>
-                                </div>
-
-                                <!-- Tipo -->
-                                <div class="form-inline-select flex-container-col">
-                                    <label for="typeSelector">{{ 'Item.Type' | translate }}</label>
-                                    <div class="custom-select-wrapper">
-                                        <select formControlName="type" class="form-control custom-select">
-                                            <option value="HN">{{ 'Honey' | translate }}</option>
-                                            <option value="MT">{{ 'Material.Title' | translate }}</option>
-                                            <option value="CC">{{'Cours.Title'|translate}}</option>
                                         </select>
                                     </div>
                                 </div>
