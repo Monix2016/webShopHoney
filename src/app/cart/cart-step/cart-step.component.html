@@ -4,7 +4,7 @@
     <div *ngFor="let item of cartItems" class="flex-container cart-box">
 
       <div>
-        <img class="cart-img" [src]="item?.photo" alt="Exterior photo of {{item?.name}}" />
+        <img class="cart-img" src="./assets/img/{{item?.photo}}"  alt="Exterior photo of {{item?.name}}" />
       </div>
 
       <div class="cart-item" *ngIf="item.type=== 'HN'">
