@@ -32,7 +32,8 @@ export class StockHoneyComponent implements OnInit {
 
   http: any;
   selectedFile: File | null = null;
-  selectedWeight: string = '1000'; // Valor inicial, puede cambiar
+  selectedWeight!: any;
+  // selectedWeight: string = '1000'; // Valor inicial, puede cambiar
 
   constructor(
     private stockService: StockService,
@@ -148,58 +149,74 @@ export class StockHoneyComponent implements OnInit {
   }
 
 
-  onWeightChange1(product: any): void {
-    const selectedWeight = product.weight;
-    const price = this.stockService.getPrice(product, selectedWeight);
-    const discount = this.stockService.getDto(product, selectedWeight);
-
-    if (price !== null) {
-      product.selectedPrice = price;
-    }
-
-    if (discount !== null) {
-      product.selectedDto = discount;
-    }
-
-    console.log('estoy en onWeightChange y el peso es ', selectedWeight)
-    console.log('estoy en onWeightChange y el precio es ', price)
-  }
 
   onWeightChange(event: any, product: any): void {
     this.selectedWeight = event.target.value;
+    console.log('Soy el peso selelcionado',this.selectedWeight)
     const formGroup = this.productForms[product.id];
-
+ 
     if (formGroup) {
-      const priceControl = formGroup.get('prices')?.get(this.selectedWeight);
-      const discountControl = formGroup.get('discounts')?.get(this.selectedWeight);
-
-      if (priceControl) {
-        const price = this.stockService.getPrice(product, this.selectedWeight);
-        if (price !== null) {
-          priceControl.setValue(price);
-        }
-      }
-
-      if (discountControl) {
-        const discount = this.stockService.getDto(product, this.selectedWeight);
-        if (discount !== null) {
-          discountControl.setValue(discount);
-        }
-      }
-
-      formGroup.get('weight')?.setValue(this.selectedWeight);
-      console.log('formGroup:', formGroup);
-      console.log('Selected Weight:', this.selectedWeight);
-      console.log('Price Control:', formGroup.get('prices')?.get(this.selectedWeight)?.value);
-      console.log('Discount Control:', formGroup.get('discounts')?.get(this.selectedWeight)?.value);
-      console.log('Price Control:', priceControl);
-console.log('Discount Control:', discountControl);
-
-              // Forzar actualización
-              this.cd.detectChanges();
+       const priceControl = formGroup.get('prices')?.get(this.selectedWeight);
+       const discountControl = formGroup.get('discounts')?.get(this.selectedWeight);
+ 
+       if (priceControl) {
+          const price = this.stockService.getPrice(product, this.selectedWeight);
+          console.log('estoy en onWeightChange y el peso es ', String(this.selectedWeight))
+          console.log('estoy en onWeightChange y el precio es ', price)
+          if (price !== null) {
+             priceControl.setValue(price);
+             
+             
+             // Forzar la actualización
+             priceControl.markAsDirty();
+             priceControl.markAsTouched();
+          }
+       }
+ 
+       if (discountControl) {
+          const discount = this.stockService.getDto(product,this.selectedWeight);
+          console.log('estoy en onWeightChange y el peso es ', String(this.selectedWeight))
+          console.log('estoy en onWeightChange y el descuento es ', discount)
+          if (discount !== null) {
+             discountControl.setValue(discount);
+             // Forzar la actualización
+             discountControl.markAsDirty();
+             discountControl.markAsTouched();
+          }
+       }
+ 
+       formGroup.get('weight')?.setValue(Number(this.selectedWeight));
+       console.log('estoy en onWeightChange este es el formulario ', formGroup)
     }
-  }
+ }
 
+
+//  onWeightChange(event: any, product: IHoney): void {
+//   const selectedWeight = parseInt(event.target.value, 10);  // Asegúrate de que es un número
+//   const formGroup = this.productForms[product.id];
+
+//   if (formGroup) {
+//      const priceControl = formGroup.get('prices')?.get(String(selectedWeight)); // Convierte a string al obtener los valores
+//      const discountControl = formGroup.get('discounts')?.get(String(selectedWeight));
+
+//      if (formGroup.get('prices')?.get(this.selectedWeight)) {
+//       const priceControl = formGroup.get('prices')?.get(this.selectedWeight);
+                                          
+//      } else {
+//       console.error(`Control for prices -> ${this.selectedWeight} not found`);}
+  
+
+//       if (formGroup.get('discounts')?.get(this.selectedWeight)) {
+//         const discountControl = formGroup.get('discounts')?.get(this.selectedWeight);
+//        }else {
+//         console.error(`Control for discounts -> ${this.selectedWeight} not found`);
+//     }
+//      }
+
+//      formGroup.get('weight')?.setValue(this.selectedWeight);
+//      console.log('estoy en onWeightChange este es el formulario ', formGroup)
+  
+// }
 
 
   removeProduct(index: number): void {

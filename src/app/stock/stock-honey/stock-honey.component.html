@@ -107,12 +107,12 @@
 
                                 <div class="flex-container-col" [formGroupName]="'prices'">
                                     <label>{{ 'cart.CartItems.Price' | translate }}</label>
-                                    <input [formControlName]="selectedWeight" type="number" class="input">
-                                </div>
-                                <div class="flex-container-col" [formGroupName]="'discounts'">
+                                    <input formControlName="{{ selectedWeight }}" type="number" class="input">
+                                 </div>
+                                 <div class="flex-container-col" [formGroupName]="'discounts'">
                                     <label>{{ 'Item.DTO' | translate }}</label>
-                                    <input [formControlName]="selectedWeight" type="number" class="input">
-                                </div>
+                                    <input formControlName="{{ selectedWeight }}" type="number" class="input">
+                                 </div>
 
                             </div>
                         </div>

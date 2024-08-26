@@ -6,7 +6,7 @@ export const MOCKHONEYS:IHoney[]=[{
     name: 'Miel de test 6',
     description: 'Miel de test 6',
 
-    weight: '1000',
+    weight: 1000,
     image: `./assets/img/honey-5043708_1280.jpg`,
     city: 'Oakland',
     state: 'En stock',
@@ -27,7 +27,7 @@ export const MOCKHONEYS:IHoney[]=[{
     name: 'Miel de test 6',
     description: 'Miel de test 6',
 
-    weight: '1000',
+    weight: 1000,
     image: `./assets/img/honey-5043708_1280.jpg`,
     city: 'Oakland',
     state: 'En stock',
@@ -47,7 +47,7 @@ export const MOCKHONEYS:IHoney[]=[{
     name: 'Miel de test 6',
     description: 'Miel de test 6',
 
-    weight: '1000',
+    weight: 1000,
     image: `./assets/img/honey-5043708_1280.jpg`,
     city: 'Oakland',
     state: 'En stock',
@@ -67,7 +67,7 @@ export const MOCKHONEYS:IHoney[]=[{
     name: 'Miel de test 6',
     description: 'Miel de test 6',
 
-    weight: '1000',
+    weight: 1000,
     image: `./assets/img/honey-5043708_1280.jpg`,
     city: 'Oakland',
     state: 'En stock',
@@ -87,7 +87,7 @@ export const MOCKHONEYS:IHoney[]=[{
     name: 'Miel de test 6',
     description: 'Miel de test 6',
 
-    weight: '1000',
+    weight: 1000,
     image: `./assets/img/honey-5043708_1280.jpg`,
     city: 'Oakland',
     state: 'En stock',
@@ -107,7 +107,7 @@ export const MOCKHONEYS:IHoney[]=[{
     name: 'Miel de test 6',
     description: 'Miel de test 6',
 
-    weight: '1000',
+    weight: 1000,
     image: `./assets/img/honey-5043708_1280.jpg`,
     city: 'Oakland',
     state: 'En stock',

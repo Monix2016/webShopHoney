@@ -40,18 +40,18 @@ export class AddProductComponent implements OnInit {
       name: ['tstForm', Validators.required],
       description: ['tstForm', Validators.required],
       prices: this.fb.group({
-        '1000': [0, Validators.required],
-        '500': [0, Validators.required],
-        '250': [0, Validators.required]
+        1000: [0, Validators.required],
+        500: [0, Validators.required],
+        250: [0, Validators.required]
       }),
       discounts: this.fb.group({
-        '1000': [0],
-        '500': [0],
-        '250': [0]
+        1000: [0],
+        500: [0],
+        250: [0]
       }),
       stock: [0, Validators.required],
       type: ['HN', Validators.required],
-      weight: ['1000', Validators.required],
+      weight: [1000, Validators.required],
       // image: ['honey-5043708_1280.jpg'],
       image: [''],
       state: ['SI', Validators.required],

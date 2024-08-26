@@ -8,7 +8,7 @@ import { IHoney } from '../interfaces/honey';
 })
 export class StockService {
   products: any[] = []; // Declaramos la propiedad aquí
-  selectedWeight: number = 1000; // Valor por defecto
+  // selectedWeight: number = 1000; // Valor por defecto
   private apiUrl = 'http://127.0.0.1:8000/api/v1/products';
   constructor(
     private http: HttpClient
@@ -20,15 +20,15 @@ export class StockService {
       map(products => products.map(product => {
         product.prices = JSON.parse(product.prices || '{}');
         product.discounts = JSON.parse(product.discounts || '{}');
-        console.log('estoy en el StockService los productos son:',product)
+        console.log('estoy en el StockService los productos son:', product)
         return product;
       }))
     );
   }
 
-  updateProduct(product: IHoney, id:number) {
-    console.log('el index para el update',product )
-   console.log('el index para el update',id )
+  updateProduct(product: IHoney, id: number) {
+    console.log('el index para el update', product)
+    console.log('el index para el update', id)
     return this.http.put<IHoney>(`${this.apiUrl}/${id}`, product);
 
   }
@@ -41,29 +41,35 @@ export class StockService {
     return this.http.post<IHoney>(this.apiUrl, product);
   }
 
-  getPrice1(product: any, selectedWeight: string): number | null {
+  getPrice(product: any, selectedWeight: string): number | null {
+
+    console.log('Product Prices desde StockService:', product.prices);
+    console.log('Requested Weight desde StockService:', selectedWeight);
     if (product && product.prices && product.prices[selectedWeight]) {
       return product.prices[selectedWeight];
     }
     return null; // Devuelve null si no se encuentra el peso seleccionado
   }
-  
-  getDto1(product: any, selectedWeight: string): number | null {
+
+  getDto(product: any, selectedWeight: string): number | null {
+      console.log('Product Prices desde StockService:', product.discounts);
+    console.log('Requested Weight desde StockService:', selectedWeight);
     if (product && product.discounts && product.discounts[selectedWeight]) {
       return product.discounts[selectedWeight];
     }
     return null; // Devuelve null si no se encuentra el peso seleccionado
   }
 
-  getPrice(product: IHoney, weight: string): number | null {
-    console.log('Product Prices desde StockService:', product.prices);
-    console.log('Requested Weight desde StockService:', weight);
-    return product.prices[weight] || null;
-}
+  // getPrice(product: IHoney, weight: number): number | null {
+  //   console.log('Product Prices desde StockService:', product.prices);
+  //   console.log('Requested Weight desde StockService:', weight);
+  //   return product.prices[weight] || null;
+  // }
 
-getDto(product: IHoney, weight: string): number | null {
-    return product.discounts[weight] || null;
-}
+  // getDto(product: IHoney, weight: number): number | null {
+
+  //   return product.discounts[weight] || null;
+  // }
 
 
 
@@ -84,10 +90,10 @@ getDto(product: IHoney, weight: string): number | null {
     const formData = new FormData();
     formData.append('image', file);
 
-      // Asegúrate de que la API devuelva solo el nombre del archivo
-  return this.http.post(this.apiUrl, formData).pipe(
-    map((response: any) => response.imageName)  // Asegúrate de que la API esté devolviendo 'imageName'
-  );
+    // Asegúrate de que la API devuelva solo el nombre del archivo
+    return this.http.post(this.apiUrl, formData).pipe(
+      map((response: any) => response.imageName)  // Asegúrate de que la API esté devolviendo 'imageName'
+    );
   }
 
 }

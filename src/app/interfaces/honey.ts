@@ -2,11 +2,11 @@ export interface IHoney {
   id:number;
   name: string;
   description: string;
-  prices: { [key: string]: number };
-  discounts: { [key: string]: number };
+  prices: { [key: number]: number };
+  discounts: { [key: number]: number };
   stock: number | null;
   type: string;
-  weight: string;
+  weight: number;
   image: string;
   state: string;
   category: string;
