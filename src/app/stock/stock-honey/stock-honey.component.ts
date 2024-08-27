@@ -45,6 +45,7 @@ export class StockHoneyComponent implements OnInit {
   ngOnInit(): void {
 
     this.getProducts();
+    this.selectedWeight = '1000';
   }
 
 

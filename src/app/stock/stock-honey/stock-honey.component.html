@@ -11,13 +11,9 @@
                     <div class="product-card">
                         <div class="product-image">
                             <img src="./assets/img/{{product.image}}">
-                            <!-- <img src="./assets/img/pexels-pixabay-33260.jpg" alt="Exterior photo of {{ product.name }}"> -->
                             <div class="titleCard">{{ 'Action.UploadImage' | translate }}</div>
                             <div class="overlay"></div>
                         </div>
-                        <!-- <div>
-                            <app-upload-img (imageUploaded)="onImageUploaded($event, i)"></app-upload-img>
-                        </div> -->
                         <div>
                             <input type="file" (change)="onFileChange($event,i)" />
                         </div>
@@ -43,14 +39,14 @@
                                     <label for="categorySelector">{{ 'Item.Category' | translate }}</label>
                                     <div class="custom-select-wrapper">
                                         <select formControlName="category" class="form-control custom-select">
-                                            <option value="HA">{{ 'BenificesHerbalHoney.Title' | translate }}</option>
                                             <option value="HH">{{ 'BenificesHerbalHoney.Title' | translate }}</option>
-                                            <option value="HC">{{'BenificesHerbalHoney.Title'|translate}}</option>
-                                            <option value="HD">{{'BenificesHerbalHoney.Title'| translate}}</option>
-                                            <option value="HX">{{'BenificesHerbalHoney.Title'| translate}}</option>
-                                            <option value="HY">{{'BenificesHerbalHoney.Title'| translate}}</option>
-                                            <option value="HA">{{'BenificesHerbalHoney.Title'| translate}}</option>
-                                            <option value="HB">{{'BenificesHerbalHoney.Title'| translate}}</option>
+                                            <option value="HA">HA</option>
+                                            <option value="HC">HC</option>
+                                            <option value="HD">HD</option>
+                                            <option value="HX">HX</option>
+                                            <option value="HY">HY</option>
+                                            <option value="HA">HA</option>
+                                            <option value="HB">HB</option>
                                         </select>
                                     </div>
                                 </div>
@@ -71,6 +67,7 @@
                         <!-- Detalles del Producto -->
                         <div class="cart-item">
                             <div class="cart-item-actions">
+
                                 <div class="flex-container-col">
                                     <label>{{ 'Item.Name' | translate }}</label>
                                     <input formControlName="name" type="text" class="input">
@@ -104,14 +101,26 @@
                                         </select>
                                     </div>
                                 </div>
+                                <div class="flex-container-col">
+                                    <label>weight</label>
+                                    <input formControlName= "weight" type="text" class="input">
+                                </div>
+                                <div class="flex-container-col">
+                                    <label>selectedWeight</label>
+                                    <input [value]="selectedWeight" type="text" class="input">
+                                </div>
 
+                                <!-- <div class="flex-container-col">
+                                    <label>selectedWeight</label>
+                                    <input [value]="selectedWeight" type="text" class="input">
+                                </div> -->
                                 <div class="flex-container-col" [formGroupName]="'prices'">
                                     <label>{{ 'cart.CartItems.Price' | translate }}</label>
-                                    <input formControlName="{{ selectedWeight }}" type="number" class="input">
+                                    <input [formControlName]="selectedWeight" type="number" class="input">
                                  </div>
                                  <div class="flex-container-col" [formGroupName]="'discounts'">
                                     <label>{{ 'Item.DTO' | translate }}</label>
-                                    <input formControlName="{{ selectedWeight }}" type="number" class="input">
+                                    <input [formControlName]="selectedWeight" type="number" class="input">
                                  </div>
 
                             </div>
