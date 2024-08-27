@@ -4,7 +4,6 @@ import { CommonModule } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core';
 import { StockService } from '../../services/stock.service';
 import { IHoney } from '../../interfaces/honey';
-import { UploadImgComponent } from '../../functionalities/upload-img/upload-img.component';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { AddProductComponent } from './add-product/add-product.component';
 
@@ -16,7 +15,6 @@ import { AddProductComponent } from './add-product/add-product.component';
     CommonModule,
     ReactiveFormsModule,
     TranslateModule,
-    UploadImgComponent,
     AddProductComponent
   ],
   templateUrl: './stock-honey.component.html',
@@ -144,10 +142,10 @@ export class StockHoneyComponent implements OnInit {
 
   }
 
-  onImageUploaded(imageName: string, index: number): void {
-    console.log('Imagen subida:', imageName);
-    this.productForms[index].patchValue({ image: imageName });
-  }
+  // onImageUploaded(imageName: string, index: number): void {
+  //   console.log('Imagen subida:', imageName);
+  //   this.productForms[index].patchValue({ image: imageName });
+  // }
 
 
 

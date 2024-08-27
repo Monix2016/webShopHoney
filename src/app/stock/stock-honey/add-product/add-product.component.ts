@@ -5,7 +5,6 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import { TranslateModule } from '@ngx-translate/core';
 import { IHoney } from '../../../interfaces/honey';
 import { StockService } from '../../../services/stock.service';
-import { UploadImgComponent } from "../../../functionalities/upload-img/upload-img.component";
 
 @Component({
   selector: 'app-add-product',
@@ -15,7 +14,7 @@ import { UploadImgComponent } from "../../../functionalities/upload-img/upload-i
     CommonModule,
     ReactiveFormsModule,
     TranslateModule,
-    UploadImgComponent
+
 ],
   templateUrl: './add-product.component.html',
   styleUrl: './add-product.component.css'

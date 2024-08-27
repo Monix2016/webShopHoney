@@ -61,31 +61,7 @@ export class StockService {
     return null; // Devuelve null si no se encuentra el peso seleccionado
   }
 
-  // getPrice(product: IHoney, weight: number): number | null {
-  //   console.log('Product Prices desde StockService:', product.prices);
-  //   console.log('Requested Weight desde StockService:', weight);
-  //   return product.prices[weight] || null;
-  // }
 
-  // getDto(product: IHoney, weight: number): number | null {
-
-  //   return product.discounts[weight] || null;
-  // }
-
-
-
-  // uploadImage(file: File): Observable<string> {
-  //   const formData = new FormData();
-  //   formData.append('image', file);
-
-  //   return this.http.post<{ path: string }>(this.apiUrl, formData).pipe(
-  //     map(response => response.path),
-  //     catchError((error) => {
-  //       console.error('Error uploading image', error);
-  //       return throwError(error);
-  //     })
-  //   );
-  // }
 
   uploadImage(file: File): Observable<any> {
     const formData = new FormData();

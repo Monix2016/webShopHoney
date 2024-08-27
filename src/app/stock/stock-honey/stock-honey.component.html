@@ -110,10 +110,6 @@
                                     <input [value]="selectedWeight" type="text" class="input">
                                 </div>
 
-                                <!-- <div class="flex-container-col">
-                                    <label>selectedWeight</label>
-                                    <input [value]="selectedWeight" type="text" class="input">
-                                </div> -->
                                 <div class="flex-container-col" [formGroupName]="'prices'">
                                     <label>{{ 'cart.CartItems.Price' | translate }}</label>
                                     <input [formControlName]="selectedWeight" type="number" class="input">
@@ -129,7 +125,7 @@
                 </div>
                 <button type="submit" class="button_main">{{ 'Action.Save' | translate
                     }}</button>
-                <!-- <button type="submit" class="button_main" (click)="removeProduct(product.id)">Eliminar</button> -->
+                
             </form>
         </div>
     </div>
