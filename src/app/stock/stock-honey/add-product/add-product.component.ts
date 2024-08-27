@@ -95,7 +95,7 @@ export class AddProductComponent implements OnInit {
         this.productForm.reset();  // Resetea el formulario
           console.log('Los datos del nuevo Formulario', response);
           this.snackBar.open('Producto añadido correctamente', 'Cerrar', {
-            duration: 3000,
+            duration: 6000,
             horizontalPosition: "start",
             verticalPosition: "top",
           }
@@ -107,7 +107,7 @@ export class AddProductComponent implements OnInit {
         (error) => {
           console.error('Error saving product', error);
           this.snackBar.open('Error al añadir el producto', 'Cerrar', {
-            duration: 3000,
+            duration: 6000,
             horizontalPosition: "start",
             verticalPosition: "top",
            

@@ -50,7 +50,7 @@ export class StockHoneyComponent implements OnInit {
 
   createProductForm(product: IHoney): FormGroup {
     return this.fb.group({
-      weight: [product.weight, Validators.required],
+      weight: [Number(product.weight), Validators.required],
       prices: this.fb.group({
         '1000': [product.prices['1000'], Validators.required],
         '500': [product.prices['500'], Validators.required],
@@ -98,11 +98,12 @@ export class StockHoneyComponent implements OnInit {
     console.log('Product Forms length:', this.productForms.length);
     const updatedProduct = this.productForms[index]?.value;  // Obtén los valores del formulario
     const productId = this.products[index].id;  // Obtener el verdadero ID del producto
-
-    if (productId < 0 || productId >= this.productForms.length) {
+    
+    if (index < 0 || index >= this.productForms.length) {
       console.error(`Index ${index} is out of bounds`);
       return;
     }
+
     if (!this.productForms[productId]) {
       console.error(`Form at index ${productId} is undefined`);
       return;
@@ -115,8 +116,9 @@ export class StockHoneyComponent implements OnInit {
     this.stockService.updateProduct(updatedProduct, productId).subscribe(
       (response) => {
         console.log('Product updated', response);
+        this.getProducts(); // Recargar productos para ver los cambios
         this.snackBar.open('Producto actualizado correctamente', 'Cerrar', {
-          duration: 3000,
+          duration: 6000,
           horizontalPosition: "start",
           verticalPosition: "top",
         });
@@ -124,7 +126,7 @@ export class StockHoneyComponent implements OnInit {
       (error) => {
         console.error('Error updating product', error);
         this.snackBar.open('Error al actualizar el producto', 'Cerrar', {
-          duration: 3000,
+          duration: 6000,
           horizontalPosition: "start",
           verticalPosition: "top",
         });
