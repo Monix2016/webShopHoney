@@ -154,6 +154,9 @@ export class StockHoneyComponent implements OnInit {
   onWeightChange(event: any, product: any): void {
     this.selectedWeight = event.target.value;
     console.log('Soy el peso selelcionado',this.selectedWeight)
+    console.log('Prueba del name',product.name)
+    console.log('Prueba del Categoria',product.category)
+    console.log('Prueba del PRecio inicial',product.prices[this.selectedWeight])
     const formGroup = this.productForms[product.id];
  
     if (formGroup) {
