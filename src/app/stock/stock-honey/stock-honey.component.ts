@@ -144,13 +144,6 @@ export class StockHoneyComponent implements OnInit {
 
   }
 
-  // onImageUploaded(imageName: string, index: number): void {
-  //   console.log('Imagen subida:', imageName);
-  //   this.productForms[index].patchValue({ image: imageName });
-  // }
-
-
-
   onWeightChange(event: any, product: any): void {
     this.selectedWeight = event.target.value;
     console.log('Soy el peso selelcionado',this.selectedWeight)
@@ -174,7 +167,8 @@ export class StockHoneyComponent implements OnInit {
              // Forzar la actualización
              priceControl.markAsDirty();
              priceControl.markAsTouched();
-          }
+          } else {
+                   console.error(`Control for prices -> ${this.selectedWeight} not found`);}
        }
  
        if (discountControl) {
@@ -187,41 +181,14 @@ export class StockHoneyComponent implements OnInit {
              discountControl.markAsDirty();
              discountControl.markAsTouched();
           }
-       }
+       }else {
+                console.error(`Control for discounts -> ${this.selectedWeight} not found`);
+            }
  
        formGroup.get('weight')?.setValue(Number(this.selectedWeight));
        console.log('estoy en onWeightChange este es el formulario ', formGroup)
     }
  }
-
-
-//  onWeightChange(event: any, product: IHoney): void {
-//   const selectedWeight = parseInt(event.target.value, 10);  // Asegúrate de que es un número
-//   const formGroup = this.productForms[product.id];
-
-//   if (formGroup) {
-//      const priceControl = formGroup.get('prices')?.get(String(selectedWeight)); // Convierte a string al obtener los valores
-//      const discountControl = formGroup.get('discounts')?.get(String(selectedWeight));
-
-//      if (formGroup.get('prices')?.get(this.selectedWeight)) {
-//       const priceControl = formGroup.get('prices')?.get(this.selectedWeight);
-                                          
-//      } else {
-//       console.error(`Control for prices -> ${this.selectedWeight} not found`);}
-  
-
-//       if (formGroup.get('discounts')?.get(this.selectedWeight)) {
-//         const discountControl = formGroup.get('discounts')?.get(this.selectedWeight);
-//        }else {
-//         console.error(`Control for discounts -> ${this.selectedWeight} not found`);
-//     }
-//      }
-
-//      formGroup.get('weight')?.setValue(this.selectedWeight);
-//      console.log('estoy en onWeightChange este es el formulario ', formGroup)
-  
-// }
-
 
   removeProduct(index: number): void {
     if (index >= 0 && index < this.products.length) {
