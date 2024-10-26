@@ -6,7 +6,8 @@
         {{ item.name }} - 
         {{'cart.CartItems.Quantity'|translate}}: {{ item.quantity }} -
         {{'cart.CartItems.Weight'|translate}}: {{ item.weight }} g - 
-        {{'cart.CartItems.Price'|translate}}: {{item.price  | currency }}
+        {{'cart.CartItems.Price'|translate}}: {{item.price  | currency }} - 
+        DTO : {{ item.discount }}
       </div>
 
       <div class="cart-item-details" *ngIf="item.type=== 'MT'">

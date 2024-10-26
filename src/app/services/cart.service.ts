@@ -32,21 +32,33 @@ export class CartService {
 
     this.updateCart(currentItems);
   }
-
+  getPrice(honeyId?: number, selectedWeight: number=100): number {
+    const honey = this.housingService.getHousingLocationById(honeyId);
+    return honey?.prices[selectedWeight] || 0;
+  }
+  getDTO(honeyId?: number, selectedWeight: number=100): number {
+    const honey = this.housingService.getHousingLocationById(honeyId);
+    return honey?.discounts[selectedWeight] || 0;
+  }
   addHoneyToCart(honeyId?: number, weight: number = 500): void {
     const honey = this.housingService.getHousingLocationById(honeyId);
+   
     if (honey) {
       this.addToCart({
         id: honey.id,
         type: honey.type,
         name: honey.name,
-        price: honey.prices[weight],
-        discount: honey.discounts[weight],
+        // price: honey.prices[weight],
+        
+        discount: this.getDTO(honey.id,weight),
         quantity: 1,
         weight: weight,
+        price:this.getPrice(honey.id,weight),
         photo: honey.image,
       });
+      
     }
+    
   }
 
   addMaterialToCart(materialId: number): void {
@@ -71,14 +83,16 @@ export class CartService {
     this.updateCart(currentItems);
   }
 
-  updateCartItem(itemId: number, quantity: number, weight: number, price:number): void {
+  updateCartItem(itemId: number, quantity: number, weight: number, price:number,discount:number): void {
     let currentItems = this.cartItems.value;
+    console.log("Es el currentITEMS",currentItems)
     const itemToUpdate = currentItems.find(cartItem => cartItem.id === itemId);
-
+    console.log("Es el itemToUpdate",itemToUpdate)
     if (itemToUpdate) {
       itemToUpdate.quantity = quantity;
       itemToUpdate.weight = weight;
       itemToUpdate.price=price;
+      itemToUpdate.discount=discount;
       this.updateCart(currentItems);
     }
   }

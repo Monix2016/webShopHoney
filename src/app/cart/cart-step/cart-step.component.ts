@@ -30,8 +30,11 @@ export class CartStepComponent implements OnInit  {
     this.cartService.removeFromCart(itemId);
   }
 
-  updateItem(itemId: number, quantity: number, weight: number,price:number): void {
-    this.cartService.updateCartItem(itemId, quantity, weight, price);
+  updateItem(itemId: number, quantity: number, weight: number, price:number, discount:number): void {
+    console.log("El preecio recibido recibidos",price)
+    price= this.getPrice(itemId,weight)
+    discount=this.getDTO(itemId,weight)
+    this.cartService.updateCartItem(itemId, quantity, weight, price,discount);
   }
   updateItemMaterial(itemId: number, quantity: number, price:number): void {
     this.cartService.updateCartItemMaterial(itemId, quantity, price);
@@ -39,5 +42,12 @@ export class CartStepComponent implements OnInit  {
 
   proceedToNextStep(): void {
     this.nextStep.emit();
+  }
+
+  getPrice(itemId: number,weight: number): number {
+    return this.cartService.getPrice(itemId,weight);
+  }
+  getDTO(itemId: number,weight: number): number {
+    return this.cartService.getDTO(itemId,weight);
   }
 }

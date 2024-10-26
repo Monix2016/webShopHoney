@@ -12,14 +12,15 @@
           {{ item.name }} -
           {{ item.quantity }} -
           {{ item.weight }} g -
-          {{ item.price | currency }}
+          {{ getPrice(item.id,item.weight) | currency }} - 
+          {{ getDTO(item.id,item.weight) }}%
         </div>
         <div class="cart-item-actions">
           <span class="btn-delete" (click)="removeItem(item.id)">
             <i class="fas fa-trash-alt"></i>
           </span>
           <input class="input-quantity" type="number" [(ngModel)]="item.quantity"
-            (change)="updateItem(item.id, item.quantity, item.weight, item.price)">
+            (change)="updateItem(item.id, item.quantity, item.weight, item.price, item.discount)">
           <!-- <select class="input-weight styled-select" [(ngModel)]="item.weight"
             (change)="updateItem(item.id, item.quantity, item.weight, item.price)">
             <option value="1000">1000g</option>
@@ -31,7 +32,7 @@
             <label for="weightSelector">Peso: </label>
             <div class="custom-select-wrapper">
               <select id="weightSelector" [(ngModel)]="item.weight"
-              (change)="updateItem(item.id, item.quantity, item.weight, item.price)" class="form-control custom-select">
+              (change)="updateItem(item.id, item.quantity, item.weight, item.price, item.discount)" class="form-control custom-select">
                 
                 <option value="1000">1000g</option>
                 <option value="500">500g</option>
