@@ -124,9 +124,10 @@ export class CartService {
     localStorage.setItem('cartItems', JSON.stringify(items));
   }
 
+  //TODO: A revisar la cuenta
   getTotalPrice(): number {
     const items = this.cartItems.value;
-    return items.reduce((total, item) => total + item.price * item.quantity, 0);
+    return items.reduce((total, item) => total + item.price * item.quantity*(1-(item.discount/100)), 0);
   }
 
 
