@@ -149,12 +149,13 @@ strong {
   /* Ajusta esta posición según sea necesario */
   transform: rotate(-45deg);
   background-color: var(--global-color-title);
-  font-weight: 700;
+  font-weight: 200;
   color: white;
-  padding: 10px;
+  padding: 5px;
   /* Ajusta el tamaño del relleno según sea necesario */
   font-style: italic;
   z-index: 10;
+  border-radius: 20px;
 }
 
 .discount::after {

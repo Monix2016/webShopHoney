@@ -1,5 +1,5 @@
 import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
-import { FormsModule, FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, FormBuilder, FormGroup, Validators, ReactiveFormsModule, FormControl } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core';
 import { StockService } from '../../services/stock.service';
@@ -32,6 +32,8 @@ export class StockHoneyComponent implements OnInit {
   selectedFile: File | null = null;
   selectedWeight!: any;
   // selectedWeight: string = '1000'; // Valor inicial, puede cambiar
+  price2!: any;
+  myForm!: FormGroup<{ selectedWeight: any; }>;
 
   constructor(
     private stockService: StockService,
@@ -49,12 +51,14 @@ export class StockHoneyComponent implements OnInit {
 
 
   createProductForm(product: IHoney): FormGroup {
+
+
     return this.fb.group({
       weight: [Number(product.weight), Validators.required],
       prices: this.fb.group({
-        '1000': [product.prices['1000'], Validators.required],
-        '500': [product.prices['500'], Validators.required],
-        '250': [product.prices['250'], Validators.required],
+        '1000': [product.prices[this.selectedWeight], Validators.required],
+        '500': [product.prices[this.selectedWeight], Validators.required],
+        '250': [product.prices[this.selectedWeight], Validators.required],
       }),
       discounts: this.fb.group({
         '1000': [product.discounts['1000']],
@@ -155,9 +159,12 @@ export class StockHoneyComponent implements OnInit {
     if (formGroup) {
        const priceControl = formGroup.get('prices')?.get(this.selectedWeight);
        const discountControl = formGroup.get('discounts')?.get(this.selectedWeight);
+       
  
        if (priceControl) {
           const price = this.stockService.getPrice(product, this.selectedWeight);
+          this.myForm.get('prices')?.get(this.selectedWeight)?.setValue(price);
+this.price2=price;
           console.log('estoy en onWeightChange y el peso es ', String(this.selectedWeight))
           console.log('estoy en onWeightChange y el precio es ', price)
           if (price !== null) {
@@ -175,8 +182,10 @@ export class StockHoneyComponent implements OnInit {
           const discount = this.stockService.getDto(product,this.selectedWeight);
           console.log('estoy en onWeightChange y el peso es ', String(this.selectedWeight))
           console.log('estoy en onWeightChange y el descuento es ', discount)
+          this.myForm.get('discounts')?.get(this.selectedWeight)?.setValue(discount);
           if (discount !== null) {
              discountControl.setValue(discount);
+             this.myForm.get('discounts')?.get(this.selectedWeight)?.setValue(discount);
              // Forzar la actualización
              discountControl.markAsDirty();
              discountControl.markAsTouched();
@@ -186,6 +195,9 @@ export class StockHoneyComponent implements OnInit {
             }
  
        formGroup.get('weight')?.setValue(Number(this.selectedWeight));
+       // Actualiza los FormControls
+
+
        console.log('estoy en onWeightChange este es el formulario ', formGroup)
     }
  }

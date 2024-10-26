@@ -38,6 +38,12 @@ export class BaseHoneyComponent {
     return 0;
   }
 
+  getDTO(): number {
+    if (this.housingLocation && this.housingLocation.discounts && this.housingLocation.discounts[this.selectedWeight]) {
+      return this.housingLocation.discounts[this.selectedWeight];
+    }
+    return 0;
+  }
 
   //TODO
   //Comporbar porque no funcion este metodo

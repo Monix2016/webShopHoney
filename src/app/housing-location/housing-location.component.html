@@ -1,7 +1,7 @@
 <section class="listing" *ngIf="housingLocation.type === 'HN'">
     <div class="image-container">
         <div class="discount" >
-            <p>DTO {{ housingLocation.discounts }} %</p>
+            <p>DTO {{ getDTO()}} %</p>
         </div>
         <img class="listing-photo animated-img" src="./assets/img/{{housingLocation.image}}"
             alt="Exterior photo of {{housingLocation.name}}" [routerLink]="['/details', housingLocation.id]">

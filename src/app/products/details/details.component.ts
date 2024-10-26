@@ -58,6 +58,9 @@ export class DetailsComponent {
   getPrice(): number {
     return this.housingLocation?.prices[this.selectedWeight] || 0;
   }
+  getDTO(): number {
+    return this.housingLocation?.discounts[this.selectedWeight] || 0;
+  }
 
 
 }
