@@ -70,7 +70,7 @@ export class HousingService {
   getMaterialById(id: number): IMaterial | undefined {
     return this.materialList.find(materialHoney => materialHoney.id === id)
   }
-
+//TODO: A borrar
   submitApplication(firstName: string, lastName: string, email: string) {
     console.log(`Homes application received: firstName: ${firstName}, lastName: ${lastName}, email: ${email}.`);
   }
